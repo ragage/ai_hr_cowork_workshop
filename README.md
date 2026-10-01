@@ -84,6 +84,7 @@ later) signed in with their workshop account (custom skills and browser tasks ar
 | File | Formats | Purpose |
 | --- | --- | --- |
 | README | [.md](README.md) · [.docx](README.docx) | This overview |
+| PROJECT-SUMMARY | [.md](PROJECT-SUMMARY.md) (maintainers only) | Handoff notes: status, architecture, decisions, how to build and test, remaining work |
 | [instructor-deck.pptx](instructor-deck.pptx) | pptx | Instructor deck (45 slides, speaker notes, alt text) — a divider slide with a picture and progress tracker before each exercise, one PowerPoint section per exercise for quick navigation, objectives, approvals, a scenario card + hands-on slide per exercise, an Output folder walkthrough, an HR plugins spotlight, and a knowledge check |
 | readiness-checklist | [.md](readiness-checklist.md) · [.docx](readiness-checklist.docx) | Prep timeline, cost planning, whole-room Plan B, and setup for hosts + attendees |
 | seed-content | [.md](seed-content.md) · [.docx](seed-content.docx) | Ready-made Zava emails, meetings, and a Teams chat to seed attendee accounts (Exercise 1) |
