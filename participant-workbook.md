@@ -18,8 +18,8 @@ Builder**.
 > **Keep this in mind all workshop:** treat every Cowork output as a **draft to review**. Cowork
 > pauses before it sends or shares anything — read those checkpoints before you confirm.
 
-> **How each exercise is introduced:** every exercise opens with a **scenario card** in the same
-> format as Microsoft's *Copilot Cowork "Nifty Fifty" scenarios* — **Function**, **Goal**,
+> **How each exercise is introduced:** every exercise opens with a **scenario card** with the same
+> parts every time: **Function**, **Goal**,
 > **Output**, **Why Cowork?**, **Prompt**, **Workflow**, and **Data sources**. Read the card first,
 > then run the prompt.
 
@@ -49,9 +49,18 @@ Builder**.
 
 ### B. Copy the sample data into your OneDrive
 The facilitator will point you to **`zava-sample-knowledge.zip`** (shared in your tenant, e.g. a
-Teams/SharePoint folder). **Download it, extract it, and upload all the files** to your **own**
-OneDrive folder, e.g. `Documents/Cowork/`. These six Word and Excel files are used throughout the day,
-in both Cowork and Agent Builder:
+Teams/SharePoint folder). Put the files in a workshop folder in your **own** OneDrive:
+
+1. **Download** `zava-sample-knowledge.zip` and **extract** it on your laptop (right-click → **Extract
+   All**).
+2. Open **OneDrive** in the browser (from the Microsoft 365 app launcher, or
+   https://onedrive.cloud.microsoft) and go to **My files → Documents**.
+3. Select **+ Create or upload → Folder**, name it **`ai_hr_cowork_workshop`**, and open it.
+4. Select **+ Create or upload → Files upload** (or drag and drop) and upload all six files.
+5. ✅ **Checkpoint:** your OneDrive shows **Documents › ai_hr_cowork_workshop** with six files. Every
+   prompt today that names a folder uses **`Documents/ai_hr_cowork_workshop`**.
+
+These six Word and Excel files are used throughout the day, in both Cowork and Agent Builder:
 
 | File | Contents | Used in |
 | --- | --- | --- |
@@ -96,7 +105,7 @@ to every exercise today.
    > communications. When you answer a policy or benefits question, cite the source document and add
    > "Policies can change — please confirm with HR." Save emails and messages as drafts for me to
    > review; during this workshop, never send anything to anyone but me. Use only the Zava sample
-   > files in my OneDrive folder Documents/Cowork, and never include real employee personal data.
+   > files in my OneDrive folder Documents/ai_hr_cowork_workshop, and never include real employee personal data.
 4. **Check it works:** start a **new task** and ask: *"Draft a two-sentence reminder to employees that
    open enrollment is in November."* The reply should use your tone and end with the
    confirm-with-HR note.
@@ -135,8 +144,7 @@ consequential in a website — and shows an approval dialog. You'll meet these a
 
 ## Exercise 1 — Executive Command Center (25 min)
 
-> **Scenario card — Ex 01 · Executive Command Center** · Function: **Executive** · *(from the
-> Copilot Cowork "Nifty Fifty" scenarios)*
+> **Scenario card — Ex 01 · Executive Command Center** · Function: **Executive**
 > - **Goal:** Turn your calendar, communications, and priority work into a daily executive view of
 >   decisions, risks, and actions requiring attention.
 > - **Output:** An interactive executive command center covering meetings, priorities, and org
@@ -160,7 +168,7 @@ you'd reuse.
 
 > **Before you start:**
 > - Replace **`[Priority Folder]`** with the OneDrive folder holding your Zava files (e.g.,
->   `Documents/Cowork`) — or any folder of priority documents.
+>   `Documents/ai_hr_cowork_workshop`) — or any folder of priority documents.
 > - Replace **`[time]`** with a weekday time, e.g., **8:00 AM**.
 > - **Shared tenant:** the saved skill lives in **your** OneDrive — keep it **"Only you."** The
 >   schedule is an Automation on **your** account; **pause or delete it after class** (it's
@@ -404,7 +412,7 @@ a skill *from a prompt* in Exercise 1 — here you use the **guided** flow and r
      > Use this skill when someone asks about company **HR policy or benefits** (PTO, remote/hybrid
      > work, benefits enrollment, overtime, code of conduct, learning budget). Ground answers in
      > `employee-handbook-excerpt.docx` and `benefits-summary.docx` in my OneDrive folder
-     > `Documents/Cowork`; if the answer isn't in them, say so instead of guessing. Answer in this
+     > `Documents/ai_hr_cowork_workshop`; if the answer isn't in them, say so instead of guessing. Answer in this
      > format: a direct plain-language answer, then a
      > short **Details** section, then a **Source** line naming the document, then the note *'Policies
      > can change — please confirm with HR.'* Keep a warm, professional tone. **Do not** handle
@@ -561,7 +569,7 @@ before it goes out?
 2. Enter this prompt. Name the **exact file and folder**, because the automation runs later without
    you there to clarify:
    > Every **Monday at 8:00 AM**, read **`hr-tickets-sample.xlsx`** in my OneDrive folder
-   > **`Documents/Cowork`**, summarize **open tickets by category and priority**, list any
+   > **`Documents/ai_hr_cowork_workshop`**, summarize **open tickets by category and priority**, list any
    > **high-priority open tickets first**, and put the result in a short report. Don't email anyone.
 3. When asked, choose **Activate and run now**. The first run starts immediately, so you see the
    result in class instead of next Monday. (**Activate** alone waits for the next scheduled time.)
@@ -606,7 +614,12 @@ once your admin adds them.*
 - **HR examples:** **Gusto** (payroll, employee records, benefits enrollment), **ZipRecruiter** and
   **Dice.com** (job listings), **Cronofy MCP** (interview scheduling across real calendar
   availability), **Articulate** (training course outlines), or your organization's **own HR system**
-  connected through an MCP server.
+  connected through an MCP server. Full list:
+  [Available plugins for Copilot Cowork](https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-available-plugins).
+- **⭐ SAP SuccessFactors?** No SuccessFactors plugin is in the Cowork catalog yet. Today, use the
+  **Employee Self-Service agent** with its SAP SuccessFactors extension pack, or have IT build a
+  **custom plugin** with an MCP connector. Details in
+  [reference/09-plugins.md](reference/09-plugins.md#hr-plugins-you-can-use-today).
 - **Imagine:** "Which open tickets in `hr-tickets-sample.xlsx` are payroll issues? Check each
   employee's latest pay run and draft a reply." With a payroll plugin, Cowork answers T-2008 from the
   spreadsheet **and** live payroll data, then waits for your approval.

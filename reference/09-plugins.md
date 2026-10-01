@@ -32,8 +32,10 @@ list once added. Your page may also show a **Preferences** tab, where custom ins
 
 ## HR plugins you can use today
 
-From Microsoft's published plugin list. What's available to **you** depends on what your admin has
-approved.
+From Microsoft's published list of
+[available plugins for Copilot Cowork](https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-available-plugins)
+(checked October 1, 2026; the catalog keeps growing). What's available to **you** depends on what your
+admin has approved; in Cowork, open **Add plugins** to see the current list for your organization.
 
 | Plugin | What it brings to HR work in Cowork |
 | --- | --- |
@@ -43,6 +45,20 @@ approved.
 | **Cronofy MCP** | Schedule meetings using real-time, multi-person calendar availability; handy for interview panels |
 | **Articulate** | Turn training ideas into build-ready course outlines for learning and development |
 | **Your own HR plugin** | Your organization's HR skills plus an **MCP connector to your HR system** (HRIS), built and deployed by IT; see below |
+
+> **⭐ Using SAP SuccessFactors?** There's **no SuccessFactors plugin** in the Cowork catalog yet (the
+> only SAP entry, *enosix arnold*, covers SAP ERP orders and invoices, not HR). Three ways to bring
+> SuccessFactors into your Microsoft 365 Copilot work today:
+>
+> 1. **Employee Self-Service agent + SAP SuccessFactors extension pack** (Microsoft 365 Copilot agent,
+>    not a Cowork plugin): employees and managers read and update their own HR data, such as hire date,
+>    job info, compensation, emergency contacts, and direct reports' details, in Copilot.
+>    [Integrate SAP SuccessFactors with Employee Self-Service](https://learn.microsoft.com/en-us/microsoft-365/copilot/employee-self-service/sapsuccessfactors)
+> 2. **A custom Cowork plugin**: IT packages HR skills with an **MCP connector** to SuccessFactors (for
+>    example through an MCP gateway in front of the SuccessFactors APIs), the same pattern as the Zava
+>    HRIS example below.
+> 3. **Ask for one:** your admin can request a plugin in the Microsoft 365 admin center, or work with a
+>    partner to build it.
 
 ## Example: payroll questions with an HR plugin
 

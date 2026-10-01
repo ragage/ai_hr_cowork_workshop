@@ -6,8 +6,7 @@ This guide gives you a minute-by-minute run sheet, talking points, and troublesh
 **their own user account**. You, the **facilitator, demo from your own separate tenant**.
 
 Each exercise is introduced on screen with a **scenario card** (Function · Goal · Output · Why
-Cowork? · Prompt · Workflow · Data sources) built on the *Copilot Cowork "Nifty Fifty"* template —
-walk the card top-left to bottom-right before attendees start.
+Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom-right before attendees start.
 
 ## Before you start
 
@@ -32,6 +31,10 @@ walk the card top-left to bottom-right before attendees start.
 > exercises grounded on the **provided sample files**, and have attendees keep custom skills
 > **"Only you"** (or initialed) to avoid 25 identical skills cluttering their tenant.
 
+> **Navigating the deck:** every exercise starts with a **divider slide** (exercise number, picture,
+> time, and an 8-step progress tracker), and each exercise is its own **PowerPoint section**. Open
+> **View → Normal** and use the section headers in the thumbnail pane to jump straight to any exercise.
+
 ## Run sheet (240 minutes)
 
 | Time | Segment | You do | Attendees do |
@@ -39,7 +42,7 @@ walk the card top-left to bottom-right before attendees start.
 | 0:00–0:10 | **Welcome & context** | Explain what Cowork is, HR value, the approval/checkpoint model | Listen; open Cowork |
 | 0:10–0:20 | **Copilot vs. Cowork** | Draw the assistant-vs-coworker distinction; when to use which | Ask questions; share HR examples |
 | 0:20–0:40 | **Cowork UI walkthrough + setup** | Tour New task, My tasks, Automations, Customize, model picker, reasoning effort; show copying files | Sign in + smoke test + copy sample files + custom instructions |
-| 0:40–1:05 | **Ex 1 — Executive Command Center** | Show the approval dialog (one at a time); walk the Nifty Fifty card; demo the HTML dashboard; **show the Output folder** (Preview, Download, OneDrive → Cowork); skill save & schedule | Fill placeholders, run the prompt, open the dashboard from the Output folder |
+| 0:40–1:05 | **Ex 1 — Executive Command Center** | Show the approval dialog (one at a time); walk the scenario card; demo the HTML dashboard; **show the Output folder** (Preview, Download, OneDrive → Cowork); skill save & schedule | Fill placeholders, run the prompt, open the dashboard from the Output folder |
 | 1:05–1:25 | **Ex 2 — Deep Research (web)** | Demo the cited briefing; run the scorecard follow-up | Run Deep Research, tailor questions, build the Word + Excel scorecard |
 | 1:25–1:35 | **Break** | Reset; help anyone still blocked | Stretch, coffee |
 | 1:35–2:00 | **Ex 3 — Navigate websites with the browser** | Demo the browser: consent, progress chips, Switch to tab as it searches dol.gov and lni.wa.gov | Run the two-site navigation, check the links, build the Word brief for payroll |
@@ -92,8 +95,7 @@ walk the card top-left to bottom-right before attendees start.
   **More options → Always allow**. Say plainly: "One at a time. No Approve All." Show where to
   revoke: side panel → **Permissions**. In this exercise they approve saving the skill and the
   schedule.
-- This is the **"Exec 01"** scenario from the *Copilot Cowork "Nifty Fifty"* pack — the scenario
-  card on screen is the same format every later exercise uses. Walk it: **Goal → Output → Why
+- This is the first **scenario card** of the day, and every later exercise uses the same format. Walk it: **Goal → Output → Why
   Cowork? → Prompt → Workflow → Data sources**.
 - It shows Cowork at full stretch in **one prompt**: Work IQ gathers calendar, mail, chats,
   transcripts, and files → analyzes signals → builds an **interactive HTML dashboard** → **saves
@@ -196,7 +198,7 @@ walk the card top-left to bottom-right before attendees start.
 
 ### Ex 7 — Automate & share (3:15–3:30)
 - Create an **Automation** live (weekly Monday ticket digest). The prompt names the **exact file and
-  folder** (`hr-tickets-sample.xlsx` in `Documents/Cowork`) because a scheduled run can't ask for
+  folder** (`hr-tickets-sample.xlsx` in `Documents/ai_hr_cowork_workshop`) because a scheduled run can't ask for
   clarification. Choose **Activate and run now** so the room sees a real run, then show the **Runs**
   vs **Manage schedules** tabs so they know where to edit/pause.
 - Demo a **Daily Briefing**, then walk the **Share / Re-share** flow on the custom skill from Ex 4.
@@ -208,10 +210,15 @@ walk the card top-left to bottom-right before attendees start.
 - Show **Customize → Plugins** on the slide (screenshot from Microsoft Learn) or live in **your own
   tenant** if you have a plugin installed. Point out **Installed** (on/off toggles), the **detail
   page** (skills, connectors, what data it reaches), **Discover**, and **Upload plugin**.
-- Name HR plugins from Microsoft's published list: **Gusto** (payroll, employee records, benefits
+- Name HR plugins from Microsoft's published list
+  ([Available plugins for Copilot Cowork](https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-available-plugins)): **Gusto** (payroll, employee records, benefits
   enrollment), **ZipRecruiter** and **Dice.com** (job listings), **Cronofy MCP** (interview
   scheduling), **Articulate** (training outlines). Explain that connectors can be **MCP servers**,
   so IT can also connect the organization's **own HR system** as a custom plugin.
+- **Expect the SAP SuccessFactors question.** There's no SuccessFactors plugin in the Cowork catalog
+  yet (checked Oct 1, 2026). Point to the **Employee Self-Service agent** with its SAP SuccessFactors
+  extension pack (a Copilot agent, not a Cowork plugin), or a **custom plugin** with an MCP connector
+  built by IT. Re-check the catalog link before each delivery; it keeps growing.
 - Walk the **T-2008 payroll example** from [reference/09-plugins.md](reference/09-plugins.md): with a
   payroll plugin, Cowork joins the ticket spreadsheet with live payroll data, then waits for approval.
 - Land the benefits: fewer copy-and-paste hand-offs between systems; consistent answers across the

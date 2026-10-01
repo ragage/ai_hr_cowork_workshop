@@ -113,7 +113,7 @@ Example:
 > to do with the result. Choose **Activate and run now** to test the first run immediately.
 
 - "Every **Monday at 8:00 AM**, read **`hr-tickets-sample.xlsx`** in my OneDrive folder
-  **`Documents/Cowork`**, summarize **open tickets by category and priority**, list high-priority
+  **`Documents/ai_hr_cowork_workshop`**, summarize **open tickets by category and priority**, list high-priority
   open tickets first, and put it in a short report. Don't email anyone."
   *(Set this up from Automations → Create.)*
 - "Each weekday morning, give me a **Daily Briefing** focused on my HR tasks and meetings."

@@ -11,8 +11,7 @@ By the end, attendees will understand **when to use Copilot Chat vs. Cowork**, w
 in its browser,
 **built their own custom skill**, and finished by building a reusable **agent** with **Copilot Agent
 Builder**. Every exercise is introduced with a **scenario card** (Function, Goal, Output, Why
-Cowork?, Prompt, Workflow, Data sources) in the style of Microsoft's *Copilot Cowork "Nifty Fifty"
-scenarios*.
+Cowork?, Prompt, Workflow, Data sources).
 
 ## Learning objectives
 
@@ -59,7 +58,7 @@ later) signed in with their workshop account (custom skills and browser tasks ar
 | 10 min | Welcome & context — what Cowork is, HR value, the approval model |
 | 10 min | **Copilot vs. Cowork** — the difference and when to use which |
 | 20 min | **Cowork UI walkthrough** + setup — New task, My tasks, Automations, Customize, sign in, copy data |
-| 25 min | **Exercise 1** — Executive Command Center (Nifty Fifty "Exec 01" scenario; approvals one at a time) |
+| 25 min | **Exercise 1** — Executive Command Center (interactive HTML dashboard; approvals one at a time) |
 | 20 min | **Exercise 2** — Research the web with Deep Research (cited briefing + Word/Excel scorecard) |
 | 10 min | Break |
 | 25 min | **Exercise 3** — Navigate websites with Cowork's browser (search and click through dol.gov and lni.wa.gov in Edge) |
@@ -85,7 +84,7 @@ later) signed in with their workshop account (custom skills and browser tasks ar
 | File | Formats | Purpose |
 | --- | --- | --- |
 | README | [.md](README.md) · [.docx](README.docx) | This overview |
-| [instructor-deck.pptx](instructor-deck.pptx) | pptx | Instructor deck (37 slides, speaker notes, alt text) built on the Copilot Cowork "Nifty Fifty" template — objectives, approvals, a scenario card + hands-on slide per exercise, an Output folder walkthrough, an HR plugins spotlight, and a knowledge check |
+| [instructor-deck.pptx](instructor-deck.pptx) | pptx | Instructor deck (45 slides, speaker notes, alt text) — a divider slide with a picture and progress tracker before each exercise, one PowerPoint section per exercise for quick navigation, objectives, approvals, a scenario card + hands-on slide per exercise, an Output folder walkthrough, an HR plugins spotlight, and a knowledge check |
 | readiness-checklist | [.md](readiness-checklist.md) · [.docx](readiness-checklist.docx) | Prep timeline, cost planning, whole-room Plan B, and setup for hosts + attendees |
 | seed-content | [.md](seed-content.md) · [.docx](seed-content.docx) | Ready-made Zava emails, meetings, and a Teams chat to seed attendee accounts (Exercise 1) |
 | facilitator-guide | [.md](facilitator-guide.md) · [.docx](facilitator-guide.docx) | Minute-by-minute run sheet, talking points, troubleshooting |
@@ -112,7 +111,8 @@ later) signed in with their workshop account (custom skills and browser tasks ar
 
 Every exercise uses the **Word and Excel** sample files. They work in both Cowork and Agent Builder
 (which doesn't accept .md or .csv). Download **[zava-sample-knowledge.zip](zava-sample-knowledge.zip)**
-to get all six at once, then upload them to OneDrive.
+to get all six at once, then upload them to a folder named **`ai_hr_cowork_workshop`** under
+**Documents** in your OneDrive (`Documents/ai_hr_cowork_workshop`); the prompts use that path.
 
 | File | Contents | Used in |
 | --- | --- | --- |
@@ -149,7 +149,7 @@ to get all six at once, then upload them to OneDrive.
 - ✅ Sample knowledge, instructions, prompt library, settings & models overview
 - ✅ Using **predefined skills** — Deep Research, Word, Excel, PowerPoint, Scheduling, Calendar,
   Communications, Daily Briefing (Exercises 2, 5, 6 & 7)
-- ✅ A **Nifty Fifty** scenario — the **Executive Command Center** (Exercise 1), which also saves
+- ✅ An **executive scenario** — the **Executive Command Center** (Exercise 1), which also saves
   itself as a skill and schedules itself
 - ✅ Creating at least one **custom skill** and **sharing** it (Exercises 1, 4 & 7)
 - ✅ Using the **browser / web** to get things done: **Deep Research** (Exercise 2) and Cowork **navigating
@@ -157,7 +157,7 @@ to get all six at once, then upload them to OneDrive.
 - ✅ Using **Automations** for recurring HR work (Exercises 1 & 7)
 - ✅ A **non-Cowork** finale: build a Policy Agent with **Copilot Agent Builder** (Exercise 8)
 - ✅ A talk-only **HR plugins spotlight** on **Customize → Plugins**, with a screenshot and benefits
-- ✅ Every exercise introduced with a **scenario card** (workbook + deck, on the Nifty Fifty template)
+- ✅ Every exercise introduced with a **scenario card** (workbook + deck)
 - ✅ **Learning objectives**, a verified **answer key**, **seed data**, a prep **timeline** with cost
   planning and **Plan B**, a **knowledge check**, and a **30-day adoption plan**
 - ✅ Broad HR-lifecycle focus: onboarding, policy/benefits, recruiting, communications, reporting
@@ -165,5 +165,6 @@ to get all six at once, then upload them to OneDrive.
 ---
 
 *Sample content depicts the fictional company "Zava" and is for training purposes only.
+Divider illustrations: [Fluent Emoji](https://github.com/microsoft/fluentui-emoji) by Microsoft (MIT License).
 Product capabilities and available models may vary by tenant and over time; confirm current
 behavior in your environment.*

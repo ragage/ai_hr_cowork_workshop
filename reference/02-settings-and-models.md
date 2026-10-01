@@ -56,7 +56,7 @@ conflict. Use sample 1 during the workshop.
 > communications. When you answer a policy or benefits question, cite the source document and add
 > "Policies can change — please confirm with HR." Save emails and messages as drafts for me to
 > review; during this workshop, never send anything to anyone but me. Use only the Zava sample files
-> in my OneDrive folder Documents/Cowork, and never include real employee personal data.
+> in my OneDrive folder Documents/ai_hr_cowork_workshop, and never include real employee personal data.
 
 **2. HR generalist / HR business partner**
 > I'm an HR business partner supporting {teams or business units}. Lead with the answer, then up to

@@ -88,7 +88,7 @@ adds up. Before the session:
 - [ ] I can see the **Cowork** toggle at the top (next to **Chat**).
 - [ ] I ran a smoke-test prompt in Cowork and got a response (e.g., *"Give me a one-sentence hello."*).
 - [ ] I copied the **sample-knowledge** files from the shared location into my **own OneDrive**
-      (e.g., `Documents/Cowork/`).
+      folder **Documents/ai_hr_cowork_workshop** (I created it in OneDrive → My files → Documents).
 - [ ] I set my **custom instructions**: **Customize → Preferences → Customize instructions for Cowork**
       (workbook Setup step D).
 - [ ] I'm on a **laptop/desktop** (custom skills aren't supported on mobile).
