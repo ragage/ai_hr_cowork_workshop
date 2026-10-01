@@ -228,10 +228,25 @@ you'd reuse.
    schedule if you prefer).
 6. Confirm the results: **Customize → Skills** shows *Executive Command Center*; **Automations →
    Manage schedules** shows the weekday run.
+7. **Check what the task cost.** In the same task, type **`/cost`** and send it. Cowork shows:
+   - the approximate **Copilot Credits this task has used so far** (a total for every action in the
+     task, not a line-by-line breakdown)
+   - how many credits **you've used this month**
+   - how many credits **remain** in your monthly limit
+
+   Running `/cost` doesn't use any credits. You can also open any earlier task from **My tasks** and
+   type `/cost` to see what it used.
+
+> **Good to know about cost:** `/cost` is an **estimate, not a bill**, and it may lag a few minutes
+> behind actions you just finished. You **can't check the cost before** a task runs, only after.
+> Monthly limits are set by your organization, reset on the 1st (00:00 UTC), and may be shared with
+> a group. The weekday schedule you just created **uses credits every time it runs**, so pause it
+> after class. Details: [Credit usage for Copilot Cowork tasks](https://learn.microsoft.com/microsoft-365/copilot/usage-based-billing-copilot-credits-cost).
 
 ✅ **Checkpoint:** An interactive **HTML command center** with the top summary and three views,
 opened from the **Output folder** and located in **OneDrive → Cowork**; a saved **Executive Command
-Center** skill; and a weekday schedule in **Automations** (or consciously skipped).
+Center** skill; a weekday schedule in **Automations** (or consciously skipped); and the task's credit
+usage from **`/cost`**.
 
 **Discuss:** Which recommendations would you trust? What would an **HR-leader** version track —
 open requisitions, employee-relations cases, policy deadlines?
@@ -634,6 +649,10 @@ once your admin adds them.*
 ---
 
 ## Exercise 8 — Build a Policy Agent with Copilot Agent Builder (20 min)
+
+> ⚠️ **This exercise is not Cowork.** You leave Cowork and use **Copilot Agent Builder** in
+> **Microsoft 365 Copilot → Create agent**. Agent Builder has its own **Describe / Configure /
+> Try it** screens; there are no Cowork tasks, side panel, approvals, or skills here.
 
 > **Scenario card — Ex 08 · HR Policy Agent** · Function: **Non-Cowork · Copilot Agent Builder**
 > - **Goal:** Stand up a reusable Q&A agent employees can chat with to get sourced policy answers.

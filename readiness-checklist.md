@@ -9,9 +9,10 @@
 
 | When | Owner | Do this |
 | --- | --- | --- |
+| **T − 4 to 6 weeks** | Account team + facilitator | **Customer preview meeting:** present [customer-preview-deck.pptx](customer-preview-deck.pptx), fill in its feedback capture slide with the customer, and agree on any changes to scenarios, data, format, and dates. |
 | **T − 3 weeks** | Host / admin | Confirm Microsoft 365 Copilot licenses and **usage-based billing** for the attendee tenant, create a **Cowork spending policy** for the attendee group, and turn on **Cowork Browsing** for that group. Estimate cost and set spend guardrails (see [Cost planning](#cost-planning)). Book the room and Wi-Fi. |
 | **T − 2 weeks** | Host / admin | Provision **~25 accounts + 2–3 spares**, assign managers, create the 2–3 **seed sender** accounts ([seed-content.md](seed-content.md)). Confirm the facilitator's own tenant is Cowork-ready. |
-| **T − 1 week** | Facilitator | **Full dry run** of all 8 exercises on a test attendee account, checking against the [answer key](facilitator-answer-key.md). Stage `zava-sample-knowledge.zip` in the shared Teams/SharePoint folder. Send attendees a joining note (bring a laptop, not a phone). |
+| **T − 1 week** | Facilitator | **Full dry run** of all 8 exercises on a test attendee account, checking against the [answer key](facilitator-answer-key.md). **Record a demo video of each exercise** in your facilitator tenant and insert it on that exercise's **Demo** slide in the deck. Stage `zava-sample-knowledge.zip` in the shared Teams/SharePoint folder. Send attendees a joining note (bring a laptop, not a phone). |
 | **T − 1 day** | Host / admin | Load the **seed emails, meetings, and Teams chat** into every account (1–2 days ahead, so the Exercise 1 command center sees them as this week). Sign in to 3 random accounts in **Edge** and run the smoke test **and** the Exercise 3 browser prompt (accept the consent notice). Print credential handouts and the [quick-reference card](quick-reference-card.docx). |
 | **Day of, T − 45 min** | Facilitator + proctors | Test the projector, Wi-Fi, and demo tenant. Open the deck, the answer key, and a ready Cowork session. Brief proctors on the [troubleshooting triage](facilitator-guide.md#troubleshooting-triage-hand-to-proctors). |
 | **Day after** | Host | **Pause or delete** Exercise 1 and 7 schedules (or have attendees do it), send the [after-the-workshop pack](after-the-workshop.md) and survey, and review usage and spend. |
@@ -33,6 +34,9 @@ adds up. Before the session:
   accounts shouldn't keep Cowork access.
 - **Reduce cost:** leave the model picker on **Let Cowork decide** and reasoning effort on the default
   unless an exercise calls for more.
+- **Track it during the day:** attendees type **`/cost`** in a task (taught at the end of Exercise 1)
+  to see the approximate credits it used and what's left of their monthly limit. For the official
+  totals, use the Copilot Credits reports in the Microsoft 365 admin center.
 
 ## Plan B — if Cowork is down for the whole room
 

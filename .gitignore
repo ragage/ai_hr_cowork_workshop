@@ -1,5 +1,9 @@
-# Build scratch folder (generator scripts are copied here temporarily)
+# Build scratch folder (icons, Word reference document, QA PDFs)
 .build/
+
+# Source PowerPoint template for the deck build (not distributed with the kit)
+tools/template.pptx
+__pycache__/
 
 # Office lock and temp files
 ~$*
