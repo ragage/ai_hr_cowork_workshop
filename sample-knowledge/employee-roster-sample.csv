@@ -1,0 +1,21 @@
+EmployeeID,Name,Department,Role,Location,StartDate,EmploymentType,ManagerID,PTOAllowance,PTOUsed
+1001,Avery Quinn,People & Culture,HR Manager,Seattle,2021-03-15,Full-time,,20,12
+1002,Jordan Lee,People & Culture,HR Coordinator,Seattle,2023-06-01,Full-time,1001,20,8
+1003,Sam Rivera,Engineering,Software Engineer,Remote,2022-01-10,Full-time,1010,20,15
+1004,Priya Nair,Engineering,Senior Engineer,Austin,2020-09-21,Full-time,1010,20,5
+1005,Chris Obi,Sales,Account Executive,Chicago,2023-02-13,Full-time,1011,20,18
+1006,Dana Kim,Sales,Sales Development Rep,Chicago,2024-01-08,Full-time,1011,20,4
+1007,Morgan Tate,Marketing,Marketing Specialist,Remote,2022-11-02,Full-time,1012,20,10
+1008,Ella Fischer,Finance,Financial Analyst,Seattle,2021-07-19,Full-time,1013,20,9
+1009,Noah Berg,Customer Support,Support Agent,Austin,2023-09-25,Full-time,1014,20,11
+1010,Riley Sato,Engineering,Engineering Manager,Seattle,2019-05-06,Full-time,1001,20,7
+1011,Casey Flores,Sales,Sales Manager,Chicago,2020-02-17,Full-time,1001,20,13
+1012,Taylor Brooks,Marketing,Marketing Manager,Remote,2021-10-11,Full-time,1001,20,6
+1013,Jamie Cole,Finance,Finance Manager,Seattle,2019-12-02,Full-time,1001,20,3
+1014,Alex Moreno,Customer Support,Support Lead,Austin,2022-04-14,Full-time,1001,20,16
+1015,Robin Shah,Engineering,Junior Engineer,Remote,2024-07-01,Full-time,1010,20,2
+1016,Lena Vogel,Marketing,Content Designer,Remote,2023-03-30,Part-time,1012,10,4
+1017,Diego Ramos,Sales,Account Executive,Chicago,2021-08-23,Full-time,1011,20,19
+1018,Hana Suzuki,People & Culture,Recruiter,Seattle,2022-06-15,Full-time,1001,20,8
+1019,Owen Wright,Customer Support,Support Agent,Austin,2024-02-05,Full-time,1014,20,3
+1020,Maya Patel,Finance,Payroll Specialist,Seattle,2020-11-30,Full-time,1013,20,10

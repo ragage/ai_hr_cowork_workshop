@@ -1,0 +1,10 @@
+# Build scratch folder (generator scripts are copied here temporarily)
+.build/
+
+# Office lock and temp files
+~$*
+*.tmp
+
+# OS files
+Thumbs.db
+.DS_Store
