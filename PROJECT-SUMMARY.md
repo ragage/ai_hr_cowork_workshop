@@ -34,8 +34,9 @@ exercise in Agent Builder.
   [10](reference/10-cowork-browser.md) browser use). Screenshots are in `reference/media/`.
 - **Example skill:** [skills/hr-policy-answer/SKILL.md](skills/hr-policy-answer/SKILL.md). Its Word
   copy sits outside the skill folder.
-- **Sample data:** `sample-knowledge/` holds the .docx/.xlsx files plus their editable .md/.csv
-  sources; `zava-sample-knowledge.zip` holds the six Word/Excel files.
+- **Sample data:** `zava-sample-knowledge.zip` holds the six Word/Excel files attendees use; their
+  editable .md/.csv sources are in `tools/zava-sample-data/` (`tools/make_office_samples.py` rebuilds
+  the zip).
 - **Other outputs:** `instructor-deck.pptx` (54 slides), `quick-reference-card.docx`, and a `.docx`
   copy of every guide (19 in total).
 - **Deck flow per exercise:** divider → scenario card → **Demo** slide (empty media placeholder for a

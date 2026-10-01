@@ -25,7 +25,7 @@ PLUM, INK, BLUE, MUTED = "3B1041", "242424", "0F6CBD", "616161"
 TOC_DOCS = {"participant-workbook.md", "facilitator-guide.md", "facilitator-answer-key.md",
             "readiness-checklist.md", "README.md"}
 # Maintainer-only files that don't get a Word copy.
-SKIP_DIRS = {".build", ".git", "sample-knowledge", "tools"}
+SKIP_DIRS = {".build", ".git", "tools"}
 SKIP_FILES = {"PROJECT-SUMMARY.md"}
 
 SOURCES = sorted(p for p in ROOT.rglob("*.md")

@@ -1,5 +1,10 @@
-"""Convert the Zava sample files to Agent Builder-friendly .docx / .xlsx copies."""
+"""Build zava-sample-knowledge.zip: Agent Builder-friendly .docx / .xlsx copies of the Zava sample files.
+
+Sources are the editable .md / .csv files in tools/zava-sample-data. The Word and Excel files are
+written to KIT_BUILD (default .build in the repo root) and zipped to the repo root.
+"""
 import csv
+import os
 import pathlib
 import re
 import zipfile
@@ -14,7 +19,9 @@ from openpyxl.styles import Alignment, Font
 from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.table import Table, TableStyleInfo
 
-SRC = pathlib.Path(__file__).resolve().parent.parent / "sample-knowledge"
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+SRC = ROOT / "tools" / "zava-sample-data"
+OUT = pathlib.Path(os.environ.get("KIT_BUILD", ROOT / ".build")) / "zava-sample-knowledge"
 INK = RGBColor(0x24, 0x24, 0x24)
 ACCENT = RGBColor(0x3B, 0x10, 0x41)
 INLINE = re.compile(r"(\*\*[^*]+\*\*|`[^`]+`|\*[^*\s][^*]*\*|_[^_\s][^_]*_)")
@@ -114,7 +121,7 @@ def md_to_docx(md_path):
         i += 1
     doc.core_properties.title = title or md_path.stem
     doc.core_properties.author = "Zava HR (fictional sample)"
-    out = md_path.with_suffix(".docx")
+    out = OUT / (md_path.stem + ".docx")
     doc.save(out)
     return out
 
@@ -139,19 +146,22 @@ def csv_to_xlsx(csv_path, sheet):
     ws.add_table(tbl)
     ws.freeze_panes = "A2"
     wb.properties.title = sheet
-    out = csv_path.with_suffix(".xlsx")
+    out = OUT / (csv_path.stem + ".xlsx")
     wb.save(out)
     return out
 
 
+OUT.mkdir(parents=True, exist_ok=True)
+for stale in list(OUT.glob("*.docx")) + list(OUT.glob("*.xlsx")):
+    stale.unlink()
 for name in ("employee-handbook-excerpt", "benefits-summary", "onboarding-checklist", "job-description-sample"):
     print("docx:", md_to_docx(SRC / (name + ".md")).name)
 print("xlsx:", csv_to_xlsx(SRC / "employee-roster-sample.csv", "Roster").name)
 print("xlsx:", csv_to_xlsx(SRC / "hr-tickets-sample.csv", "Tickets").name)
 
-ZIP = SRC.parent / "zava-sample-knowledge.zip"
+ZIP = ROOT / "zava-sample-knowledge.zip"
 with zipfile.ZipFile(ZIP, "w", zipfile.ZIP_DEFLATED) as z:
-    for f in sorted(list(SRC.glob("*.docx")) + list(SRC.glob("*.xlsx"))):
+    for f in sorted(list(OUT.glob("*.docx")) + list(OUT.glob("*.xlsx"))):
         z.write(f, f.name)
         print("zip:", f.name)
 print("saved", ZIP.name)
