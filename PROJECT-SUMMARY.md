@@ -24,10 +24,12 @@ exercise in Agent Builder.
 
 ## Architecture
 
-- **Guides:** [README.md](README.md), [participant-workbook.md](participant-workbook.md),
-  [facilitator-guide.md](facilitator-guide.md), [facilitator-answer-key.md](facilitator-answer-key.md),
-  [readiness-checklist.md](readiness-checklist.md), [seed-content.md](seed-content.md),
-  [after-the-workshop.md](after-the-workshop.md).
+- **Guides:** [README.md](README.md), [participant-workbook.md](participants/participant-workbook.md),
+  [facilitator-guide.md](instructor/facilitator-guide.md),
+  [facilitator-answer-key.md](instructor/facilitator-answer-key.md),
+  [readiness-checklist.md](instructor/readiness-checklist.md),
+  [seed-content.md](instructor/seed-content.md),
+  [after-the-workshop.md](participants/after-the-workshop.md).
 - **Reference pages:** `reference/00`–`10`
   ([02](reference/02-settings-and-models.md) holds the sample custom instructions,
   [09](reference/09-plugins.md) the plugins spotlight with the SuccessFactors note,
@@ -37,12 +39,13 @@ exercise in Agent Builder.
 - **Sample data:** `zava-sample-knowledge.zip` holds the six Word/Excel files attendees use; their
   editable .md/.csv sources are in `tools/zava-sample-data/` (`tools/make_office_samples.py` rebuilds
   the zip).
-- **Other outputs:** `instructor-deck.pptx` (54 slides), `quick-reference-card.docx`, and a `.docx`
+- **Other outputs:** `instructor/instructor-deck.pptx` (54 slides),
+  `participants/quick-reference-card.docx`, and a `.docx`
   copy of every guide (19 in total).
 - **Deck flow per exercise:** divider → scenario card → **Demo** slide (empty media placeholder for a
   recorded run) → hands-on. Exercise 1 adds the Output folder and **`/cost`** slides; Exercise 8 carries
   a red **Not Cowork** banner on its divider, card, and demo slide.
-- **Customer preview deck:** `customer-preview-deck.pptx` (17 slides) for a pre-sales or pre-delivery
+- **Customer preview deck:** `instructor/customer-preview-deck.pptx` (17 slides) for a pre-sales or pre-delivery
   meeting: overview, agenda, exercises, safety, takeaways, prerequisites, cost, feedback questions,
   tailoring options, a feedback capture table, and next steps. Built from scratch by
   `tools/build_preview_deck.py` (no template), reusing the exercise text in `tools/content.py`.
@@ -148,7 +151,7 @@ Requirements:
   `.docx`, and scans the .md files and the XML inside the Office files for the old title, the old
   sample folder (except `/skills`), and the extra terms. Expect "OK".
 - **Live:** a dry run in the tenant with one attendee account, compared against
-  [facilitator-answer-key.md](facilitator-answer-key.md).
+  [facilitator-answer-key.md](instructor/facilitator-answer-key.md).
 
 ## Remaining Work
 
@@ -174,7 +177,7 @@ Requirements:
 - The `{placeholders}` in the Word copies looked like parentheses in a low-resolution render; confirm in
   Word.
 - Schedules from Exercises 1 and 7 keep costing money until paused.
-- Rebuilding the deck replaces `instructor-deck.pptx`, so any videos inserted into it are lost; keep the
+- Rebuilding the deck replaces `instructor/instructor-deck.pptx`, so any videos inserted into it are lost; keep the
   facilitator copy with videos separately.
 - After the October 1, 2026 Office update, Word on the authoring machine got slow and could hang on
   quit after the editing pass in `finalize_word.ps1`. If it stalls after listing all 19 documents,

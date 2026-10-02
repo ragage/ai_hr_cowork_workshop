@@ -5,7 +5,7 @@ feedback before delivery. Standalone (no template needed); exercise text comes f
 Environment variables (all optional):
   PREVIEW_CUSTOMER  customer name on the title slide (default "[Customer name]")
   PREVIEW_DATE      meeting date on the title slide (default "[Date]")
-  PREVIEW_OUT       output path (default customer-preview-deck.pptx in the repo root)
+  PREVIEW_OUT       output path (default instructor/customer-preview-deck.pptx)
   KIT_BUILD         scratch folder (default .build in the repo root)
 """
 import os
@@ -25,11 +25,12 @@ from content import EXERCISES
 TOOLS = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(TOOLS)
 BUILD = os.environ.get("KIT_BUILD", os.path.join(ROOT, ".build"))
-OUT = os.environ.get("PREVIEW_OUT", os.path.join(ROOT, "customer-preview-deck.pptx"))
+OUT = os.environ.get("PREVIEW_OUT", os.path.join(ROOT, "instructor", "customer-preview-deck.pptx"))
 CUSTOMER = os.environ.get("PREVIEW_CUSTOMER", "[Customer name]")
 DATE = os.environ.get("PREVIEW_DATE", "[Date]")
 KIT = "Getting Things Done with Copilot Cowork for HR Tasks"
 os.makedirs(BUILD, exist_ok=True)
+os.makedirs(os.path.dirname(os.path.abspath(OUT)), exist_ok=True)
 
 INK, SUB, LINE, WHITE = "242424", "616161", "D1D1D1", "FFFFFF"
 PLUM, PURPLE, PILL, PANEL, CARD = "341434", "8064A2", "F3E5FD", "FFF9FD", "FFFCFD"

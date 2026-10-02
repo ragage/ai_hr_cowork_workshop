@@ -1,4 +1,4 @@
-"""Scenario-card content for the instructor deck (mirrors participant-workbook.md)."""
+"""Scenario-card content for the instructor deck (mirrors participants/participant-workbook.md)."""
 
 GUIDE_CARD = dict(
     pill="Guide", title="How to read an exercise card", function="Every exercise", tag_label="Format",
@@ -218,7 +218,7 @@ EXERCISES = [
                    "out-of-scope questions.",
         stretch="Add a rule to link to the HR portal whenever a change requires a form.",
         notes_card="EXERCISE 4 CARD (2:00-2:30, 30 min) - CENTERPIECE. SAY: 'In Ex 1 a skill was saved for you from a prompt. Now you build one on purpose and Cowork grades it.' Explain why a skill beats re-typing instructions: same format, sources, and guardrails every time. Scoring bands: Excellent 85+, Good 70-84, Needs work 50-69, Poor <50.",
-        notes_hands="EXERCISE 4 HANDS-ON. DO: build it live from Customize -> Skills -> Add -> Create new; paste the instructions; read the evaluation ALOUD and name the four dimensions (trigger clarity, instruction specificity, scope boundaries, robustness). Then test both questions. WATCH FOR: the skill triggering WITHOUT being named; Answer -> Details -> Source -> confirm-with-HR; the salary question declined. IF STUCK: 'Needs work' -> tighten trigger wording and the out-of-scope list; wrong facts -> check the two file names in the instructions match their OneDrive. Keep skills 'Only you'. Answer key: facilitator-answer-key.md and skills/hr-policy-answer/SKILL.md. NEXT: 'This skill helps YOU. In Ex 8 we build an agent that helps OTHERS.'",
+        notes_hands="EXERCISE 4 HANDS-ON. DO: build it live from Customize -> Skills -> Add -> Create new; paste the instructions; read the evaluation ALOUD and name the four dimensions (trigger clarity, instruction specificity, scope boundaries, robustness). Then test both questions. WATCH FOR: the skill triggering WITHOUT being named; Answer -> Details -> Source -> confirm-with-HR; the salary question declined. IF STUCK: 'Needs work' -> tighten trigger wording and the out-of-scope list; wrong facts -> check the two file names in the instructions match their OneDrive. Keep skills 'Only you'. Answer key: instructor/facilitator-answer-key.md and skills/hr-policy-answer/SKILL.md. NEXT: 'This skill helps YOU. In Ex 8 we build an agent that helps OTHERS.'",
     ),
     dict(
         num=5, pill="Ex 05", title="Recruiting + Reporting", short="Recruiting + Reporting",

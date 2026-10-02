@@ -79,7 +79,7 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
 ### Copilot vs. Cowork (0:10–0:20)
 - The key framing for the whole day: **Copilot (Chat) = AI assistant** (you ask, it answers, you
   drive); **Cowork = AI coworker** (you describe an outcome, it does the multi-step work and hands
-  back a deliverable). See [reference/00-copilot-vs-cowork.md](reference/00-copilot-vs-cowork.md).
+  back a deliverable). See [reference/00-copilot-vs-cowork.md](../reference/00-copilot-vs-cowork.md).
 - Use one HR example of each: Chat *"summarize this policy in 3 bullets"* vs. Cowork *"draft welcome
   emails for all 4 new hires from our onboarding checklist and save them as drafts."*
 - Land the rule of thumb: several steps ending in a file/email/schedule/report → **Cowork**; a quick
@@ -90,7 +90,7 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
   **New task** (the "What can I do for you?" home — Start a task box, model picker, reasoning effort,
   attach, "Try these next"), **My tasks** (resume past work), **Automations** (Runs / Manage
   schedules), **Customize** (custom instructions, skills, plugins). See
-  [reference/07-cowork-ui-walkthrough.md](reference/07-cowork-ui-walkthrough.md).
+  [reference/07-cowork-ui-walkthrough.md](../reference/07-cowork-ui-walkthrough.md).
 - Point out the **session side panel** (skills chips, files, schedule) — you'll refer back to it all day.
 - Then have everyone **sign in in Microsoft Edge**, check their **Edge profile** is the workshop account
   (needed for the Ex 3 browser task), run the **smoke test**, **copy the sample files** into their own
@@ -170,7 +170,7 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
   **T-2008** is time-sensitive. Remind the room: a policy check, not legal advice.
 - **3b** turns the table into a Word brief for payroll; they find it in the **Output folder**.
 - **Requirements** (host; see the [readiness checklist](readiness-checklist.md) and
-  [reference/10-cowork-browser.md](reference/10-cowork-browser.md)): browser access allowed for the
+  [reference/10-cowork-browser.md](../reference/10-cowork-browser.md)): browser access allowed for the
   attendee group, Edge 152 or later, Cowork open **in Edge on the web**, an Edge profile signed in
   with the **workshop account** (not InPrivate), and the Edge **Cowork** setting on. Anyone blocked
   follows your demo.
@@ -234,7 +234,7 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
   yet (checked Oct 1, 2026). Point to the **Employee Self-Service agent** with its SAP SuccessFactors
   extension pack (a Copilot agent, not a Cowork plugin), or a **custom plugin** with an MCP connector
   built by IT. Re-check the catalog link before each delivery; it keeps growing.
-- Walk the **T-2008 payroll example** from [reference/09-plugins.md](reference/09-plugins.md): with a
+- Walk the **T-2008 payroll example** from [reference/09-plugins.md](../reference/09-plugins.md): with a
   payroll plugin, Cowork joins the ticket spreadsheet with live payroll data, then waits for approval.
 - Land the benefits: fewer copy-and-paste hand-offs between systems; consistent answers across the
   team; **governed by IT** (approval, deployment, Purview audit logs); **no extra access** (each
@@ -248,7 +248,7 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
   Copilot Agent Builder** banner. Attendees close their Cowork task and work in Agent Builder, which
   has no tasks, side panel, approvals, or skills.
 - Step **outside Cowork**: open Microsoft 365 Copilot → **Create agent** and build the **HR Policy
-  Agent** live. See [reference/08-agent-builder-policy-agent.md](reference/08-agent-builder-policy-agent.md).
+  Agent** live. See [reference/08-agent-builder-policy-agent.md](../reference/08-agent-builder-policy-agent.md).
 - Make the skill-vs-agent distinction explicit: the Ex 4 skill helps **you**; this **agent** is a
   standalone helper **others** can chat with in Copilot.
 - Walk the **Describe → Configure → Try it** tabs; add the Zava HR docs as **knowledge**; test a
@@ -263,13 +263,13 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
   (stand up a reusable helper).
 - Remind everyone to **pause or delete the Exercise 1 and Exercise 7 schedules** if they don't want
   them to keep running.
-- Recap the five golden rules from [reference/06-responsible-use.md](reference/06-responsible-use.md).
-- Point to the [prompt library](reference/04-prompt-library.md) as their takeaway.
+- Recap the five golden rules from [reference/06-responsible-use.md](../reference/06-responsible-use.md).
+- Point to the [prompt library](../reference/04-prompt-library.md) as their takeaway.
 - Run a **quick knowledge check** as a show of hands (deck slide: pick 2–3 of the 4 questions;
-  questions and answers in [after-the-workshop.md](after-the-workshop.md)), then revisit the learning
+  questions and answers in [after-the-workshop.md](../participants/after-the-workshop.md)), then revisit the learning
   objectives.
 - Have them name one task they'll try in real work next week.
-- **Next day:** send [after-the-workshop.md](after-the-workshop.md) (full knowledge check, feedback
+- **Next day:** send [after-the-workshop.md](../participants/after-the-workshop.md) (full knowledge check, feedback
   survey, and 30-day adoption plan).
 
 ## Troubleshooting triage (hand to proctors)
@@ -309,7 +309,7 @@ order** if you're behind. Never cut Ex 4 or the core of Ex 8.
 | **3:35** | Starting Ex 8 | Run Ex 8 as a facilitator demo; attendees build it after class |
 
 **Fast room?** Use the **Stretch** prompts, or have early finishers try a prompt from the
-[prompt library](reference/04-prompt-library.md).
+[prompt library](../reference/04-prompt-library.md).
 
 ## Pacing tips for ~25 people
 

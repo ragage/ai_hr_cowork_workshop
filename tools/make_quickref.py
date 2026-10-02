@@ -9,12 +9,13 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
 
-OUT = str(pathlib.Path(__file__).resolve().parent.parent / "quick-reference-card.docx")
+OUT = str(pathlib.Path(__file__).resolve().parent.parent / "participants" / "quick-reference-card.docx")
 PLUM = RGBColor(0x3B, 0x10, 0x41)
 INK = RGBColor(0x24, 0x24, 0x24)
 MUTED = RGBColor(0x61, 0x61, 0x61)
 
 doc = Document()
+pathlib.Path(OUT).parent.mkdir(parents=True, exist_ok=True)
 sec = doc.sections[0]
 sec.orientation = WD_ORIENT.LANDSCAPE
 sec.page_width, sec.page_height = Inches(11), Inches(8.5)

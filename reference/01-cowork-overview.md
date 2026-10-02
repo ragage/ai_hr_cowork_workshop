@@ -94,4 +94,4 @@ treat every Cowork output as a **draft to review before it's used**.
 - *(Optional)* Enrollment in the **Frontier** program — only needed for the built-in **App** skill,
   which is awareness-only in this workshop.
 
-See [readiness-checklist.md](../readiness-checklist.md) for the full pre-workshop setup.
+See [readiness-checklist.md](../instructor/readiness-checklist.md) for the full pre-workshop setup.

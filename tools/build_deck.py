@@ -23,13 +23,14 @@ ROOT = os.path.dirname(TOOLS)
 BUILD = os.environ.get("KIT_BUILD", os.path.join(ROOT, ".build"))
 # The source template is not in the repo; point DECK_TEMPLATE at a local copy or save it as tools/template.pptx.
 TEMPLATE = os.environ.get("DECK_TEMPLATE", os.path.join(TOOLS, "template.pptx"))
-OUT = os.environ.get("DECK_OUT", os.path.join(ROOT, "instructor-deck.pptx"))
+OUT = os.environ.get("DECK_OUT", os.path.join(ROOT, "instructor", "instructor-deck.pptx"))
 UI_SHOT = os.environ.get("DECK_UI_SHOT", os.path.join(TOOLS, "assets", "cowork-home.png"))
 MEDIA = os.path.join(ROOT, "reference", "media")
 for _label, _path in (("DECK_TEMPLATE", TEMPLATE), ("DECK_UI_SHOT", UI_SHOT)):
     if not os.path.isfile(_path):
         raise SystemExit(f"{_label}: file not found: {_path}")
 os.makedirs(BUILD, exist_ok=True)
+os.makedirs(os.path.dirname(os.path.abspath(OUT)), exist_ok=True)
 R_NS = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
 P14 = "http://schemas.microsoft.com/office/powerpoint/2010/main"
 
@@ -762,8 +763,8 @@ band(s, 0.55, 5.2, 12.23, 1.55,
 notes(s, "SETUP (part of 0:20-0:40). Whole room: sign in + smoke test, then download zava-sample-knowledge.zip, "
          "extract, and upload the six Word and Excel files to their own OneDrive. Show how to attach "
          "a file: + -> Attach cloud files, or type /. EDGE PROFILE CHECK: the browser task in Ex 3 runs in the Edge profile signed in with the workshop account; anyone in their own corporate profile adds a new Edge profile now (not InPrivate). Attendees share ONE tenant; YOU are on a "
-         "SEPARATE tenant. Proctors triage; anyone blocked follows your demo. readiness-checklist.md has "
-         "the triage, and seed-content.md has the seed data for Exercises 1 and 2.")
+         "SEPARATE tenant. Proctors triage; anyone blocked follows your demo. instructor/readiness-checklist.md has "
+         "the triage, and instructor/seed-content.md has the seed data for Exercises 1 and 2.")
 
 # 6b — Setup: custom instructions
 CI_SHOT = os.path.join(MEDIA, "customize-instructions.png")
@@ -1165,21 +1166,21 @@ mark_section("Close")
 s = white_slide("Facilitation & troubleshooting", "For instructors \u2014 skip live or use during a break.")
 wcard(s, 0.55, 1.6, 5.98, 3.35, BLUE, "KEEP 25 PEOPLE TOGETHER",
       bullets(["1 facilitator + 1\u20132 floaters", "Use each hands-on slide\u2019s **checkpoint** to sync",
-               "Load **seed-content.md** within 24 h of the session", "Check results with the **answer key**", "Watch the clock: **time checks** at each break"], size=14))
+               "Load **instructor/seed-content.md** within 24 h of the session", "Check results with the **answer key**", "Watch the clock: **time checks** at each break"], size=14))
 wcard(s, 6.8, 1.6, 5.98, 3.35, PURPLE, "COMMON BLOCKERS",
       bullets(["No Cowork toggle \u2192 spare licensed account", "Acted without asking \u2192 revoke in side panel **Permissions**",
                "Empty dashboard \u2192 expected; show your demo", "No browser task \u2192 Edge, signed in as the workshop account", "Agent ignores files \u2192 wait for \u201cPreparing\u201d, then refresh"], size=14))
 band(s, 0.55, 5.25, 12.23, 1.5,
-     "**Fallback:** anyone blocked follows your demo, using **facilitator-answer-key.md**. Whole room down? Stop after "
-     "10 minutes and switch to **Plan B** (readiness-checklist.md). Running long? Use the time checks in the facilitator guide.",
+     "**Fallback:** anyone blocked follows your demo, using **instructor/facilitator-answer-key.md**. Whole room down? Stop after "
+     "10 minutes and switch to **Plan B** (instructor/readiness-checklist.md). Running long? Use the time checks in the facilitator guide.",
      fill=PLUM, color="FFFFFF", size=14)
 notes(s, "FACILITATION. Biggest risks with ~25 people: pace variance, account readiness, and sparse data in new "
-         "accounts (Ex 1, fixed by seed-content.md). Attendees share one tenant; you're on a separate one. "
-         "Mirrors facilitator-guide.md, facilitator-answer-key.md, and readiness-checklist.md (timeline, cost "
+         "accounts (Ex 1, fixed by instructor/seed-content.md). Attendees share one tenant; you're on a separate one. "
+         "Mirrors instructor/facilitator-guide.md, instructor/facilitator-answer-key.md, and instructor/readiness-checklist.md (timeline, cost "
          "planning, Plan B). Time checks: 0:40 Ex 1, 1:25 break, 2:00 Ex 4, 2:45 break, 3:15 Ex 7, 3:35 Ex 8; cut in that order (shorter breaks, demo the Ex 3 scorecard, 6a + 6c only, 7a only, Ex 8 as a demo). Never cut Ex 4.")
 
 # Knowledge check
-s = white_slide("Quick knowledge check", "Show of hands \u2014 answers in after-the-workshop.md.")
+s = white_slide("Quick knowledge check", "Show of hands \u2014 answers in participants/after-the-workshop.md.")
 KC = [("1", "You need a 3-bullet summary of one policy. Which tool?", "Copilot Chat", BLUE),
       ("2", "Cowork shows **Approve All (5)**. What happens if you click it?", "All five run, with no individual review", PURPLE),
       ("3", "Why can\u2019t you add **.md** files as Agent Builder knowledge?", "Unsupported \u2014 use .docx, .pdf, or .xlsx", GREEN),
@@ -1196,7 +1197,7 @@ band(s, 0.55, 5.9, 12.23, 0.85,
      size=13)
 notes(s, "KNOWLEDGE CHECK (start of wrap-up). Read each question, take a show of hands, THEN reveal the answer (the "
          "right column; consider covering it or using an animation). Then return to the six learning objectives. "
-         "The full 8-question check, feedback survey, and 30-day adoption plan are in after-the-workshop.md; send "
+         "The full 8-question check, feedback survey, and 30-day adoption plan are in participants/after-the-workshop.md; send "
          "it the next day.")
 
 # Wrap-up

@@ -93,7 +93,7 @@ what you can use Cowork with.
 
 | Week | Focus | Try this |
 | --- | --- | --- |
-| **1** | Daily habit | Check your **Executive Command Center** each morning, or try the **Organize my inbox** prompt from the [prompt library](reference/04-prompt-library.md). Approve one action at a time. |
+| **1** | Daily habit | Check your **Executive Command Center** each morning, or try the **Organize my inbox** prompt from the [prompt library](../reference/04-prompt-library.md). Approve one action at a time. |
 | **2** | Your recurring question | Rebuild your **HR Policy Answer** skill on your organization's **real, approved** policy documents, then test in-scope and out-of-scope questions. |
 | **3** | Put a report on a schedule | Turn one weekly report you rebuild by hand (ticket volume, open reqs, onboarding status) into an **Automation**. Use **Activate and run now** to test it. |
 | **4** | Share and measure | Share your best skill with **one** teammate (with your manager's OK), and note the time saved across the month. |
@@ -109,7 +109,7 @@ what you can use Cowork with.
   rows and a 1–5 anchored scale."
 
 ### Where to go next
-- The kit's [prompt library](reference/04-prompt-library.md) and [custom skill guide](reference/05-custom-skill-guide.md)
+- The kit's [prompt library](../reference/04-prompt-library.md) and [custom skill guide](../reference/05-custom-skill-guide.md)
 - Microsoft Learn: [Use Copilot Cowork](https://learn.microsoft.com/microsoft-365/copilot/cowork/use-cowork)
   and [Agent Builder overview](https://learn.microsoft.com/microsoft-365/copilot/extensibility/agent-builder)
 

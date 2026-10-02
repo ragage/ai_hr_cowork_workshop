@@ -41,7 +41,7 @@ Builder**.
    Exercise 3; Chrome works for everything else).
 2. At the top, select **Cowork** (next to **Chat**).
 3. In the chat input, type: *"Give me a one-sentence hello and tell me today's date."* Send it.
-   - ✅ **Checkpoint:** You get a response. If not, tell a proctor — see the [readiness checklist](readiness-checklist.md).
+   - ✅ **Checkpoint:** You get a response. If not, tell a proctor — see the [readiness checklist](../instructor/readiness-checklist.md).
 4. **Edge profile check (for Exercise 3):** in Edge, select your profile picture at the top left.
    It must show the **workshop account**. If it shows your own work or personal account, select
    **Add profile → Sign in** with the workshop account and use that window all day. (InPrivate and
@@ -89,14 +89,14 @@ The left navigation has four places you'll use today:
 - **Customize** — custom instructions, your personal skills, and plugins (more in the plugins
   spotlight before Exercise 8).
 
-See [reference/07-cowork-ui-walkthrough.md](reference/07-cowork-ui-walkthrough.md) for the full tour.
+See [reference/07-cowork-ui-walkthrough.md](../reference/07-cowork-ui-walkthrough.md) for the full tour.
 
 ### D. Customize instructions for Cowork (3 min)
 Custom instructions are guidance Cowork **automatically adds to the start of every task**, so you
 don't have to repeat your tone, format, or rules in each prompt. Set them once now and they apply
 to every exercise today.
 
-![The "Customize instructions for Cowork" card: Give Cowork guidance that is automatically added to the start of every task.](reference/media/customize-instructions.png)
+![The "Customize instructions for Cowork" card: Give Cowork guidance that is automatically added to the start of every task.](../reference/media/customize-instructions.png)
 
 1. In the left navigation, select **Customize**, then the **Preferences** tab.
 2. Select **Customize instructions for Cowork** (the card above).
@@ -121,7 +121,7 @@ to every exercise today.
 | **Employee communications** | *For messages to all employees: aim for an 8th-grade reading level, open with what's changing and when, then what employees need to do, then where to get help ({HR help mailbox}). Keep subject lines under eight words, and offer a shorter Teams version too.* |
 
 Full set, including formatting preferences you can add to any of them:
-[reference/02-settings-and-models.md](reference/02-settings-and-models.md#sample-custom-instructions-to-paste).
+[reference/02-settings-and-models.md](../reference/02-settings-and-models.md#sample-custom-instructions-to-paste).
 
 > **Good to know:** instructions are **personal** to your account (your neighbors in the shared tenant
 > don't see them). They support rich text, and you can type **/** to reference a skill, file, person,
@@ -138,7 +138,7 @@ consequential in a website — and shows an approval dialog. You'll meet these a
 > options → Always allow**. **Don't use Approve All or Always allow today**: one click would skip every
 > remaining checkpoint and could bulk-send or bulk-change things. Clicked one by mistake? Revoke it in the
 > side panel's **Permissions** section. Details:
-> [How approvals work](reference/07-cowork-ui-walkthrough.md#how-approvals-work-read-this-before-exercise-1).
+> [How approvals work](../reference/07-cowork-ui-walkthrough.md#how-approvals-work-read-this-before-exercise-1).
 
 ---
 
@@ -347,7 +347,7 @@ to pick; ask for something that needs a website and Cowork opens the browser its
 >   window.
 > - In Edge, open **Settings**, search for **Cowork**, and make sure **Allow Cowork to take actions on
 >   your behalf** is on (it may be greyed out if your organization manages it).
-> - Not working? See [reference/10-cowork-browser.md](reference/10-cowork-browser.md), tell a proctor,
+> - Not working? See [reference/10-cowork-browser.md](../reference/10-cowork-browser.md), tell a proctor,
 >   and follow the facilitator's demo.
 
 ### Task 3a — Navigate two websites
@@ -413,7 +413,7 @@ any personal information.
 > - **You'll learn:** How to **write, evaluate, and test a custom skill**, including clear triggers
 >   and scope limits.
 
-Full background: [reference/05-custom-skill-guide.md](reference/05-custom-skill-guide.md). You saved
+Full background: [reference/05-custom-skill-guide.md](../reference/05-custom-skill-guide.md). You saved
 a skill *from a prompt* in Exercise 1 — here you use the **guided** flow and read the evaluation.
 
 ### Build it (guided Customize page)
@@ -457,7 +457,7 @@ tenant, keep it **"Only you"** (recommended) so the room doesn't fill up with 25
 do share to **specific users**, add your **initials** to the skill name first to avoid collisions.
 
 > Compare your result with the reference skill in
-> [skills/hr-policy-answer/SKILL.md](skills/hr-policy-answer/SKILL.md).
+> [skills/hr-policy-answer/SKILL.md](../skills/hr-policy-answer/SKILL.md).
 
 ---
 
@@ -617,7 +617,7 @@ You've packaged your own work as a **skill** and put it on a **schedule**. **Plu
 further, into the **HR systems you already use**: payroll, recruiting, scheduling, or your HR
 system. This is a short talk by the facilitator; there's nothing to do on your own screen.
 
-![The Cowork Customize page with the Plugins tab selected, showing installed plugins with on/off toggles.](reference/media/customize-plugins.png)
+![The Cowork Customize page with the Plugins tab selected, showing installed plugins with on/off toggles.](../reference/media/customize-plugins.png)
 
 *Customize → Plugins (screenshot: Microsoft Learn). HR plugins appear in the same **Installed** list
 once your admin adds them.*
@@ -634,7 +634,7 @@ once your admin adds them.*
 - **⭐ SAP SuccessFactors?** No SuccessFactors plugin is in the Cowork catalog yet. Today, use the
   **Employee Self-Service agent** with its SAP SuccessFactors extension pack, or have IT build a
   **custom plugin** with an MCP connector. Details in
-  [reference/09-plugins.md](reference/09-plugins.md#hr-plugins-you-can-use-today).
+  [reference/09-plugins.md](../reference/09-plugins.md#hr-plugins-you-can-use-today).
 - **Imagine:** "Which open tickets in `hr-tickets-sample.xlsx` are payroll issues? Check each
   employee's latest pay run and draft a reply." With a payroll plugin, Cowork answers T-2008 from the
   spreadsheet **and** live payroll data, then waits for your approval.
@@ -644,7 +644,7 @@ once your admin adds them.*
 
 > Don't add or upload plugins in the shared workshop tenant; most plugins need admin approval.
 > Details, the full example, and how IT can build an HR plugin:
-> [reference/09-plugins.md](reference/09-plugins.md).
+> [reference/09-plugins.md](../reference/09-plugins.md).
 
 ---
 
@@ -670,7 +670,7 @@ once your admin adds them.*
 
 Step **outside Cowork** and build a **reusable, shareable agent** with **Copilot Agent Builder**.
 Background & the skill-vs-agent comparison:
-[reference/08-agent-builder-policy-agent.md](reference/08-agent-builder-policy-agent.md).
+[reference/08-agent-builder-policy-agent.md](../reference/08-agent-builder-policy-agent.md).
 
 > **Why this, after a custom skill?** Your Ex 4 skill helps **you** in your own Cowork sessions. An
 > **agent** is a standalone helper **other people** can use directly. Same no-code spirit, different
@@ -731,8 +731,8 @@ prompt for new hires.
   **agent** — all no-code.
 - Remember the difference: **Copilot Chat** for quick answers, **Cowork** to get multi-step work
   done, and **Agent Builder** to stand up a helper others can use.
-- Keep the **prompt library** ([reference/04-prompt-library.md](reference/04-prompt-library.md)) handy.
-- Remember the golden rules ([reference/06-responsible-use.md](reference/06-responsible-use.md)):
+- Keep the **prompt library** ([reference/04-prompt-library.md](../reference/04-prompt-library.md)) handy.
+- Remember the golden rules ([reference/06-responsible-use.md](../reference/06-responsible-use.md)):
   **draft, review, approve at checkpoints, cite and confirm, no real PII in practice.**
 - **Before you leave:** pause or delete the schedules you created in Exercises 1 and 7
   (**Automations → Manage schedules**).
@@ -740,7 +740,7 @@ prompt for new hires.
   check, a short survey, and a 30-day plan to make this a habit.
 
 ### If you get stuck
-- Cowork toggle missing or no response → [readiness checklist](readiness-checklist.md), then a proctor.
+- Cowork toggle missing or no response → [readiness checklist](../instructor/readiness-checklist.md), then a proctor.
 - Naming clashes when sharing a skill → keep skills **"Only you"** or add your initials to the name
   (everyone's in the same tenant).
 - Finished early → try the **Stretch** prompts above.
