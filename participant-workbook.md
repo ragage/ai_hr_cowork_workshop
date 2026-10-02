@@ -52,12 +52,14 @@ The facilitator will point you to **`zava-sample-knowledge.zip`** (shared in you
 Teams/SharePoint folder). Put the files in a workshop folder in your **own** OneDrive:
 
 1. **Download** `zava-sample-knowledge.zip` and **extract** it on your laptop (right-click → **Extract
-   All**).
+   All**). Inside is a folder named **`ai_hr_cowork_workshop`** that holds the six files.
 2. Open **OneDrive** in the browser (from the Microsoft 365 app launcher, or
    https://onedrive.cloud.microsoft) and go to **My files → Documents**.
-3. Select **+ Create or upload → Folder**, name it **`ai_hr_cowork_workshop`**, and open it.
-4. Select **+ Create or upload → Files upload** (or drag and drop) and upload all six files.
-5. ✅ **Checkpoint:** your OneDrive shows **Documents › ai_hr_cowork_workshop** with six files. Every
+3. Select **+ Create or upload → Folder upload** and choose the extracted **`ai_hr_cowork_workshop`**
+   folder (or drag the folder onto the page). OneDrive creates the folder and uploads all six files.
+   *No Folder upload option?* Select **+ Create or upload → Folder**, name it
+   **`ai_hr_cowork_workshop`**, open it, then use **Files upload** to add the six files.
+4. ✅ **Checkpoint:** your OneDrive shows **Documents › ai_hr_cowork_workshop** with six files. Every
    prompt today that names a folder uses **`Documents/ai_hr_cowork_workshop`**.
 
 These six Word and Excel files are used throughout the day, in both Cowork and Agent Builder:

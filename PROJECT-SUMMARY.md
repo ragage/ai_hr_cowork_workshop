@@ -36,7 +36,8 @@ exercise in Agent Builder.
 - **Example skill:** [skills/hr-policy-answer/SKILL.md](skills/hr-policy-answer/SKILL.md). Its Word
   copy sits outside the skill folder.
 - **Sample data:** `sample-knowledge/` holds the .docx/.xlsx files plus their editable .md/.csv
-  sources; `zava-sample-knowledge.zip` holds the six Word/Excel files.
+  sources; `zava-sample-knowledge.zip` holds the six Word/Excel files inside an
+  `ai_hr_cowork_workshop/` folder (the same name as the OneDrive folder the prompts use).
 - **Other outputs:** `instructor-deck.pptx` (45 slides), `quick-reference-card.docx`, and a `.docx`
   copy of every guide (19 in total).
 - **Agenda (240 min):**
@@ -63,7 +64,7 @@ exercise in Agent Builder.
   - `make_word_docs.py` and `callouts.lua`: Markdown to Word.
   - `finalize_word.ps1`: Word COM updates contents pages and exports QA PDFs.
   - `make_quickref.py`: the quick-reference card.
-  - `make_office_samples.py`: sample files and zip.
+  - `make_office_samples.py`: the Word/Excel sample files (not the zip; see Build Instructions).
   - `art/ex1-8.png`: Fluent Emoji pictures for the dividers.
 - **External inputs the deck build needs:** a local copy of the source PowerPoint template, and the
   Cowork home-page screenshot (`UI_SHOT` in `build_deck.py`).
@@ -118,6 +119,17 @@ python make_word_docs.py
 powershell -ExecutionPolicy Bypass -File finalize_word.ps1
 # copy any edited generator back to $g; then:
 cd ..; Remove-Item .build -Recurse -Force; git add -A; git commit -m "..."; git push
+```
+
+If the sample Word/Excel files change, rebuild the zip so the six files sit inside an
+`ai_hr_cowork_workshop/` folder:
+
+```powershell
+cd c:\source\ai_hr_cowork_workshop
+$z = New-Item -ItemType Directory -Force "$env:TEMP\zava-zip\ai_hr_cowork_workshop"
+Copy-Item sample-knowledge\*.docx, sample-knowledge\*.xlsx $z -Force
+Compress-Archive -Path $z -DestinationPath zava-sample-knowledge.zip -Force
+Remove-Item "$env:TEMP\zava-zip" -Recurse -Force
 ```
 
 Requirements:

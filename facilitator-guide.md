@@ -17,7 +17,7 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
   (that's what grants Cowork access) and allowed **Cowork Browsing** (for Ex 3); distribute credentials. Make sure **your own
   (facilitator) tenant** is Copilot/Cowork-ready too. See [readiness checklist](readiness-checklist.md).
 - **Stage the sample data:** put **zava-sample-knowledge.zip** (the six Word and
-  Excel sample files) in a **shared location in the attendee tenant** (Teams/SharePoint)
+  Excel sample files, in an `ai_hr_cowork_workshop` folder) in a **shared location in the attendee tenant** (Teams/SharePoint)
   that every account can reach, so attendees can copy them into their own OneDrive.
 - **Dry run:** a full run of all 8 exercises on a test attendee account one week out, checked
   against the [answer key](facilitator-answer-key.md). The full prep timeline, cost planning, and

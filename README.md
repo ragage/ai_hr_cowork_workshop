@@ -106,14 +106,14 @@ later) signed in with their workshop account (custom skills and browser tasks ar
 | reference/10-cowork-browser | [.md](reference/10-cowork-browser.md) · [.docx](reference/10-cowork-browser.docx) | Navigate websites with Cowork's browser: what it is, how to turn it on, troubleshooting (Exercise 3) |
 | skills/hr-policy-answer/SKILL | [.md](skills/hr-policy-answer/SKILL.md) (used by Cowork) · [.docx](skills/hr-policy-answer.SKILL.docx) (read-only copy) | Example custom skill (reference/answer key) |
 | [sample-knowledge/](sample-knowledge) | folder | Fictional *Zava* HR data: the Word/Excel files used in the exercises, plus their editable .md/.csv sources |
-| [zava-sample-knowledge.zip](zava-sample-knowledge.zip) | zip | The six Word and Excel sample files, zipped for easy upload to OneDrive |
+| [zava-sample-knowledge.zip](zava-sample-knowledge.zip) | zip | The six Word and Excel sample files in an `ai_hr_cowork_workshop` folder, ready to upload to OneDrive |
 
 ### Sample data (all fictional — no real PII)
 
 Every exercise uses the **Word and Excel** sample files. They work in both Cowork and Agent Builder
 (which doesn't accept .md or .csv). Download **[zava-sample-knowledge.zip](zava-sample-knowledge.zip)**
-to get all six at once, then upload them to a folder named **`ai_hr_cowork_workshop`** under
-**Documents** in your OneDrive (`Documents/ai_hr_cowork_workshop`); the prompts use that path.
+to get all six at once. It extracts to a folder named **`ai_hr_cowork_workshop`**; upload that folder
+to **Documents** in your OneDrive (`Documents/ai_hr_cowork_workshop`). The prompts use that path.
 
 | File | Contents | Used in |
 | --- | --- | --- |

@@ -66,8 +66,8 @@ adds up. Before the session:
 - [ ] *(Optional)* For the **HR plugins spotlight**, have a plugin installed in the **facilitator's
       tenant** (e.g., an approved HR or Microsoft plugin) so you can show **Customize → Plugins**
       live. Otherwise the deck's screenshot is enough. Don't add plugins to the attendee tenant.
-- [ ] **Stage the sample data:** upload **zava-sample-knowledge.zip** (the six Word and Excel sample files)
-      to a shared location every attendee account can reach (a **Teams channel** or **SharePoint
+- [ ] **Stage the sample data:** upload **zava-sample-knowledge.zip** (the six Word and Excel sample files,
+      in an `ai_hr_cowork_workshop` folder) to a shared location every attendee account can reach (a **Teams channel** or **SharePoint
       library**), so attendees can copy them into their own OneDrive.
 - [ ] **Seed mail, calendar & chat for Exercise 1 (Executive Command Center):** new accounts are
       empty. Load the **7 emails**, **3 meetings** (including the deliberate Thursday conflict), and
