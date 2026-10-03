@@ -1,0 +1,7 @@
+# Python packages for the kit generators (python -m pip install -r tools/requirements.txt)
+python-pptx
+python-docx
+openpyxl
+pillow
+lxml
+pypandoc_binary

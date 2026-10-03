@@ -1,4 +1,4 @@
-# Build scratch folder (generator scripts are copied here temporarily)
+# Build scratch folder (icons, reference.docx, QA PDFs, deck previews)
 .build/
 
 # Office lock and temp files
@@ -8,3 +8,7 @@
 # OS files
 Thumbs.db
 .DS_Store
+
+# Python build environment and caches
+.venv/
+__pycache__/

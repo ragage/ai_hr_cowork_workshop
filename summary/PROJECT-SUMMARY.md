@@ -66,8 +66,7 @@ exercise in Agent Builder.
 | 3:35–3:55 | Ex 8 · Agent Builder |
 | 3:55–4:00 | Wrap-up |
 
-- **Generators (not in this repo)** live in the authoring session folder
-  `c:\Users\cragage\.copilot\session-state\051732a1-5bba-4dda-a082-a71c80e8bdca\files\deck-generator\`:
+- **Generators** live in `tools/` (see [tools/README.md](../tools/README.md)):
   - `build_deck.py` and `content.py`: the instructor deck.
   - `build_overview.py`: the training overview deck. It reuses `build_deck.py`'s helpers and shared
     slides (agenda, objectives, workshop-kit links) by running the part of that file before the
@@ -79,8 +78,9 @@ exercise in Agent Builder.
     (`reference/media/download-hint.png`) used in the guides, emails, and both decks' kit slide.
   - `make_office_samples.py`: the Word/Excel sample files (not the zip; see Build Instructions).
   - `art/ex1-8.png`: Fluent Emoji pictures for the dividers.
-- **External inputs the deck build needs:** a local copy of the source PowerPoint template, and the
-  Cowork home-page screenshot (`UI_SHOT` in `build_deck.py`).
+  - `assets/cowork-home.png`: the Cowork home-page screenshot.
+  - All paths are relative to the repo. The only external input is the source PowerPoint template,
+    which isn't committed: set `DECK_TEMPLATE` to a local copy.
 
 ## Files Modified
 
@@ -127,17 +127,14 @@ Latest work:
 ## Build Instructions
 
 ```powershell
-$g = "<path to deck-generator folder>"
 cd c:\source\ai_hr_cowork_workshop
-New-Item -ItemType Directory -Force .build | Out-Null; Copy-Item "$g\*" .build\ -Recurse -Force
-cd .build; $env:PYTHONIOENCODING = "utf-8"
-python build_deck.py      # close PowerPoint first, or set $env:DECK_OUT to a preview path
-python build_overview.py  # or set $env:OVERVIEW_OUT to a preview path
-python make_quickref.py
-python make_word_docs.py
-powershell -ExecutionPolicy Bypass -File finalize_word.ps1
-# copy any edited generator back to $g; then:
-cd ..; Remove-Item .build -Recurse -Force; git add -A; git commit -m "..."; git push
+python -m venv .venv; .venv\Scripts\python -m pip install -r tools\requirements.txt   # first time only
+$env:PYTHONIOENCODING = "utf-8"; $env:DECK_TEMPLATE = "<path to the source template .pptx>"
+.venv\Scripts\python tools\build_deck.py      # close PowerPoint first, or set $env:DECK_OUT to a preview path
+.venv\Scripts\python tools\build_overview.py  # or set $env:OVERVIEW_OUT to a preview path
+.venv\Scripts\python tools\make_quickref.py
+.venv\Scripts\python tools\make_word_docs.py
+powershell -ExecutionPolicy Bypass -File tools\finalize_word.ps1
 ```
 
 If the sample Word/Excel files change, rebuild the zip so the six files sit inside an
@@ -153,7 +150,7 @@ Remove-Item "$env:TEMP\zava-zip" -Recurse -Force
 
 Requirements:
 
-- Python 3.14 with python-pptx, python-docx, openpyxl, PyMuPDF, pypandoc_binary, Pillow.
+- Python 3.13+ with the packages in `tools/requirements.txt`, plus PyMuPDF for the QA renders.
 - PowerPoint and Word, for COM rendering.
 - The gh CLI, signed in.
 - Don't use npm or pptxgenjs; LibreOffice isn't required.
@@ -173,8 +170,7 @@ Requirements:
 
 ## Remaining Work
 
-1. Move the generators and art into the repo (for example `tools/`) and make the template and
-   screenshot paths configurable.
+1. Fix `tools/finalize_word.ps1` hanging (see Known Issues).
 2. Do the tenant dry run (browser use, skill evaluation score, "Activate and run now") and update the
    answer key.
 3. Optionally:
@@ -186,8 +182,12 @@ Requirements:
 
 ## Known Issues
 
-- The deck build depends on absolute local paths (template and screenshot), so it breaks on another
-  machine.
+- The deck build needs a local copy of the source PowerPoint template (`DECK_TEMPLATE`); it isn't in
+  the repo.
+- On October 3, 2026, `finalize_word.ps1` hung with no output (its Word automation instance never
+  returned, probably waiting on a hidden dialog) and had to be stopped. Until it's fixed, a Word
+  rebuild leaves the contents pages empty: refresh them in Word, or don't commit rebuilt `.docx`
+  files whose text didn't change.
 - Product facts are dated October 1, 2026: plugin catalog, Edge 152 requirement, limits.
 - Browser use needs an admin setting, the Edge policy, Edge 152+ and an Edge profile signed in with the
   workshop account. Any of these can block Exercise 3.
@@ -200,11 +200,8 @@ Requirements:
 ## Next Session Starting Prompt
 
 > Continue work on the HR Copilot Cowork workshop kit in `c:\source\ai_hr_cowork_workshop` (GitHub:
-> cragage_microsoft/ai_hr_cowork_workshop, private, `main`). Read `README.md` and `summary/PROJECT-SUMMARY.md`
-> first. The generators live in the authoring session's `deck-generator` folder (copy them to `.build\`
-> to run; `build_deck.py` also needs the local PowerPoint template). First task: move the generators
-> and `art/` into the repo under `tools/`, make the template and screenshot paths configurable
-> (environment variables or relative paths), add a "How to build" section to the README, rebuild
-> everything, run the link and stale-text checks, then commit and push. Keep the "Getting Things Done"
-> title, the `Documents/ai_hr_cowork_workshop` sample folder, and the Exercise 1–8 order. Don't name
-> the source template in any artifact.
+> cragage_microsoft/ai_hr_cowork_workshop, private, `main`). Read `README.md`, `summary/PROJECT-SUMMARY.md`
+> and `tools/README.md` first. The generators are in `tools/`; `build_deck.py` needs `DECK_TEMPLATE`
+> set to the local PowerPoint template. Keep the "Getting Things Done" title, the
+> `Documents/ai_hr_cowork_workshop` sample folder, and the Exercise 1–8 order. Don't name the source
+> template in any artifact.
