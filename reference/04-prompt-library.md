@@ -8,15 +8,20 @@
 
 ## How to write a good Cowork prompt
 
-Cowork works best when you describe the **outcome**, give it **context/source**, and state any
-**constraints**. A simple recipe:
+A strong Cowork prompt includes four elements. You don't have to label them; just make sure each
+one is there (the Word copy color-codes them):
 
-> **[Outcome]** + **[Audience/tone]** + **[Source or context]** + **[Format]** + **[Constraints]**
+- <span class="goal">**Goal**</span>: the outcome you want, for whom, and why (blue).
+- <span class="source">**Source**</span>: the files, sites, or data Cowork should use (green).
+- <span class="expect">**Expectations**</span>: what the result looks like: format, length, sections, tone (orange).
+- <span class="constraint">**Constraints**</span>: what Cowork must not do: guess, invent, send, include (purple).
 
 Example:
-> "Draft a **warm welcome email** *(outcome + tone)* for a **new HR Coordinator starting Monday**
-> *(context)*, using the **onboarding checklist I uploaded** *(source)*. Keep it **under 200 words**
-> *(constraint)* and **save it as a draft** *(format)* — don't send it."
+> "<span class="goal">Draft a **warm welcome email** for a **new HR Coordinator starting Monday**</span>, <span class="source">using the
+> **onboarding checklist I attached**</span>. <span class="expect">Keep it **under 200 words** and **save it as a draft**</span>;
+> <span class="constraint">don't send it.</span>"
+
+The participant workbook (Setup step F) has a weak and a strong version of the same HR prompt.
 
 ---
 
@@ -50,7 +55,8 @@ Example:
 - "Using `job-description-sample.docx`, write an **inclusive, engaging job posting** for the HR
   Coordinator role for our careers page. Keep it under 350 words, with short What you'll do, What
   you'll bring, and What we offer sections. Then add a table that **flags wording that could
-  discourage qualified applicants**, with a suggested alternative for each. Save it as a Word doc."
+  discourage qualified applicants**, with a suggested alternative for each. Save it as a Word doc.
+  Don't add pay figures, perks, or requirements that aren't in the description."
   *(Exercise 5a)*
 - "Using `job-description-sample.docx`, create an **interview prep pack** for the HR Coordinator role:
   8 competency-based questions, what a strong answer looks like, and 3 red flags to watch for."

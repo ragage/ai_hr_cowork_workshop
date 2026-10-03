@@ -23,3 +23,27 @@ function Blocks(blocks)
   end
   return out
 end
+
+-- Prompt colour coding: <span class="goal|source|expect|constraint">…</span> in the Markdown
+-- (invisible on GitHub) becomes a Word character style with its own background shading.
+local PROMPT_STYLES = {goal = "Prompt Goal", source = "Prompt Source",
+                       expect = "Prompt Expectations", constraint = "Prompt Constraints"}
+
+function Inlines(inlines)
+  local out, cur, style = pandoc.List(), nil, nil
+  for _, il in ipairs(inlines) do
+    local cls = il.t == "RawInline" and il.format == "html" and il.text:match('^<span class="([%w-]+)">$')
+    if cls and PROMPT_STYLES[cls] and not cur then
+      cur, style = pandoc.List(), PROMPT_STYLES[cls]
+    elseif cur and il.t == "RawInline" and il.format == "html" and il.text == "</span>" then
+      out:insert(pandoc.Span(cur, pandoc.Attr("", {}, {{"custom-style", style}})))
+      cur = nil
+    elseif cur then
+      cur:insert(il)
+    else
+      out:insert(il)
+    end
+  end
+  if cur then out:extend(cur) end  -- unclosed tag: keep the text unstyled
+  return out
+end

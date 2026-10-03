@@ -1,4 +1,8 @@
-"""Scenario-card content for the instructor deck (mirrors participant-workbook.md)."""
+"""Scenario-card content for the instructor deck (mirrors participant-workbook.md).
+
+Prompt text marks its elements for color coding: {g}Goal{/g}, {s}Source{/s}, {e}Expectations{/e},
+{c}Constraints{/c} (the workbook uses <span class=...> for the same thing). Exercise 1 is left unmarked.
+"""
 
 GUIDE_CARD = dict(
     pill="Guide", title="How to read an exercise card", function="Every exercise", tag_label="Format",
@@ -104,15 +108,15 @@ EXERCISES = [
                "interviewer scorecard in Word and Excel with the scoring scales filled in.",
         why="Good research means reading and citing many sources. Deep Research does that across the web, applies "
             "the findings to your job description, and a follow-up turns them into ready-to-use documents.",
-        prompt=["Use Deep Research to summarize current best practices for structured behavioral interviews from "
-                "multiple reputable sources. Produce a 1-page briefing with the key practices and cite your sources.",
+        prompt=["{g}Use Deep Research to summarize current best practices for structured behavioral interviews{/g} {s}from "
+                "multiple reputable sources{/s}. {e}Produce a 1-page briefing with the key practices and cite your sources.{/e}",
                 "",
                 "## Then:",
-                "Now compare these best practices to our HR Coordinator interview needs in "
-                "job-description-sample.docx, and suggest 5 interview questions.",
+                "{g}Now compare these best practices to our HR Coordinator interview needs{/g} {s}in "
+                "job-description-sample.docx{/s}, {e}and suggest 5 interview questions.{/e}",
                 "",
                 "## Follow-up:",
-                "Turn this into an interviewer scorecard in Word AND Excel with the scoring scales filled in."],
+                "{g}Turn this into an interviewer scorecard{/g} {e}in Word AND Excel with the scoring scales filled in.{/e}"],
         prompt_size=12.5,
         workflow=[("Deep Research", "Search and read multiple web sources"), ("Synthesize", "Key practices with citations"),
                   ("Ground", "Compare to job-description-sample.docx"), ("Draft", "Briefing + 5 tailored questions"),
@@ -142,19 +146,19 @@ EXERCISES = [
         why="Checking policy against official sites means searching, clicking, and copying. Cowork does the clicks in a "
             "hidden tab in your own Edge, with your sign-ins and policies, and asks before anything consequential.",
         prompt=["## Task 3a \u2014 Attach the handbook, then:",
-                "Use my browser to do this step by step, and tell me which page you\u2019re on at each step:",
-                "1. Go to https://www.dol.gov and use the site\u2019s search box to find the Wage and Hour Division\u2019s "
-                "overtime pay fact sheet (Fact Sheet #23). Open it and note the overtime rules and when overtime must "
-                "be paid.",
-                "2. Go to https://lni.wa.gov and use the site\u2019s menu or search to find Washington State\u2019s "
-                "overtime page. Open it and note anything Washington adds to the federal rules.",
-                "3. Compare both with the overtime rule in employee-handbook-excerpt.docx. Give me a table with the "
-                "columns Rule, Federal (DOL), Washington (L&I), and Zava handbook, plus a link to every page you used.",
-                "Only read: don\u2019t sign in, and don\u2019t fill in or submit any form except a site search box.",
+                "{e}Use my browser to do this step by step, and tell me which page you\u2019re on at each step:{/e}",
+                "1. {s}Go to https://www.dol.gov and use the site\u2019s search box to find the Wage and Hour Division\u2019s "
+                "overtime pay fact sheet (Fact Sheet #23).{/s} {g}Open it and note the overtime rules and when overtime must "
+                "be paid.{/g}",
+                "2. {s}Go to https://lni.wa.gov and use the site\u2019s menu or search to find Washington State\u2019s "
+                "overtime page.{/s} {g}Open it and note anything Washington adds to the federal rules.{/g}",
+                "3. {g}Compare both with the overtime rule{/g} {s}in employee-handbook-excerpt.docx{/s}. {e}Give me a table with the "
+                "columns Rule, Federal (DOL), Washington (L&I), and Zava handbook, plus a link to every page you used.{/e}",
+                "{c}Only read: don\u2019t sign in, and don\u2019t fill in or submit any form except a site search box.{/c}",
                 "",
                 "## Task 3b \u2014 Follow-up",
-                "Turn this into a one-page Word brief for our payroll team about ticket T-2008: what the rules say, "
-                "what our handbook says, and the recommended next step. Don\u2019t send it."],
+                "{g}Turn this into a one-page Word brief for our payroll team about ticket T-2008{/g}: {e}what the rules say, "
+                "what our handbook says, and the recommended next step.{/e} {c}Don\u2019t send it.{/c}"],
         prompt_size=12,
         workflow=[("Navigate", "dol.gov: site search \u2192 Fact Sheet #23"), ("Navigate", "lni.wa.gov: menu \u2192 overtime page"),
                   ("Ground", "Compare with the Zava handbook"), ("Build", "Table with links + Word brief")],
@@ -191,15 +195,15 @@ EXERCISES = [
                 "grounded in our handbook and benefits documents.",
                 "",
                 "## Instructions:",
-                "Use this skill when someone asks about company HR policy or benefits (PTO, remote/hybrid work, "
-                "benefits enrollment, overtime, code of conduct, learning budget). Ground answers in "
-                "employee-handbook-excerpt.docx and benefits-summary.docx in my OneDrive folder Documents/ai_hr_cowork_workshop; if "
-                "the answer isn\u2019t in them, say so instead of guessing. Answer in this format: a direct "
+                "{g}Use this skill when someone asks about company HR policy or benefits (PTO, remote/hybrid work, "
+                "benefits enrollment, overtime, code of conduct, learning budget).{/g} {s}Ground answers in "
+                "employee-handbook-excerpt.docx and benefits-summary.docx in my OneDrive folder Documents/ai_hr_cowork_workshop{/s}; {c}if "
+                "the answer isn\u2019t in them, say so instead of guessing.{/c} {e}Answer in this format: a direct "
                 "plain-language answer, then a short Details "
                 "section, then a Source line naming the document, then the note \u201cPolicies can change \u2014 "
-                "please confirm with HR.\u201d Keep a warm, professional tone. Do not handle individual pay, "
+                "please confirm with HR.\u201d Keep a warm, professional tone.{/e} {c}Do not handle individual pay, "
                 "performance, disciplinary, legal, or medical questions \u2014 politely redirect those. Produce a "
-                "draft for HR to review; never send automatically."],
+                "draft for HR to review; never send automatically.{/c}"],
         prompt_size=11,
         workflow=[("Customize", "Skills \u2192 Add \u2192 Create new"), ("Define", "Name, description, category, instructions"),
                   ("Evaluate", "Auto-score on four dimensions"), ("Test", "In-scope triggers; out-of-scope declines")],
@@ -228,15 +232,16 @@ EXERCISES = [
         why="One task reads a job description and writes a structured document; the other analyzes a spreadsheet and reports "
             "on it. Cowork picks the right skills (Word, Excel) for each and grounds both in your files.",
         prompt=["## Task 5a \u2014 Inclusive job posting",
-                "Using job-description-sample.docx, write an inclusive, engaging job posting for the HR Coordinator "
-                "role for our careers page. Keep it under 350 words, with short What you\u2019ll do, What you\u2019ll "
+                "{s}Using job-description-sample.docx{/s}, {g}write an inclusive, engaging job posting for the HR Coordinator "
+                "role for our careers page.{/g} {e}Keep it under 350 words, with short What you\u2019ll do, What you\u2019ll "
                 "bring, and What we offer sections, and mention the hybrid schedule. Then add a separate table that "
                 "flags any wording in the original description that could discourage qualified applicants, with a "
-                "suggested alternative for each. Save it as a Word doc.",
+                "suggested alternative for each. Save it as a Word doc.{/e} {c}Don\u2019t add pay figures, perks, or "
+                "requirements that aren\u2019t in the description.{/c}",
                 "",
                 "## Task 5b \u2014 Ticket summary",
-                "Using hr-tickets-sample.xlsx, summarize open vs. closed tickets by category and priority, and list "
-                "the high-priority open items I should follow up on today. Put it in a short report."],
+                "{s}Using hr-tickets-sample.xlsx{/s}, {g}summarize open vs. closed tickets by category and priority, and list "
+                "the high-priority open items I should follow up on today.{/g} {e}Put it in a short report.{/e}"],
         prompt_size=12.5,
         workflow=[("Ground", "Read the job description and ticket spreadsheet"), ("Draft", "Inclusive job posting (Word)"),
                   ("Analyze", "Open vs. closed by category & priority"), ("Report", "Today\u2019s high-priority follow-ups")],
@@ -263,18 +268,18 @@ EXERCISES = [
         why="Onboarding spans documents, calendars, and communications. Cowork chains PowerPoint, Scheduling, and "
             "Communications skills in one flow, grounded in your checklist, handbook, and benefits.",
         prompt=["## Task 6a \u2014 Orientation deck",
-                "Using onboarding-checklist.docx, employee-handbook-excerpt.docx, and benefits-summary.docx, build a short "
-                "onboarding orientation PowerPoint (6\u20138 slides) covering first-day logistics, PTO, remote/hybrid "
-                "work, and benefits basics. Keep it clean and friendly.",
+                "{s}Using onboarding-checklist.docx, employee-handbook-excerpt.docx, and benefits-summary.docx{/s}, {g}build a short "
+                "onboarding orientation PowerPoint{/g} {e}(6\u20138 slides){/e} {g}covering first-day logistics, PTO, remote/hybrid "
+                "work, and benefits basics.{/g} {e}Keep it clean and friendly.{/e} {c}Use only facts from these files.{/c}",
                 "",
                 "## Task 6b \u2014 Schedule the kickoff",
-                "Schedule a 30-minute onboarding kickoff for Sofia Alvarez\u2019s first day, next Monday at 9:30 AM, "
-                "add a Teams meeting link, and invite only me. Show it to me before you send it.",
+                "{g}Schedule a 30-minute onboarding kickoff for Sofia Alvarez\u2019s first day{/g}, {e}next Monday at 9:30 AM, "
+                "add a Teams meeting link{/e}, {c}and invite only me. Show it to me before you send it.{/c}",
                 "",
                 "## Task 6c \u2014 Team announcement",
-                "Draft a warm, inclusive team announcement introducing Sofia Alvarez, our new HR Coordinator starting "
-                "next Monday, and her first-week plan, using onboarding-checklist.docx. Save it as an Outlook email "
-                "draft addressed to me; don\u2019t send it."],
+                "{g}Draft a warm, inclusive team announcement introducing Sofia Alvarez, our new HR Coordinator starting "
+                "next Monday, and her first-week plan{/g}, {s}using onboarding-checklist.docx{/s}. {e}Save it as an Outlook email "
+                "draft addressed to me{/e}; {c}don\u2019t send it.{/c}"],
         prompt_size=11.5,
         workflow=[("Ground", "Checklist, handbook, benefits"), ("Build", "Orientation deck (PowerPoint)"),
                   ("Schedule", "30-min kickoff with a Teams link"), ("Communicate", "Team announcement draft")],
@@ -300,14 +305,14 @@ EXERCISES = [
         why="Recurring work belongs on autopilot. Automations run prompts on a schedule or on events, Daily Briefing "
             "pulls your day together, and sharing turns a personal skill into a team asset.",
         prompt=["## Task 7a \u2014 Automations \u2192 Create",
-                "Every Monday at 8:00 AM, read hr-tickets-sample.xlsx in my OneDrive folder Documents/ai_hr_cowork_workshop, summarize "
-                "open tickets by category and priority, list high-priority open tickets first, and put it in a short "
-                "report. Don\u2019t email anyone.",
+                "{e}Every Monday at 8:00 AM{/e}, {s}read hr-tickets-sample.xlsx in my OneDrive folder Documents/ai_hr_cowork_workshop{/s}, {g}summarize "
+                "open tickets by category and priority{/g}, {e}list high-priority open tickets first, and put it in a short "
+                "report.{/e} {c}Don\u2019t email anyone.{/c}",
                 "",
                 "Choose Activate and run now to see the first run in class.",
                 "",
                 "## Task 7b \u2014 New task",
-                "Give me a Daily Briefing focused on my HR tasks and meetings for today.",
+                "{g}Give me a Daily Briefing{/g} {s}focused on my HR tasks and meetings for today{/s}. {e}List the most urgent items first.{/e}",
                 "",
                 "## Task 7c \u2014 Share your skill",
                 "Open HR Policy Answer on the Customize page \u2192 Share. Keep it \u201cOnly you\u201d or share to one "
@@ -338,11 +343,11 @@ EXERCISES = [
         why="A Cowork skill helps you in your own tasks. An agent is a standalone helper other people use directly in "
             "Copilot \u2014 built with no code via Describe \u2192 Configure \u2192 Try it, then shared or published.",
         prompt=["## Describe tab",
-                "Create an HR Policy Agent that answers employee questions about company policies and benefits \u2014 "
-                "PTO, remote/hybrid work, benefits enrollment, overtime, and the code of conduct \u2014 in a warm, "
-                "professional tone. Always cite the source document and remind the reader that HR should confirm. "
-                "Politely decline questions about individual pay, performance, legal, or medical matters and "
-                "redirect them to HR.",
+                "{g}Create an HR Policy Agent that answers employee questions about company policies and benefits \u2014 "
+                "PTO, remote/hybrid work, benefits enrollment, overtime, and the code of conduct{/g} \u2014 {e}in a warm, "
+                "professional tone. Always cite the source document and remind the reader that HR should confirm.{/e} "
+                "{c}Politely decline questions about individual pay, performance, legal, or medical matters and "
+                "redirect them to HR.{/c}",
                 "",
                 "## Configure tab",
                 "- Name: HR Policy Agent",

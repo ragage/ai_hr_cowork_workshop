@@ -21,6 +21,9 @@ ROOT = TOOLS.parent  # repo root (this file is in tools/)
 BUILD = ROOT / ".build"
 KIT = "Getting Things Done with Copilot Cowork for HR Tasks"
 PLUM, INK, BLUE, MUTED = "3B1041", "242424", "0F6CBD", "616161"
+# Prompt colour coding (callouts.lua maps <span class="goal|source|expect|constraint"> to these styles).
+PROMPT_STYLES = {"Prompt Goal": ("DCEBFF", "1F4E99"), "Prompt Source": ("DFF5E1", "1E6B32"),
+                 "Prompt Expectations": ("FFE9CC", "8A4B00"), "Prompt Constraints": ("EDE3FA", "5B2C91")}
 TOC_DOCS = {"participant-workbook.md", "facilitator-guide.md", "facilitator-answer-key.md",
             "readiness-checklist.md", "README.md"}
 
@@ -109,11 +112,15 @@ def make_reference():
     for sname in ("Callout Marker",):
         if sname not in names:
             st.add_style(sname, WD_STYLE_TYPE.PARAGRAPH)
-    mk = st["Callout Marker"]
-    mk.base_style = st["Normal"]
-    mk.font.size = Pt(2)
-    mk.paragraph_format.space_before = Pt(0)
-    mk.paragraph_format.space_after = Pt(0)
+    cm = st["Callout Marker"]
+    cm.base_style = st["Normal"]
+    cm.font.size = Pt(2)
+    cm.paragraph_format.space_before = Pt(0)
+    cm.paragraph_format.space_after = Pt(0)
+    for sname, (fill, color) in PROMPT_STYLES.items():
+        cs = st[sname] if sname in names else st.add_style(sname, WD_STYLE_TYPE.CHARACTER)
+        cs.font.color.rgb = RGBColor.from_string(color)
+        cs.element.get_or_add_rPr().append(mk("w:shd", val="clear", color="auto", fill=fill))
     set_font(st["Verbatim Char"], "Consolas", 9.5, "5B2A63")
     set_font(st["Hyperlink"], color=BLUE)
     if "Source Code" in names:

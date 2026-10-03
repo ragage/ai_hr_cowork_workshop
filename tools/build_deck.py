@@ -2,6 +2,7 @@
 """Build the instructor deck from the Copilot Cowork scenario PowerPoint template."""
 import copy
 import os
+import re
 import uuid
 
 from lxml import etree
@@ -380,6 +381,50 @@ def notes(slide, t):
     tf.text = t
 
 
+# ---------------------------------------------------------------- prompt elements
+# Goal · Source · Expectations · Constraints: same colors as the Word workbook (make_word_docs.py).
+PROMPT_EL = {"G": ("Goal", "DCEBFF", "1F4E99", "What outcome do I want, for whom, and why?"),
+             "S": ("Source", "DFF5E1", "1E6B32", "Which files, sites, or data should Cowork use?"),
+             "E": ("Expectations", "FFE9CC", "8A4B00", "What should the result look like: format, length, tone?"),
+             "C": ("Constraints", "EDE3FA", "5B2C91", "What must Cowork not do: guess, invent, send?")}
+
+
+RPR_BEFORE_HL = {qn(t) for t in ("a:ln", "a:noFill", "a:solidFill", "a:gradFill", "a:blipFill", "a:pattFill",
+                                   "a:grpFill", "a:effectLst", "a:effectDag")}
+
+
+def highlight(r, fill):
+    """Shade an a:r element like a highlighter (PowerPoint for Microsoft 365), keeping rPr schema order."""
+    rPr = r.find(qn("a:rPr"))
+    if rPr is None:
+        rPr = etree.Element(qn("a:rPr"))
+        r.insert(0, rPr)
+    hl = etree.Element(qn("a:highlight"))
+    etree.SubElement(hl, qn("a:srgbClr"), val=fill)
+    before = [c for c in rPr if c.tag in RPR_BEFORE_HL]
+    if before:
+        before[-1].addnext(hl)
+    else:
+        rPr.insert(0, hl)
+
+
+PROMPT_TAG = re.compile(r"\{([gsec])\}(.*?)\{/\1\}")
+
+
+def prompt_segs(line):
+    """'{g}text{/g} plain' -> [(text, 'G'), (' plain', None)] (content.py marks prompt elements this way)."""
+    out, pos = [], 0
+    for m in PROMPT_TAG.finditer(line):
+        if m.start() > pos:
+            out.append((line[pos:m.start()], None))
+        out.append((m.group(2), m.group(1).upper()))
+        pos = m.end()
+    if pos < len(line):
+        out.append((line[pos:], None))
+    return out
+
+
+
 # ---------------------------------------------------------------- template-based slide builders
 def white_slide(title, subtitle):
     s = clone_slide(S_WHITE)
@@ -435,7 +480,12 @@ def scenario_card(ex):
         elif line.startswith("## "):
             new.append(build_p(p_plain, [(line[3:], 0, True)]))
         else:
-            new.append(build_p(p_plain, [(line, 0)]))
+            segs = prompt_segs(line)
+            para = build_p(p_plain, [(t, 0) for t, _ in segs])
+            for r, (_, key) in zip(para.findall(qn("a:r")), segs):
+                if key:
+                    highlight(r, PROMPT_EL[key][1])
+            new.append(para)
     set_paras(pr, new)
     if ex.get("prompt_size"):
         set_sizes(pr, ex["prompt_size"])
@@ -949,6 +999,62 @@ notes(s, "RESPONSIBLE USE. Draft -> review -> approve. Fictional Zava data only;
          "people (send only to yourself). Cite sources + 'confirm with HR'. Exercise 1's prompt also "
          "keeps recommendations on workstreams, not on evaluating individuals. Detail: "
          "reference/06-responsible-use.md.")
+
+# 9b — Prompting best practices: Goal · Source · Expectations · Constraints (same colors as the Word workbook)
+s = white_slide("Prompting best practices",
+                "Strong prompts include four elements. No labels needed: just make sure each one is there.")
+for i, key in enumerate("GSEC"):
+    name, fill, dark, ask = PROMPT_EL[key]
+    x = 0.55 + i * 3.1
+    box(s, x, 1.55, 2.95, 1.15, fill)
+    box(s, x, 1.55, 0.07, 1.15, dark)
+    text(s, x + 0.25, 1.62, 2.6, 0.4, [{"runs": [(name, {"size": 17, "bold": True, "color": dark})]}])
+    text(s, x + 0.25, 2.03, 2.6, 0.65, [{"runs": [(ask, {"size": 12, "color": W_BODY})]}], line_spacing=1.0)
+# Weak
+box(s, 0.55, 2.9, 12.23, 0.95, "FFFFFF", line=W_LINE, shadow=True)
+box(s, 0.55, 2.9, 0.07, 0.95, RED)
+text(s, 0.85, 2.9, 1.2, 0.95, [{"runs": [("WEAK", {"size": 15, "bold": True, "color": RED})]}], anchor=MSO_ANCHOR.MIDDLE)
+text(s, 2.05, 2.9, 4.6, 0.95, [{"runs": [("“Write an email about open enrollment.”",
+                                           {"size": 16, "italic": True, "color": W_TITLE})]}], anchor=MSO_ANCHOR.MIDDLE)
+text(s, 6.85, 2.9, 5.75, 0.95, [{"runs": rich("Cowork has to **guess**: who it’s for, which dates apply, how long it "
+                                              "should be, and whether to send it.", 13, W_SUB)}],
+     anchor=MSO_ANCHOR.MIDDLE, line_spacing=1.0)
+# Strong (same topic), each element shaded in its color and tagged for readers who can't rely on color
+box(s, 0.55, 4.0, 12.23, 2.8, "FFFFFF", line=W_LINE, shadow=True)
+box(s, 0.55, 4.0, 0.07, 2.8, GREEN)
+text(s, 0.85, 4.18, 1.2, 0.4, [{"runs": [("STRONG", {"size": 15, "bold": True, "color": GREEN})]}])
+STRONG = [("G", "Draft a reminder email to all Zava employees so that anyone who wants to change their benefits "
+                "does it during November open enrollment."),
+          ("S", "Use the Enrollment Windows section of benefits-summary.docx and the Who to Contact section of "
+                "employee-handbook-excerpt.docx."),
+          ("E", "Keep it under 150 words, with a subject line of eight words or fewer, three short bullets on what "
+                "to do, and who to contact for help. Use a warm, plain-language tone."),
+          ("C", "Don’t invent dates, deadlines, or plan details that aren’t in the files. Save it as a draft "
+                "for me to review; don’t send it.")]
+runs, keys = [], []
+for i, (key, seg) in enumerate(STRONG):
+    name, fill, dark, _ = PROMPT_EL[key]
+    runs += [(name.upper() + " ", {"size": 9.5, "bold": True, "color": dark}), (seg, {"size": 15, "color": W_TITLE})]
+    keys += [key, key]
+    if i < len(STRONG) - 1:
+        runs.append((" ", {"size": 15}))
+        keys.append(None)
+tb = text(s, 2.05, 4.18, 10.5, 2.5, [{"runs": runs}], line_spacing=1.12)
+for r, key in zip(tb.text_frame.paragraphs[0].runs, keys):
+    if key:
+        highlight(r._r, PROMPT_EL[key][1])
+text(s, 2.05, 6.22, 10.5, 0.4, [{"runs": rich("**Same topic.** Now Cowork knows what to do, where to look, "
+                                              "what good looks like, and what not to do.", 13, W_SUB)}])
+notes(s, "PROMPTING BEST PRACTICES (about 4 min, before the exercises). Read the WEAK prompt aloud and ask the room: "
+         "what would Cowork have to guess? (Audience, which dates, length, tone, whether to send.) Then walk the STRONG "
+         "version element by element: GOAL (blue) says what outcome and for whom; SOURCE (green) names the exact files "
+         "and sections; EXPECTATIONS (orange) describe what good looks like: length, subject line, bullets, tone; "
+         "CONSTRAINTS (purple) say what not to do. Point out 'don't invent dates': the benefits summary only says "
+         "November, so a weak prompt invites a made-up deadline. Key message: no labels and no fixed order; just check "
+         "all four are there. Context about the situation belongs in the Goal. In the Word workbook every exercise "
+         "prompt from Ex 2 onward is color-coded with these same colors (setup step F has the legend and this example); "
+         "Exercise 1's prompt is left as is. When Cowork asks a clarifying question or misses, the missing piece is "
+         "usually one of the four: add it in a follow-up.")
 
 # 10 — How to read an exercise card (the template itself, annotated)
 scenario_card(GUIDE_CARD)

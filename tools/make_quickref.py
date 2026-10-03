@@ -54,6 +54,25 @@ def para(runs, style=None, size=9):
     return p
 
 
+# Prompt elements, same colors as the Word workbook: (shading, text color)
+PROMPT_COLORS = {"G": ("DCEBFF", "1F4E99"), "S": ("DFF5E1", "1E6B32"), "E": ("FFE9CC", "8A4B00"),
+                 "C": ("EDE3FA", "5B2C91")}
+
+
+def cpara(runs, size=9):
+    """runs: (text, element key or None, bold); element runs get their color and shading."""
+    p = doc.add_paragraph()
+    for t, k, b in runs:
+        r = p.add_run(t); r.bold = b; r.font.size = Pt(size)
+        if k:
+            fill, color = PROMPT_COLORS[k]
+            r.font.color.rgb = RGBColor.from_string(color)
+            shd = OxmlElement("w:shd")
+            shd.set(qn("w:val"), "clear"); shd.set(qn("w:color"), "auto"); shd.set(qn("w:fill"), fill)
+            r._r.get_or_add_rPr().append(shd)
+    return p
+
+
 def bullet(text_bold, text=""):
     return para([(text_bold, True), (text, False)], style="List Bullet")
 
@@ -86,8 +105,12 @@ table([["Tool", "Use it when…", "HR example"],
       [Inches(1.0), Inches(2.1), Inches(1.9)])
 
 h("2 · Write a good prompt")
-para([("Outcome", True), (" + ", False), ("audience/tone", True), (" + ", False), ("source", True), (" + ", False), ("format", True), (" + ", False), ("constraints", True)])
-para([("e.g. ", False), ("“Draft a warm welcome email for our new HR Coordinator starting Monday, using onboarding-checklist.docx. Under 200 words. Save as a draft — don’t send.”", False)], size=8.5)
+cpara([("Goal", "G", True), (" + ", None, False), ("Source", "S", True), (" + ", None, False),
+       ("Expectations", "E", True), (" + ", None, False), ("Constraints", "C", True)])
+cpara([("e.g. “", None, False), ("Draft a warm welcome email for our new HR Coordinator starting Monday,", "G", False),
+       (" ", None, False), ("using onboarding-checklist.docx.", "S", False), (" ", None, False),
+       ("Under 200 words. Save as a draft", "E", False), (" — ", None, False), ("don’t send.", "C", False),
+       ("”", None, False)], size=8.5)
 bullet("Attach files: ", "+ → Attach cloud files, or type / and pick the file.")
 bullet("Web tasks: ", "“Use Deep Research…” for cited research; “Open {site} in my browser…” runs in your Edge.")
 bullet("Automations: ", "name the exact file and folder; choose Activate and run now to test.")

@@ -147,6 +147,36 @@ consequential in a website — and shows an approval dialog. You'll meet these a
 > side panel's **Permissions** section. Details:
 > [How approvals work](../reference/07-cowork-ui-walkthrough.md#how-approvals-work-read-this-before-exercise-1).
 
+### F. Prompting best practices
+
+A strong Cowork prompt includes four elements. You don't have to label them; just make sure each one
+is there. In the **Word workbook**, the prompts from Exercise 2 onward are color-coded so you can spot
+them:
+
+| Element | Ask yourself | Color |
+| --- | --- | --- |
+| <span class="goal">**Goal**</span> | What outcome do I want, for whom, and why? | Blue |
+| <span class="source">**Source**</span> | Which files, sites, or data should Cowork use? | Green |
+| <span class="expect">**Expectations**</span> | What should the result look like: format, length, sections, tone? | Orange |
+| <span class="constraint">**Constraints**</span> | What must Cowork not do: guess, invent, send, include? | Purple |
+
+Same topic, two prompts:
+
+> **Weak:** Write an email about open enrollment.
+>
+> *Cowork has to guess who it's for, which dates apply, how long it should be, and whether to send it.*
+
+> **Strong:** <span class="goal">Draft a reminder email to all Zava employees so that anyone who wants to change their
+> benefits does it during November open enrollment.</span> <span class="source">Use the Enrollment Windows section of
+> `benefits-summary.docx` and the Who to Contact section of `employee-handbook-excerpt.docx`.</span>
+> <span class="expect">Keep it under 150 words, with a subject line of eight words or fewer, three short bullets on what
+> to do, and who to contact for help. Use a warm, plain-language tone.</span> <span class="constraint">Don't invent dates,
+> deadlines, or plan details that aren't in the files. Save it as a draft for me to review; don't send
+> it.</span>
+
+**Tip:** if Cowork asks a clarifying question or gets something wrong, the missing piece is usually
+one of the four. Add it in a follow-up instead of starting over.
+
 ---
 
 ## Exercise 1 — Executive Command Center (25 min)
@@ -269,18 +299,18 @@ HR ticket trends from `hr-tickets-sample.xlsx`.
 
 ### Task 2a — Research
 1. In a **new task**, prompt:
-   > Use **Deep Research** to summarize **current best practices for structured behavioral
-   > interviews** from multiple reputable sources. Produce a **1-page briefing** with the key
-   > practices and **cite your sources**.
+   > <span class="goal">Use **Deep Research** to summarize **current best practices for structured behavioral
+   > interviews**</span> <span class="source">from multiple reputable sources</span>. <span class="expect">Produce a **1-page briefing** with the key
+   > practices and **cite your sources**.</span>
 2. Watch the **Deep Research** skill load and work across sources. It takes a few minutes.
 3. **Open two citations** and check that each one supports the claim it's attached to.
 
 ### Task 2b — Ground it, then build a scorecard
 1. **Attach `job-description-sample.docx`** (📎 **+ → Attach cloud files**, or type **/**) and prompt:
-   > Now compare these best practices to our **HR Coordinator** interview needs in
-   > `job-description-sample.docx`, and suggest 5 interview questions.
+   > <span class="goal">Now compare these best practices to our **HR Coordinator** interview needs</span> <span class="source">in
+   > `job-description-sample.docx`</span>, <span class="expect">and suggest 5 interview questions.</span>
 2. **Follow-up:** in the same task, prompt:
-   > Turn this into an interviewer scorecard in **Word AND Excel** with the scoring scales filled in.
+   > <span class="goal">Turn this into an interviewer scorecard</span> <span class="expect">in **Word AND Excel** with the scoring scales filled in.</span>
 3. Watch Cowork load both the **Word** and **Excel** skills. When it finishes, open the **Output
    folder** (as in Exercise 1) and **Preview** both files:
    - **Word:** a printable scorecard with each competency, the question(s) for it, and a **filled-in
@@ -345,18 +375,18 @@ to pick; ask for something that needs a website and Cowork opens the browser its
 ### Task 3a — Navigate two websites
 1. In a **new task**, attach `employee-handbook-excerpt.docx` (📎 **+ → Attach cloud files**, or type
    **/**), then prompt:
-   > Use my browser to do this step by step, and tell me which page you're on at each step:
+   > <span class="expect">Use my browser to do this step by step, and tell me which page you're on at each step:</span>
    >
-   > 1. Go to https://www.dol.gov and use the site's search box to find the Wage and Hour Division's
-   >    overtime pay fact sheet (Fact Sheet #23). Open it and note the overtime rules and when overtime
-   >    must be paid.
-   > 2. Go to https://lni.wa.gov and use the site's menu or search to find Washington State's overtime
-   >    page. Open it and note anything Washington adds to the federal rules.
-   > 3. Compare both with the overtime rule in `employee-handbook-excerpt.docx`. Give me a table with
+   > 1. <span class="source">Go to https://www.dol.gov and use the site's search box to find the Wage and Hour Division's
+   >    overtime pay fact sheet (Fact Sheet #23).</span> <span class="goal">Open it and note the overtime rules and when overtime
+   >    must be paid.</span>
+   > 2. <span class="source">Go to https://lni.wa.gov and use the site's menu or search to find Washington State's overtime
+   >    page.</span> <span class="goal">Open it and note anything Washington adds to the federal rules.</span>
+   > 3. <span class="goal">Compare both with the overtime rule</span> <span class="source">in `employee-handbook-excerpt.docx`</span>. <span class="expect">Give me a table with
    >    the columns Rule, Federal (DOL), Washington (L&I), and Zava handbook, plus a link to every page
-   >    you used.
+   >    you used.</span>
    >
-   > Only read: don't sign in, and don't fill in or submit any form except a site search box.
+   > <span class="constraint">Only read: don't sign in, and don't fill in or submit any form except a site search box.</span>
 2. The first time, Cowork shows a **browser consent notice**. Read it, then select **I understand**.
 3. Watch the **progress chips** (for example, *Opening dol.gov*, *Searching the site*). Select
    **Switch to tab** to watch Edge type in the search box and click through the pages, then switch
@@ -367,9 +397,9 @@ to pick; ask for something that needs a website and Cowork opens the browser its
 
 ### Task 3b — Turn it into a brief for payroll
 In the same task, prompt:
-> Turn this into a one-page **Word brief** for our payroll team about ticket **T-2008** (overtime
-> missing from Owen Wright's paycheck): what the federal and Washington rules say, what our handbook
-> says, and the recommended next step. Save it as a Word doc; don't send it.
+> <span class="goal">Turn this into a one-page **Word brief** for our payroll team about ticket **T-2008** (overtime
+> missing from Owen Wright's paycheck)</span>: <span class="expect">what the federal and Washington rules say, what our handbook
+> says, and the recommended next step. Save it as a Word doc</span>; <span class="constraint">don't send it.</span>
 
 Open the brief from the **Output folder**.
 
@@ -416,15 +446,15 @@ a skill *from a prompt* in Exercise 1 — here you use the **guided** flow and r
    - **Description:** "Answers employee policy and benefits questions in a consistent, sourced format,
      grounded in our handbook and benefits documents."
    - **Instructions (paste/adapt):**
-     > Use this skill when someone asks about company **HR policy or benefits** (PTO, remote/hybrid
-     > work, benefits enrollment, overtime, code of conduct, learning budget). Ground answers in
+     > <span class="goal">Use this skill when someone asks about company **HR policy or benefits** (PTO, remote/hybrid
+     > work, benefits enrollment, overtime, code of conduct, learning budget).</span> <span class="source">Ground answers in
      > `employee-handbook-excerpt.docx` and `benefits-summary.docx` in my OneDrive folder
-     > `Documents/ai_hr_cowork_workshop`; if the answer isn't in them, say so instead of guessing. Answer in this
+     > `Documents/ai_hr_cowork_workshop`</span>; <span class="constraint">if the answer isn't in them, say so instead of guessing.</span> <span class="expect">Answer in this
      > format: a direct plain-language answer, then a
      > short **Details** section, then a **Source** line naming the document, then the note *'Policies
-     > can change — please confirm with HR.'* Keep a warm, professional tone. **Do not** handle
+     > can change — please confirm with HR.'* Keep a warm, professional tone.</span> <span class="constraint">**Do not** handle
      > individual pay, performance, disciplinary, legal, or medical questions — politely redirect
-     > those. Produce a draft for HR to review; never send automatically.
+     > those. Produce a draft for HR to review; never send automatically.</span>
 3. Confirm in chat when you're happy. Cowork saves it to your OneDrive `/Documents/Cowork/skills/`.
 
 ### Read the evaluation
@@ -475,16 +505,17 @@ In Exercise 2 you prepared to **interview** for the HR Coordinator role. Now wri
 **attracts** the candidates.
 
 📎 Attach `job-description-sample.docx`, then prompt:
-> Using `job-description-sample.docx`, write an **inclusive, engaging job posting** for the HR
-> Coordinator role for our careers page. Keep it under 350 words, with short **What you'll do**,
+> <span class="source">Using `job-description-sample.docx`</span>, <span class="goal">write an **inclusive, engaging job posting** for the HR
+> Coordinator role for our careers page.</span> <span class="expect">Keep it under 350 words, with short **What you'll do**,
 > **What you'll bring**, and **What we offer** sections, and mention the hybrid schedule. Then add a
 > separate table that **flags any wording in the original description that could discourage
-> qualified applicants**, with a suggested alternative for each. Save it as a Word doc.
+> qualified applicants**, with a suggested alternative for each. Save it as a Word doc.</span>
+> <span class="constraint">Don't add pay figures, perks, or requirements that aren't in the description.</span>
 
 ### Task 5b — Ticket summary report
 📎 Attach `hr-tickets-sample.xlsx`, then prompt:
-> Using `hr-tickets-sample.xlsx`, summarize **open vs. closed tickets by category and priority**, and
-> list the **high-priority open items** I should follow up on today. Put it in a short report.
+> <span class="source">Using `hr-tickets-sample.xlsx`</span>, <span class="goal">summarize **open vs. closed tickets by category and priority**, and
+> list the **high-priority open items** I should follow up on today.</span> <span class="expect">Put it in a short report.</span>
 
 ✅ **Checkpoint:** You have a job posting in Word with a wording-review table, and a ticket summary.
 The sample data has **6 open and 14 closed** tickets, and exactly **one high-priority open** item —
@@ -530,21 +561,21 @@ ready. (Sofia is fictional and has no account in the tenant, so nothing reaches 
 ### Task 6a — Orientation deck (PowerPoint skill)
 📎 Attach `onboarding-checklist.docx`, `employee-handbook-excerpt.docx`, and `benefits-summary.docx`, then
 prompt:
-> Using `onboarding-checklist.docx`, `employee-handbook-excerpt.docx`, and `benefits-summary.docx`, build
-> a short **onboarding orientation PowerPoint** (6–8 slides) covering first-day logistics, PTO,
-> remote/hybrid work, and benefits basics. Keep it clean and friendly.
+> <span class="source">Using `onboarding-checklist.docx`, `employee-handbook-excerpt.docx`, and `benefits-summary.docx`</span>, <span class="goal">build
+> a short **onboarding orientation PowerPoint**</span> <span class="expect">(6–8 slides)</span> <span class="goal">covering first-day logistics, PTO,
+> remote/hybrid work, and benefits basics.</span> <span class="expect">Keep it clean and friendly.</span> <span class="constraint">Use only facts from these files.</span>
 - → Watch the **PowerPoint** skill chip load.
 
 ### Task 6b — Schedule the kickoff (Scheduling / Calendar skill)
-> Schedule a 30-minute **onboarding kickoff** for Sofia Alvarez's first day, **next Monday at
-> 9:30 AM**, add a Teams meeting link, and invite only me. Show it to me before you send it.
+> <span class="goal">Schedule a 30-minute **onboarding kickoff** for Sofia Alvarez's first day</span>, <span class="expect">**next Monday at
+> 9:30 AM**, add a Teams meeting link</span>, <span class="constraint">and invite only me. Show it to me before you send it.</span>
 - → Watch the **Scheduling** / **Calendar** skill chip load. In this shared tenant, invite
   **yourself** only — don't add real people.
 
 ### Task 6c — Team announcement (Communications skill)
-> Draft a warm, inclusive **team announcement** introducing Sofia Alvarez, our new HR Coordinator
-> starting next Monday, and her first-week plan, using `onboarding-checklist.docx`. Save it as an
-> **Outlook email draft addressed to me**; don't send it.
+> <span class="goal">Draft a warm, inclusive **team announcement** introducing Sofia Alvarez, our new HR Coordinator
+> starting next Monday, and her first-week plan</span>, <span class="source">using `onboarding-checklist.docx`</span>. <span class="expect">Save it as an
+> **Outlook email draft addressed to me**</span>; <span class="constraint">don't send it.</span>
 
 ✅ **Checkpoint:** an orientation deck, a scheduled kickoff (reviewed, not blasted out), and a team
 announcement draft.
@@ -575,9 +606,9 @@ before it goes out?
 1. Open **Automations** → **Create**.
 2. Enter this prompt. Name the **exact file and folder**, because the automation runs later without
    you there to clarify:
-   > Every **Monday at 8:00 AM**, read **`hr-tickets-sample.xlsx`** in my OneDrive folder
-   > **`Documents/ai_hr_cowork_workshop`**, summarize **open tickets by category and priority**, list any
-   > **high-priority open tickets first**, and put the result in a short report. Don't email anyone.
+   > <span class="expect">Every **Monday at 8:00 AM**</span>, <span class="source">read **`hr-tickets-sample.xlsx`** in my OneDrive folder
+   > **`Documents/ai_hr_cowork_workshop`**</span>, <span class="goal">summarize **open tickets by category and priority**</span>, <span class="expect">list any
+   > **high-priority open tickets first**, and put the result in a short report.</span> <span class="constraint">Don't email anyone.</span>
 3. When asked, choose **Activate and run now**. The first run starts immediately, so you see the
    result in class instead of next Monday. (**Activate** alone waits for the next scheduled time.)
 4. Check the **Runs** tab (today's run) and **Manage schedules** (edit, pause, resume, delete).
@@ -585,7 +616,7 @@ before it goes out?
   whose report names **T-2008** as the high-priority open ticket.
 
 ### Task 7b — Daily Briefing (Daily Briefing skill)
-> Give me a **Daily Briefing** focused on my HR tasks and meetings for today.
+> <span class="goal">Give me a **Daily Briefing**</span> <span class="source">focused on my HR tasks and meetings for today</span>. <span class="expect">List the most urgent items first.</span>
 - → Watch the **Daily Briefing** skill chip load.
 
 ### Task 7c — Share your custom skill (sharing flow)
@@ -670,11 +701,11 @@ tab in Teams), select **Create agent** / **New agent**. (Desktop/web only — no
 
 ### Step 2 — Describe the agent
 On the **Describe** tab:
-> Create an **HR Policy Agent** that answers employee questions about company policies and benefits
-> — PTO, remote/hybrid work, benefits enrollment, overtime, and the code of conduct — in a warm,
-> professional tone. Always cite the source document and remind the reader that HR should confirm.
-> Politely decline questions about individual pay, performance, legal, or medical matters and
-> redirect them to HR.
+> <span class="goal">Create an **HR Policy Agent** that answers employee questions about company policies and benefits
+> — PTO, remote/hybrid work, benefits enrollment, overtime, and the code of conduct</span> — <span class="expect">in a warm,
+> professional tone. Always cite the source document and remind the reader that HR should confirm.</span>
+> <span class="constraint">Politely decline questions about individual pay, performance, legal, or medical matters and
+> redirect them to HR.</span>
 
 ### Step 3 — Configure name, instructions & knowledge
 On the **Configure** tab:

@@ -20,7 +20,7 @@ exercise in Agent Builder.
 - **Done and pushed** to the private repo https://github.com/cragage_microsoft/ai_hr_cowork_workshop
   (`main`).
 - **Last verification passed:** no stale text, no broken links in Markdown or Word files, and the
-  deck (46 slides) opens cleanly.
+  deck (47 slides) opens cleanly.
 - **Not yet run end to end in a real tenant.**
 
 ## Architecture
@@ -46,7 +46,13 @@ exercise in Agent Builder.
   8 slides) and two paste-ready Outlook emails (`participant-email.html`, `instructor-email.html`).
   Both decks' "Workshop kit" slide and the emails link to files on `main` in this repo
   (`/raw/main/...` downloads), so update them together when files move.
-- **Other outputs:** `instructor/instructor-deck.pptx` (46 slides),
+- **Prompt colour coding:** exercise prompts (Ex 2–8; Ex 1 is deliberately left plain) highlight
+  their elements instead of labelling them: Goal (blue), Source (green), Expectations (orange),
+  Constraints (purple). In Markdown this is `<span class="goal|source|expect|constraint">`, which
+  `tools/callouts.lua` maps to the Word character styles "Prompt Goal" etc.; in `tools/content.py`
+  the deck uses `{g}…{/g}`, `{s}`, `{e}`, `{c}` markers. Workbook Setup step F and deck slide 14
+  teach the four elements with a weak vs. strong open-enrollment prompt.
+- **Other outputs:** `instructor/instructor-deck.pptx` (47 slides),
   `participant/quick-reference-card.docx`, and a `.docx` copy of every guide (19 in total).
 - **Agenda (240 min):**
 
@@ -187,7 +193,11 @@ Requirements:
 - On October 3, 2026, `finalize_word.ps1` hung with no output (its Word automation instance never
   returned, probably waiting on a hidden dialog) and had to be stopped. Until it's fixed, a Word
   rebuild leaves the contents pages empty: refresh them in Word, or don't commit rebuilt `.docx`
-  files whose text didn't change.
+  files whose text didn't change. It hung again later that day on two files. Running each step
+  separately (open, TOC update, field update, save, PDF export) on the same files then succeeded
+  in 7–22 s each, so the hang is intermittent rather than one bad step. Workaround: finalize one file
+  at a time (put a single path in `.build/made.txt`), and stop only the `/Automation` WINWORD
+  process, plus its `~$` lock file, if it stalls.
 - Product facts are dated October 1, 2026: plugin catalog, Edge 152 requirement, limits.
 - Browser use needs an admin setting, the Edge policy, Edge 152+ and an Edge profile signed in with the
   workshop account. Any of these can block Exercise 3.
