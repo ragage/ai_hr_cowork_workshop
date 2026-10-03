@@ -88,7 +88,7 @@ say, that the handbook matches, and a next step for **T-2008** (Owen Wright, ove
 e.g. "correct in the next pay run or an off-cycle payment, confirm hours with the manager, and reply
 to Owen." Not sent anywhere.
 
-**Didn't run?** See [reference/10-cowork-browser.md](reference/10-cowork-browser.md#troubleshooting).
+**Didn't run?** See [reference/10-cowork-browser.md](../reference/10-cowork-browser.md#troubleshooting).
 "Browser tasks run in Microsoft Edge" means the wrong browser; no browser step at all usually means
 browser use isn't allowed for the account, or the Edge setting is off. The attendee follows the
 facilitator demo.
@@ -98,7 +98,7 @@ facilitator demo.
 ## Exercise 4 — Custom skill: HR Policy Answer
 
 **Evaluation:** **Good (70–84)** or better. Common "Needs work" causes: a vague trigger ("HR stuff"),
-or no out-of-scope list. Answer key: [skills/hr-policy-answer/SKILL.md](skills/hr-policy-answer/SKILL.md).
+or no out-of-scope list. Answer key: [skills/hr-policy-answer/SKILL.md](../skills/hr-policy-answer/SKILL.md).
 
 **In-scope test — "When is open enrollment and how do I change my medical plan?"** Expected facts:
 - Open enrollment is held every **November**; changes take effect **January 1**.

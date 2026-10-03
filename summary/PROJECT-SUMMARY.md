@@ -20,26 +20,34 @@ exercise in Agent Builder.
 - **Done and pushed** to the private repo https://github.com/cragage_microsoft/ai_hr_cowork_workshop
   (`main`).
 - **Last verification passed:** no stale text, no broken links in Markdown or Word files, and the
-  deck (45 slides) opens cleanly.
+  deck (46 slides) opens cleanly.
 - **Not yet run end to end in a real tenant.**
 
 ## Architecture
 
-- **Guides:** [README.md](README.md), [participant-workbook.md](participant-workbook.md),
-  [facilitator-guide.md](facilitator-guide.md), [facilitator-answer-key.md](facilitator-answer-key.md),
-  [readiness-checklist.md](readiness-checklist.md), [seed-content.md](seed-content.md),
-  [after-the-workshop.md](after-the-workshop.md).
+- **Folders by audience:** `participant/` (workbook, quick-reference card, sample-data zip,
+  after-the-workshop pack), `instructor/` (instructor deck, facilitator guide, answer key, readiness
+  checklist, seed content), `communication/` (overview deck and emails), and `summary/` (this file).
+  Only `README.md` and its Word copy stay at the root.
+- **Guides:** [README.md](../README.md), [participant-workbook.md](../participant/participant-workbook.md),
+  [facilitator-guide.md](../instructor/facilitator-guide.md), [facilitator-answer-key.md](../instructor/facilitator-answer-key.md),
+  [readiness-checklist.md](../instructor/readiness-checklist.md), [seed-content.md](../instructor/seed-content.md),
+  [after-the-workshop.md](../participant/after-the-workshop.md).
 - **Reference pages:** `reference/00`–`10`
-  ([02](reference/02-settings-and-models.md) holds the sample custom instructions,
-  [09](reference/09-plugins.md) the plugins spotlight with the SuccessFactors note,
-  [10](reference/10-cowork-browser.md) browser use). Screenshots are in `reference/media/`.
-- **Example skill:** [skills/hr-policy-answer/SKILL.md](skills/hr-policy-answer/SKILL.md). Its Word
+  ([02](../reference/02-settings-and-models.md) holds the sample custom instructions,
+  [09](../reference/09-plugins.md) the plugins spotlight with the SuccessFactors note,
+  [10](../reference/10-cowork-browser.md) browser use). Screenshots are in `reference/media/`.
+- **Example skill:** [skills/hr-policy-answer/SKILL.md](../skills/hr-policy-answer/SKILL.md). Its Word
   copy sits outside the skill folder.
 - **Sample data:** `sample-knowledge/` holds the .docx/.xlsx files plus their editable .md/.csv
-  sources; `zava-sample-knowledge.zip` holds the six Word/Excel files inside an
+  sources; `participant/zava-sample-knowledge.zip` holds the six Word/Excel files inside an
   `ai_hr_cowork_workshop/` folder (the same name as the OneDrive folder the prompts use).
-- **Other outputs:** `instructor-deck.pptx` (45 slides), `quick-reference-card.docx`, and a `.docx`
-  copy of every guide (19 in total).
+- **Communication:** `communication/` holds the training overview deck (`training-overview.pptx`,
+  8 slides) and two paste-ready Outlook emails (`participant-email.html`, `instructor-email.html`).
+  Both decks' "Workshop kit" slide and the emails link to files on `main` in this repo
+  (`/raw/main/...` downloads), so update them together when files move.
+- **Other outputs:** `instructor/instructor-deck.pptx` (46 slides),
+  `participant/quick-reference-card.docx`, and a `.docx` copy of every guide (19 in total).
 - **Agenda (240 min):**
 
 | Time | Segment |
@@ -60,10 +68,15 @@ exercise in Agent Builder.
 
 - **Generators (not in this repo)** live in the authoring session folder
   `c:\Users\cragage\.copilot\session-state\051732a1-5bba-4dda-a082-a71c80e8bdca\files\deck-generator\`:
-  - `build_deck.py` and `content.py`: the deck.
+  - `build_deck.py` and `content.py`: the instructor deck.
+  - `build_overview.py`: the training overview deck. It reuses `build_deck.py`'s helpers and shared
+    slides (agenda, objectives, workshop-kit links) by running the part of that file before the
+    `# 1 — Title` marker, so keep that marker and the shared-slide functions above it.
   - `make_word_docs.py` and `callouts.lua`: Markdown to Word.
   - `finalize_word.ps1`: Word COM updates contents pages and exports QA PDFs.
   - `make_quickref.py`: the quick-reference card.
+  - `make_download_hint.py`: the "select the Download icon" tip picture
+    (`reference/media/download-hint.png`) used in the guides, emails, and both decks' kit slide.
   - `make_office_samples.py`: the Word/Excel sample files (not the zip; see Build Instructions).
   - `art/ex1-8.png`: Fluent Emoji pictures for the dividers.
 - **External inputs the deck build needs:** a local copy of the source PowerPoint template, and the
@@ -73,7 +86,12 @@ exercise in Agent Builder.
 
 Latest work:
 
-- **Deck:**
+- **Decks:**
+  - the instructor deck lives in `instructor/instructor-deck.pptx` (the generator's `OUT` points there)
+  - a new training overview deck, `communication/training-overview.pptx`, built by `build_overview.py`
+  - a "Workshop kit — download links" slide in both decks (before Setup in the instructor deck), with
+    participant and instructor links (base URL in `KIT_REPO`, overridable by environment variable)
+  - the Setup slide now says to upload the zip's `ai_hr_cowork_workshop` folder with Folder upload
   - a divider before each exercise, with number, picture, time and a 1–8 tracker
   - one PowerPoint section per exercise
   - a new custom-instructions setup slide
@@ -114,6 +132,7 @@ cd c:\source\ai_hr_cowork_workshop
 New-Item -ItemType Directory -Force .build | Out-Null; Copy-Item "$g\*" .build\ -Recurse -Force
 cd .build; $env:PYTHONIOENCODING = "utf-8"
 python build_deck.py      # close PowerPoint first, or set $env:DECK_OUT to a preview path
+python build_overview.py  # or set $env:OVERVIEW_OUT to a preview path
 python make_quickref.py
 python make_word_docs.py
 powershell -ExecutionPolicy Bypass -File finalize_word.ps1
@@ -128,7 +147,7 @@ If the sample Word/Excel files change, rebuild the zip so the six files sit insi
 cd c:\source\ai_hr_cowork_workshop
 $z = New-Item -ItemType Directory -Force "$env:TEMP\zava-zip\ai_hr_cowork_workshop"
 Copy-Item sample-knowledge\*.docx, sample-knowledge\*.xlsx $z -Force
-Compress-Archive -Path $z -DestinationPath zava-sample-knowledge.zip -Force
+Compress-Archive -Path $z -DestinationPath participant\zava-sample-knowledge.zip -Force
 Remove-Item "$env:TEMP\zava-zip" -Recurse -Force
 ```
 
@@ -150,7 +169,7 @@ Requirements:
 - **Stale text:** scan all .md files and the XML inside the Office files for the template name, the old
   sample folder `Documents/Cowork` (except `/skills`), and the old title. Expect zero hits.
 - **Live:** a dry run in the tenant with one attendee account, compared against
-  [facilitator-answer-key.md](facilitator-answer-key.md).
+  [facilitator-answer-key.md](../instructor/facilitator-answer-key.md).
 
 ## Remaining Work
 
@@ -181,7 +200,7 @@ Requirements:
 ## Next Session Starting Prompt
 
 > Continue work on the HR Copilot Cowork workshop kit in `c:\source\ai_hr_cowork_workshop` (GitHub:
-> cragage_microsoft/ai_hr_cowork_workshop, private, `main`). Read `README.md` and `PROJECT-SUMMARY.md`
+> cragage_microsoft/ai_hr_cowork_workshop, private, `main`). Read `README.md` and `summary/PROJECT-SUMMARY.md`
 > first. The generators live in the authoring session's `deck-generator` folder (copy them to `.build\`
 > to run; `build_deck.py` also needs the local PowerPoint template). First task: move the generators
 > and `art/` into the repo under `tools/`, make the template and screenshot paths configurable

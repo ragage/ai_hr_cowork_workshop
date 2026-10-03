@@ -49,7 +49,7 @@ each attendee account has a **Microsoft 365 Copilot** license and is covered by 
 policy** (usage-based billing; this is what grants Cowork access), with **Cowork Browsing** allowed for
 the Exercise 3 browser task. Attendees need a **laptop/desktop** with **Microsoft Edge** (version 152 or
 later) signed in with their workshop account (custom skills and browser tasks aren't supported on mobile). Full details and a host checklist:
-[readiness-checklist.md](readiness-checklist.md).
+[readiness-checklist.md](instructor/readiness-checklist.md).
 
 ## Agenda (240 minutes)
 
@@ -81,18 +81,37 @@ later) signed in with their workshop account (custom skills and browser tasks ar
 > Exception: the custom skill file (`skills/hr-policy-answer/SKILL.md`) must stay Markdown for Cowork to
 > use it; its `.docx` copy is only for reading and printing.
 
+The kit is organized by audience:
+
+- **[participant/](participant)** — what attendees use: the workbook, the quick-reference card, the
+  sample-data zip, and the after-the-workshop pack.
+- **[instructor/](instructor)** — what the facilitator and host use: the instructor deck, facilitator
+  guide, answer key, readiness checklist, and seed content.
+- **[communication/](communication)** — what you send out: the training overview deck and paste-ready
+  Outlook emails for participants and instructors.
+- **[reference/](reference)**, **[skills/](skills)**, and **[sample-knowledge/](sample-knowledge)** —
+  background guides, the example custom skill, and the editable sample data.
+
+> **Downloading a file from GitHub:** if a link opens the file on GitHub instead of downloading it,
+> select the **Download** icon (**Download raw file**) at the top right of the file.
+
+![Tip: on a GitHub file page, select the Download icon (Download raw file) at the top right of the file](reference/media/download-hint.png)
+
 | File | Formats | Purpose |
 | --- | --- | --- |
 | README | [.md](README.md) · [.docx](README.docx) | This overview |
-| PROJECT-SUMMARY | [.md](PROJECT-SUMMARY.md) (maintainers only) | Handoff notes: status, architecture, decisions, how to build and test, remaining work |
-| [instructor-deck.pptx](instructor-deck.pptx) | pptx | Instructor deck (45 slides, speaker notes, alt text) — a divider slide with a picture and progress tracker before each exercise, one PowerPoint section per exercise for quick navigation, objectives, approvals, a scenario card + hands-on slide per exercise, an Output folder walkthrough, an HR plugins spotlight, and a knowledge check |
-| readiness-checklist | [.md](readiness-checklist.md) · [.docx](readiness-checklist.docx) | Prep timeline, cost planning, whole-room Plan B, and setup for hosts + attendees |
-| seed-content | [.md](seed-content.md) · [.docx](seed-content.docx) | Ready-made Zava emails, meetings, and a Teams chat to seed attendee accounts (Exercise 1) |
-| facilitator-guide | [.md](facilitator-guide.md) · [.docx](facilitator-guide.docx) | Minute-by-minute run sheet, talking points, troubleshooting |
-| facilitator-answer-key | [.md](facilitator-answer-key.md) · [.docx](facilitator-answer-key.docx) | Expected results and verified figures for every exercise; fallback walkthrough |
-| participant-workbook | [.md](participant-workbook.md) · [.docx](participant-workbook.docx) | Step-by-step attendee exercises with checkpoints |
-| [quick-reference-card.docx](quick-reference-card.docx) | docx | One-page printable handout: tools, prompt recipe, approvals, UI map, golden rules |
-| after-the-workshop | [.md](after-the-workshop.md) · [.docx](after-the-workshop.docx) | Knowledge check, feedback survey (for Microsoft Forms), and 30-day adoption plan |
+| summary/PROJECT-SUMMARY | [.md](summary/PROJECT-SUMMARY.md) (maintainers only) | Handoff notes: status, architecture, decisions, how to build and test, remaining work |
+| [instructor/instructor-deck.pptx](instructor/instructor-deck.pptx) | pptx | Instructor deck (46 slides, speaker notes, alt text) — a divider slide with a picture and progress tracker before each exercise, one PowerPoint section per exercise for quick navigation, objectives, approvals, a **workshop kit slide with download links** for participants and instructors, a scenario card + hands-on slide per exercise, an Output folder walkthrough, an HR plugins spotlight, and a knowledge check |
+| [communication/training-overview.pptx](communication/training-overview.pptx) | pptx | Training overview deck (8 slides) for HR leaders and prospective attendees — what the training is, objectives, agenda, the eight exercises, what to prepare, and the same **download links** slide |
+| [communication/participant-email.html](communication/participant-email.html) | html | Paste-ready Outlook invitation for attendees: session details, what to bring, and links to the workbook, sample data, and handouts |
+| [communication/instructor-email.html](communication/instructor-email.html) | html | Paste-ready Outlook email for the instructor: links to every kit asset, the preparation timeline, and key reminders |
+| instructor/readiness-checklist | [.md](instructor/readiness-checklist.md) · [.docx](instructor/readiness-checklist.docx) | Prep timeline, cost planning, whole-room Plan B, and setup for hosts + attendees |
+| instructor/seed-content | [.md](instructor/seed-content.md) · [.docx](instructor/seed-content.docx) | Ready-made Zava emails, meetings, and a Teams chat to seed attendee accounts (Exercise 1) |
+| instructor/facilitator-guide | [.md](instructor/facilitator-guide.md) · [.docx](instructor/facilitator-guide.docx) | Minute-by-minute run sheet, talking points, troubleshooting |
+| instructor/facilitator-answer-key | [.md](instructor/facilitator-answer-key.md) · [.docx](instructor/facilitator-answer-key.docx) | Expected results and verified figures for every exercise; fallback walkthrough |
+| participant/participant-workbook | [.md](participant/participant-workbook.md) · [.docx](participant/participant-workbook.docx) | Step-by-step attendee exercises with checkpoints |
+| [participant/quick-reference-card.docx](participant/quick-reference-card.docx) | docx | One-page printable handout: tools, prompt recipe, approvals, UI map, golden rules |
+| participant/after-the-workshop | [.md](participant/after-the-workshop.md) · [.docx](participant/after-the-workshop.docx) | Knowledge check, feedback survey (for Microsoft Forms), and 30-day adoption plan |
 | reference/00-copilot-vs-cowork | [.md](reference/00-copilot-vs-cowork.md) · [.docx](reference/00-copilot-vs-cowork.docx) | Copilot Chat vs. Cowork — the difference (training opener) |
 | reference/01-cowork-overview | [.md](reference/01-cowork-overview.md) · [.docx](reference/01-cowork-overview.docx) | What Cowork is and where to use it |
 | reference/02-settings-and-models | [.md](reference/02-settings-and-models.md) · [.docx](reference/02-settings-and-models.docx) | Settings, model picker, reasoning effort, automations |
@@ -106,12 +125,12 @@ later) signed in with their workshop account (custom skills and browser tasks ar
 | reference/10-cowork-browser | [.md](reference/10-cowork-browser.md) · [.docx](reference/10-cowork-browser.docx) | Navigate websites with Cowork's browser: what it is, how to turn it on, troubleshooting (Exercise 3) |
 | skills/hr-policy-answer/SKILL | [.md](skills/hr-policy-answer/SKILL.md) (used by Cowork) · [.docx](skills/hr-policy-answer.SKILL.docx) (read-only copy) | Example custom skill (reference/answer key) |
 | [sample-knowledge/](sample-knowledge) | folder | Fictional *Zava* HR data: the Word/Excel files used in the exercises, plus their editable .md/.csv sources |
-| [zava-sample-knowledge.zip](zava-sample-knowledge.zip) | zip | The six Word and Excel sample files in an `ai_hr_cowork_workshop` folder, ready to upload to OneDrive |
+| [participant/zava-sample-knowledge.zip](participant/zava-sample-knowledge.zip) | zip | The six Word and Excel sample files in an `ai_hr_cowork_workshop` folder, ready to upload to OneDrive |
 
 ### Sample data (all fictional — no real PII)
 
 Every exercise uses the **Word and Excel** sample files. They work in both Cowork and Agent Builder
-(which doesn't accept .md or .csv). Download **[zava-sample-knowledge.zip](zava-sample-knowledge.zip)**
+(which doesn't accept .md or .csv). Download **[zava-sample-knowledge.zip](participant/zava-sample-knowledge.zip)**
 to get all six at once. It extracts to a folder named **`ai_hr_cowork_workshop`**; upload that folder
 to **Documents** in your OneDrive (`Documents/ai_hr_cowork_workshop`). The prompts use that path.
 
@@ -130,15 +149,20 @@ to **Documents** in your OneDrive (`Documents/ai_hr_cowork_workshop`). The promp
 
 ## How to use this kit
 
-1. **Host (3 weeks out):** follow the [preparation timeline](readiness-checklist.md#preparation-timeline).
-   Provision accounts, estimate cost, and load [seed-content.md](seed-content.md) the day before.
-2. **Facilitator:** read [facilitator-guide.md](facilitator-guide.md), do a full dry run against the
-   [answer key](facilitator-answer-key.md), and present with
-   [instructor-deck.pptx](instructor-deck.pptx) (speaker notes carry the run sheet).
-3. **Attendees:** on the day, follow [participant-workbook.md](participant-workbook.md) start to
-   finish, with the printed [quick-reference card](quick-reference-card.docx) and the
+1. **Host (3 weeks out):** follow the [preparation timeline](instructor/readiness-checklist.md#preparation-timeline).
+   Provision accounts, estimate cost, and load [seed-content.md](instructor/seed-content.md) the day before.
+   Send the instructor the [instructor email](communication/instructor-email.html), and attendees the
+   [participant email](communication/participant-email.html) one week out; use the
+   [training overview deck](communication/training-overview.pptx) to introduce the workshop. To use
+   either email, open it in a browser, copy the email, and paste it into Outlook. Its links point to
+   this private repo, so give recipients access or swap in your Teams/SharePoint links.
+2. **Facilitator:** read [facilitator-guide.md](instructor/facilitator-guide.md), do a full dry run against the
+   [answer key](instructor/facilitator-answer-key.md), and present with
+   [instructor-deck.pptx](instructor/instructor-deck.pptx) (speaker notes carry the run sheet).
+3. **Attendees:** on the day, follow [participant-workbook.md](participant/participant-workbook.md) start to
+   finish, with the printed [quick-reference card](participant/quick-reference-card.docx) and the
    [prompt library](reference/04-prompt-library.md) open.
-4. **Afterward:** send [after-the-workshop.md](after-the-workshop.md) (knowledge check, survey, and
+4. **Afterward:** send [after-the-workshop.md](participant/after-the-workshop.md) (knowledge check, survey, and
    30-day plan) and pause the Exercise 1 and 7 schedules.
 5. **Everyone:** treat every Cowork output as a **draft to review**, approve **one action at a
    time**, and use only the fictional sample data during exercises.

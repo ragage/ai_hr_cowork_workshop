@@ -11,10 +11,10 @@
 | --- | --- | --- |
 | **T − 3 weeks** | Host / admin | Confirm Microsoft 365 Copilot licenses and **usage-based billing** for the attendee tenant, create a **Cowork spending policy** for the attendee group, and turn on **Cowork Browsing** for that group. Estimate cost and set spend guardrails (see [Cost planning](#cost-planning)). Book the room and Wi-Fi. |
 | **T − 2 weeks** | Host / admin | Provision **~25 accounts + 2–3 spares**, assign managers, create the 2–3 **seed sender** accounts ([seed-content.md](seed-content.md)). Confirm the facilitator's own tenant is Cowork-ready. |
-| **T − 1 week** | Facilitator | **Full dry run** of all 8 exercises on a test attendee account, checking against the [answer key](facilitator-answer-key.md). Stage `zava-sample-knowledge.zip` in the shared Teams/SharePoint folder. Send attendees a joining note (bring a laptop, not a phone). |
-| **T − 1 day** | Host / admin | Load the **seed emails, meetings, and Teams chat** into every account (1–2 days ahead, so the Exercise 1 command center sees them as this week). Sign in to 3 random accounts in **Edge** and run the smoke test **and** the Exercise 3 browser prompt (accept the consent notice). Print credential handouts and the [quick-reference card](quick-reference-card.docx). |
+| **T − 1 week** | Facilitator | **Full dry run** of all 8 exercises on a test attendee account, checking against the [answer key](facilitator-answer-key.md). Stage `zava-sample-knowledge.zip` in the shared Teams/SharePoint folder. Send attendees a joining note (bring a laptop, not a phone); the [participant email](../communication/participant-email.html) is ready to paste into Outlook. |
+| **T − 1 day** | Host / admin | Load the **seed emails, meetings, and Teams chat** into every account (1–2 days ahead, so the Exercise 1 command center sees them as this week). Sign in to 3 random accounts in **Edge** and run the smoke test **and** the Exercise 3 browser prompt (accept the consent notice). Print credential handouts and the [quick-reference card](../participant/quick-reference-card.docx). |
 | **Day of, T − 45 min** | Facilitator + proctors | Test the projector, Wi-Fi, and demo tenant. Open the deck, the answer key, and a ready Cowork session. Brief proctors on the [troubleshooting triage](facilitator-guide.md#troubleshooting-triage-hand-to-proctors). |
-| **Day after** | Host | **Pause or delete** Exercise 1 and 7 schedules (or have attendees do it), send the [after-the-workshop pack](after-the-workshop.md) and survey, and review usage and spend. |
+| **Day after** | Host | **Pause or delete** Exercise 1 and 7 schedules (or have attendees do it), send the [after-the-workshop pack](../participant/after-the-workshop.md) and survey, and review usage and spend. |
 
 ## Cost planning
 
@@ -42,7 +42,7 @@ adds up. Before the session:
 3. **Keep the non-Cowork pieces hands-on:** Exercise 8 (Agent Builder) and the Copilot Chat
    comparison work without Cowork, if Microsoft 365 Copilot is up.
 4. **Turn practice into judgment:** have attendees critique the demo outputs with the answer key and
-   the [responsible-use checklist](reference/06-responsible-use.md#quick-pre-send-checklist).
+   the [responsible-use checklist](../reference/06-responsible-use.md#quick-pre-send-checklist).
 5. **Reschedule a 90-minute hands-on follow-up** for Exercises 1, 3, 4, and 7, with the same
    accounts and seed data.
 
@@ -58,7 +58,7 @@ adds up. Before the session:
       Settings → View all → Cowork settings → Allow browser access**, and allow it for the attendee
       group. It's **off by default**. Also check that web filtering doesn't block **dol.gov** or
       **lni.wa.gov**, and that the Edge policy **CopilotCoworkToolActionsEnabled** isn't set to
-      Disabled on managed laptops. Details: [reference/10-cowork-browser.md](reference/10-cowork-browser.md).
+      Disabled on managed laptops. Details: [reference/10-cowork-browser.md](../reference/10-cowork-browser.md).
 - [ ] Attendee laptops have **Microsoft Edge 152 or later**. Each attendee will sign in to an **Edge
       profile** with their workshop account (InPrivate and guest windows can't run browser tasks) and
       check that **Allow Cowork to take actions on your behalf** is on in Edge **Settings**.
@@ -68,7 +68,9 @@ adds up. Before the session:
       live. Otherwise the deck's screenshot is enough. Don't add plugins to the attendee tenant.
 - [ ] **Stage the sample data:** upload **zava-sample-knowledge.zip** (the six Word and Excel sample files,
       in an `ai_hr_cowork_workshop` folder) to a shared location every attendee account can reach (a **Teams channel** or **SharePoint
-      library**), so attendees can copy them into their own OneDrive.
+      library**), so attendees can copy them into their own OneDrive. Getting the files from GitHub?
+      If a link opens the file on GitHub, select the **Download** icon (**Download raw file**) at the
+      top right of the file (see the picture after this list).
 - [ ] **Seed mail, calendar & chat for Exercise 1 (Executive Command Center):** new accounts are
       empty. Load the **7 emails**, **3 meetings** (including the deliberate Thursday conflict), and
       the short **Teams chat** from [seed-content.md](seed-content.md) into each attendee account
@@ -80,6 +82,8 @@ adds up. Before the session:
       not required for the core exercises.
 - [ ] Confirm any **model/subprocessor policy** (e.g., use of Anthropic models as a subprocessor) so
       you can tell attendees what's allowed in the model picker.
+
+![Tip: on a GitHub file page, select the Download icon (Download raw file) at the top right of the file](../reference/media/download-hint.png)
 
 ## For attendees (during setup, first 20 minutes)
 

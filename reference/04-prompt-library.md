@@ -120,7 +120,7 @@ Example:
 
 ## 8. Personal productivity & leadership (generic)
 
-The full command-center prompt is in the [participant workbook](../participant-workbook.md)
+The full command-center prompt is in the [participant workbook](../participant/participant-workbook.md)
 (Exercise 1). Short versions to adapt; the inbox prompt is a good everyday habit:
 
 - **Organize my inbox:** "Help me organize my inbox. Review my Outlook email from the last 24 hours:
