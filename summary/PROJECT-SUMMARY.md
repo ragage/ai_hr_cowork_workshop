@@ -22,7 +22,7 @@ exercise in Agent Builder.
 - **Done and pushed** to the private repo https://github.com/cragage_microsoft/ai_hr_cowork_workshop
   (`main`).
 - **Last verification passed:** no stale text, no broken links in Markdown or Word files, and the
-  deck (47 slides) opens cleanly.
+  deck (57 slides) opens cleanly.
 - **Not yet run end to end in a real tenant.**
 
 ## Architecture
@@ -52,12 +52,12 @@ exercise in Agent Builder.
   their elements instead of labelling them: Goal (blue), Source (green), Expectations (orange),
   Constraints (purple). In Markdown this is `<span class="goal|source|expect|constraint">`, which
   `tools/callouts.lua` maps to the Word character styles "Prompt Goal" etc.; in `tools/content.py`
-  the deck uses `{g}…{/g}`, `{s}`, `{e}`, `{c}` markers. Workbook Setup step F and deck slide 14
+  the deck uses `{g}…{/g}`, `{s}`, `{e}`, `{c}` markers. Workbook Setup step F and deck slide 15
   teach the four elements with a weak vs. strong open-enrollment prompt.
   Every exercise card in the deck has a "Prompt key" legend picture (bottom right). Stretch prompts live at the
   end of each workbook exercise; the hands-on slides, the closing slide, and the facilitator guide
   link to the workbook.
-- **Other outputs:** `instructor/instructor-deck.pptx` (47 slides),
+- **Other outputs:** `instructor/instructor-deck.pptx` (57 slides),
   `participant/quick-reference-card.docx`, and a `.docx` copy of every guide (19 in total).
 - **Agenda (240 min):**
 
@@ -88,7 +88,7 @@ exercise in Agent Builder.
   - `make_quickref.py`: the quick-reference card.
   - `make_prompt_key.py`: the Goal / Source / Expectations / Constraints legend pictures
     (`reference/media/prompt-key*.png`) used by the workbook, prompt library, quick-reference card,
-    deck slide 14, and the "Prompt key" corner of every exercise card. Run it before the deck and
+    deck slide 15, and the "Prompt key" corner of every exercise card. Run it before the deck and
     Word builds if the colours or wording change.
   - `make_download_hint.py`: the "select the Download icon" tip picture
     (`reference/media/download-hint.png`) used in the guides, emails, and both decks' kit slide.
@@ -102,13 +102,17 @@ exercise in Agent Builder.
 
 Latest work:
 
+- **Demo video slides (October 4):** ported from `main` (PR #1) into `build_deck.py`: a **Demo** slide
+  after every scenario card, plus one after the Copilot and Cowork UI walkthrough (slide 7) and one
+  after Prompting best practices (slide 16). Each has a 16:9 media placeholder, "Watch for" cues, and
+  notes on inserting the recording. The facilitator guide and readiness checklist cover recording them.
 - **Data model (October 3):** attendees use their own work accounts and real data for Exercise 1
   only; the participant seed step is gone. `instructor/seed-content.md` is now for the facilitator's
   demo account and recommends loading it with VS Code + GitHub Copilot (Agent mode) + the **Work IQ
   MCP server**, with the alternatives compared. Workbook, guides, emails, both decks, and the
   quick-reference card were updated (privacy etiquette, "Keep real data private" rule).
 - **Prompt legend graphic:** `tools/make_prompt_key.py` draws the colour legend; it replaces the
-  text legend on the exercise cards and slide 14, and appears in the workbook, prompt library, and
+  text legend on the exercise cards and slide 15, and appears in the workbook, prompt library, and
   quick-reference card. Hands-on slides link to the stretch prompts in the workbook.
 - **`finalize_word.ps1`** rewritten to stop the hangs (see Known Issues).
 - **Decks:**

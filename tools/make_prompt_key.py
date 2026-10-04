@@ -4,7 +4,7 @@ Same colors as the Word workbook (make_word_docs.py) and the deck (build_deck.py
 card with a round icon (target, folder, checklist, shield), its name, and what it answers.
 Outputs (reference/media/, rendered at 3x):
 - prompt-key.png        one row, short descriptions (workbook, prompt library, quick-reference card), 6.5 in wide
-- prompt-key-slide.png  one row, the full questions (deck slide 14), 12.23 in wide
+- prompt-key-slide.png  one row, the full questions (deck slide 15), 12.23 in wide
 - prompt-key-grid.png   2 x 2, names only (Prompt key corner of every exercise card), 4.62 in wide
 - prompt-key-card.png   2 x 2, short descriptions (quick-reference card), 4.6 in wide
 """

@@ -4,6 +4,7 @@ import copy
 import os
 import re
 import uuid
+from xml.sax.saxutils import escape as xml_escape
 
 from lxml import etree
 from PIL import Image, ImageDraw, ImageFont
@@ -806,6 +807,87 @@ def kit_links_slide():
     return s
 
 
+MEDIA_PH = ('<p:sp xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" '
+            'xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">'
+            '<p:nvSpPr><p:cNvPr id="%d" name="Demo Video Placeholder" descr="%s"/>'
+            '<p:cNvSpPr><a:spLocks noGrp="1"/></p:cNvSpPr>'
+            '<p:nvPr><p:ph type="media" sz="quarter" idx="%d"/></p:nvPr></p:nvSpPr>'
+            '<p:spPr><a:xfrm><a:off x="%d" y="%d"/><a:ext cx="%d" cy="%d"/></a:xfrm>'
+            '<a:prstGeom prst="rect"><a:avLst/></a:prstGeom></p:spPr>'
+            '<p:txBody><a:bodyPr anchor="ctr"/><a:lstStyle/><a:p><a:pPr algn="ctr"/>'
+            '<a:endParaRPr lang="en-US"/></a:p></p:txBody></p:sp>')
+
+
+def media_placeholder(slide, x, y, w, h, descr):
+    """An empty media placeholder: select its icon in PowerPoint to insert a video that fills the frame."""
+    tree = slide.shapes._spTree
+    nid = max(int(e.get("id")) for e in tree.iter(qn("p:cNvPr"))) + 1
+    tree.append(etree.fromstring(MEDIA_PH % (nid, xml_escape(descr, {'"': "&quot;"}), 100 + nid,
+                                             Inches(x), Inches(y), Inches(w), Inches(h))))
+
+
+def demo_video_slide(title, pill_text, what, watch, next_md, say, band_msg=None):
+    """Demo slide with an empty 16:9 video frame for a pre-recorded run (Cowork tasks can take minutes).
+    what: frame caption ("Exercise 1, ..."); watch: (label, text) steps; next_md: the "Next:" box; say: speaker-note lead."""
+    s = clone_slide(S_CARD)
+    keep_only(s, {"Title 3", "NavPill_SitesPages", "TextBox 29", "TextBox 30", "TextBox 49"})
+    d = by_name(s)
+    set_first_run(d["Title 3"], "Demo \u00b7 " + title)
+    set_first_run(d["NavPill_SitesPages"], pill_text)
+    set_first_run(d["TextBox 30"], "Format")
+    set_first_run(d["TextBox 49"], "Video")
+    # 16:9 video frame (left); the inserted video covers it
+    fx, fy, fw = 0.46, 1.3, 7.3
+    fh = fw * 9 / 16
+    box(s, fx, fy, fw, fh, PANEL, line=PURPLE, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.03)
+    pill(s, fx + fw / 2, fy - 0.15, "Demo video")
+    text(s, fx + 0.3, fy + fh - 0.75, fw - 0.6, 0.6,
+         [{"runs": [("Recorded run: " + what, {"size": 13, "bold": True, "color": PURPLE, "font": SEG_SEMI})],
+           "align": PP_ALIGN.CENTER},
+          {"runs": [("Facilitator: insert your recording here (see notes)", {"size": 10, "color": W_SUB})],
+           "align": PP_ALIGN.CENTER}], anchor=MSO_ANCHOR.BOTTOM)
+    media_placeholder(s, fx, fy, fw, fh, "Demo video: recorded run of " + what)
+    # Band under the frame
+    by = fy + fh + 0.3
+    msg = band_msg or ("Why a recording? ", "Cowork tasks can take several minutes. Watch the run here, then do it yourself.")
+    box(s, 0.46, by, 7.3, 7.05 - by, PLUM, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.12)
+    text(s, 0.75, by, 6.72, 7.05 - by, [{"runs": [(msg[0], {"size": 13, "bold": True, "color": "FFFFFF", "font": SEG_SEMI}),
+                                                   (msg[1], {"size": 13, "color": "FFFFFF", "font": SEG_DISP})]}],
+         anchor=MSO_ANCHOR.MIDDLE, line_spacing=1.03)
+    # What to watch for (right)
+    x0, y0, w = 8.2, 1.3, 4.9
+    box(s, x0, y0, w, 5.75, "FFFFFF", line=W_LINE, shadow=True, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.03)
+    text(s, x0 + 0.25, y0 + 0.12, w - 0.5, 0.35,
+         [{"runs": [("Watch for in the demo", {"size": 12, "bold": True, "color": W_SUB})]}])
+    steps = [f"**{lbl}** \u2192 {txt}" for lbl, txt in watch]
+    text(s, x0 + 0.3, y0 + 0.6, w - 0.6, 3.4, bullets(steps, size=14, color=INK, kind="num"), font=SEG_DISP,
+         space_after=10, line_spacing=1.05)
+    box(s, x0 + 0.25, y0 + 4.35, w - 0.5, 1.15, CARD, line=W_LINE, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.1)
+    text(s, x0 + 0.45, y0 + 4.35, w - 0.9, 1.15, [{"runs": rich("**Next:** " + next_md, 12, INK, font=SEG_DISP)}],
+         anchor=MSO_ANCHOR.MIDDLE, line_spacing=1.03)
+    notes(s, say + " Play your pre-recorded demo so the room doesn't wait while the task runs, and narrate the steps "
+             "on the right as they happen. TO ADD THE VIDEO (once, before the session): select the media icon in the "
+             "frame (or Insert > Video > This Device) and pick your recording; on Playback set Start: When Clicked On; "
+             "use Trim Video to cut long waits. Record it from your demo account with the same prompt. NO VIDEO? Run "
+             "the demo live, then move on.")
+    return s
+
+
+def exercise_demo(ex):
+    """The demo-video slide that follows each exercise's scenario card."""
+    num = ex["num"]
+    band_msg = (("Not Cowork. ", "This demo runs in Copilot Agent Builder (Microsoft 365 Copilot \u2192 Create agent), "
+                 "not in a Cowork task.") if num == 8 else None)
+    say = f"DEMO VIDEO \u2014 EXERCISE {num}: {ex['title']}."
+    if num == 1:
+        say += (" Record this one from your SEEDED demo account (seed-content.md), never from real mail: the Thursday "
+                "conflict and T-2008 should show. Attendees then run it on their own data, privately.")
+    if num == 8:
+        say += " SAY: 'This one is NOT Cowork. We are in Copilot Agent Builder.'"
+    return demo_video_slide(ex["short"], ex["pill"], f"Exercise {num}, {ex['title']}", ex["workflow"],
+                            f"your turn on the hands-on slide ({ex['minutes']}).", say, band_msg)
+
+
 # 1 — Title
 mark_section("Welcome & orientation")
 s = title_slide("Getting Things Done with Copilot Cowork for HR Tasks",
@@ -890,6 +972,19 @@ notes(s, "COWORK UI WALKTHROUGH (part of 0:20-0:40). The screenshot is the NEW T
          "MY TASKS (resume past work), AUTOMATIONS (Runs / Manage schedules), CUSTOMIZE (instructions, "
          "skills, plugins). Point out the session side panel — you'll refer to it all day. Detail: "
          "reference/07-cowork-ui-walkthrough.md.")
+
+# 5a \u2014 Demo video: Copilot and Cowork UI walkthrough
+demo_video_slide("Copilot and Cowork UI", "Demo", "the Copilot and Cowork UI walkthrough",
+                 [("Copilot Chat", "Ask a quick question; get a one-shot answer"),
+                  ("Open Cowork", "From the Microsoft 365 Copilot app"),
+                  ("New task", "Start box, model picker, reasoning effort, attach"),
+                  ("Left nav", "My tasks \u00b7 Automations \u00b7 Customize"),
+                  ("Side panel", "Progress, skill chips, Output folder")],
+                 "how approvals work, then setup in your own account.",
+                 "DEMO VIDEO \u2014 COPILOT AND COWORK UI WALKTHROUGH. Show the difference first: a quick question in "
+                 "Copilot Chat, then the same app's Cowork entry point. Then tour New task, My tasks, Automations, "
+                 "Customize, and the side panel of a running task.",
+                 ("Watch, don't click yet. ", "You'll set up your own account in a few minutes."))
 
 # 5b — How approvals work
 s = white_slide("How approvals work \u2014 one at a time",
@@ -1089,6 +1184,19 @@ notes(s, "PROMPTING BEST PRACTICES (about 4 min, before the exercises). Read the
          "(setup step F has the legend and this example). When Cowork asks a clarifying question or misses, the missing piece is "
          "usually one of the four: add it in a follow-up.")
 
+# 9c \u2014 Demo video: weak vs. strong prompt
+demo_video_slide("Prompting best practices", "Demo", "the weak and strong open-enrollment prompts",
+                 [("Weak prompt", "Cowork guesses, or asks what you meant"),
+                  ("Strong prompt", "Goal, Source, Expectations, Constraints"),
+                  ("Grounding", "Dates come from benefits-summary.docx"),
+                  ("Compare", "Length, subject line, tone, contacts"),
+                  ("Constraint held", "Saved as a draft, not sent")],
+                 "how to read an exercise card; every prompt today uses these colors.",
+                 "DEMO VIDEO \u2014 PROMPTING BEST PRACTICES. Run the WEAK prompt from the previous slide, then the "
+                 "STRONG one, in two tasks side by side. Point to each colored element as Cowork uses it, and to "
+                 "the invented-vs-sourced dates.",
+                 ("Same topic, two prompts. ", "Watch what Cowork does with each, then spot the four elements."))
+
 # 10 — How to read an exercise card (the template itself, annotated)
 scenario_card(GUIDE_CARD)
 
@@ -1250,6 +1358,7 @@ for ex in EXERCISES:
                                            7: "Automate & share", 8: "HR Policy Agent"}.get(ex["num"], ex["short"]))
     exercise_divider(ex)
     scenario_card(ex)
+    exercise_demo(ex)
     hands_on(ex)
     if ex["num"] == 1:
         output_folder_slide()
