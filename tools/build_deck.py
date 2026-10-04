@@ -549,6 +549,16 @@ def scenario_card(ex):
     return s
 
 
+def prompt_notes(ex):
+    """The exercise prompt as plain text (color markers removed) for the speaker notes, ready to copy."""
+    lines = [re.sub(r"\{/?[gsec]\}", "", l) for l in ex["prompt"]]
+    lines = ["--- " + l[3:].rstrip(":") + " ---" if l.startswith("## ") else l for l in lines]
+    if not lines[0].startswith("--- "):
+        lines.insert(0, "--- Prompt ---")
+    return ("\n\nPROMPT TO COPY AND PASTE (copy the text under each --- heading; each heading is a separate step):\n"
+            + "\n".join(lines))
+
+
 def hands_on(ex):
     s = clone_slide(S_CARD)
     keep_only(s, {"Title 3", "NavPill_SitesPages", "TextBox 29", "TextBox 30", "TextBox 49"})
@@ -589,7 +599,7 @@ def hands_on(ex):
                                                                           "font": SEG_DISP})]}],
               anchor=MSO_ANCHOR.MIDDLE, line_spacing=1.03)
     link_run(tb.text_frame.paragraphs[1].runs[1], WORKBOOK_URL)
-    notes(s, ex["notes_hands"])
+    notes(s, ex["notes_hands"] + prompt_notes(ex))
     return s
 
 

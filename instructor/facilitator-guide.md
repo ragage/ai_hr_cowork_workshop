@@ -47,6 +47,10 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
 > time, and an 8-step progress tracker), and each exercise is its own **PowerPoint section**. Open
 > **View → Normal** and use the section headers in the thumbnail pane to jump straight to any exercise.
 
+> **Prompts in the speaker notes:** every **Hands-on** slide's notes end with the exercise prompt as
+> plain text, one block per task, so you can copy it straight into Cowork (or Agent Builder for
+> Exercise 8) during your demo.
+
 > **Demo videos:** each exercise has a **Demo** slide right after its scenario card, and so do the
 > **Copilot and Cowork UI walkthrough** and **Prompting best practices** slides (10 in all). Each has an
 > empty video frame. Cowork tasks can take several minutes, so **record each demo ahead of time** from
