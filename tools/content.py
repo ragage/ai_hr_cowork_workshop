@@ -1,7 +1,8 @@
 """Scenario-card content for the instructor deck (mirrors participant-workbook.md).
 
 Prompt text marks its elements for color coding: {g}Goal{/g}, {s}Source{/s}, {e}Expectations{/e},
-{c}Constraints{/c} (the workbook uses <span class=...> for the same thing). Exercise 1 is left unmarked.
+{c}Constraints{/c} (the workbook uses <span class=...> for the same thing). Exercise 1 keeps its exact
+wording; only the markers were added.
 """
 
 GUIDE_CARD = dict(
@@ -14,6 +15,7 @@ GUIDE_CARD = dict(
         "This panel holds the exact prompt you\u2019ll paste into Cowork.",
         "",
         "Before you run it:",
+        "- Colors mark the {g}Goal{/g}, {s}Source{/s}, {e}Expectations{/e}, and {c}Constraints{/c} (see the Prompt key)",
         "- Replace any [placeholders], such as [Priority Folder] or [time]",
         "- Keep \u201csave as a draft\u201d wording \u2014 never send to real people in class",
         "- Watch the side panel: skill chips, files, and schedules appear as Cowork works",
@@ -30,41 +32,42 @@ GUIDE_CARD = dict(
     notes_card="HOW TO READ A CARD. Every exercise is introduced with the same scenario "
                "format. Walk it top-left to bottom-right: Goal, Output, Why Cowork?, Prompt, Workflow, Data "
                "sources; the Function tag names the business area. Each card is followed by a hands-on slide "
-               "with numbered steps, what to watch for, a checkpoint, and a stretch.",
+               "with numbered steps, what to watch for, a checkpoint, and a stretch. The Prompt key at the bottom right "
+               "shows what each prompt color means; the colors are the same on every card and in the workbook.",
 )
 
 
 EXEC_PROMPT = [
-    "Build an interactive HTML Executive Command Center that shows what requires my attention today and this "
-    "week.",
+    "{g}Build an interactive HTML Executive Command Center that shows what requires my attention today and this "
+    "week.{/g}",
     "",
-    "Use my calendar, recent emails, Teams conversations, meeting transcripts, and priority documents from "
-    "[Priority Folder]. Focus on decisions, commitments, risks, and workstreams where my involvement could "
-    "change the outcome.",
+    "{s}Use my calendar, recent emails, Teams conversations, meeting transcripts, and priority documents from "
+    "[Priority Folder].{/s} {g}Focus on decisions, commitments, risks, and workstreams where my involvement could "
+    "change the outcome.{/g}",
     "",
-    "At the top, show:",
-    "- One or two urgent items requiring action",
-    "- Today\u2019s most important meeting or priority",
-    "- My busiest day this week",
-    "- Remaining working days this week",
+    "{e}At the top, show:{/e}",
+    "- {e}One or two urgent items requiring action{/e}",
+    "- {e}Today\u2019s most important meeting or priority{/e}",
+    "- {e}My busiest day this week{/e}",
+    "- {e}Remaining working days this week{/e}",
     "",
-    "Organize the command center into three views:",
-    "- Meetings: Key meetings, preparation needed, conflicts, and follow-ups",
-    "- Priorities: Active commitments, approaching deadlines, blockers, and decisions waiting on me",
-    "- Org pulse: Workstreams receiving significant attention, areas with limited recent activity, and "
-    "important commitments that may have gone quiet",
+    "{e}Organize the command center into three views:{/e}",
+    "- {e}Meetings: Key meetings, preparation needed, conflicts, and follow-ups{/e}",
+    "- {e}Priorities: Active commitments, approaching deadlines, blockers, and decisions waiting on me{/e}",
+    "- {e}Org pulse: Workstreams receiving significant attention, areas with limited recent activity, and "
+    "important commitments that may have gone quiet{/e}",
     "",
-    "For each recommended action, label it:",
-    "- Lean in; OR, Delegate; OR, Re-engage; OR, Protect time",
+    "{e}For each recommended action, label it:{/e}",
+    "- {e}Lean in; OR, Delegate; OR, Re-engage; OR, Protect time{/e}",
     "",
-    "Explain the signal behind the recommendation and give me one clear next action. Keep recommendations "
-    "focused on workstreams, decisions, and commitments rather than evaluating individual people. Make the "
+    "{e}Explain the signal behind the recommendation and give me one clear next action.{/e} {c}Keep recommendations "
+    "focused on workstreams, decisions, and commitments rather than evaluating individual people.{/c} {e}Make the "
     "dashboard executive-ready and easy to scan, with expandable sections, traffic-light indicators, and links "
-    "to the supporting emails, meetings, chats, and files. The most important content should answer: What "
-    "needs my attention, and what should I do differently today?",
+    "to the supporting emails, meetings, chats, and files.{/e} {g}The most important content should answer: What "
+    "needs my attention, and what should I do differently today?{/g}",
     "",
-    "Save this as a skill named [Executive Command Center] and schedule it to run every weekday at [time], "
-    "using the latest available context.",
+    "{e}Save this as a skill named [Executive Command Center] and schedule it to run every weekday at [time], "
+    "using the latest available context.{/e}",
 ]
 
 EXERCISES = [
@@ -84,7 +87,7 @@ EXERCISES = [
                   ("Build", "Interactive HTML command center"), ("Schedule", "Daily run every weekday morning")],
         sources=["m365"],
         discuss='Which recommendations would you trust? What would an **HR-leader** version track — open reqs, ER cases, policy deadlines?',
-        steps=["Fill **[Priority Folder]** (your OneDrive folder with the Zava files) and **[time]** (e.g., 8:00 AM).",
+        steps=["Fill **[Priority Folder]** (a OneDrive folder of your priority documents, or the Zava folder) and **[time]** (e.g., 8:00 AM).",
                "**New task** \u2192 paste the Executive Command Center prompt.",
                "**Side panel \u2192 Output folder \u2192 Preview** the HTML dashboard (see the next slide).",
                "Check the top summary, the three views, the action labels, and the links.",
@@ -92,12 +95,12 @@ EXERCISES = [
         watch=["Work IQ gathering calendar, mail, chats, and files",
                "Labels: Lean in \u00b7 Delegate \u00b7 Re-engage \u00b7 Protect time",
                "Focus on workstreams \u2014 not on evaluating people",
-               "Light data in new accounts is expected"],
+               "Your own data, private to you: no screen sharing"],
         checkpoint="An HTML command center opened from the Output folder and found in OneDrive \u2192 Cowork, a "
                    "saved skill, and a weekday schedule. Pause it after class.",
         stretch="Make an HR Leader variant with a view for open requisitions and HR ticket trends.",
         notes_card="EXERCISE 1 CARD (0:40-1:05, 25 min). SAY: 'Watch one prompt gather signals, build a dashboard, save itself as a skill, and schedule itself.' APPROVALS FIRST: this is the first exercise where Cowork asks permission (saving the skill, creating the schedule). Point back to the approvals slide: one at a time, no Approve All. It previews Ex 4 (skills) and Ex 7 (Automations). Read the guardrail in the prompt aloud: workstreams, not people.",
-        notes_hands="EXERCISE 1 HANDS-ON. DO: show how to fill [Priority Folder] (e.g., Documents/ai_hr_cowork_workshop) and [time] (e.g., 8:00 AM), then start your demo. WATCH FOR: Work IQ gathering; the HTML file in the Output folder; the Thursday conflict and T-2008 from the seed data. Light results on fresh accounts are expected; show your richer demo. SLOW DOWN at step 3: the next slide walks the Output folder. CLEANUP: skill stays 'Only you'; pause or delete the weekday schedule after class. NEXT: Output folder slide, then Deep Research.",
+        notes_hands="EXERCISE 1 HANDS-ON. DO: show how to fill [Priority Folder] (their own priority-documents folder, or Documents/ai_hr_cowork_workshop) and [time] (e.g., 8:00 AM), then start your demo. WATCH FOR: Work IQ gathering; the HTML file in the Output folder; in YOUR seeded demo, the Thursday conflict and T-2008 (seed-content.md). Attendees run it on their own mail, calendar, and Teams: results vary and stay private, so debrief on the pattern, never ask them to share screens; a quiet week gives a light dashboard. SLOW DOWN at step 3: the next slide walks the Output folder. CLEANUP: skill stays 'Only you'; pause or delete the weekday schedule after class. NEXT: Output folder slide, then Deep Research.",
     ),
     dict(
         num=2, pill="Ex 02", title="Research the Web with Deep Research", short="Deep Research",
@@ -164,7 +167,7 @@ EXERCISES = [
                   ("Ground", "Compare with the Zava handbook"), ("Build", "Table with links + Word brief")],
         sources=["web", "onedrive"],
         discuss='When would you use browser use instead of Deep Research? What would you never let it do unwatched?',
-        steps=["**Check:** Cowork open **in Edge**; Edge profile = **workshop account**; Edge setting **Allow Cowork to take actions** on.",
+        steps=["**Check:** Cowork open **in Edge**; Edge profile = **your work account**; Edge setting **Allow Cowork to take actions** on.",
                "**New task:** attach the handbook; paste the two-site prompt.",
                "**Consent:** select **I understand** at the browser notice.",
                "**Switch to tab** to watch it search dol.gov and click through; open two links yourself.",
@@ -177,7 +180,7 @@ EXERCISES = [
                    "Washington L&I overtime page, and a Word brief about T-2008.",
         stretch="Step through the DOL FLSA Overtime Security Advisor, with Cowork telling you each answer before it clicks.",
         notes_card="EXERCISE 3 CARD (1:35-2:00, 25 min). SAY: 'This is Cowork driving a real browser, like a person or a test tool such as Playwright: it types in a site's search box, clicks links and menus, and moves to another site. There's no browser skill to pick and no skill chip; ask for something that needs a website and Cowork opens a hidden tab in your own Edge, with your sign-ins and your company's policies.' Contrast with Deep Research (reads and cites) from Ex 2.",
-        notes_hands="EXERCISE 3 HANDS-ON. DO: demo first. Show the consent notice (I understand), the progress chips, and Switch to tab so the room sees Edge typing in the DOL search box and clicking through to Fact Sheet #23, then lni.wa.gov. WATCH FOR: a table showing Zava's 1.5x over 40 hours matches federal and Washington rules; DOL adds the regular-payday rule; Washington adds no waiver and no daily overtime; links to both pages. IF STUCK: 'Browser tasks run in Microsoft Edge' -> wrong browser; no browser at all -> Edge profile isn't the workshop account, InPrivate, the Edge setting is off, or the admin hasn't allowed browser access (reference/10-cowork-browser.md). They follow your demo. TIME CHECK: at 1:55 skip 3b and demo it. NEXT: 'You've used built-in skills and the browser. Now build your own skill.'",
+        notes_hands="EXERCISE 3 HANDS-ON. DO: demo first. Show the consent notice (I understand), the progress chips, and Switch to tab so the room sees Edge typing in the DOL search box and clicking through to Fact Sheet #23, then lni.wa.gov. WATCH FOR: a table showing Zava's 1.5x over 40 hours matches federal and Washington rules; DOL adds the regular-payday rule; Washington adds no waiver and no daily overtime; links to both pages. IF STUCK: 'Browser tasks run in Microsoft Edge' -> wrong browser; no browser at all -> Edge profile isn't their work account, InPrivate, the Edge setting is off, or the admin hasn't allowed browser access (reference/10-cowork-browser.md). They follow your demo. TIME CHECK: at 1:55 skip 3b and demo it. NEXT: 'You've used built-in skills and the browser. Now build your own skill.'",
     ),
     dict(
         num=4, pill="Ex 04", title="Build a Custom Skill: HR Policy Answer", short="Custom Skill",
@@ -290,7 +293,7 @@ EXERCISES = [
                "**Task 6c:** draft a warm team announcement and save it as an Outlook draft to yourself.",
                "**Review** each artifact at its checkpoint."],
         watch=["**PowerPoint**, **Scheduling/Calendar**, and **Communications** chips",
-               "No real invitees in the shared tenant", "Short on time? Do 6a + 6c; watch 6b as a demo"],
+               "Your real calendar: invite only yourself", "Short on time? Do 6a + 6c; watch 6b as a demo"],
         checkpoint="An orientation deck, a reviewed kickoff invite, and a team announcement draft for Sofia Alvarez.",
         stretch="Turn the orientation deck into a one-page PDF handout.",
         notes_card="EXERCISE 6 CARD (2:55-3:15, 20 min). SAY: 'Sofia Alvarez accepted the HR Coordinator role and starts next Monday. Let's get her first day ready.' This is the story arc from Ex 2 (interview) and Ex 5 (posting). Several built-in skills chain together: PowerPoint, Scheduling, Communications. Call out each new skill chip.",

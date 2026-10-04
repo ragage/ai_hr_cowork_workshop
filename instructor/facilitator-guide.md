@@ -2,8 +2,9 @@
 ## Getting Things Done with Copilot Cowork for HR Tasks (4 hours, ~25 attendees)
 
 This guide gives you a minute-by-minute run sheet, talking points, and troubleshooting for a
-4-hour, hands-on workshop. The **~25 attendees share one common tenant**, each signed in with
-**their own user account**. You, the **facilitator, demo from your own separate tenant**.
+4-hour, hands-on workshop. The **~25 attendees sign in with their own work accounts** (Exercise 1 reads their own mail and
+calendar; everything else uses the Zava files). You, the **facilitator, demo from your own separate
+tenant**, with your demo account seeded from [seed-content.md](seed-content.md).
 
 Each exercise is introduced on screen with a **scenario card** (Function · Goal · Output · Why
 Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom-right before attendees start.
@@ -12,28 +13,35 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
 
 - **Staffing:** 1 facilitator + **1–2 floaters/proctors** for a group of ~25. Proctors handle
   sign-in and account issues so you can keep pace.
-- **Provision ahead (host/admin):** ~25 **licensed user accounts** in the **shared attendee tenant**
-  with a Microsoft 365 Copilot license, in a security group covered by a **Cowork spending policy**
-  (that's what grants Cowork access) and allowed **Cowork Browsing** (for Ex 3); distribute credentials. Make sure **your own
-  (facilitator) tenant** is Copilot/Cowork-ready too. See [readiness checklist](readiness-checklist.md).
+- **Access ahead (host/admin):** attendees use **their own work accounts**, so there's nothing to
+  provision or hand out. Check each has a Microsoft 365 Copilot license and is in a security group
+  covered by a **Cowork spending policy** (that's what grants Cowork access) and allowed **Cowork
+  Browsing** (for Ex 3); keep 1–2 licensed spares. Make sure **your own (demo) tenant** is
+  Copilot/Cowork-ready too. See [readiness checklist](readiness-checklist.md).
+- **Seed your demo account (1–2 days ahead):** load the Exercise 1 emails, meetings, and Teams chat
+  into **your** demo account only, with VS Code, GitHub Copilot (Agent mode), and the **Work IQ MCP
+  server** ([seed-content.md](seed-content.md#how-to-load-it)). Attendees need no seed: they run
+  Exercise 1 on their own data.
 - **Stage the sample data:** put **zava-sample-knowledge.zip** (the six Word and
-  Excel sample files, in an `ai_hr_cowork_workshop` folder) in a **shared location in the attendee tenant** (Teams/SharePoint)
-  that every account can reach, so attendees can copy them into their own OneDrive.
+  Excel sample files, in an `ai_hr_cowork_workshop` folder) in a **shared location in the attendees' tenant** (Teams/SharePoint)
+  that every attendee can reach, so attendees can copy them into their own OneDrive.
   Downloading the kit files from GitHub? If a link opens the file on GitHub, select the **Download**
   icon (**Download raw file**) at the top right of the file (see the picture below).
-- **Dry run:** a full run of all 8 exercises on a test attendee account one week out, checked
+- **Dry run:** a full run of all 8 exercises with a licensed account in the attendees' tenant one week out, checked
   against the [answer key](facilitator-answer-key.md). The full prep timeline, cost planning, and
   whole-room **Plan B** are in the [readiness checklist](readiness-checklist.md#preparation-timeline).
-- **Set expectations up front:** "You attendees share one tenant, so your screens match each other.
-  I'm demoing from a **separate tenant**, so mine may look a little different. Your drafts, OneDrive,
-  and skills are your own. Everything Cowork produces is a **draft to review**."
+- **Set expectations up front:** "You're in your own work accounts, so your screens match each other.
+  I'm demoing from a **separate demo tenant**, so mine may look a little different. Exercise 1 reads
+  your own mail and calendar, and the results stay private to you; everything else uses the fictional
+  Zava files. Everything Cowork produces is a **draft to review**."
 
 ![Tip: on a GitHub file page, select the Download icon (Download raw file) at the top right of the file](../reference/media/download-hint.png)
 
-> **Tenant reminder:** The attendees share one tenant, so org search/grounding is consistent across
-> the room — but so is any other demo content, and **your facilitator tenant is separate**. Keep
-> exercises grounded on the **provided sample files**, and have attendees keep custom skills
-> **"Only you"** (or initialed) to avoid 25 identical skills cluttering their tenant.
+> **Tenant and data reminder:** Attendees are in their **production tenant**, so org search returns
+> real content that differs by person, and **your demo tenant is separate**. Except for Exercise 1,
+> keep exercises grounded on the **provided sample files**. **Never ask attendees to project or share
+> their Exercise 1 results.** Have attendees keep custom skills **"Only you"** (or initialed) to avoid
+> 25 identical skills cluttering their tenant.
 
 > **Navigating the deck:** every exercise starts with a **divider slide** (exercise number, picture,
 > time, and an 8-step progress tracker), and each exercise is its own **PowerPoint section**. Open
@@ -87,7 +95,7 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
   schedules), **Customize** (custom instructions, skills, plugins). See
   [reference/07-cowork-ui-walkthrough.md](../reference/07-cowork-ui-walkthrough.md).
 - Point out the **session side panel** (skills chips, files, schedule) — you'll refer back to it all day.
-- Then have everyone **sign in in Microsoft Edge**, check their **Edge profile** is the workshop account
+- Then have everyone **sign in in Microsoft Edge**, check their **Edge profile** is their work account
   (needed for the Ex 3 browser task), run the **smoke test**, **copy the sample files** into their own
   OneDrive, and set their **custom instructions** (Customize → Preferences → **Customize instructions for
   Cowork**; paste the workbook's text, Setup step D) — this is where sign-in/account issues surface. Proctors triage while you keep going with
@@ -104,8 +112,8 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
 - It shows Cowork at full stretch in **one prompt**: Work IQ gathers calendar, mail, chats,
   transcripts, and files → analyzes signals → builds an **interactive HTML dashboard** → **saves
   itself as a skill** and **schedules itself**. Preview for Ex 4 (skills) and Ex 7 (Automations).
-- Have attendees fill the placeholders: **`[Priority Folder]`** → their OneDrive folder with the
-  Zava files; **`[time]`** → e.g., 8:00 AM.
+- Have attendees fill the placeholders: **`[Priority Folder]`** → a OneDrive folder of their own
+  priority documents (or the Zava folder); **`[time]`** → e.g., 8:00 AM.
 - **Slow down and show the Output folder (about 3 minutes, on screen).** This is the first
   exercise that creates a file, and every later exercise depends on finding outputs:
   1. Open the **side panel** with the side panel toggle at the right of the session.
@@ -116,9 +124,11 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
   5. Open **OneDrive → Cowork** in a new browser tab to show the same file saved there.
   Then have the room do it themselves before moving on; proctors help anyone who can't find the
   side panel toggle.
-- **Data will be light** in fresh accounts. The seeded meetings (with a deliberate Thursday
-  conflict) and Teams chat in [seed-content.md](seed-content.md) give it real signals. Keep the room
-  focused on the **pattern**, and demo a richer result from your own tenant.
+- **Attendees use their own mail, calendar, and Teams**, so results vary: a busy week gives a rich
+  dashboard, a quiet one a light dashboard. Demo first from **your seeded demo account**
+  ([seed-content.md](seed-content.md); the Thursday conflict and T-2008 should surface), then keep the
+  room focused on the **pattern**. Debrief on structure, not content: **no screen sharing** of
+  attendee dashboards.
 - Reinforce the guardrail baked into the prompt: recommendations focus on **workstreams and
   decisions, not evaluating individual people** — an important norm for HR.
 - **Cleanup:** skill stays **"Only you"**; ask everyone to **pause or delete the weekday schedule**
@@ -161,7 +171,7 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
 - **Requirements** (host; see the [readiness checklist](readiness-checklist.md) and
   [reference/10-cowork-browser.md](../reference/10-cowork-browser.md)): browser access allowed for the
   attendee group, Edge 152 or later, Cowork open **in Edge on the web**, an Edge profile signed in
-  with the **workshop account** (not InPrivate), and the Edge **Cowork** setting on. Anyone blocked
+  with their **work account** (not InPrivate), and the Edge **Cowork** setting on. Anyone blocked
   follows your demo.
 - **Stretch for fast finishers:** the DOL's interactive **FLSA Overtime Security Advisor**, with
   Cowork saying each answer before it clicks. It shows multi-step form navigation without
@@ -191,7 +201,7 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
 - Second reset. Check that everyone's Exercise 4 skill saved — Ex 7 shares it. Restart on time.
 
 ### Ex 6 — Onboarding pack (2:55–3:15)
-- **Story:** **Sofia Alvarez** (fictional, no account) accepted the HR Coordinator role from Ex 2
+- **Story:** **Sofia Alvarez** (fictional; attendees invite only themselves) accepted the HR Coordinator role from Ex 2
   and Ex 5 and starts **next Monday**. The kickoff prompt gives a concrete time (9:30 AM) so Cowork
   doesn't have to guess.
 - This exercise shows off **more built-in skills**: PowerPoint (deck), Scheduling/Calendar (kickoff),
@@ -264,19 +274,19 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
 | --- | --- | --- |
 | No **Cowork** toggle | Account missing license / Cowork not enabled | Host swaps to a spare licensed account; attendee uses **fallback follow-along** meanwhile (see the [answer key](facilitator-answer-key.md#fallback-walkthrough-for-attendees-who-cant-run-cowork)) |
 | Prompt returns nothing / error | Usage-based billing not enabled | Host confirms tenant billing; fallback follow-along |
-| Can't sign in / bad credentials | Account distribution mix-up | Proctor issues a spare account |
+| Can't sign in | MFA prompt, wrong account in the browser, or a personal account | Sign in with the work account in an Edge work profile; else the host lends a spare account |
 | Can't find sample files | Staged location not shared | Point to the Teams/SharePoint copy; proctor helps copy to OneDrive |
 | Custom skill option missing | On mobile | Switch to laptop/desktop |
 | Sees others' skills in the list | Shared tenant + org-shared skills | Keep skills **"Only you"** or initialed |
 | Cowork acted without asking | **Approve All** or **Always allow** was clicked earlier in the session | Side panel → **Permissions** → revoke; start a **new task** to reset; check Sent/Deleted items |
 | **Create agent** option missing (Ex 8) | On mobile, or wrong Copilot surface | Use desktop/web Microsoft 365 Copilot (Chat/Teams); confirm Copilot license |
-| Command center is nearly empty (Ex 1) | Fresh account with little calendar/Teams history | Expected — focus on the pattern; show your richer demo; seed events/emails next time |
+| Command center is nearly empty (Ex 1) | Quiet week, or a spare account with no history | Expected: focus on the pattern and show your seeded demo; don't ask attendees to share real dashboards |
 | Can't find the output file (any exercise) | Side panel closed, or looking in the chat | Open the **side panel toggle** → **Output folder**; or open **OneDrive → Cowork** |
 | Schedule not created (Ex 1) | Checkpoint declined or `[time]` left blank | Re-run the last line of the prompt with a real time, or create it in Automations |
 | Deep Research slow (Ex 2) | Multi-source research takes several minutes | Expected: discuss while it runs; demo the scorecard if the room is behind |
-| "Browser tasks run in Microsoft Edge" (Ex 3) | Not in Edge, Edge profile isn't the workshop account, InPrivate window, or Edge older than 152 | Open Cowork in Edge in a profile signed in with the workshop account; update Edge; else watch the facilitator demo |
+| "Browser tasks run in Microsoft Edge" (Ex 3) | Not in Edge, Edge profile isn't the work account, InPrivate window, or Edge older than 152 | Open Cowork in Edge in a profile signed in with the work account; update Edge; else watch the facilitator demo |
 | Browser task never starts (Ex 3) | Browser access not allowed for this account, the Edge **Cowork** setting is off, or the consent notice wasn't accepted | Select **I understand** at the consent notice; host checks Copilot → Settings → Cowork settings → **Allow browser access** includes the attendee group |
-| Falling behind | Group pace variance | Use **checkpoints** to sync; stretch prompts for fast finishers |
+| Falling behind | Group pace variance | Use **checkpoints** to sync; [stretch prompts](../participant/participant-workbook.md) for fast finishers |
 | **Whole room** can't use Cowork | Service or tenant outage | Stop after 10 minutes; switch to [Plan B](readiness-checklist.md#plan-b--if-cowork-is-down-for-the-whole-room) |
 
 ## Time checks and what to cut
@@ -294,14 +304,16 @@ order** if you're behind. Never cut Ex 4 or the core of Ex 8.
 | **3:15** | Starting Ex 7 | Ex 6: do 6a + 6c, demo 6b. Ex 7: do 7a only, demo 7b and 7c |
 | **3:35** | Starting Ex 8 | Run Ex 8 as a facilitator demo; attendees build it after class |
 
-**Fast room?** Use the **Stretch** prompts, or have early finishers try a prompt from the
+**Fast room?** Use the **Stretch** prompts (at the end of each exercise in the
+[participant workbook](../participant/participant-workbook.md)), or have early finishers try a prompt from the
 [prompt library](../reference/04-prompt-library.md).
 
 ## Pacing tips for ~25 people
 
 - Use the **✅ Checkpoints** in the workbook as sync points — "raise a hand when you hit the
   checkpoint."
-- Keep **stretch prompts** ready so fast finishers stay engaged while others catch up.
+- Keep **stretch prompts** ready (end of each exercise in the [participant workbook](../participant/participant-workbook.md)) so fast
+  finishers stay engaged while others catch up.
 - Don't let one tenant issue stall the room — **parking lot** it and keep moving; a proctor follows up.
 - Timings are guidance; if you're running long, shorten Ex 6 (do 6a + 6c, demo 6b) and/or run Ex 8
   as a **facilitator demo** (attendees watch, then build after) — protect Ex 4 and the Ex 8 concept.

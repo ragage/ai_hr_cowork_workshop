@@ -21,9 +21,13 @@
   the dashboard rates a person's performance, raise it as a discussion point.
 - **Skill + schedule:** Customize → Skills shows **Executive Command Center**; Automations → Manage
   schedules shows a **weekday** run at the chosen time.
-- **With seeded data** ([seed-content.md](seed-content.md)): the Thursday **meeting conflict** and the
-  **T-2008 payroll** email should appear as urgent or needing attention.
-- **Nearly empty dashboard?** Expected on fresh accounts; the pattern is what matters.
+- **Your demo (seeded with [seed-content.md](seed-content.md)):** the Thursday **meeting conflict** and the
+  **T-2008 payroll** email should appear as urgent or needing attention; the newsletter and FYI
+  shouldn't.
+- **Attendees** run it on their **own** mail, calendar, and Teams, so every dashboard differs and you
+  can't check content against a key. Check the **structure** instead (sections, labels, next actions,
+  skill, schedule), and don't ask anyone to share their screen.
+- **Nearly empty dashboard?** Expected for a quiet week; the pattern is what matters.
 - **Approvals:** saving the skill and creating the schedule each showed an approval dialog, approved
   **one at a time**. If an attendee clicked **Approve All** or **Always allow**, have them revoke it in
   the side panel's **Permissions** section.
@@ -182,8 +186,8 @@ Open tickets to follow up: T-2006 (Benefits), T-2008 (Payroll, **High**), T-2011
 - **Deck (6–8 slides):** first-day logistics (welcome meeting, paperwork, workstation), PTO basics
   (20 days, 5-day carryover), hybrid (Tue/Thu anchors, core hours 10:00–15:00, $300 home-office
   stipend), benefits (enroll within **30 days**; medical plans, 401(k) 4% match).
-- **Kickoff:** a 30-minute meeting **next Monday at 9:30 AM** for **Sofia Alvarez** (fictional, no
-  account), **with a Teams link**, the attendee as the **only invitee**, and shown for approval before
+- **Kickoff:** a 30-minute meeting **next Monday at 9:30 AM** for **Sofia Alvarez** (fictional, not
+  invited), **with a Teams link**, the attendee as the **only invitee**, and shown for approval before
   it's sent.
 - **Announcement:** warm and inclusive; introduces Sofia Alvarez as the new HR Coordinator starting
   next Monday; mentions the onboarding buddy and first-week plan; **saved as an Outlook draft**
@@ -197,8 +201,8 @@ Open tickets to follow up: T-2006 (Benefits), T-2008 (Payroll, **High**), T-2011
   started with **Activate and run now**.
 - The run's output lists the **6 open tickets** and names **T-2008** as the one high-priority item
   (same figures as Exercise 5).
-- **Daily Briefing** loads its skill chip and summarizes the day's meetings and tasks (light on
-  fresh accounts).
+- **Daily Briefing** loads its skill chip and summarizes the day's meetings and tasks (light in a quiet
+  week).
 - **Sharing:** the skill is still **"Only you"**, or shared to one named colleague with the
   attendee's initials in its name; after an edit, **Re-share** was used.
 

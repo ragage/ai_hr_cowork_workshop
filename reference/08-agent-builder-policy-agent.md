@@ -107,6 +107,6 @@ declines out-of-scope requests — built with **no code**, outside Cowork.
 
 ## Responsible use (same rules apply)
 - Ground answers in **official HR documents**; have the agent **cite** and add *"confirm with HR."*
-- Use only the **fictional sample data** in the workshop — no real PII.
+- Use only the **fictional Zava files** as knowledge in the workshop; no real employee personal data.
 - Test the **out-of-scope** behavior before you share; an agent others use needs tight scope.
 - Review what the agent returns before you publish it broadly.

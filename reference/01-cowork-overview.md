@@ -73,23 +73,22 @@ treat every Cowork output as a **draft to review before it's used**.
 
 ## This workshop's setup
 
-- You and the other attendees work in **one shared tenant**, signing in with **your own user
-  account**, so you each have your own OneDrive, drafts, and skills.
-- Because the attendees share one tenant, **org search and grounding are consistent** across the
-  room. The **facilitator demos from their own separate tenant**, so the instructor's screen may
-  look a little different from yours — that's expected.
-- Exercises are built on **provided sample files** you copy into your own OneDrive, so everyone
-  works from the same fictional HR data.
-- Since attendee accounts share a tenant, keep any **custom skills you build private** ("Only you")
+- You sign in with **your own work account**, so you have your own OneDrive, drafts, and skills. The
+  other attendees are in the same tenant. The **facilitator demos from a separate demo tenant**, so
+  the instructor's screen may look a little different from yours; that's expected.
+- **Exercise 1** runs on **your own mail, calendar, and Teams**. Cowork reaches only what you can
+  already see, and the results stay private to you.
+- **Every other exercise** uses **provided sample files** you copy into your own OneDrive, so everyone
+  works from the same fictional HR data (*Zava*).
+- Since everyone shares a tenant, keep any **custom skills you build private** ("Only you")
   or add your initials to the name so you don't collide with your neighbors.
 
-## Prerequisites (in the shared attendee tenant)
+## Prerequisites
 
-- A **user account** in the workshop tenant with an active **Microsoft 365 Copilot** license
-  (provisioned by the host).
+- **Your work account** with an active **Microsoft 365 Copilot** license.
 - **Usage-based billing**, with your account in the scope of a **spending policy that selects Cowork**;
   that policy is what grants access.
-- **Microsoft Edge** (152 or later), signed in with your workshop account, with **Cowork Browsing**
+- **Microsoft Edge** (152 or later), signed in with your work account, with **Cowork Browsing**
   turned on by the admin, for the Exercise 3 browser task. Chrome works for everything else.
 - *(Optional)* Enrollment in the **Frontier** program — only needed for the built-in **App** skill,
   which is awareness-only in this workshop.

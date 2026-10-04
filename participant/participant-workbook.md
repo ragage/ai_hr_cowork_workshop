@@ -7,13 +7,14 @@ browser** for you, and
 **build your own custom skill** — then finish by building a reusable **agent** with **Copilot Agent
 Builder**.
 
-- You and the other attendees work in **one shared tenant**, each signed in with **your own user
-  account** — so your OneDrive, drafts, and skills are your own.
-- Because the attendees share one tenant, **your screen matches your neighbors'** and org search is
-  consistent across the room. The **facilitator demos from a separate tenant**, so their screen may
-  look a little different — that's expected.
-- Everyone uses the **same fictional sample data** (the *Zava* files) so we're all on the
-  same page.
+- You sign in with **your own work account**, so your OneDrive, drafts, and skills are your own. The
+  other attendees are in the same tenant, so **your screen matches your neighbors'**. The
+  **facilitator demos from a separate demo tenant**, so their screen may look a little different;
+  that's expected.
+- **Exercise 1 uses your own mail, calendar, and Teams.** Cowork sees only what you can already see,
+  and the results stay private to you (keep them off the projector).
+- **Every other exercise uses the fictional *Zava* sample files**, so we're all on the same page. Keep
+  real employee records out of those exercises.
 
 > **Keep this in mind all workshop:** treat every Cowork output as a **draft to review**. Cowork
 > pauses before it sends or shares anything — read those checkpoints before you confirm.
@@ -29,22 +30,22 @@ Builder**.
 3. **Ground work in real content:** attach files, research and browse the web with citations, and check results.
 4. **Package repeatable work:** build a custom skill, and schedule recurring work with Automations.
 5. **Build a no-code agent** that answers from HR documents and declines what it shouldn't answer.
-6. **Apply HR guardrails:** fictional data, cite and confirm, and people decisions stay with people.
+6. **Apply HR guardrails:** keep real data private, cite and confirm, and people decisions stay with people.
 
 ---
 
 ## Setup (20 minutes, with the UI walkthrough) — do this before Exercise 1
 
 ### A. Sign in and smoke test
-1. Sign in to the **workshop account** you were given, then open
+1. Sign in with **your own work account**, then open
    **https://copilot.cloud.microsoft** in **Microsoft Edge** (needed for the browser task in
    Exercise 3; Chrome works for everything else).
 2. At the top, select **Cowork** (next to **Chat**).
 3. In the chat input, type: *"Give me a one-sentence hello and tell me today's date."* Send it.
    - ✅ **Checkpoint:** You get a response. If not, tell a proctor — see the [readiness checklist](../instructor/readiness-checklist.md).
 4. **Edge profile check (for Exercise 3):** in Edge, select your profile picture at the top left.
-   It must show the **workshop account**. If it shows your own work or personal account, select
-   **Add profile → Sign in** with the workshop account and use that window all day. (InPrivate and
+   It must show **your work account** (the one you use for Microsoft 365). If it shows a personal
+   account, select **Add profile → Sign in** with your work account and use that window all day. (InPrivate and
    guest windows can't run browser tasks.)
 
 ### B. Copy the sample data into your OneDrive
@@ -111,8 +112,9 @@ to every exercise today.
    > I work in HR at Zava. Write in a warm, professional, inclusive tone suitable for employee
    > communications. When you answer a policy or benefits question, cite the source document and add
    > "Policies can change — please confirm with HR." Save emails and messages as drafts for me to
-   > review; during this workshop, never send anything to anyone but me. Use only the Zava sample
-   > files in my OneDrive folder Documents/ai_hr_cowork_workshop, and never include real employee personal data.
+   > review; during this workshop, never send anything to anyone but me. Unless I ask you to use my
+   > mail, calendar, or Teams, use only the Zava sample files in my OneDrive folder
+   > Documents/ai_hr_cowork_workshop, and never copy real employee personal data into files or drafts.
 4. **Check it works:** start a **new task** and ask: *"Draft a two-sentence reminder to employees that
    open enrollment is in November."* The reply should use your tone and end with the
    confirm-with-HR note.
@@ -130,8 +132,7 @@ to every exercise today.
 Full set, including formatting preferences you can add to any of them:
 [reference/02-settings-and-models.md](../reference/02-settings-and-models.md#sample-custom-instructions-to-paste).
 
-> **Good to know:** instructions are **personal** to your account (your neighbors in the shared tenant
-> don't see them). They support rich text, and you can type **/** to reference a skill, file, person,
+> **Good to know:** instructions are **personal** to your account (your neighbors don't see them). They support rich text, and you can type **/** to reference a skill, file, person,
 > or meeting. The limit is about **20 KB** (roughly 3,000 words; a counter shows how much you've
 > used), but **shorter is better**: Cowork includes them in every task, so long or conflicting
 > instructions leave less room for the task itself. Change or clear them any time on the same page.
@@ -150,8 +151,10 @@ consequential in a website — and shows an approval dialog. You'll meet these a
 ### F. Prompting best practices
 
 A strong Cowork prompt includes four elements. You don't have to label them; just make sure each one
-is there. In the **Word workbook**, the prompts from Exercise 2 onward are color-coded so you can spot
-them:
+is there. In the **Word workbook** and on the exercise slides, every exercise prompt is color-coded so
+you can spot them:
+
+![Prompt key: Goal (blue) is the outcome, for whom, and why; Source (green) is the files, sites, or data to use; Expectations (orange) describe what good looks like; Constraints (purple) say what Cowork must not do](../reference/media/prompt-key.png)
 
 | Element | Ask yourself | Color |
 | --- | --- | --- |
@@ -204,47 +207,50 @@ itself** in one prompt. HR leaders juggle the same scattered signals, so watch f
 you'd reuse.
 
 > **Before you start:**
-> - Replace **`[Priority Folder]`** with the OneDrive folder holding your Zava files (e.g.,
->   `Documents/ai_hr_cowork_workshop`) — or any folder of priority documents.
+> - Replace **`[Priority Folder]`** with a OneDrive folder of your own priority documents, or the
+>   folder holding your Zava files (`Documents/ai_hr_cowork_workshop`).
 > - Replace **`[time]`** with a weekday time, e.g., **8:00 AM**.
-> - **Shared tenant:** the saved skill lives in **your** OneDrive — keep it **"Only you."** The
->   schedule is an Automation on **your** account; **pause or delete it after class** (it's
->   usage-billed). Workshop accounts have little calendar/Teams history, so results will be light —
->   focus on the **gather → analyze → build → schedule** pattern.
+> - **Your real data, kept private:** this exercise reads **your own** mail, calendar, Teams, and
+>   meeting transcripts, and nothing beyond what you can already open. The dashboard and the saved
+>   skill live in **your** OneDrive; keep the skill **"Only you,"** and don't project or share your
+>   results. The schedule is an Automation on **your** account; **pause or delete it after class**
+>   (it's usage-billed).
+> - **Quiet week?** If your mailbox or calendar is light, results will be too. Focus on the
+>   **gather → analyze → build → schedule** pattern; the facilitator's demo shows a busy example.
 
 ### Prompt
 1. In a **new task**, paste this prompt (with your placeholders filled in):
-   > Build an interactive HTML Executive Command Center that shows what requires my attention today
-   > and this week.
+   > <span class="goal">Build an interactive HTML Executive Command Center that shows what requires my attention today
+   > and this week.</span>
    >
-   > Use my calendar, recent emails, Teams conversations, meeting transcripts, and priority
-   > documents from [Priority Folder]. Focus on decisions, commitments, risks, and workstreams where
-   > my involvement could change the outcome.
+   > <span class="source">Use my calendar, recent emails, Teams conversations, meeting transcripts, and priority
+   > documents from [Priority Folder].</span> <span class="goal">Focus on decisions, commitments, risks, and workstreams where
+   > my involvement could change the outcome.</span>
    >
-   > At the top, show:
-   > - One or two urgent items requiring action
-   > - Today's most important meeting or priority
-   > - My busiest day this week
-   > - Remaining working days this week
+   > <span class="expect">At the top, show:</span>
+   > - <span class="expect">One or two urgent items requiring action</span>
+   > - <span class="expect">Today's most important meeting or priority</span>
+   > - <span class="expect">My busiest day this week</span>
+   > - <span class="expect">Remaining working days this week</span>
    >
-   > Organize the command center into three views:
-   > - Meetings: Key meetings, preparation needed, conflicts, and follow-ups
-   > - Priorities: Active commitments, approaching deadlines, blockers, and decisions waiting on me
-   > - Org pulse: Workstreams receiving significant attention, areas with limited recent activity,
-   >   and important commitments that may have gone quiet
+   > <span class="expect">Organize the command center into three views:</span>
+   > - <span class="expect">Meetings: Key meetings, preparation needed, conflicts, and follow-ups</span>
+   > - <span class="expect">Priorities: Active commitments, approaching deadlines, blockers, and decisions waiting on me</span>
+   > - <span class="expect">Org pulse: Workstreams receiving significant attention, areas with limited recent activity,
+   >   and important commitments that may have gone quiet</span>
    >
-   > For each recommended action, label it:
-   > - Lean in; OR, Delegate; OR, Re-engage; OR, Protect time
+   > <span class="expect">For each recommended action, label it:</span>
+   > - <span class="expect">Lean in; OR, Delegate; OR, Re-engage; OR, Protect time</span>
    >
-   > Explain the signal behind the recommendation and give me one clear next action. Keep
+   > <span class="expect">Explain the signal behind the recommendation and give me one clear next action.</span> <span class="constraint">Keep
    > recommendations focused on workstreams, decisions, and commitments rather than evaluating
-   > individual people. Make the dashboard executive-ready and easy to scan, with expandable
+   > individual people.</span> <span class="expect">Make the dashboard executive-ready and easy to scan, with expandable
    > sections, traffic-light indicators, and links to the supporting emails, meetings, chats, and
-   > files. The most important content should answer: What needs my attention, and what should I do
-   > differently today?
+   > files.</span> <span class="goal">The most important content should answer: What needs my attention, and what should I do
+   > differently today?</span>
    >
-   > Save this as a skill named [Executive Command Center] and schedule it to run every weekday at
-   > [time], using the latest available context.
+   > <span class="expect">Save this as a skill named [Executive Command Center] and schedule it to run every weekday at
+   > [time], using the latest available context.</span>
 2. Watch the side panel: Cowork gathers signals through **Work IQ**, loads its skills, and the
    **HTML command center** appears in the **Output folder**.
 3. **Find your output (take a minute here, you'll use this all day):**
@@ -365,7 +371,7 @@ to pick; ask for something that needs a website and Cowork opens the browser its
 > **Before you start (1 minute):**
 > - You're using Cowork **in Microsoft Edge** at https://copilot.cloud.microsoft, not the Copilot
 >   desktop app or Chrome.
-> - Your **Edge profile** is the **workshop account** (Setup step A4), and you're not in an InPrivate
+> - Your **Edge profile** is **your work account** (Setup step A4), and you're not in an InPrivate
 >   window.
 > - In Edge, open **Settings**, search for **Cowork**, and make sure **Allow Cowork to take actions on
 >   your behalf** is on (it may be greyed out if your organization manages it).
@@ -556,7 +562,7 @@ Stretch and reset. When we're back: an onboarding pack, automations, and the Age
 
 **The story:** **Sofia Alvarez** accepted the HR Coordinator offer, the role you researched in
 Exercise 2 and advertised in Exercise 5. She starts **next Monday**, and you're getting her first day
-ready. (Sofia is fictional and has no account in the tenant, so nothing reaches her.)
+ready. (Sofia is fictional, so invite and address only yourself, and nothing reaches anyone.)
 
 ### Task 6a — Orientation deck (PowerPoint skill)
 📎 Attach `onboarding-checklist.docx`, `employee-handbook-excerpt.docx`, and `benefits-summary.docx`, then
@@ -569,8 +575,8 @@ prompt:
 ### Task 6b — Schedule the kickoff (Scheduling / Calendar skill)
 > <span class="goal">Schedule a 30-minute **onboarding kickoff** for Sofia Alvarez's first day</span>, <span class="expect">**next Monday at
 > 9:30 AM**, add a Teams meeting link</span>, <span class="constraint">and invite only me. Show it to me before you send it.</span>
-- → Watch the **Scheduling** / **Calendar** skill chip load. In this shared tenant, invite
-  **yourself** only — don't add real people.
+- → Watch the **Scheduling** / **Calendar** skill chip load. This is your real calendar, so invite
+  **yourself** only; don't add real people.
 
 ### Task 6c — Team announcement (Communications skill)
 > <span class="goal">Draft a warm, inclusive **team announcement** introducing Sofia Alvarez, our new HR Coordinator
@@ -621,7 +627,7 @@ before it goes out?
 
 ### Task 7c — Share your custom skill (sharing flow)
 1. Open the **HR Policy Answer** skill from Ex 4 on the **Customize** page.
-2. Select **Share**. Since we all share one tenant, either keep it **"Only you"** or share to
+2. Select **Share**. Everyone here is in the same tenant, so either keep it **"Only you"** or share to
    **one specific colleague** — and add your **initials** to the name first to avoid collisions.
 3. Make a small edit to the skill, then use **Re-share** to see how updates propagate.
 - ✅ **Checkpoint:** you've walked the share / re-share flow (kept private or shared to one person).
@@ -752,7 +758,7 @@ prompt for new hires.
   done, and **Agent Builder** to stand up a helper others can use.
 - Keep the **prompt library** ([reference/04-prompt-library.md](../reference/04-prompt-library.md)) handy.
 - Remember the golden rules ([reference/06-responsible-use.md](../reference/06-responsible-use.md)):
-  **draft, review, approve at checkpoints, cite and confirm, no real PII in practice.**
+  **draft, review, approve at checkpoints, cite and confirm, keep real data private.**
 - **Before you leave:** pause or delete the schedules you created in Exercises 1 and 7
   (**Automations → Manage schedules**).
 - **Tomorrow:** you'll receive [after-the-workshop.md](after-the-workshop.md), with a knowledge
@@ -762,4 +768,5 @@ prompt for new hires.
 - Cowork toggle missing or no response → [readiness checklist](../instructor/readiness-checklist.md), then a proctor.
 - Naming clashes when sharing a skill → keep skills **"Only you"** or add your initials to the name
   (everyone's in the same tenant).
-- Finished early → try the **Stretch** prompts above.
+- Finished early → try the **Stretch** prompt at the end of each exercise:
+  [Ex 1](#exercise-1--executive-command-center-25-min) · [Ex 2](#exercise-2--research-the-web-with-deep-research-20-min) · [Ex 3](#exercise-3--navigate-websites-with-coworks-browser-25-min) · [Ex 4](#exercise-4--build-your-own-custom-skill-30-min) · [Ex 5](#exercise-5--recruiting--reporting-mini-lab-15-min) · [Ex 6](#exercise-6--onboarding-orientation-pack-20-min) · [Ex 7](#exercise-7--automate--share-15-min) · [Ex 8](#exercise-8--build-a-policy-agent-with-copilot-agent-builder-20-min).

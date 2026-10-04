@@ -12,8 +12,9 @@
    before you confirm. Avoid **Approve All** and **Always allow / don't ask again**: they skip
    later checkpoints for the rest of the session. Revoke them in the side panel's **Permissions**
    section.
-3. **Use sample/fictional data in this workshop.** All provided files describe the fictional
-   *Zava*. Do not paste real employee PII into exercises.
+3. **Keep real data private in this workshop.** Exercise 1 reads your own mail, calendar, and Teams;
+   its results stay in your account, so keep them off shared screens. Every other exercise uses the
+   fictional *Zava* files: don't paste real employee personal data into them.
 4. **Cite and confirm.** For policy answers, have Cowork name the source document and remind the
    reader that HR should confirm — policies change.
 5. **Right person, right data.** Cowork acts in *your* context and accesses only what *you* are
@@ -23,11 +24,11 @@
 
 - Cowork grounds answers in your organization's data through **Work IQ**, respecting existing
   **permissions** — it only reaches content you already have access to.
-- **Enterprise Search / org-grounded** results reflect the **shared workshop tenant**, so they're
-  consistent for everyone — but that tenant may hold other demo content, so prefer grounding on the
-  **provided sample files** during exercises.
+- **Enterprise Search / org-grounded** results come from **your organization's tenant** and differ by
+  person, because each of you can see different content. During exercises (except Exercise 1), ground
+  on the **provided sample files** so results are predictable.
 - Work stays within the **Microsoft 365 tenant boundary**; your drafts, OneDrive files, and custom
-  skills live under **your own user account** in the shared tenant.
+  skills live under **your own user account**.
 
 ## When Cowork uses the web
 

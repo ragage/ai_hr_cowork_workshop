@@ -14,6 +14,7 @@ from pptx.enum.text import MSO_ANCHOR, PP_ALIGN
 from pptx.opc.constants import RELATIONSHIP_TYPE as RT
 from pptx.opc.package import Part
 from pptx.oxml.ns import qn
+from pptx.text.text import _Run
 from pptx.util import Emu, Inches, Pt
 
 from content import EXERCISES, GUIDE_CARD
@@ -30,10 +31,15 @@ DECK_SUBJECT = "Instructor deck"
 # Download links on the "Workshop kit" slide (both decks); same URLs as the emails in communication/.
 KIT_REPO = os.environ.get("KIT_REPO", "https://github.com/cragage_microsoft/ai_hr_cowork_workshop")
 HINT_IMG = os.path.join(ROOT, "reference", "media", "download-hint.png")  # from make_download_hint.py
+KEY_GRID = os.path.join(ROOT, "reference", "media", "prompt-key-grid.png")  # from make_prompt_key.py
+KEY_ROW = os.path.join(ROOT, "reference", "media", "prompt-key-slide.png")
+KEY_ALT = ("Prompt key: Goal (blue) is the outcome, for whom, and why; Source (green) is the files, sites, or data "
+           "to use; Expectations (orange) describe what good looks like; Constraints (purple) say what Cowork must not do.")
 
 
 def kit_url(path):
     return f"{KIT_REPO}/raw/main/{path}"
+WORKBOOK_URL = kit_url("participant/participant-workbook.docx")  # where the full stretch prompts live
 UI_SHOT = os.path.join(ROOT, "tools", "assets", "cowork-home.png")  # Cowork home-page screenshot
 R_NS = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
 P14 = "http://schemas.microsoft.com/office/powerpoint/2010/main"
@@ -424,6 +430,36 @@ def prompt_segs(line):
     return out
 
 
+def prompt_p(proto, line):
+    """A paragraph built from proto whose marked prompt elements are highlighted in their colors."""
+    segs = prompt_segs(line)
+    para = build_p(proto, [(t, 0) for t, _ in segs])
+    for r, (_, key) in zip(para.findall(qn("a:r")), segs):
+        if key:
+            highlight(r, PROMPT_EL[key][1])
+    return para
+
+
+def prompt_key(slide, x=8.49, y=5.72):
+    """Color key for the prompt elements, under Data Sources on a scenario card."""
+    pill(slide, x + 0.83, y, "Prompt key")
+    pic = slide.shapes.add_picture(KEY_GRID, Inches(x - 0.04), Inches(y + 0.38), width=Inches(4.62))
+    pic._element.nvPicPr.cNvPr.set("descr", KEY_ALT)
+
+
+def link_segments(shape, segs):
+    """Rewrite a shape's first paragraph as (text, url or None) runs, keeping the first run's formatting."""
+    p = shape.text_frame.paragraphs[0]
+    proto = p.runs[0]._r
+    for seg, url in segs:
+        r = copy.deepcopy(proto)
+        r.find(qn("a:t")).text = seg
+        proto.addprevious(r)
+        if url:
+            link_run(_Run(r, p), url)
+    p._p.remove(proto)
+
+
 
 # ---------------------------------------------------------------- template-based slide builders
 def white_slide(title, subtitle):
@@ -476,16 +512,11 @@ def scenario_card(ex):
         if line == "":
             new.append(copy.deepcopy(p_empty))
         elif line.startswith("- "):
-            new.append(build_p(p_bullet, [(line[2:], 0)]))
+            new.append(prompt_p(p_bullet, line[2:]))
         elif line.startswith("## "):
             new.append(build_p(p_plain, [(line[3:], 0, True)]))
         else:
-            segs = prompt_segs(line)
-            para = build_p(p_plain, [(t, 0) for t, _ in segs])
-            for r, (_, key) in zip(para.findall(qn("a:r")), segs):
-                if key:
-                    highlight(r, PROMPT_EL[key][1])
-            new.append(para)
+            new.append(prompt_p(p_plain, line))
     set_paras(pr, new)
     if ex.get("prompt_size"):
         set_sizes(pr, ex["prompt_size"])
@@ -511,6 +542,7 @@ def scenario_card(ex):
             ext = blip.find(qn("a:extLst"))
             if ext is not None:
                 blip.remove(ext)
+    prompt_key(s)
     dedupe_ids(s)
     notes(s, ex["notes_card"])
     return s
@@ -548,9 +580,14 @@ def hands_on(ex):
          anchor=MSO_ANCHOR.MIDDLE, line_spacing=1.05)
     # Stretch
     box(s, 8.49, 6.0, 4.62, 1.05, CARD, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.1)
-    text(s, 8.75, 6.0, 4.15, 1.05, [{"runs": [("Stretch: ", {"size": 11, "bold": True, "color": INK, "font": SEG_SEMI}),
-                                              (ex["stretch"], {"size": 11, "color": INK, "font": SEG_DISP})]}],
-         anchor=MSO_ANCHOR.MIDDLE, line_spacing=1.03)
+    tb = text(s, 8.75, 6.0, 4.15, 1.05,
+              [{"runs": [("Stretch: ", {"size": 11, "bold": True, "color": INK, "font": SEG_SEMI}),
+                         (ex["stretch"], {"size": 11, "color": INK, "font": SEG_DISP})], "space_after": 2},
+               {"runs": [("Full prompt: ", {"size": 10, "color": W_SUB, "font": SEG_DISP}),
+                         (f"participant workbook, Exercise {ex['num']}", {"size": 10, "bold": True, "color": BLUE,
+                                                                          "font": SEG_DISP})]}],
+              anchor=MSO_ANCHOR.MIDDLE, line_spacing=1.03)
+    link_run(tb.text_frame.paragraphs[1].runs[1], WORKBOOK_URL)
     notes(s, ex["notes_hands"])
     return s
 
@@ -703,7 +740,7 @@ def objectives_slide():
            ("Ground in real content", "Attach files, research and browse the web **with citations**, and check the result.", GREEN),
            ("Package repeatable work", "Build a **custom skill**; schedule recurring work with **Automations**.", RED),
            ("Build a no-code agent", "Answers from HR documents; **declines** what it shouldn\u2019t answer.", OLIVE),
-           ("Apply HR guardrails", "Fictional data, **cite and confirm**, people decisions stay with people.", BLUE)]
+           ("Apply HR guardrails", "Keep real data private, **cite and confirm**, people decisions stay with people.", BLUE)]
     for i, (h, sub, acc) in enumerate(OBJ):
         x, y = 0.55 + (i % 2) * 6.2, 1.6 + (i // 2) * 1.75
         box(s, x, y, 6.03, 1.55, "FFFFFF", line=W_LINE, shadow=True)
@@ -730,7 +767,7 @@ def kit_links_slide():
                       ("Facilitator guide", kit_url("instructor/facilitator-guide.docx"), "run sheet + triage"),
                       ("Answer key", kit_url("instructor/facilitator-answer-key.docx"), "expected results"),
                       ("Readiness checklist", kit_url("instructor/readiness-checklist.docx"), "prep timeline + Plan B"),
-                      ("Seed content", kit_url("instructor/seed-content.docx"), "mail, meetings, chat for Ex 1"),
+                      ("Demo seed content", kit_url("instructor/seed-content.docx"), "your Ex 1 demo data + how to load it"),
                       ("Communication kit", f"{KIT_REPO}/tree/main/communication", "overview deck + emails")]
     for col, (head, items, acc) in enumerate((("FOR PARTICIPANTS", KIT_PARTICIPANT, BLUE),
                                               ("FOR INSTRUCTORS", KIT_INSTRUCTOR, PURPLE))):
@@ -777,7 +814,7 @@ s = title_slide("Getting Things Done with Copilot Cowork for HR Tasks",
 notes(s, "WELCOME (0:00-0:10). Introduce yourself and the goal: by the end, every attendee knows when to "
          "use Copilot Chat vs. Cowork and has built an executive command center, researched the web, "
          "had Cowork navigate websites in its browser, built a custom skill, an onboarding pack and an automation, and finished "
-         "with a no-code AGENT. 4 hours, two breaks. Tenant note: ATTENDEES share one tenant; YOU demo "
+         "with a no-code AGENT. 4 hours, two breaks. Tenant note: ATTENDEES use their own work accounts; YOU demo "
          "from a SEPARATE tenant, so your screen may differ. Golden rule all day: every Cowork output is "
          "a DRAFT; Cowork pauses at checkpoints.")
 
@@ -888,25 +925,25 @@ kit_links_slide()
 # 6 — Setup
 s = white_slide("Setup \u2014 sign in and copy the data", "Do this before Exercise 1. Proctors: triage sign-in issues now.")
 wcard(s, 0.55, 1.6, 3.95, 3.3, BLUE, "1 \u00b7 SIGN IN",
-      bullets(["Use the workshop account you were given", "Open copilot.cloud.microsoft in Microsoft Edge",
-               "Select **Cowork** next to Chat", "Smoke test: \u201cGive me a one-sentence hello.\u201d", "Edge profile = the **workshop account** (for Ex 3)"], size=14))
+      bullets(["Sign in with **your own work account**", "Open copilot.cloud.microsoft in Microsoft Edge",
+               "Select **Cowork** next to Chat", "Smoke test: \u201cGive me a one-sentence hello.\u201d", "Edge profile = **your work account** (for Ex 3)"], size=14))
 wcard(s, 4.69, 1.6, 3.95, 3.3, PURPLE, "2 \u00b7 COPY THE DATA",
       bullets(["Download and extract **zava-sample-knowledge.zip**",
                "In **your** OneDrive \u2192 **Documents**, use **Folder upload** to add the **ai_hr_cowork_workshop** folder",
                "Attach files with **+ \u2192 Attach cloud files**, or type **/**"], size=14))
 wcard(s, 8.83, 1.6, 3.95, 3.3, GREEN, "3 \u00b7 ETIQUETTE",
       bullets(["Your OneDrive, drafts, and skills are your own", "Keep custom skills **\u201cOnly you\u201d** or initialed",
-               "Fictional Zava data only \u2014 no real PII", "Never send to real people; save drafts"], size=14))
+               "Ex 1 uses **your own** data: keep it private", "Other exercises: **Zava files** only", "Never send to real people; save drafts"], size=14))
 band(s, 0.55, 5.2, 12.23, 1.55,
-     "**Attendees share one tenant**, so your screens match each other and org search is consistent. The "
+     "You\u2019re in **your own work account**, so your screens match each other. The "
      "**facilitator demos from a separate tenant**, so the instructor\u2019s screen may look a little different.",
      fill=PLUM, color="FFFFFF", size=14)
 notes(s, "SETUP (part of 0:20-0:40). Whole room: sign in + smoke test, then download zava-sample-knowledge.zip, "
          "extract it, and use Folder upload to add the ai_hr_cowork_workshop folder (the six Word and Excel files) "
          "to Documents in their own OneDrive; no Folder upload option? create the folder and upload the files. Show how to attach "
-         "a file: + -> Attach cloud files, or type /. EDGE PROFILE CHECK: the browser task in Ex 3 runs in the Edge profile signed in with the workshop account; anyone in their own corporate profile adds a new Edge profile now (not InPrivate). Attendees share ONE tenant; YOU are on a "
-         "SEPARATE tenant. Proctors triage; anyone blocked follows your demo. readiness-checklist.md has "
-         "the triage, and seed-content.md has the seed data for Exercises 1 and 2.")
+         "a file: + -> Attach cloud files, or type /. EDGE PROFILE CHECK: the browser task in Ex 3 runs in the Edge profile signed in with their work account; anyone in a personal profile adds a work profile now (not InPrivate). Attendees use their OWN work accounts; YOU are on a "
+         "SEPARATE demo tenant. DATA: Ex 1 reads their own mail and calendar (private: no screen sharing); everything else uses the Zava files. "
+         "Proctors triage; anyone blocked follows your demo. readiness-checklist.md has the triage.")
 
 # 6b — Setup: custom instructions
 CI_SHOT = os.path.join(ROOT, "reference", "media", "customize-instructions.png")
@@ -923,8 +960,9 @@ wcard(s, 5.05, 3.5, 7.73, 2.4, PURPLE, "PASTE THIS (WORKBOOK SETUP STEP D)",
       [{"runs": [("I work in HR at Zava. Write in a warm, professional, inclusive tone suitable for employee "
                   "communications. When you answer a policy or benefits question, cite the source document and add "
                   "\u201cPolicies can change \u2014 please confirm with HR.\u201d Save emails and messages as drafts for "
-                  "me to review; during this workshop, never send anything to anyone but me. Use only the Zava sample "
-                  "files in my OneDrive folder Documents/ai_hr_cowork_workshop, and never include real employee personal data.",
+                  "me to review; during this workshop, never send anything to anyone but me. Unless I ask you to use my "
+                  "mail, calendar, or Teams, use only the Zava sample files in my OneDrive folder Documents/ai_hr_cowork_workshop, "
+                  "and never copy real employee personal data into files or drafts.",
                   {"size": 13.5, "italic": True, "color": W_BODY})]}])
 band(s, 0.55, 6.05, 12.23, 0.75,
      "**Personal to you** \u00b7 type **/** to reference a file or person \u00b7 up to ~20 KB, but **shorter is better** "
@@ -934,7 +972,7 @@ notes(s, "CUSTOM INSTRUCTIONS (part of 0:20-0:40, about 3 min). Show it live: Cu
          "format, and rules don't have to be repeated in each prompt. Everyone pastes the workbook text (Setup step D), "
          "saves, then tests in a new task: 'Draft a two-sentence reminder to employees that open enrollment is in "
          "November.' The reply should use the tone and end with the confirm-with-HR note. Instructions are personal "
-         "(neighbors in the shared tenant don't see them), support rich text and / references, up to about 20 KB; "
+         "(neighbors don't see them), support rich text and / references, up to about 20 KB; "
          "keep them short because they're included in every task. Source: Microsoft Learn, 'Customize Copilot Cowork "
          "-> Custom instructions in Cowork'. MORE SAMPLES: workbook step D has role-based samples to paste back at work "
          "(HR business partner, recruiter, HR operations, employee comms); the full set is in "
@@ -985,7 +1023,7 @@ notes(s, "SKILLS. You don't invoke skills manually — Cowork activates them and
 s = white_slide("Responsible use \u2014 the golden rules", "HR handles sensitive people data. Make these non-negotiable.")
 RULES = [("Every output is a draft", "Review before you send, share, or file \u2014 especially employee comms.", BLUE),
          ("Approve at checkpoints", "Cowork pauses before irreversible actions. Read before you confirm.", PURPLE),
-         ("Use fictional data today", "All sample files are the fictional Zava. No real PII.", GREEN),
+         ("Keep real data private", "Ex 1 reads **your own** mail and calendar: keep results off shared screens. Everything else uses the fictional Zava files.", GREEN),
          ("Cite & confirm", "For policy answers, name the source and note HR should confirm.", RED),
          ("Right person, right data", "Cowork only reaches content you already have permission to see.", OLIVE)]
 for i, (h, sub, acc) in enumerate(RULES):
@@ -995,7 +1033,7 @@ for i, (h, sub, acc) in enumerate(RULES):
     text(s, 0.8, y, 0.5, 0.92, [{"runs": [(str(i + 1), {"size": 22, "bold": True, "color": acc})]}], anchor=MSO_ANCHOR.MIDDLE)
     text(s, 1.35, y, 3.9, 0.92, [{"runs": [(h, {"size": 16, "bold": True, "color": W_TITLE})]}], anchor=MSO_ANCHOR.MIDDLE)
     text(s, 5.3, y, 7.3, 0.92, [{"runs": rich(sub, 14, W_SUB)}], anchor=MSO_ANCHOR.MIDDLE)
-notes(s, "RESPONSIBLE USE. Draft -> review -> approve. Fictional Zava data only; no real PII; never send to real "
+notes(s, "RESPONSIBLE USE. Draft -> review -> approve. Ex 1 runs on their own real data: results stay private, no screen sharing; all other exercises use the fictional Zava files, so no real employee data goes into them; never send to real "
          "people (send only to yourself). Cite sources + 'confirm with HR'. Exercise 1's prompt also "
          "keeps recommendations on workstreams, not on evaluating individuals. Detail: "
          "reference/06-responsible-use.md.")
@@ -1003,13 +1041,8 @@ notes(s, "RESPONSIBLE USE. Draft -> review -> approve. Fictional Zava data only;
 # 9b — Prompting best practices: Goal · Source · Expectations · Constraints (same colors as the Word workbook)
 s = white_slide("Prompting best practices",
                 "Strong prompts include four elements. No labels needed: just make sure each one is there.")
-for i, key in enumerate("GSEC"):
-    name, fill, dark, ask = PROMPT_EL[key]
-    x = 0.55 + i * 3.1
-    box(s, x, 1.55, 2.95, 1.15, fill)
-    box(s, x, 1.55, 0.07, 1.15, dark)
-    text(s, x + 0.25, 1.62, 2.6, 0.4, [{"runs": [(name, {"size": 17, "bold": True, "color": dark})]}])
-    text(s, x + 0.25, 2.03, 2.6, 0.65, [{"runs": [(ask, {"size": 12, "color": W_BODY})]}], line_spacing=1.0)
+pic = s.shapes.add_picture(KEY_ROW, Inches(0.5), Inches(1.52), width=Inches(12.33))  # legend from make_prompt_key.py
+pic._element.nvPicPr.cNvPr.set("descr", KEY_ALT)
 # Weak
 box(s, 0.55, 2.9, 12.23, 0.95, "FFFFFF", line=W_LINE, shadow=True)
 box(s, 0.55, 2.9, 0.07, 0.95, RED)
@@ -1051,9 +1084,9 @@ notes(s, "PROMPTING BEST PRACTICES (about 4 min, before the exercises). Read the
          "and sections; EXPECTATIONS (orange) describe what good looks like: length, subject line, bullets, tone; "
          "CONSTRAINTS (purple) say what not to do. Point out 'don't invent dates': the benefits summary only says "
          "November, so a weak prompt invites a made-up deadline. Key message: no labels and no fixed order; just check "
-         "all four are there. Context about the situation belongs in the Goal. In the Word workbook every exercise "
-         "prompt from Ex 2 onward is color-coded with these same colors (setup step F has the legend and this example); "
-         "Exercise 1's prompt is left as is. When Cowork asks a clarifying question or misses, the missing piece is "
+         "all four are there. Context about the situation belongs in the Goal. Every exercise prompt, in the "
+         "workbook and on the exercise cards, uses these same colors, and each card has a Prompt key at the bottom right "
+         "(setup step F has the legend and this example). When Cowork asks a clarifying question or misses, the missing piece is "
          "usually one of the four: add it in a follow-up.")
 
 # 10 — How to read an exercise card (the template itself, annotated)
@@ -1234,16 +1267,16 @@ mark_section("Close")
 s = white_slide("Facilitation & troubleshooting", "For instructors \u2014 skip live or use during a break.")
 wcard(s, 0.55, 1.6, 5.98, 3.35, BLUE, "KEEP 25 PEOPLE TOGETHER",
       bullets(["1 facilitator + 1\u20132 floaters", "Use each hands-on slide\u2019s **checkpoint** to sync",
-               "Load **seed-content.md** within 24 h of the session", "Check results with the **answer key**", "Watch the clock: **time checks** at each break"], size=14))
+               "Seed **your demo account** 1\u20132 days ahead (seed-content.md)", "Check results with the **answer key**", "Watch the clock: **time checks** at each break"], size=14))
 wcard(s, 6.8, 1.6, 5.98, 3.35, PURPLE, "COMMON BLOCKERS",
       bullets(["No Cowork toggle \u2192 spare licensed account", "Acted without asking \u2192 revoke in side panel **Permissions**",
-               "Empty dashboard \u2192 expected; show your demo", "No browser task \u2192 Edge, signed in as the workshop account", "Agent ignores files \u2192 wait for \u201cPreparing\u201d, then refresh"], size=14))
+               "Light dashboard \u2192 quiet week; show your demo", "No browser task \u2192 Edge, signed in with the work account", "Agent ignores files \u2192 wait for \u201cPreparing\u201d, then refresh"], size=14))
 band(s, 0.55, 5.25, 12.23, 1.5,
      "**Fallback:** anyone blocked follows your demo, using **facilitator-answer-key.md**. Whole room down? Stop after "
      "10 minutes and switch to **Plan B** (readiness-checklist.md). Running long? Use the time checks in the facilitator guide.",
      fill=PLUM, color="FFFFFF", size=14)
-notes(s, "FACILITATION. Biggest risks with ~25 people: pace variance, account readiness, and sparse data in new "
-         "accounts (Ex 1, fixed by seed-content.md). Attendees share one tenant; you're on a separate one. "
+notes(s, "FACILITATION. Biggest risks with ~25 people: pace variance, account readiness, and quiet mailboxes in "
+         "Ex 1 (your demo account is seeded with seed-content.md, loaded through VS Code + the Work IQ MCP server). Attendees use their own work accounts; you're on a separate tenant. Never ask anyone to share their Ex 1 dashboard. "
          "Mirrors facilitator-guide.md, facilitator-answer-key.md, and readiness-checklist.md (timeline, cost "
          "planning, Plan B). Time checks: 0:40 Ex 1, 1:25 break, 2:00 Ex 4, 2:45 break, 3:15 Ex 7, 3:35 Ex 8; cut in that order (shorter breaks, demo the Ex 3 scorecard, 6a + 6c only, 7a only, Ex 8 as a demo). Never cut Ex 4.")
 
@@ -1288,6 +1321,10 @@ notes(s, "WRAP-UP (3:55-4:00). Recap the THREE tools and everything they built. 
 
 # Thank you
 s = title_slide("Thank you", "Questions? Try the stretch prompts, then explore the kit\u2019s README.")
+link_segments(by_name(s)["Text Placeholder 4"],
+              [("Questions? Try the ", None), ("stretch prompts", WORKBOOK_URL),
+               (" at the end of each exercise in the participant workbook, then explore the kit\u2019s ", None),
+               ("README", f"{KIT_REPO}/blob/main/README.md"), (".", None)])
 notes(s, "CLOSE. Thank the group and take questions. Point to README.md, the prompt library, and the "
          "custom-skill and Agent Builder guides.")
 

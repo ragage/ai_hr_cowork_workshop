@@ -9,8 +9,9 @@ Edit the content here (or in the Markdown guides), then rebuild; don't hand-edit
 | `build_deck.py` + `content.py` | `instructor/instructor-deck.pptx` |
 | `build_overview.py` | `communication/training-overview.pptx` (reuses `build_deck.py`'s helpers and shared slides: keep the `# 1 — Title` marker and the shared-slide functions above it) |
 | `make_word_docs.py` + `callouts.lua` | a `.docx` copy of every guide's `.md` (not `sample-knowledge/`, `summary/`, or `tools/`) |
-| `finalize_word.ps1` | updates contents pages in Word and exports QA PDFs to `.build/` |
+| `finalize_word.ps1` | updates contents pages in Word, one process per file with a time limit; `-Pdf` also exports QA PDFs to `.build/` |
 | `make_quickref.py` | `participant/quick-reference-card.docx` (must stay 1 page) |
+| `make_prompt_key.py` | `reference/media/prompt-key*.png`: the Goal / Source / Expectations / Constraints legend (workbook, prompt library, quick-reference card, deck) |
 | `make_download_hint.py` | `reference/media/download-hint.png` |
 | `make_office_samples.py` | the Word/Excel copies in `sample-knowledge/` (not the zip) |
 | `art/ex1.png`–`ex8.png` | Fluent Emoji pictures for the exercise dividers |
@@ -32,6 +33,7 @@ python -m venv .venv; .venv\Scripts\python -m pip install -r tools\requirements.
 $env:PYTHONIOENCODING = "utf-8"
 $env:DECK_TEMPLATE = "C:\path\to\template.pptx"
 
+.venv\Scripts\python tools\make_prompt_key.py   # only if the legend changes
 .venv\Scripts\python tools\build_deck.py       # close PowerPoint first, or set $env:DECK_OUT to a preview path
 .venv\Scripts\python tools\build_overview.py   # or set $env:OVERVIEW_OUT to a preview path
 .venv\Scripts\python tools\make_quickref.py

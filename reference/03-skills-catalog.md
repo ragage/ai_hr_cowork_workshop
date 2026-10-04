@@ -63,9 +63,9 @@ policies (no new access). It isn't a skill you pick; Cowork decides when a task 
 It needs Edge 152 or later and an admin to turn on **Cowork Browsing**. We use it in Exercise 3. See
 [10-cowork-browser.md](10-cowork-browser.md).
 
-> **Grounding note:** In this workshop everyone shares **one common tenant**, so **Enterprise
-> Search** and org-grounded results are **consistent for everyone** (the shared tenant may also
-> contain other demo data). Deep Research reaches **external/web sources**, which is why we use it
+> **Grounding note:** In this workshop everyone signs in to their **own organization's tenant**, so
+> **Enterprise Search** and org-grounded results reflect real content and **differ by person**
+> (each of you can see different files). Deep Research reaches **external/web sources**, which is why we use it
 > for the web exercise. To keep results identical across the room, exercises still ground on the
 > **shared sample files** you copy into your own OneDrive.
 

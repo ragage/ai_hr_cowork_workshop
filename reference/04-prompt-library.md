@@ -11,6 +11,8 @@
 A strong Cowork prompt includes four elements. You don't have to label them; just make sure each
 one is there (the Word copy color-codes them):
 
+![Prompt key: Goal (blue) is the outcome, for whom, and why; Source (green) is the files, sites, or data to use; Expectations (orange) describe what good looks like; Constraints (purple) say what Cowork must not do](media/prompt-key.png)
+
 - <span class="goal">**Goal**</span>: the outcome you want, for whom, and why (blue).
 - <span class="source">**Source**</span>: the files, sites, or data Cowork should use (green).
 - <span class="expect">**Expectations**</span>: what the result looks like: format, length, sections, tone (orange).

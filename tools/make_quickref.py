@@ -105,8 +105,13 @@ table([["Tool", "Use it when…", "HR example"],
       [Inches(1.0), Inches(2.1), Inches(1.9)])
 
 h("2 · Write a good prompt")
-cpara([("Goal", "G", True), (" + ", None, False), ("Source", "S", True), (" + ", None, False),
-       ("Expectations", "E", True), (" + ", None, False), ("Constraints", "C", True)])
+# Legend picture from make_prompt_key.py (same colors as the workbook and the deck)
+kp = doc.add_paragraph()
+kp.add_run().add_picture(str(pathlib.Path(OUT).parents[1] / "reference" / "media" / "prompt-key-card.png"),
+                         width=Inches(4.6))
+kp.runs[0]._r.xpath(".//wp:docPr")[0].set("descr", "Prompt key: Goal (blue) is the outcome, for whom, and why; "
+    "Source (green) is the files, sites, or data to use; Expectations (orange) describe what good looks like; "
+    "Constraints (purple) say what Cowork must not do.")
 cpara([("e.g. “", None, False), ("Draft a warm welcome email for our new HR Coordinator starting Monday,", "G", False),
        (" ", None, False), ("using onboarding-checklist.docx.", "S", False), (" ", None, False),
        ("Under 200 words. Save as a draft", "E", False), (" — ", None, False), ("don’t send.", "C", False),
@@ -139,7 +144,7 @@ table([["Go to…", "To…"],
 h("5 · Golden rules for HR")
 for b, t in (("Every output is a draft. ", "Review before you send, share, or file."),
              ("Approve one at a time. ", "Read the preview before you confirm."),
-             ("Fictional data in class. ", "No real employee PII."),
+             ("Keep real data private. ", "Ex 1 results stay yours; Zava files for the rest."),
              ("Cite and confirm. ", "Name the source; note “please confirm with HR.”"),
              ("People decisions stay with people. ", "Cowork only sees what you’re allowed to see.")):
     bullet(b, t)

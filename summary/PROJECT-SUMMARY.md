@@ -1,7 +1,7 @@
 # Project Summary
 
 Handoff notes for maintainers of the "Getting Things Done with Copilot Cowork for HR Tasks" kit
-(as of October 1, 2026).
+(as of October 3, 2026).
 
 ## Goal
 
@@ -9,8 +9,10 @@ A 4-hour, no-code, hands-on workshop kit, **"Getting Things Done with Copilot Co
 that teaches HR staff to use Microsoft Copilot Cowork for day-to-day work and ends with a non-Cowork
 exercise in Agent Builder.
 
-- **Audience:** about 25 customer attendees sharing one tenant, each with their own account. The
-  facilitator demos from a separate tenant.
+- **Audience and data:** about 25 attendees sign in with their **own work accounts** in their
+  organization's (production) tenant. Exercise 1 runs on each attendee's own mail, calendar, and Teams
+  (private: no screen sharing); every other exercise uses the Zava sample files. Nothing is provisioned
+  for attendees. The facilitator demos from a separate demo tenant, seeded for Exercise 1.
 - **Sample data:** the fictional company Zava.
 - **Deliverables:** Markdown guides with Word copies, an instructor PowerPoint, Word/Excel sample
   data, and a zip of the sample files.
@@ -27,7 +29,7 @@ exercise in Agent Builder.
 
 - **Folders by audience:** `participant/` (workbook, quick-reference card, sample-data zip,
   after-the-workshop pack), `instructor/` (instructor deck, facilitator guide, answer key, readiness
-  checklist, seed content), `communication/` (overview deck and emails), and `summary/` (this file).
+  checklist, the facilitator's demo seed content), `communication/` (overview deck and emails), and `summary/` (this file).
   Only `README.md` and its Word copy stay at the root.
 - **Guides:** [README.md](../README.md), [participant-workbook.md](../participant/participant-workbook.md),
   [facilitator-guide.md](../instructor/facilitator-guide.md), [facilitator-answer-key.md](../instructor/facilitator-answer-key.md),
@@ -46,12 +48,15 @@ exercise in Agent Builder.
   8 slides) and two paste-ready Outlook emails (`participant-email.html`, `instructor-email.html`).
   Both decks' "Workshop kit" slide and the emails link to files on `main` in this repo
   (`/raw/main/...` downloads), so update them together when files move.
-- **Prompt colour coding:** exercise prompts (Ex 2–8; Ex 1 is deliberately left plain) highlight
+- **Prompt colour coding:** all exercise prompts (Ex 1 keeps its exact wording; only colours were added) highlight
   their elements instead of labelling them: Goal (blue), Source (green), Expectations (orange),
   Constraints (purple). In Markdown this is `<span class="goal|source|expect|constraint">`, which
   `tools/callouts.lua` maps to the Word character styles "Prompt Goal" etc.; in `tools/content.py`
   the deck uses `{g}…{/g}`, `{s}`, `{e}`, `{c}` markers. Workbook Setup step F and deck slide 14
   teach the four elements with a weak vs. strong open-enrollment prompt.
+  Every exercise card in the deck has a "Prompt key" legend picture (bottom right). Stretch prompts live at the
+  end of each workbook exercise; the hands-on slides, the closing slide, and the facilitator guide
+  link to the workbook.
 - **Other outputs:** `instructor/instructor-deck.pptx` (47 slides),
   `participant/quick-reference-card.docx`, and a `.docx` copy of every guide (19 in total).
 - **Agenda (240 min):**
@@ -78,8 +83,13 @@ exercise in Agent Builder.
     slides (agenda, objectives, workshop-kit links) by running the part of that file before the
     `# 1 — Title` marker, so keep that marker and the shared-slide functions above it.
   - `make_word_docs.py` and `callouts.lua`: Markdown to Word.
-  - `finalize_word.ps1`: Word COM updates contents pages and exports QA PDFs.
+  - `finalize_word.ps1`: Word COM updates contents pages and fields, one child PowerShell process
+    and Word instance per file, with a time limit; QA PDFs only with `-Pdf`.
   - `make_quickref.py`: the quick-reference card.
+  - `make_prompt_key.py`: the Goal / Source / Expectations / Constraints legend pictures
+    (`reference/media/prompt-key*.png`) used by the workbook, prompt library, quick-reference card,
+    deck slide 14, and the "Prompt key" corner of every exercise card. Run it before the deck and
+    Word builds if the colours or wording change.
   - `make_download_hint.py`: the "select the Download icon" tip picture
     (`reference/media/download-hint.png`) used in the guides, emails, and both decks' kit slide.
   - `make_office_samples.py`: the Word/Excel sample files (not the zip; see Build Instructions).
@@ -92,6 +102,15 @@ exercise in Agent Builder.
 
 Latest work:
 
+- **Data model (October 3):** attendees use their own work accounts and real data for Exercise 1
+  only; the participant seed step is gone. `instructor/seed-content.md` is now for the facilitator's
+  demo account and recommends loading it with VS Code + GitHub Copilot (Agent mode) + the **Work IQ
+  MCP server**, with the alternatives compared. Workbook, guides, emails, both decks, and the
+  quick-reference card were updated (privacy etiquette, "Keep real data private" rule).
+- **Prompt legend graphic:** `tools/make_prompt_key.py` draws the colour legend; it replaces the
+  text legend on the exercise cards and slide 14, and appears in the workbook, prompt library, and
+  quick-reference card. Hands-on slides link to the stretch prompts in the workbook.
+- **`finalize_word.ps1`** rewritten to stop the hangs (see Known Issues).
 - **Decks:**
   - the instructor deck lives in `instructor/instructor-deck.pptx` (the generator's `OUT` points there)
   - a new training overview deck, `communication/training-overview.pptx`, built by `build_overview.py`
@@ -117,8 +136,14 @@ Latest work:
 ## Key Decisions
 
 - **Sample files are .docx/.xlsx,** because Agent Builder rejects .md and .csv as knowledge.
-- **Shared-tenant safety:** each attendee uses their own OneDrive copy, keeps skills "Only you", and
-  sends only to themselves.
+- **Real data, kept private:** attendees share one production tenant, so Exercise 1 results stay on
+  their own screen (no screen sharing), every other exercise uses the Zava files in their own
+  OneDrive, skills stay "Only you", and they send only to themselves.
+- **Demo seeding uses the Work IQ MCP server** (one endpoint for mail, calendar, and Teams; acts as
+  the signed-in user; approvals per tool call). Writes are blocked by default: the demo-tenant admin
+  allows them under Agents → Tools → Work IQ MCP → Policy (up to 24 h). Mail must come from
+  other senders, so loading runs one pass per sender. MCP Server for Enterprise (read-only directory)
+  and the Agent 365 per-workload servers (legacy) weren't suitable.
 - **Browser use is its own exercise.** It's a built-in capability, not a skill, and the exercise is
   read-only on dol.gov and lni.wa.gov.
 - **Approvals** are taught in setup step E and in Exercise 1.
@@ -140,8 +165,10 @@ $env:PYTHONIOENCODING = "utf-8"; $env:DECK_TEMPLATE = "<path to the source templ
 .venv\Scripts\python tools\build_overview.py  # or set $env:OVERVIEW_OUT to a preview path
 .venv\Scripts\python tools\make_quickref.py
 .venv\Scripts\python tools\make_word_docs.py
-powershell -ExecutionPolicy Bypass -File tools\finalize_word.ps1
+powershell -ExecutionPolicy Bypass -File tools\finalize_word.ps1   # add -Pdf for QA PDFs
 ```
+
+Run `.venv\Scripts\python tools\make_prompt_key.py` first if the legend colours or wording change.
 
 If the sample Word/Excel files change, rebuild the zip so the six files sit inside an
 `ai_hr_cowork_workshop/` folder:
@@ -165,42 +192,40 @@ Requirements:
 
 - **Slides:** open with PowerPoint COM (`Presentations.Open(path,-1,0,0)`), export with
   `Slides.Item(n).Export(jpg,"JPG",1600,900)`, and inspect visually.
-- **Word:** render pages from the QA PDFs (in `.build`) with PyMuPDF and inspect.
+- **Word:** run `finalize_word.ps1 -Pdf`, then render pages from the QA PDFs (in `.build`) with PyMuPDF
+  and inspect.
   `quick-reference-card.docx` must stay 1 page.
 - **Links:** a Python check that every Markdown link and anchor resolves, and every external target in
   each `.docx` exists.
 - **Stale text:** scan all .md files and the XML inside the Office files for the template name, the old
   sample folder `Documents/Cowork` (except `/skills`), and the old title. Expect zero hits.
-- **Live:** a dry run in the tenant with one attendee account, compared against
+- **Live:** a dry run in the attendees' tenant with one licensed work account, compared against
   [facilitator-answer-key.md](../instructor/facilitator-answer-key.md).
 
 ## Remaining Work
 
-1. Fix `tools/finalize_word.ps1` hanging (see Known Issues).
-2. Do the tenant dry run (browser use, skill evaluation score, "Activate and run now") and update the
+1. Do the tenant dry run (browser use, skill evaluation score, "Activate and run now") and update the
    answer key.
-3. Optionally:
+2. Optionally:
    - add dividers for the spotlight and wrap-up
-   - script loading the seed content into 25 accounts
+   - script the demo seeding (Graph PowerShell) if you reseed often
    - rebuild the zip if the samples change
-4. Re-check the Microsoft Learn pages before each delivery: cowork-available-plugins,
-   cowork-local-browser, cowork-admin-governance, cowork-customize.
+3. Re-check the Microsoft Learn pages before each delivery: cowork-available-plugins,
+   cowork-local-browser, cowork-admin-governance, cowork-customize, and the Work IQ MCP pages
+   (overview, policy governance) used in seed-content.md.
 
 ## Known Issues
 
 - The deck build needs a local copy of the source PowerPoint template (`DECK_TEMPLATE`); it isn't in
   the repo.
-- On October 3, 2026, `finalize_word.ps1` hung with no output (its Word automation instance never
-  returned, probably waiting on a hidden dialog) and had to be stopped. Until it's fixed, a Word
-  rebuild leaves the contents pages empty: refresh them in Word, or don't commit rebuilt `.docx`
-  files whose text didn't change. It hung again later that day on two files. Running each step
-  separately (open, TOC update, field update, save, PDF export) on the same files then succeeded
-  in 7–22 s each, so the hang is intermittent rather than one bad step. Workaround: finalize one file
-  at a time (put a single path in `.build/made.txt`), and stop only the `/Automation` WINWORD
-  process, plus its `~$` lock file, if it stalls.
+- `finalize_word.ps1` used to hang intermittently (one Word instance for all files never returned).
+  It now runs each file in its own child PowerShell process and Word instance with a time limit,
+  stops only the Word processes it started, and logs to `.build/finalize.log`. A file that times
+  out shows FAILED; rerun it alone (single path in `.build/made.txt`). PDF export is opt-in (`-Pdf`)
+  because it often stalls right after an update. Never stop a Word you have open yourself.
 - Product facts are dated October 1, 2026: plugin catalog, Edge 152 requirement, limits.
 - Browser use needs an admin setting, the Edge policy, Edge 152+ and an Edge profile signed in with the
-  workshop account. Any of these can block Exercise 3.
+  attendee's work account. Any of these can block Exercise 3.
 - The large divider number falls back to another font when Segoe Sans Display Bold isn't installed
   (cosmetic).
 - The `{placeholders}` in the Word copies looked like parentheses in a low-resolution render; confirm in

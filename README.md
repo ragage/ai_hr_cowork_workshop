@@ -27,7 +27,7 @@ By the end of the workshop, attendees will be able to:
    with Automations.
 5. **Build a no-code agent** in Copilot Agent Builder, grounded in HR documents and scoped to decline
    out-of-scope questions.
-6. **Apply HR guardrails:** fictional or permitted data only, cite and confirm policy answers, and
+6. **Apply HR guardrails:** keep real data private, cite and confirm policy answers, and
    keep people-related judgments with people.
 
 ## Who it's for
@@ -35,20 +35,21 @@ By the end of the workshop, attendees will be able to:
 - **Audience:** HR practitioners doing day-to-day operations.
 - **Level:** No-code, beginner-friendly.
 - **Group size:** designed for ~25 attendees.
-- **Tenant model:** the **~25 attendees share one common tenant**, each signing in with **their own
-  user account** — so each person has their own OneDrive, drafts, and skills, while org
-  search/grounding is **consistent across attendees**. The **facilitator demos from their own
-  separate tenant**, so the instructor's screen may look a little different from the attendees'.
-  Exercises run on **shared sample files** each person copies into their own OneDrive.
+- **Tenant and data model:** the **~25 attendees sign in with their own work accounts** in their
+  organization's tenant, so each person has their own OneDrive, drafts, and skills. **Exercise 1** runs
+  on each attendee's **own mail, calendar, and Teams** (the results stay private to them); **every other
+  exercise** uses the fictional **Zava sample files** each person copies into their own OneDrive. The
+  **facilitator demos from a separate demo tenant**, seeded with [seed-content.md](instructor/seed-content.md),
+  so the instructor's screen may look a little different from the attendees'.
 
 ## Prerequisites
 
-The **~25 attendees share one common tenant** provisioned by the host, each with a **licensed user
-account**; the **facilitator uses their own separate (demo) tenant**. The host/tenant admin ensures
-each attendee account has a **Microsoft 365 Copilot** license and is covered by a **Cowork spending
+The **~25 attendees use their own work accounts** (no workshop accounts to provision); the
+**facilitator uses a separate (demo) tenant**. The host/tenant admin ensures
+each attendee has a **Microsoft 365 Copilot** license and is covered by a **Cowork spending
 policy** (usage-based billing; this is what grants Cowork access), with **Cowork Browsing** allowed for
 the Exercise 3 browser task. Attendees need a **laptop/desktop** with **Microsoft Edge** (version 152 or
-later) signed in with their workshop account (custom skills and browser tasks aren't supported on mobile). Full details and a host checklist:
+later) signed in with their work account (custom skills and browser tasks aren't supported on mobile). Full details and a host checklist:
 [readiness-checklist.md](instructor/readiness-checklist.md).
 
 ## Agenda (240 minutes)
@@ -86,7 +87,7 @@ The kit is organized by audience:
 - **[participant/](participant)** — what attendees use: the workbook, the quick-reference card, the
   sample-data zip, and the after-the-workshop pack.
 - **[instructor/](instructor)** — what the facilitator and host use: the instructor deck, facilitator
-  guide, answer key, readiness checklist, and seed content.
+  guide, answer key, readiness checklist, and the facilitator's demo seed content.
 - **[communication/](communication)** — what you send out: the training overview deck and paste-ready
   Outlook emails for participants and instructors.
 - **[reference/](reference)**, **[skills/](skills)**, and **[sample-knowledge/](sample-knowledge)** —
@@ -106,7 +107,7 @@ The kit is organized by audience:
 | [communication/participant-email.html](communication/participant-email.html) | html | Paste-ready Outlook invitation for attendees: session details, what to bring, and links to the workbook, sample data, and handouts |
 | [communication/instructor-email.html](communication/instructor-email.html) | html | Paste-ready Outlook email for the instructor: links to every kit asset, the preparation timeline, and key reminders |
 | instructor/readiness-checklist | [.md](instructor/readiness-checklist.md) · [.docx](instructor/readiness-checklist.docx) | Prep timeline, cost planning, whole-room Plan B, and setup for hosts + attendees |
-| instructor/seed-content | [.md](instructor/seed-content.md) · [.docx](instructor/seed-content.docx) | Ready-made Zava emails, meetings, and a Teams chat to seed attendee accounts (Exercise 1) |
+| instructor/seed-content | [.md](instructor/seed-content.md) · [.docx](instructor/seed-content.docx) | Zava emails, meetings, and a Teams chat for the **facilitator's demo account** (Exercise 1), with how to load them through VS Code and the Work IQ MCP server |
 | instructor/facilitator-guide | [.md](instructor/facilitator-guide.md) · [.docx](instructor/facilitator-guide.docx) | Minute-by-minute run sheet, talking points, troubleshooting |
 | instructor/facilitator-answer-key | [.md](instructor/facilitator-answer-key.md) · [.docx](instructor/facilitator-answer-key.docx) | Expected results and verified figures for every exercise; fallback walkthrough |
 | participant/participant-workbook | [.md](participant/participant-workbook.md) · [.docx](participant/participant-workbook.docx) | Step-by-step attendee exercises with checkpoints |
@@ -129,7 +130,8 @@ The kit is organized by audience:
 
 ### Sample data (all fictional — no real PII)
 
-Every exercise uses the **Word and Excel** sample files. They work in both Cowork and Agent Builder
+The exercises use the **Word and Excel** sample files (Exercise 1 also reads each attendee's own mail and
+calendar). They work in both Cowork and Agent Builder
 (which doesn't accept .md or .csv). Download **[zava-sample-knowledge.zip](participant/zava-sample-knowledge.zip)**
 to get all six at once. It extracts to a folder named **`ai_hr_cowork_workshop`**; upload that folder
 to **Documents** in your OneDrive (`Documents/ai_hr_cowork_workshop`). The prompts use that path.
@@ -150,7 +152,8 @@ to **Documents** in your OneDrive (`Documents/ai_hr_cowork_workshop`). The promp
 ## How to use this kit
 
 1. **Host (3 weeks out):** follow the [preparation timeline](instructor/readiness-checklist.md#preparation-timeline).
-   Provision accounts, estimate cost, and load [seed-content.md](instructor/seed-content.md) the day before.
+   Confirm licenses and Cowork access, estimate cost, and stage the sample files. The facilitator loads
+   [seed-content.md](instructor/seed-content.md) into their own demo account 1–2 days before.
    Send the instructor the [instructor email](communication/instructor-email.html), and attendees the
    [participant email](communication/participant-email.html) one week out; use the
    [training overview deck](communication/training-overview.pptx) to introduce the workshop. To use
@@ -165,7 +168,7 @@ to **Documents** in your OneDrive (`Documents/ai_hr_cowork_workshop`). The promp
 4. **Afterward:** send [after-the-workshop.md](participant/after-the-workshop.md) (knowledge check, survey, and
    30-day plan) and pause the Exercise 1 and 7 schedules.
 5. **Everyone:** treat every Cowork output as a **draft to review**, approve **one action at a
-   time**, and use only the fictional sample data during exercises.
+   time**, keep Exercise 1 results private, and use the fictional sample data for the other exercises.
 
 ## Requirement coverage
 
@@ -183,7 +186,7 @@ to **Documents** in your OneDrive (`Documents/ai_hr_cowork_workshop`). The promp
 - ✅ A **non-Cowork** finale: build a Policy Agent with **Copilot Agent Builder** (Exercise 8)
 - ✅ A talk-only **HR plugins spotlight** on **Customize → Plugins**, with a screenshot and benefits
 - ✅ Every exercise introduced with a **scenario card** (workbook + deck)
-- ✅ **Learning objectives**, a verified **answer key**, **seed data**, a prep **timeline** with cost
+- ✅ **Learning objectives**, a verified **answer key**, facilitator **demo seed data**, a prep **timeline** with cost
   planning and **Plan B**, a **knowledge check**, and a **30-day adoption plan**
 - ✅ Broad HR-lifecycle focus: onboarding, policy/benefits, recruiting, communications, reporting
 

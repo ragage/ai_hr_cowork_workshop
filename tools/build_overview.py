@@ -31,15 +31,16 @@ wcard(s, 0.55, 1.6, 3.95, 3.35, BLUE, "WHO IT\u2019S FOR",
                "About **25 attendees** per session"], size=15))
 wcard(s, 4.69, 1.6, 3.95, 3.35, PURPLE, "FORMAT",
       bullets(["**4 hours**, instructor-led and hands-on", "**Eight** scenario-based exercises, two breaks",
-               "Each attendee gets a **workshop account** with fictional Zava data"], size=15))
+               "Your **own work account**: your real calendar and mail for Ex 1, fictional Zava files for the rest"], size=15))
 wcard(s, 8.83, 1.6, 3.95, 3.35, GREEN, "THREE TOOLS",
       bullets(["**Copilot Chat** for quick answers", "**Cowork** for multi-step work that ends in a deliverable",
                "**Agent Builder** for a reusable helper others can use"], size=15))
 band(s, 0.55, 5.25, 12.23, 1.5,
      "**One habit all day: draft \u2192 review \u2192 approve.** Cowork pauses before it sends or shares anything, "
      "so HR stays accountable for every output.", fill=PLUM, color="FFFFFF", size=16)
-notes(s, "ABOUT. Who it's for, the format, and the three tools. Attendees share one workshop tenant, each with their "
-         "own account, and use only fictional sample data. Everything Cowork produces is a draft to review.")
+notes(s, "ABOUT. Who it's for, the format, and the three tools. Attendees use their own work accounts: Exercise 1 "
+         "builds a private dashboard from their own mail and calendar, and every other exercise uses fictional Zava "
+         "sample files. Everything Cowork produces is a draft to review.")
 
 # 3 — Learning objectives
 s = objectives_slide()
@@ -76,19 +77,19 @@ notes(s, "EXERCISES. Walk the eight scenarios: an executive command center, Deep
 s = white_slide("Before the session", "What attendees bring, and what the host sets up in advance.")
 wcard(s, 0.55, 1.6, 5.98, 3.45, BLUE, "FOR ATTENDEES",
       bullets(["A **laptop or desktop** (not a phone) with **Microsoft Edge** 152 or later",
-               "The **workshop account** the host provides",
+               "Your **own work account** (Microsoft 365 Copilot licensed)",
                "No prep needed; optional five-minute pre-read: **Copilot vs. Cowork**",
-               "Fictional sample data only \u2014 no real employee data"], size=15))
+               "Real data stays private; exercise files are fictional"], size=15))
 wcard(s, 6.8, 1.6, 5.98, 3.45, PURPLE, "FOR HOSTS (START 3 WEEKS OUT)",
       bullets(["**Microsoft 365 Copilot** licenses and usage-based billing",
                "A **Cowork spending policy** (grants access) with **Cowork Browsing** allowed",
-               "About **25 accounts** plus spares; seed content loaded the day before",
+               "Attendees in the workshop group, plus 1\u20132 spare accounts",
                "Follow the **readiness checklist** for the full timeline and Plan B"], size=15))
 band(s, 0.55, 5.3, 12.23, 1.45,
      "**Instructors:** start with the readiness checklist and the facilitator guide, then do a full dry run against "
      "the answer key. The instructor deck\u2019s speaker notes carry the run sheet.", size=15)
-notes(s, "BEFORE THE SESSION. Attendees need only a laptop with Edge and the workshop account. Hosts provision "
-         "licenses, the Cowork spending policy, accounts, and seed content; the readiness checklist has the "
+notes(s, "BEFORE THE SESSION. Attendees need only a laptop with Edge and their own work account; nothing to provision. Hosts set up "
+         "licenses, the Cowork spending policy, and browser access; the facilitator seeds only their own demo account. The readiness checklist has the "
          "timeline, cost planning, and Plan B.")
 
 # 7 — Download links
@@ -99,7 +100,7 @@ notes(s, "DOWNLOAD LINKS. Everything participants and instructors need, plus the
          "folder and share that link instead.")
 
 # 8 — Close
-s = title_slide("Ready to join?", "Ask your workshop host for the next session date and your workshop account.")
+s = title_slide("Ready to join?", "Ask your workshop host for the next session date.")
 notes(s, "CLOSE. Invite questions. The paste-ready invitation emails in communication/ carry the same links.")
 
 exec(compile("# ---------------------------------------------------------------- remove template slides" + _TAIL,

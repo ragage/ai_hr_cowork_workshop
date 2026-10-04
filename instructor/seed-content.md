@@ -1,22 +1,99 @@
-# Seed Content Pack — Exercise 1 (Executive Command Center)
+# Seed Content Pack — Exercise 1 demo (instructor only)
 
-> **For the host.** New workshop accounts have empty mailboxes and calendars, so the Exercise 1
-> command center has nothing to work with. Load the items below into **each attendee account**
-> **1–2 days before the session**, so they count as "today and this week."
+> **For the facilitator's demo account only.** Attendees don't need any of this: they run Exercise 1
+> on **their own work mail, calendar, and Teams** and use the **Zava sample files** for everything
+> else. Your demo account (in your separate demo tenant) is usually quiet, so load the items below
+> into it **1–2 days before the session**. Then your live Exercise 1 demo shows a rich, predictable
+> command center, whatever the room's own data looks like.
 >
 > All content is **fictional Zava** material. What the command center should surface is in the
 > [facilitator answer key](facilitator-answer-key.md#exercise-1--executive-command-center).
 
-## How to send it
+## How to load it
 
-- **Senders:** create 2–3 extra accounts in the attendee tenant to send from (e.g., *Avery Quinn* as
-  "HR Manager," *Zava Communications*, *Jordan Lee*). Optionally set each attendee's **manager** to
-  Avery Quinn in the Microsoft 365 admin center (**Users → Manager**), so the command center can
-  recognize requests from the manager.
-- **Delivery:** send by hand, or script it with Microsoft Graph (`sendMail` / `events`) or
-  PowerShell. Script it for 25 accounts.
-- Replace `{attendee}` with each attendee's display name, and `{Thursday}` etc. with real dates in
-  the workshop week.
+### Recommended: VS Code + GitHub Copilot (Agent mode) + the Work IQ MCP server
+
+**Why this option:** the [Work IQ MCP server](https://learn.microsoft.com/microsoft-365/copilot/extensibility/work-iq/mcp/overview)
+is Microsoft's generally available MCP server for Microsoft 365 data. One endpoint covers **mail,
+calendar, and Teams chat**, it can **create** as well as read (`create_entity /me/events`,
+`do_action /me/sendMail`, chat messages), every action runs **as the signed-in user only**, and VS Code
+asks you to approve each tool call. It's also the same Work IQ layer Cowork reads from, so you can
+check the result straight away. Sign-in is Microsoft Entra ID; there's no app to register in most
+tenants.
+
+> **Do this a week ahead (demo-tenant admin).** Work IQ MCP **blocks create, update, and send by
+> default**. In the [Microsoft 365 admin center](https://admin.microsoft.com), go to **Agents → Tools →
+> Work IQ MCP → Policy** and allow write operations for the demo tenant
+> ([policy governance](https://learn.microsoft.com/microsoft-365/copilot/extensibility/work-iq/mcp/policy-governance-mcp)).
+> The change can take **up to 24 hours** to apply. If Work IQ isn't on yet, an admin may also need to
+> [enable your tenant for Work IQ](https://learn.microsoft.com/microsoft-365/copilot/extensibility/work-iq/enable-work-iq)
+> and give it a spending policy (Work IQ is billed by usage). This is your demo tenant, not the
+> attendees' production tenant.
+
+| Option | Verdict |
+| --- | --- |
+| **Work IQ MCP server in VS Code (Agent mode)** | **Recommended.** About 20 minutes, mostly prompts you paste. |
+| Microsoft Graph PowerShell or a Graph script (`sendMail`, `events`) | Good if you reseed often; more setup (app registration, permissions). |
+| By hand in Outlook and Teams | Fine as a fallback; about 30 minutes, easy to get dates wrong. |
+| Microsoft MCP Server for Enterprise | Not suitable: it reads tenant and directory data; it doesn't create mail or meetings. |
+| Agent 365 per-workload MCP servers (Mail, Calendar, Teams) | Not recommended: legacy, kept for backward compatibility, and they need an app registration. |
+| Microsoft 365 Agents Toolkit (VS Code extension) | Not suitable: it builds agents and apps; it doesn't load mailbox content. |
+
+#### 1. One-time setup (about 10 minutes)
+
+1. Install **Visual Studio Code** (1.118 or later; Insiders works too) and sign in to **GitHub
+   Copilot** (Accounts menu, bottom left).
+2. Open the Command Palette (**Ctrl+Shift+P**) → **MCP: Add Server** → **HTTP** → enter
+   `https://workiq.svc.cloud.microsoft/mcp` → name it **workiq** → choose **Global**.
+3. VS Code opens `mcp.json`; select **Start** above the `workiq` entry, then **Allow** and sign in
+   with a **demo-tenant** account (never an attendee's or a production account).
+4. Open **Chat** (**Ctrl+Alt+I**), switch the mode to **Agent**, select the **Tools** icon, and check
+   that the **workiq** tools are on.
+5. **Test it:** ask *"Using Work IQ, what's on my calendar tomorrow?"* A "policy denied" reply when
+   you create or send something means the write policy above isn't on yet (or hasn't applied); it
+   isn't a transient error, so don't keep retrying.
+
+#### 2. Prepare the demo tenant
+
+- **Sender accounts:** emails should arrive *from* other people, so each item is created while signed
+  in as its sender. Use **Avery Quinn** (your manager, required) plus any one or two existing demo
+  users for the rest. The command center reads the subject and body, so a different sender name is
+  fine. Set your demo account's **manager** to Avery Quinn (Microsoft 365 admin center → **Users →
+  Manager**), so requests from your manager stand out.
+- **Dates:** pick the workshop week and note the real dates for `{Wednesday}`, `{Thursday}`, and
+  `{Friday}`. Load everything **1–2 days before** the session, so it counts as "today and this week."
+
+#### 3. Load the items, one sender at a time
+
+Open this file (or `seed-content.docx` saved as text) in VS Code so Copilot can read it, then run one
+pass per sender. To switch sender: **Accounts** menu → sign out of the Microsoft account → **MCP: List
+Servers** → **workiq** → **Restart**, and sign in as the next sender.
+
+| Pass | Sign in as | Items |
+| --- | --- | --- |
+| 1 | **Avery Quinn** | Emails 1 and 4 (send 4 as the meeting: calendar event 3 with you invited), calendar event 1 with you invited, the Teams chat (C) |
+| 2 | A second demo user (e.g., *Zava Communications*) | Emails 3 and 6 |
+| 3 | A third demo user (or the second again) | Emails 2, 5, and 7 (keep each body's signature: Owen, Dana, Hana) |
+| 4 | **Your demo account** | Calendar event 2 (the overlapping interview), the optional quiet recurring meeting, and accept the kickoff invite |
+
+Paste this prompt in Agent mode for each pass (fill in the brackets):
+
+> Using the Work IQ tools and the file seed-content.md, create **only** these items: [items from the
+> table]. Send or invite **only** [demo account email]; replace {attendee} with [demo account display
+> name], {Wednesday} with [date], {Thursday} with [date], and {Friday} with [date]. Keep each subject,
+> body, importance, time, and Teams-meeting setting exactly as written. Show me each item before you
+> create or send it, and don't contact anyone else.
+
+Approve each tool call as it comes (keep **Allow once**, not **Always allow**), so you see every
+email and meeting before it goes.
+
+#### 4. Check it
+
+- In VS Code (signed in as your demo account): *"Using Work IQ, list my unread emails from the last
+  two days and my meetings on [Thursday]."* You should see the 7 emails, the **Thursday conflict**,
+  and the Wednesday kickoff.
+- Then run your Exercise 1 dry run in Cowork and compare with the
+  [answer key](facilitator-answer-key.md#exercise-1--executive-command-center).
 
 ---
 
@@ -81,7 +158,7 @@
 | --- | --- | --- | --- |
 | 1 | HR leadership sync | {Thursday} 10:00–11:00 | Organizer: Avery Quinn. Agenda: Q4 onboarding plan, T-2008 escalation |
 | 2 | Candidate interview — HR Coordinator | {Thursday} **10:30–11:15** | **Deliberately overlaps #1**, so the command center should flag a **conflict** |
-| 3 | Benefits Open Enrollment Kickoff | {Wednesday} 14:00–14:30 | Same as email #4; add it to each attendee's calendar as accepted |
+| 3 | Benefits Open Enrollment Kickoff | {Wednesday} 14:00–14:30 | Same as email #4; accept it in your demo account's calendar |
 
 Optional: add one **declined or quiet** recurring meeting (e.g., "Monthly engagement survey review",
 no activity in 6 weeks). It gives the command center's **Org pulse** view a "gone quiet" signal.
@@ -90,7 +167,7 @@ no activity in 6 weeks). It gives the command center's **Org pulse** view a "gon
 
 ## C. Teams chat (optional)
 
-A 1:1 chat from **Avery Quinn** to the attendee:
+A 1:1 chat from **Avery Quinn** to your demo account:
 
 > **Avery:** Heads up, payroll says the T-2008 overtime fix may slip to next cycle. Can you own the
 > comms to Owen?

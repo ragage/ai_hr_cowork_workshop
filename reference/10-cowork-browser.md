@@ -45,7 +45,7 @@ Browser use is **off by default**. All of the following must be true.
 2. Open Cowork **in Edge, on the web**, at https://copilot.cloud.microsoft. Browser use doesn't run
    from the Copilot desktop app, from mobile, or when Cowork is open in Chrome.
 3. Be signed in to **Edge** with the **same work account** you use for Cowork. In the workshop, that
-   means an Edge profile for your **workshop account**. InPrivate and guest windows don't work.
+   means an Edge profile for your **work account**. InPrivate and guest windows don't work.
 4. In Edge **Settings**, search for **Cowork** and make sure **Allow Cowork to take actions on your
    behalf** is on (it's greyed out if your organization manages it).
 5. The first time Cowork needs the browser, a **consent notice** appears in the conversation. Select
@@ -69,7 +69,7 @@ Browser use is **off by default**. All of the following must be true.
 | --- | --- | --- |
 | "Browser tasks run in Microsoft Edge" and a **Get Microsoft Edge** link | Cowork is open in Chrome or another browser | Open https://copilot.cloud.microsoft in Edge |
 | Cowork answers from memory or with Deep Research and never opens a site | Browser use isn't allowed for your account, or the Edge setting is off | Admin: check **Allow browser access** and the Edge policy. User: Edge **Settings → Cowork** |
-| Nothing happens, or it can't use your sign-ins | Edge profile isn't your workshop account, or you're InPrivate | Switch to (or add) an Edge profile signed in with the workshop account |
+| Nothing happens, or it can't use your sign-ins | Edge profile isn't your work account, or you're InPrivate | Switch to (or add) an Edge profile signed in with your work account |
 | Browser option unavailable in the desktop app | Desktop app isn't supported | Use Cowork on the web in Edge |
 | Old Edge | Version below 152 | Edge menu → **Help and feedback → About Microsoft Edge** to update |
 | "Your organization's policy doesn't allow this action" | DLP, web filtering, or Conditional Access | Expected: Cowork has your access, never more. Do that step by hand |

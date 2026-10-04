@@ -88,8 +88,8 @@ behavior?
 
 ## 3. Your 30-day adoption plan
 
-Pick **one** task per week. Keep using fictional or permitted data until your organization confirms
-what you can use Cowork with.
+Pick **one** task per week. Use real work data only in the ways your organization permits for
+Cowork; when in doubt, practice on the Zava files first.
 
 | Week | Focus | Try this |
 | --- | --- | --- |
