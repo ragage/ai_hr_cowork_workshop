@@ -215,6 +215,11 @@ Requirements:
   `quick-reference-card.docx` must stay 1 page.
 - **Links:** a Python check that every Markdown link and anchor resolves, and every external target in
   each `.docx` exists.
+- **Download links:** before you send the emails or hand out the decks, run
+  `.venv\Scripts\python tools\check_download_links.py --online`. It lists every GitHub link in the two
+  decks, the two emails, the workbook, and the quick-reference card, and fails if a linked file is
+  missing here or on `origin/main` (merge and push first). It warns when `main` has an older copy.
+  `[online: ...]` shows what someone who isn't signed in to GitHub gets.
 - **Stale text:** scan all .md files and the XML inside the Office files for the template name, the old
   sample folder `Documents/Cowork` (except `/skills`), and the old title. Expect zero hits.
 - **Live:** a dry run in the attendees' tenant with one licensed work account, compared against
@@ -249,6 +254,11 @@ Requirements:
 - The `{placeholders}` in the Word copies looked like parentheses in a low-resolution render; confirm in
   Word.
 - Schedules from Exercises 1 and 7 keep costing money until paused.
+- **The GitHub download links need a Microsoft sign-in** (checked October 7, 2026). The repo is under
+  the Microsoft Enterprise Managed Users (EMU) account, so it can't be public. Anyone who isn't
+  signed in, including customer attendees, gets the "Sign in to Microsoft EMU" page, not the file.
+  For customer deliveries, swap the email links for the Teams/SharePoint copies (the readiness
+  checklist says to stage them there).
 
 ## Next Session Starting Prompt
 

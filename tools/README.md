@@ -13,6 +13,7 @@ Edit the content here (or in the Markdown guides), then rebuild; don't hand-edit
 | `make_quickref.py` | `participant/quick-reference-card.docx` (must stay 1 page) |
 | `make_prompt_key.py` | `reference/media/prompt-key*.png`: the Goal / Source / Expectations / Constraints legend (workbook, prompt library, quick-reference card, deck) |
 | `make_download_hint.py` | `reference/media/download-hint.png` |
+| `check_download_links.py` | builds nothing: checks the GitHub download links in the decks, emails, workbook, and quick-reference card against the working copy and `origin/main`; `--online` also opens each one without signing in |
 | `art/ex1.png`–`ex8.png` | Fluent Emoji pictures for the exercise dividers |
 | `assets/cowork-home.png` | the Cowork home-page screenshot on the "What is Copilot Cowork?" slide |
 
@@ -38,6 +39,7 @@ $env:DECK_TEMPLATE = "C:\path\to\template.pptx"
 .venv\Scripts\python tools\make_quickref.py
 .venv\Scripts\python tools\make_word_docs.py
 powershell -ExecutionPolicy Bypass -File tools\finalize_word.ps1
+.venv\Scripts\python tools\check_download_links.py --online   # before sending the emails
 ```
 
 Other settings: `KIT_REPO` changes the base URL of the download links on the "Workshop kit" slide.
