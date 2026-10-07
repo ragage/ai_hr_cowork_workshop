@@ -75,11 +75,11 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
 | 0:20–0:35 | **Ex 1 — Executive Command Center** | Show the approval dialog (one at a time); walk the scenario card; demo the HTML dashboard; **show the Output folder** (Preview, Download, OneDrive → Cowork); skill save & schedule | Fill placeholders, run the prompt, open the dashboard from the Output folder |
 | 0:35–0:50 | **Ex 2 — Deep Research (web)** | Demo the cited briefing; demo the optional scorecard | Run Deep Research, ground it in the job description for 5 questions; optional: Word + Excel scorecard |
 | 0:50–1:05 | **Ex 3 — Navigate websites with the browser** | Demo the browser: consent, progress chips, Switch to tab as it searches dol.gov and lni.wa.gov | Run the two-site navigation, check the links; optional: Word brief for payroll |
-| 1:05–1:25 | **Ex 4 — Build a custom skill** | Build "HR Policy Answer" live; read the evaluation aloud | Build, read score, test in/out of scope |
-| 1:25–1:35 | **Ex 5 — Recruiting + reporting** | Demo the inclusive job posting + ticket summary | Do Task 5a & 5b |
-| 1:35–1:50 | **Break** (15 min) | Reset; sweep for blockers; check Ex 4 skills saved | Stretch, coffee |
-| 1:50–2:00 | **Ex 6 — Onboarding pack** | Demo deck + scheduling + announcement; call out new skill chips | Do Task 6a; optional: 6b, 6c |
-| 2:00–2:10 | **Ex 7 — Automate & share** | Create an Automation; demo Daily Briefing + share/re-share | Do Task 7a, 7b; optional: 7c |
+| 1:05–1:20 | **Ex 4 — Build a custom skill** | Build "HR Policy Answer" live; read the evaluation aloud | Build, read score, test in/out of scope |
+| 1:20–1:30 | **Ex 5 — Recruiting + reporting** | Demo the inclusive job posting + ticket summary | Do Task 5a & 5b |
+| 1:30–1:45 | **Break** (15 min) | Reset; sweep for blockers; check Ex 4 skills saved | Stretch, coffee |
+| 1:45–1:55 | **Ex 6 — Onboarding pack** | Demo deck + scheduling + announcement; call out new skill chips | Do Task 6a; optional: 6b, 6c |
+| 1:55–2:10 | **Ex 7 — Automate & share** | Create an Automation; demo Daily Briefing + share/re-share | Do Task 7a, 7b; optional: 7c |
 | 2:10–2:25 | **Ex 8 — Agent Builder (non-Cowork)** | Build the HR Policy Agent live; test on "Try it" | Build, add knowledge, test in/out of scope |
 | 2:25–2:30 | **Wrap-up** | Recap the three tools, quick knowledge check, next steps | Q&A, pick a "next week" task |
 
@@ -204,7 +204,7 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
   regular pages. Don't point people at interactive tools such as the DOL eLaws **Overtime Security
   Advisor**: in the dry run Cowork declined to open it.
 
-### Ex 4 — Build a custom skill (1:05–1:25) — the centerpiece
+### Ex 4 — Build a custom skill (1:05–1:20) — the centerpiece
 - Build it live from **Customize → Skills → Add → Create new**.
 - Read the **auto-evaluation** aloud; explain the four scoring dimensions and the bands.
 - Demo both a **triggering** question and an **out-of-scope** one (salary) to show scope boundaries.
@@ -218,7 +218,7 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
   don't end up with 25 identically named skills shared across the tenant.
 - Foreshadow Ex 8: this skill helps **you** in Cowork; later we build an **agent** others can use.
 
-### Ex 5 — Recruiting + reporting (1:25–1:35)
+### Ex 5 — Recruiting + reporting (1:20–1:30)
 - **Job posting (5a):** the follow-on to Ex 2. Ex 2 prepared the interview; 5a writes the posting
   that attracts candidates. Discuss the **wording-review table**: typical flags are the degree
   requirement and "1–3 years" read as must-haves. Ask the room whether they agree with every flag;
@@ -229,11 +229,11 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
   [facilitator-answer-key.md](facilitator-answer-key.md).
 - Keep this a one-off report; they'll turn it into a scheduled **Automation** in Exercise 7.
 
-### Break (1:35–1:50, 15 minutes)
+### Break (1:30–1:45, 15 minutes)
 - The only break. Help anyone still blocked catch up, and check that everyone's Exercise 4 skill
   saved — Ex 7 shares it. Restart on time.
 
-### Ex 6 — Onboarding pack (1:50–2:00)
+### Ex 6 — Onboarding pack (1:45–1:55)
 - **Story:** **Sofia Alvarez** (fictional; attendees invite only themselves) accepted the HR Coordinator role from Ex 2
   and Ex 5 and starts **next Monday**. The kickoff prompt gives a concrete time (9:30 AM) so Cowork
   doesn't have to guess.
@@ -244,7 +244,11 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
 - **6a (the deck) is the must-do.** 6b and 6c are **optional** for fast finishers; demo them while
   the room's decks build. In the dry run, 6a alone took about 11 minutes.
 
-### Ex 7 — Automate & share (2:00–2:10)
+### Ex 7 — Automate & share (1:55–2:10)
+
+Ex 7 has 15 minutes because 7a alone took about 12 minutes in the dry run; Ex 4 has 15
+because it took about 11.
+
 - Create an **Automation** live (weekly Monday ticket digest). The prompt names the **exact file and
   folder** (`hr-tickets-sample.xlsx` in `Documents/ai_hr_cowork_workshop`) because a scheduled run can't ask for
   clarification. Choose **Activate and run now** so the room sees a real run, then show the **Runs**
@@ -325,8 +329,8 @@ outside the core timing, so the first cut is simply not waiting for them.
 | **0:35** | Starting Ex 2 | Skip the Ex 1 discussion; demo the Output folder only |
 | **0:50** | Starting Ex 3 | Stop Ex 2 after the 5 questions; demo the optional scorecard |
 | **1:05** | Starting Ex 4 | Move on after the comparison table; demo the optional 3b brief |
-| **1:35** | Starting the break | Ex 5: do 5b only; shorten the break to 10 minutes |
-| **2:00** | Starting Ex 7 | Ex 6: move on after 6a (6b and 6c are optional). Ex 7: do 7a only, demo 7b and 7c |
+| **1:30** | Starting the break | Ex 5: do 5b only; shorten the break to 10 minutes |
+| **1:55** | Starting Ex 7 | Ex 6: move on after 6a (6b and 6c are optional). Ex 7: do 7a only, demo 7b and 7c |
 | **2:10** | Starting Ex 8 | Run Ex 8 as a facilitator demo; attendees build it after class |
 
 **Fast room?** Use the **Stretch** prompts (at the end of each exercise in the

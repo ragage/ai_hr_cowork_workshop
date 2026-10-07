@@ -62,11 +62,11 @@ later) signed in with their work account (custom skills and browser tasks aren't
 | 15 min | **Exercise 1** — Executive Command Center (interactive HTML dashboard; approvals one at a time) |
 | 15 min | **Exercise 2** — Research the web with Deep Research (cited briefing + 5 tailored interview questions) |
 | 15 min | **Exercise 3** — Navigate websites with Cowork's browser (search and click through dol.gov and lni.wa.gov in Edge) |
-| 20 min | **Exercise 4** — Build your own custom skill ("HR Policy Answer") |
+| 15 min | **Exercise 4** — Build your own custom skill ("HR Policy Answer") |
 | 10 min | **Exercise 5** — Recruiting + reporting mini-lab |
 | 15 min | Break |
 | 10 min | **Exercise 6** — Onboarding pack (orientation deck; scheduling + announcement if time allows) |
-| 10 min | **Exercise 7** — Automate & share (Automations, Daily Briefing; skill sharing if time allows) |
+| 15 min | **Exercise 7** — Automate & share (Automations, Daily Briefing; skill sharing if time allows) |
 | 15 min | **Exercise 8** — Build a Policy Agent with **Copilot Agent Builder** (non-Cowork) |
 | 5 min | Wrap-up — best practices & next steps |
 
@@ -159,8 +159,9 @@ to **Documents** in your OneDrive (`Documents/ai_hr_cowork_workshop`). The promp
    Send the instructor the [instructor email](communication/instructor-email.html), and attendees the
    [participant email](communication/participant-email.html) one week out; use the
    [training overview deck](communication/training-overview.pptx) to introduce the workshop. To use
-   either email, open it in a browser, copy the email, and paste it into Outlook. Its links point to
-   this private repo, so give recipients access or swap in your Teams/SharePoint links.
+   either email, open it in a browser, copy the email, and paste it into Outlook. The participant email
+   has highlighted `[link: …]` placeholders for your Teams/SharePoint copies of the files. The instructor
+   email links to this private repo, so give the instructor access first.
 2. **Facilitator:** read [facilitator-guide.md](instructor/facilitator-guide.md), do a full dry run against the
    [answer key](instructor/facilitator-answer-key.md), and present with
    [instructor-deck.pptx](instructor/instructor-deck.pptx) (speaker notes carry the run sheet).

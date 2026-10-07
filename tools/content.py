@@ -184,7 +184,7 @@ EXERCISES = [
     ),
     dict(
         num=4, pill="Ex 04", title="Build a Custom Skill: HR Policy Answer", short="Custom Skill",
-        function="HR \u00b7 Policy", minutes="20 min",
+        function="HR \u00b7 Policy", minutes="15 min",
         goal="Teach Cowork to answer policy and benefits questions the same clear, sourced way \u2014 every time.",
         output="A saved custom skill, \u201cHR Policy Answer,\u201d with a quality score, that triggers on policy "
                "questions and answers Answer \u2192 Details \u2192 Source \u2192 \u201cconfirm with HR.\u201d",
@@ -225,7 +225,7 @@ EXERCISES = [
         checkpoint="Your skill scores Good or better, triggers on its own, follows the format, and declines "
                    "out-of-scope questions.",
         stretch="Add a rule to link to the HR portal whenever a change requires a form.",
-        notes_card="EXERCISE 4 CARD (1:05-1:25, 20 min) - CENTERPIECE. SAY: 'In Ex 1 a skill was saved for you from a prompt. Now you build one on purpose and Cowork grades it.' Explain why a skill beats re-typing instructions: same format, sources, and guardrails every time. Scoring bands: Excellent 85+, Good 70-84, Needs work 50-69, Poor <50.",
+        notes_card="EXERCISE 4 CARD (1:05-1:20, 15 min) - CENTERPIECE. SAY: 'In Ex 1 a skill was saved for you from a prompt. Now you build one on purpose and Cowork grades it.' Explain why a skill beats re-typing instructions: same format, sources, and guardrails every time. Scoring bands: Excellent 85+, Good 70-84, Needs work 50-69, Poor <50.",
         notes_hands="EXERCISE 4 HANDS-ON. DO: build it live from Customize -> Skills -> Add -> Create new; paste the instructions; read the evaluation ALOUD and name the four dimensions (trigger clarity, instruction specificity, scope boundaries, robustness). Then test both questions in a NEW task, and start the policy question with 'At Zava': attendees' own tenants hold real benefits content, and in the dry run a generic question pulled that instead. WATCH FOR: the skill triggering WITHOUT being named; Answer -> Details -> Source -> confirm-with-HR; the salary question declined. IF STUCK: 'Needs work' -> tighten trigger wording and the out-of-scope list; wrong facts -> check the two file names in the instructions match their OneDrive; answer quotes their own company's benefits -> the instructions must say ONLY the two Zava files, then retest in a new task. Keep skills 'Only you'. Answer key: facilitator-answer-key.md and skills/hr-policy-answer/SKILL.md. NEXT: 'This skill helps YOU. In Ex 8 we build an agent that helps OTHERS.'",
     ),
     dict(
@@ -261,7 +261,7 @@ EXERCISES = [
         checkpoint="A Word job posting with a wording-review table, and a ticket summary: 6 open / 14 closed, with "
                    "T-2008 as the only high-priority open ticket.",
         stretch="Summarize employee-roster-sample.xlsx: headcount by department, remote vs. on-site, average PTO used.",
-        notes_card="EXERCISE 5 CARD (1:25-1:35, 10 min). SAY: 'Two quick wins. In Ex 2 we prepared to interview for the HR Coordinator role; now we write the posting that attracts the right candidates. Then we get on top of the ticket queue.' Point out that Cowork picks Word for writing and Excel for analysis on its own.",
+        notes_card="EXERCISE 5 CARD (1:20-1:30, 10 min). SAY: 'Two quick wins. In Ex 2 we prepared to interview for the HR Coordinator role; now we write the posting that attracts the right candidates. Then we get on top of the ticket queue.' Point out that Cowork picks Word for writing and Excel for analysis on its own.",
         notes_hands='EXERCISE 5 HANDS-ON. DO: run 5a and 5b back to back; attendees can start 5b while 5a is still working. WATCH FOR: 5a -> a posting under 350 words with the hybrid schedule, plus a wording-review table (e.g., degree requirement, years of experience framed as must-haves); discuss whether every flag is fair. 5b -> 6 open / 14 closed, T-2008 as the ONLY high-priority open ticket. TRAP: T-2003 and T-2013 are High but Closed; listing them means Status was ignored. IF STUCK: wrong counts -> ask Cowork to show the table it counted from. NEXT: break, then they automate this report in Ex 7.',
     ),
     dict(
@@ -299,12 +299,12 @@ EXERCISES = [
         checkpoint="A 6\u20138 slide orientation deck for Sofia Alvarez built only from the Zava files (plus the optional "
                    "kickoff invite and announcement draft).",
         stretch="Turn the orientation deck into a one-page PDF handout.",
-        notes_card="EXERCISE 6 CARD (1:50-2:00, 10 min). SAY: 'Sofia Alvarez accepted the HR Coordinator role and starts next Monday. Let's get her first day ready.' This is the story arc from Ex 2 (interview) and Ex 5 (posting). Several built-in skills chain together: PowerPoint, Scheduling, Communications. Call out each new skill chip.",
-        notes_hands="EXERCISE 6 HANDS-ON. DO: 6a is the must-do (the deck takes longest); 6b and 6c are OPTIONAL for fast finishers, or demo them while the deck builds. WATCH FOR: PowerPoint, Scheduling/Calendar, and Communications chips; an approval dialog before the invite is sent; the announcement saved as a draft, not sent. SAFETY: invite yourself only; Sofia is fictional and has no account. IF STUCK: no Teams link -> ask Cowork to add one before approving. TIME CHECK: at 2:00 move on, even if only 6a is done. NEXT: 'Now let's stop re-asking for the same work.'",
+        notes_card="EXERCISE 6 CARD (1:45-1:55, 10 min). SAY: 'Sofia Alvarez accepted the HR Coordinator role and starts next Monday. Let's get her first day ready.' This is the story arc from Ex 2 (interview) and Ex 5 (posting). Several built-in skills chain together: PowerPoint, Scheduling, Communications. Call out each new skill chip.",
+        notes_hands="EXERCISE 6 HANDS-ON. DO: 6a is the must-do (the deck takes longest); 6b and 6c are OPTIONAL for fast finishers, or demo them while the deck builds. WATCH FOR: PowerPoint, Scheduling/Calendar, and Communications chips; an approval dialog before the invite is sent; the announcement saved as a draft, not sent. SAFETY: invite yourself only; Sofia is fictional and has no account. IF STUCK: no Teams link -> ask Cowork to add one before approving. TIME CHECK: at 1:55 move on, even if only 6a is done. NEXT: 'Now let's stop re-asking for the same work.'",
     ),
     dict(
         num=7, pill="Ex 07", title="Automate & Share", short="Automate & Share", function="HR \u00b7 Operations",
-        minutes="10 min",
+        minutes="15 min",
         goal="Stop re-asking for the same work \u2014 put it on a schedule and share what you built.",
         output="An active weekly automation (Monday HR-ticket digest) and a Daily Briefing; if time allows, your "
                "custom skill shared (or kept private) and re-shared after an edit.",
@@ -337,7 +337,7 @@ EXERCISES = [
         checkpoint="An active weekly schedule with a completed run naming T-2008, and a Daily Briefing (plus the "
                    "optional share / re-share).",
         stretch="Send the Monday digest as an email draft to your manager instead of a report.",
-        notes_card="EXERCISE 7 CARD (2:00-2:10, 10 min). SAY: 'You built a skill and a report. Now put recurring work on a schedule and share what you built.' They already created one schedule in Ex 1; now they see where schedules live and how to control them.",
+        notes_card="EXERCISE 7 CARD (1:55-2:10, 15 min). SAY: 'You built a skill and a report. Now put recurring work on a schedule and share what you built.' They already created one schedule in Ex 1; now they see where schedules live and how to control them.",
         notes_hands="EXERCISE 7 HANDS-ON. DO: create the Automation live; choose 'Activate and run now'; show Runs vs Manage schedules (edit, pause, resume, delete). Demo a Daily Briefing, then Share / Re-share on the Ex 4 skill. WATCH FOR: an Active schedule and a completed run naming T-2008. IF STUCK: run can't find the file -> the prompt must name the exact file and folder. Sharing stays inside the attendee tenant: 'Only you' or initialed names. TIME CHECK: 7a is the must-do; 7b is quick; 7c is OPTIONAL, so demo it. NEXT: Agent Builder, the non-Cowork finale.",
     ),
     dict(

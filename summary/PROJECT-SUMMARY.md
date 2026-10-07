@@ -108,7 +108,10 @@ Latest work:
   when is open enrollment..."), a new-task test for the skill, and the Agent Builder knowledge
   toggles (Only use specified sources on, Search all websites off). Exercise 1 now explains what
   Cowork asks along the way and that it uses attendees' own work. The Exercise 3 stretch replaces
-  the interactive DOL advisor (Cowork declined it) with a read-only exemption check.
+  the interactive DOL advisor (Cowork declined it) with a read-only exemption check. Exercise 4
+  went from 20 to 15 minutes and Exercise 7 from 10 to 15 (dry run: about 11 and 14), so Ex 5 to
+  Ex 7 start 5 minutes earlier. The participant email now has `[link: …]` placeholders for
+  Teams/SharePoint copies instead of GitHub links.
 - **2½-hour format (October 7):** the agenda is now 150 minutes with one 15-minute break after
   Exercise 5; all eight exercises stay, shortened (15/15/15/20/10/10/10/15 min). Attendees sign in and
   upload the sample data before the session (participant email). The plugins spotlight slide and
@@ -257,8 +260,9 @@ Requirements:
 - **The GitHub download links need a Microsoft sign-in** (checked October 7, 2026). The repo is under
   the Microsoft Enterprise Managed Users (EMU) account, so it can't be public. Anyone who isn't
   signed in, including customer attendees, gets the "Sign in to Microsoft EMU" page, not the file.
-  For customer deliveries, swap the email links for the Teams/SharePoint copies (the readiness
-  checklist says to stage them there).
+  So the participant email has `[link: …]` placeholders for the host's Teams/SharePoint copies
+  instead of GitHub links. The decks and the instructor email still link to GitHub (for presenters
+  with repo access; `KIT_REPO` changes the deck links).
 
 ## Next Session Starting Prompt
 

@@ -447,7 +447,7 @@ classification decision; that belongs to HR and legal.
 
 ---
 
-## Exercise 4 — Build your own custom skill (20 min)
+## Exercise 4 — Build your own custom skill (15 min)
 
 > **Scenario card — Ex 04 · Build a Custom Skill: HR Policy Answer** · Function: **HR · Policy &
 > benefits**
@@ -623,7 +623,7 @@ before it goes out?
 
 ---
 
-## Exercise 7 — Automate & share (10 min)
+## Exercise 7 — Automate & share (15 min)
 
 > **Scenario card — Ex 07 · Automate & Share** · Function: **HR · Operations**
 > - **Goal:** Stop re-asking for the same work — put it on a schedule and share what you built.
@@ -773,4 +773,4 @@ prompt for new hires.
 - Naming clashes when sharing a skill → keep skills **"Only you"** or add your initials to the name
   (everyone's in the same tenant).
 - Finished early → try the **Stretch** prompt at the end of each exercise:
-  [Ex 1](#exercise-1--executive-command-center-15-min) · [Ex 2](#exercise-2--research-the-web-with-deep-research-15-min) · [Ex 3](#exercise-3--navigate-websites-with-coworks-browser-15-min) · [Ex 4](#exercise-4--build-your-own-custom-skill-20-min) · [Ex 5](#exercise-5--recruiting--reporting-mini-lab-10-min) · [Ex 6](#exercise-6--onboarding-orientation-pack-10-min) · [Ex 7](#exercise-7--automate--share-10-min) · [Ex 8](#exercise-8--build-a-policy-agent-with-copilot-agent-builder-15-min).
+  [Ex 1](#exercise-1--executive-command-center-15-min) · [Ex 2](#exercise-2--research-the-web-with-deep-research-15-min) · [Ex 3](#exercise-3--navigate-websites-with-coworks-browser-15-min) · [Ex 4](#exercise-4--build-your-own-custom-skill-15-min) · [Ex 5](#exercise-5--recruiting--reporting-mini-lab-10-min) · [Ex 6](#exercise-6--onboarding-orientation-pack-10-min) · [Ex 7](#exercise-7--automate--share-15-min) · [Ex 8](#exercise-8--build-a-policy-agent-with-copilot-agent-builder-15-min).
