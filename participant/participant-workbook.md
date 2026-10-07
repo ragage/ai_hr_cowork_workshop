@@ -210,16 +210,28 @@ itself** in one prompt. HR leaders juggle the same scattered signals, so watch f
 you'd reuse.
 
 > **Before you start:**
+> - **This one uses your real work, not Zava.** Exercise 1 is the only exercise built on **your
+>   own** mail, calendar, Teams, and meeting transcripts, so the dashboard shows **your** meetings,
+>   tasks, and emails. That's expected. Cowork sees nothing beyond what you can already open. The
+>   dashboard and the saved skill live in **your** OneDrive; keep the skill **"Only you,"** and don't
+>   project or share your results. The schedule is an Automation on **your** account; **pause or
+>   delete it after class** (it's usage-billed).
 > - Replace **`[Priority Folder]`** with a OneDrive folder of your own priority documents, or the
 >   folder holding your Zava files (`Documents/ai_hr_cowork_workshop`).
 > - Replace **`[time]`** with a weekday time, e.g., **8:00 AM**.
-> - **Your real data, kept private:** this exercise reads **your own** mail, calendar, Teams, and
->   meeting transcripts, and nothing beyond what you can already open. The dashboard and the saved
->   skill live in **your** OneDrive; keep the skill **"Only you,"** and don't project or share your
->   results. The schedule is an Automation on **your** account; **pause or delete it after class**
->   (it's usage-billed).
 > - **Quiet week?** If your mailbox or calendar is light, results will be too. Focus on the
 >   **gather → analyze → build → schedule** pattern; the facilitator's demo shows a busy example.
+
+> **What Cowork will ask you along the way:**
+> - **Clarifying questions** (for example, which folder you meant or which time zone): answer them
+>   in the chat, the same way you'd answer a colleague.
+> - **Progress messages and skill chips** (Work IQ, the HTML or skill-creation skill): nothing to
+>   do; they show what Cowork is working on.
+> - **Two approval cards near the end:** one to **save the skill**, one to **create the schedule**.
+>   Read each card and approve it on its own; don't use **Approve All** or **Always allow**. You can
+>   decline the schedule if you'd rather not have one.
+> - **Suggested next steps** when it finishes (for example, *"Want me to add more?"*): optional.
+>   Skip them for now and move on to step 3.
 
 ### Prompt
 1. In a **new task**, paste this prompt (with your placeholders filled in):
@@ -293,18 +305,20 @@ HR ticket trends from `hr-tickets-sample.xlsx`.
 > acquisition**
 > - **Goal:** Get an evidence-based view of structured behavioral interviewing and turn it into
 >   questions for a real open role.
-> - **Output:** A one-page, cited briefing on interview best practices, five tailored questions for
->   Zava's HR Coordinator role, and an **interviewer scorecard in Word and Excel** with the scoring
->   scales filled in.
+> - **Output:** A one-page, cited briefing on interview best practices and five tailored questions
+>   for Zava's HR Coordinator role. *If you have time:* an **interviewer scorecard in Word and
+>   Excel** with the scoring scales filled in.
 > - **Why Cowork?** Good research means reading many sources, reconciling them, and citing them.
 >   Deep Research searches and reads multiple web sources, synthesizes them with citations, applies
 >   the findings to your own job description, and then turns them into ready-to-use documents.
 > - **Workflow:** 1. **Deep Research** → search and read multiple web sources · 2. **Synthesize** →
 >   key practices with citations · 3. **Ground** → compare to `job-description-sample.docx` ·
->   4. **Draft** → briefing + 5 tailored questions · 5. **Build** → scorecard in Word + Excel
+>   4. **Draft** → briefing + 5 tailored questions · 5. **Build** (optional) → scorecard in Word +
+>   Excel
 > - **Data sources:** Web · OneDrive (Zava files)
 > - **You'll learn:** How **Deep Research** gathers and cites web sources, how to ground findings in
->   your own files, and how one follow-up prompt produces deliverables in **two formats**.
+>   your own files, and (if you have time) how one follow-up prompt produces deliverables in **two
+>   formats**.
 
 ### Task 2a — Research
 1. In a **new task**, prompt:
@@ -314,22 +328,25 @@ HR ticket trends from `hr-tickets-sample.xlsx`.
 2. Watch the **Deep Research** skill load and work across sources. It takes a few minutes.
 3. **Open two citations** and check that each one supports the claim it's attached to.
 
-### Task 2b — Ground it, then build a scorecard
-1. **Attach `job-description-sample.docx`** (📎 **+ → Attach cloud files**, or type **/**) and prompt:
-   > <span class="goal">Now compare these best practices to our **HR Coordinator** interview needs</span> <span class="source">in
-   > `job-description-sample.docx`</span>, <span class="expect">and suggest 5 interview questions.</span>
-2. **Follow-up:** in the same task, prompt:
+### Task 2b — Ground it in the job description
+In the same task, **attach `job-description-sample.docx`** (📎 **+ → Attach cloud files**, or type
+**/**) and prompt:
+> <span class="goal">Now compare these best practices to our **HR Coordinator** interview needs</span> <span class="source">in
+> `job-description-sample.docx`</span>, <span class="expect">and suggest 5 interview questions.</span>
+
+### Task 2c (optional, if you have time) — Build a scorecard
+1. In the same task, prompt:
    > <span class="goal">Turn this into an interviewer scorecard</span> <span class="expect">in **Word AND Excel** with the scoring scales filled in.</span>
-3. Watch Cowork load both the **Word** and **Excel** skills. When it finishes, open the **Output
+2. Watch Cowork load both the **Word** and **Excel** skills. When it finishes, open the **Output
    folder** (as in Exercise 1) and **Preview** both files:
    - **Word:** a printable scorecard with each competency, the question(s) for it, and a **filled-in
      rating scale** (e.g., 1–5, with what a 1, 3, and 5 answer looks like), plus space for notes.
    - **Excel:** the same competencies as rows, rating columns and notes, ideally with a **total or
      weighted score** calculated.
 
-✅ **Checkpoint:** A one-page briefing with citations that open, 5 interview questions tied to the
-HR Coordinator's responsibilities, and an **interviewer scorecard in both Word and Excel** whose
-rating scales are filled in (no blank "define later" placeholders).
+✅ **Checkpoint:** A one-page briefing with citations that open, and 5 interview questions tied to
+the HR Coordinator's responsibilities. (Did Task 2c? The scorecard is in **both Word and Excel**
+and its rating scales are filled in, with no blank "define later" placeholders.)
 
 **Discuss:** When is web research better than searching your organization's own content — and when
 is it riskier?
@@ -346,15 +363,15 @@ short benchmark I can compare to our handbook. Cite sources.
 > - **Goal:** Have Cowork drive a real web browser for you (search a site, click through its pages,
 >   move to a second site) and bring back a sourced comparison against your own policy.
 > - **Output:** A comparison table of overtime rules (U.S. Department of Labor vs. Washington State
->   vs. the Zava handbook) with a link to every page Cowork visited, and a one-page **Word brief** for
->   payroll about ticket T-2008.
+>   vs. the Zava handbook) with a link to every page Cowork visited. *If you have time:* a one-page
+>   **Word brief** for payroll about ticket T-2008.
 > - **Why Cowork?** Checking a policy against official sources means searching websites, clicking
 >   through menus, and copying what you find. Cowork does those clicks for you in a **hidden tab in
 >   your own Microsoft Edge**, with your sign-ins and your organization's policies, tells you which
 >   page it's on, and asks before anything consequential.
 > - **Workflow:** 1. **Navigate** → dol.gov, site search, open the overtime fact sheet ·
 >   2. **Navigate** → lni.wa.gov menu or search, open the overtime page · 3. **Ground** → compare with
->   the handbook · 4. **Build** → comparison table + Word brief for payroll
+>   the handbook · 4. **Build** → comparison table (+ optional Word brief for payroll)
 > - **Data sources:** Web (Microsoft Edge) · OneDrive (Zava handbook)
 > - **You'll learn:** How Cowork's **browser use** works (consent, progress chips, **Switch to tab**,
 >   approvals, hand-back for sign-ins), and when to use it instead of Deep Research.
@@ -397,7 +414,7 @@ to pick; ask for something that needs a website and Cowork opens the browser its
    sign-in or a CAPTCHA), don't enter anything: tell it to skip that site.
 5. Read the table, then **open two of the links** and check one claim on each page yourself.
 
-### Task 3b — Turn it into a brief for payroll
+### Task 3b (optional, if you have time) — Turn it into a brief for payroll
 In the same task, prompt:
 > <span class="goal">Turn this into a one-page **Word brief** for our payroll team about ticket **T-2008** (overtime
 > missing from Owen Wright's paycheck)</span>: <span class="expect">what the federal and Washington rules say, what our handbook
@@ -406,16 +423,27 @@ In the same task, prompt:
 Open the brief from the **Output folder**.
 
 ✅ **Checkpoint:** Cowork used the **site search or menus** on two websites (not just one guessed
-URL); your table links to the **DOL overtime fact sheet** and the **Washington L&I overtime page**;
-and a **Word brief** about T-2008 is in your Output folder.
+URL), and your table links to the **DOL overtime fact sheet** and the **Washington L&I overtime
+page**. (Did Task 3b? A **Word brief** about T-2008 is in your Output folder.)
 
 **Discuss:** When would you use **browser use** and when **Deep Research**? What would you **never**
 let Cowork do in a browser without watching?
 
-**Stretch:** Open the DOL's interactive **FLSA Overtime Security Advisor**
-(https://webapps.dol.gov/elaws/whd/flsa/overtime/) and have Cowork step through the first few
-questions for a salaried HR Coordinator, **telling you each answer before it clicks**. Don't enter
-any personal information.
+**Stretch — is the HR Coordinator exempt from overtime?** In the same task, prompt:
+> <span class="expect">Use my browser again, step by step, and tell me which page you're on.</span>
+>
+> 1. <span class="source">On https://www.dol.gov, use the site search to find **Fact Sheet #17A** (exemptions for executive,
+>    administrative, and professional employees).</span> <span class="goal">Open it and tell me whether a salaried **HR
+>    Coordinator** is likely to meet the **administrative exemption's duties test**, and why.</span>
+> 2. <span class="source">On https://lni.wa.gov, use the menu or search to find Washington's current **minimum salary for
+>    exempt employees**.</span>
+>
+> <span class="expect">Give me both answers with a link to each page.</span> <span class="constraint">Only read: don't sign in or fill in any form except a site
+> search box. If a site won't open or you can't use it, skip it and tell me.</span>
+
+This stretch stays on regular web pages on purpose: Cowork may decline to operate some interactive
+government tools (such as the DOL's eLaws advisors). Treat the answer as background reading, not a
+classification decision; that belongs to HR and legal.
 
 ---
 
@@ -445,13 +473,14 @@ a skill *from a prompt* in Exercise 1 — here you use the **guided** flow and r
 2. When prompted, use these details:
    - **Name:** HR Policy Answer
    - **Category:** Human Resources
-   - **Description:** "Answers employee policy and benefits questions in a consistent, sourced format,
-     grounded in our handbook and benefits documents."
+   - **Description:** "Answers Zava employee policy and benefits questions in a consistent, sourced
+     format, grounded only in Zava's handbook and benefits documents."
    - **Instructions (paste/adapt):**
-     > <span class="goal">Use this skill when someone asks about company **HR policy or benefits** (PTO, remote/hybrid
-     > work, benefits enrollment, overtime, code of conduct, learning budget).</span> <span class="source">Ground answers in
-     > `employee-handbook-excerpt.docx` and `benefits-summary.docx` in my OneDrive folder
-     > `Documents/ai_hr_cowork_workshop`</span>; <span class="constraint">if the answer isn't in them, say so instead of guessing.</span> <span class="expect">Answer in this
+     > <span class="goal">Use this skill when someone asks about **Zava's HR policy or benefits** (PTO, remote/hybrid
+     > work, benefits enrollment, overtime, code of conduct, learning budget).</span> <span class="source">Ground answers **only**
+     > in `employee-handbook-excerpt.docx` and `benefits-summary.docx` in my OneDrive folder
+     > `Documents/ai_hr_cowork_workshop`.</span> <span class="constraint">Don't use web results or any other documents in my
+     > Microsoft 365, and if the answer isn't in these two files, say so instead of guessing.</span> <span class="expect">Answer in this
      > format: a direct plain-language answer, then a
      > short **Details** section, then a **Source** line naming the document, then the note *'Policies
      > can change — please confirm with HR.'* Keep a warm, professional tone.</span> <span class="constraint">**Do not** handle
@@ -466,10 +495,15 @@ a skill *from a prompt* in Exercise 1 — here you use the **guided** flow and r
   improve (usually clearer trigger wording or tighter scope) — tweak and re-confirm.
 
 ### Test it
-1. In a session, ask a policy question **without** naming the skill:
-   > When is open enrollment and how do I change my medical plan?
+1. Start a **new task** and ask a policy question **without** naming the skill. Name **Zava** in the
+   question: Cowork can also see your own organization's real HR content, and a generic question
+   may pull that instead.
+   > At Zava, when is open enrollment and how do I change my medical plan?
 2. ✅ **Checkpoint:** The skill triggers on its own, and the answer follows your format (Answer →
-   Details → Source → confirm-with-HR note).
+   Details → Source → confirm-with-HR note) and cites **`benefits-summary.docx`** (open enrollment
+   in **November**, changes effective **January 1**).
+   - **Got your own company's benefits instead?** Check that the instructions say to use **only**
+     the two Zava files, re-confirm the skill, then ask again in a new task.
 3. Try an **out-of-scope** question: *"What's my colleague's salary?"* — the skill should **decline**
    and redirect.
 
@@ -544,14 +578,14 @@ Stretch and reset. When we're back: an onboarding pack, automations, and the Age
 
 > **Scenario card — Ex 06 · Onboarding Orientation Pack** · Function: **HR · Onboarding**
 > - **Goal:** Give a new hire a polished first-day experience without assembling it by hand.
-> - **Output:** A 6–8 slide orientation deck, a scheduled kickoff with a Teams link, and a team
->   announcement draft for Sofia Alvarez, Zava's new HR Coordinator.
+> - **Output:** A 6–8 slide orientation deck for Sofia Alvarez, Zava's new HR Coordinator. *If you
+>   have time:* a scheduled kickoff with a Teams link and a team announcement draft.
 > - **Why Cowork?** Onboarding spans documents, calendars, and communications. Cowork chains
 >   PowerPoint, Scheduling, and Communications skills in one flow, grounded in your checklist,
 >   handbook, and benefits.
 > - **Workflow:** 1. **Ground** → checklist, handbook, benefits · 2. **Build** → orientation deck
->   (PowerPoint) · 3. **Schedule** → 30-min kickoff with Teams link · 4. **Communicate** → team
->   announcement draft
+>   (PowerPoint) · 3. **Schedule** (optional) → 30-min kickoff with Teams link · 4. **Communicate**
+>   (optional) → team announcement draft
 > - **Data sources:** OneDrive (Zava files) · M365 Data (calendar)
 > - **You'll learn:** How Cowork **chains several skills** (PowerPoint, Scheduling, Communications)
 >   in one workflow.
@@ -568,19 +602,19 @@ prompt:
 > remote/hybrid work, and benefits basics.</span> <span class="expect">Keep it clean and friendly.</span> <span class="constraint">Use only facts from these files.</span>
 - → Watch the **PowerPoint** skill chip load.
 
-### Task 6b — Schedule the kickoff (Scheduling / Calendar skill)
+### Task 6b (optional, if you have time) — Schedule the kickoff (Scheduling / Calendar skill)
 > <span class="goal">Schedule a 30-minute **onboarding kickoff** for Sofia Alvarez's first day</span>, <span class="expect">**next Monday at
 > 9:30 AM**, add a Teams meeting link</span>, <span class="constraint">and invite only me. Show it to me before you send it.</span>
 - → Watch the **Scheduling** / **Calendar** skill chip load. This is your real calendar, so invite
   **yourself** only; don't add real people.
 
-### Task 6c — Team announcement (Communications skill)
+### Task 6c (optional, if you have time) — Team announcement (Communications skill)
 > <span class="goal">Draft a warm, inclusive **team announcement** introducing Sofia Alvarez, our new HR Coordinator
 > starting next Monday, and her first-week plan</span>, <span class="source">using `onboarding-checklist.docx`</span>. <span class="expect">Save it as an
 > **Outlook email draft addressed to me**</span>; <span class="constraint">don't send it.</span>
 
-✅ **Checkpoint:** an orientation deck, a scheduled kickoff (reviewed, not blasted out), and a team
-announcement draft.
+✅ **Checkpoint:** a 6–8 slide orientation deck that uses only facts from the Zava files. (Did 6b
+and 6c? A kickoff you reviewed before it was sent, and an announcement saved as a draft.)
 
 **Discuss:** What else belongs in a new-hire pack at your organization, and who should review it
 before it goes out?
@@ -593,13 +627,13 @@ before it goes out?
 
 > **Scenario card — Ex 07 · Automate & Share** · Function: **HR · Operations**
 > - **Goal:** Stop re-asking for the same work — put it on a schedule and share what you built.
-> - **Output:** An active weekly automation (Monday HR-ticket digest), a Daily Briefing, and your
->   custom skill shared (or kept private) and re-shared after an edit.
+> - **Output:** An active weekly automation (Monday HR-ticket digest) and a Daily Briefing. *If you
+>   have time:* your custom skill shared (or kept private) and re-shared after an edit.
 > - **Why Cowork?** Recurring work belongs on autopilot. Automations run prompts on a schedule or on
 >   events, Daily Briefing pulls your day together, and sharing turns a personal skill into a team
 >   asset.
 > - **Workflow:** 1. **Automations** → create a weekly schedule · 2. **Monitor** → Runs & Manage
->   schedules · 3. **Brief** → Daily Briefing for today · 4. **Share** → share / re-share your skill
+>   schedules · 3. **Brief** → Daily Briefing for today · 4. **Share** (optional) → share / re-share your skill
 > - **Data sources:** M365 Data · OneDrive (ticket spreadsheet)
 > - **You'll learn:** How to put work on a **schedule** with Automations, and how to **share** a
 >   skill.
@@ -621,12 +655,12 @@ before it goes out?
 > <span class="goal">Give me a **Daily Briefing**</span> <span class="source">focused on my HR tasks and meetings for today</span>. <span class="expect">List the most urgent items first.</span>
 - → Watch the **Daily Briefing** skill chip load.
 
-### Task 7c — Share your custom skill (sharing flow)
+### Task 7c (optional, if you have time) — Share your custom skill (sharing flow)
 1. Open the **HR Policy Answer** skill from Ex 4 on the **Customize** page.
 2. Select **Share**. Everyone here is in the same tenant, so either keep it **"Only you"** or share to
    **one specific colleague** — and add your **initials** to the name first to avoid collisions.
 3. Make a small edit to the skill, then use **Re-share** to see how updates propagate.
-- ✅ **Checkpoint:** you've walked the share / re-share flow (kept private or shared to one person).
+- **Done when:** you've walked the share / re-share flow (kept private or shared to one person).
 
 **Discuss:** Which report do you rebuild every week that should become an automation? What should it
 **never** do unattended?
@@ -666,9 +700,10 @@ tab in Teams), select **Create agent** / **New agent**. (Desktop/web only — no
 
 ### Step 2 — Describe the agent
 On the **Describe** tab:
-> <span class="goal">Create an **HR Policy Agent** that answers employee questions about company policies and benefits
-> — PTO, remote/hybrid work, benefits enrollment, overtime, and the code of conduct</span> — <span class="expect">in a warm,
-> professional tone. Always cite the source document and remind the reader that HR should confirm.</span>
+> <span class="goal">Create an **HR Policy Agent** that answers Zava employees' questions about **Zava's** policies and
+> benefits — PTO, remote/hybrid work, benefits enrollment, overtime, and the code of conduct</span> — <span class="source">using
+> only Zava's HR documents</span>, <span class="expect">in a warm, professional tone. Always cite the source document and
+> remind the reader that HR should confirm.</span>
 > <span class="constraint">Politely decline questions about individual pay, performance, legal, or medical matters and
 > redirect them to HR.</span>
 
@@ -676,20 +711,30 @@ On the **Describe** tab:
 On the **Configure** tab:
 - **Name:** HR Policy Agent  ·  **Description:** "Answers Zava policy & benefits questions,
   grounded in our HR documents."
-- **Instructions:** answer format *Answer → Details → Source → "confirm with HR"*, warm tone, and the
-  out-of-scope guardrails.
+- **Instructions:** answer **only** from the two Zava documents (if the answer isn't there, say so),
+  answer format *Answer → Details → Source → "confirm with HR"*, warm tone, and the out-of-scope
+  guardrails.
 - **Knowledge:** add the same Zava Word files you've used all day: `employee-handbook-excerpt.docx`
   and `benefits-summary.docx` (upload them, or point to the OneDrive/SharePoint folder that holds
   them).
   > **File types matter:** Agent Builder knowledge accepts .doc/.docx, .pdf, .ppt/.pptx, .txt, and
   > .xls/.xlsx, but **not** Markdown (.md) or .csv. Keep that in mind when you build agents on your
   > own documents.
-- **Suggested prompts:** e.g., "How much PTO do I get and can I carry it over?", "When is open
-  enrollment?", "What are the anchor office days?"
+- **Keep it on Zava's files:** in the **Knowledge** section, turn **Only use specified sources**
+  **on**, and turn **Search all websites** **off**. Without these, the agent can mix in your own
+  organization's real HR content or web results. Newly uploaded files show **Preparing** for a few
+  minutes; wait until they're ready before you test.
+- **Suggested prompts:** e.g., "How much PTO do I get at Zava, and can I carry it over?", "When is
+  Zava's open enrollment?", "What are Zava's anchor office days?"
 
 ### Step 4 — Test on "Try it"
-- Ask: *"When is open enrollment and how do I change my medical plan?"* → it should answer in your
-  format **with a source**.
+- Ask: *"At Zava, when is open enrollment and how do I change my medical plan?"* → it should answer
+  in your format **with a source** (`benefits-summary.docx`: open enrollment in November, changes
+  effective January 1).
+- **Answer about your own company's benefits?** Check the two Knowledge settings in Step 3, make sure
+  the files have finished **Preparing**, then ask again. Agent Builder *prioritizes* your sources but
+  can't fully block its general knowledge; for stricter control, organizations build the agent in
+  Copilot Studio.
 - Ask: *"What's my colleague's salary?"* → it should **decline and redirect**.
 
 ### Step 5 — (Optional) Share / publish

@@ -101,6 +101,14 @@ The HR plugins read (reference/09) is self-study in the after-the-workshop pack.
 
 Latest work:
 
+- **Dry-run feedback (October 7):** the dry run ran about 146 minutes of exercises against a
+  110-minute budget, so secondary tasks are now optional for fast finishers (2c scorecard, 3b payroll
+  brief, 6b kickoff, 6c announcement, 7c skill sharing) and facilitators demo them. Exercise 4 and
+  Exercise 8 are grounded in Zava only: Zava-specific instructions and test questions ("At Zava,
+  when is open enrollment..."), a new-task test for the skill, and the Agent Builder knowledge
+  toggles (Only use specified sources on, Search all websites off). Exercise 1 now explains what
+  Cowork asks along the way and that it uses attendees' own work. The Exercise 3 stretch replaces
+  the interactive DOL advisor (Cowork declined it) with a read-only exemption check.
 - **2½-hour format (October 7):** the agenda is now 150 minutes with one 15-minute break after
   Exercise 5; all eight exercises stay, shortened (15/15/15/20/10/10/10/15 min). Attendees sign in and
   upload the sample data before the session (participant email). The plugins spotlight slide and

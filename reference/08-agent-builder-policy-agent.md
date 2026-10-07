@@ -53,9 +53,9 @@ Zava HR documents, and test it.
 ### Step 1 — Create the agent
 1. In Microsoft 365 Copilot, select **Create agent** (or **New agent**).
 2. On the **Describe** tab, tell it what to build, for example:
-   > "Create an **HR Policy Agent** that answers employee questions about company policies and
-   > benefits — PTO, remote/hybrid work, benefits enrollment, overtime, and the code of conduct — in
-   > a warm, professional tone. Always cite the source document and remind the reader that HR should
+   > "Create an **HR Policy Agent** that answers Zava employees' questions about **Zava's** policies
+   > and benefits — PTO, remote/hybrid work, benefits enrollment, overtime, and the code of conduct —
+   > using only Zava's HR documents, in a warm, professional tone. Always cite the source document and remind the reader that HR should
    > confirm. Politely decline questions about individual pay, performance, legal, or medical matters
    > and redirect them to HR."
 
@@ -63,7 +63,8 @@ Zava HR documents, and test it.
 - **Name:** HR Policy Agent
 - **Description:** "Answers employee policy and benefits questions for Zava, grounded in our HR
   documents."
-- **Instructions:** paste/adapt the behavior above — answer format (direct answer → details →
+- **Instructions:** paste/adapt the behavior above — answer **only** from the Zava documents (if the
+  answer isn't there, say so), answer format (direct answer → details →
   **source** → "confirm with HR"), tone, and the out-of-scope guardrails.
 
 ### Step 3 — Add knowledge sources
@@ -75,6 +76,11 @@ Point the agent at the Zava HR documents (the same fictional Word files used all
   when you build agents on your own documents.
 - Newly added OneDrive/SharePoint files can show **"Preparing"** for a few minutes; you can test
   while they prepare, but answers won't use them until they're ready.
+- **Keep it on these files:** in the **Knowledge** section, turn **Only use specified sources** on
+  and **Search all websites** off. Otherwise the agent can mix in web results or general knowledge,
+  and in the workshop dry run it answered with the tester's **own company's** open-enrollment
+  details. The toggle makes the agent *prioritize* your sources; it can't fully block general
+  knowledge (for stricter control, use Copilot Studio).
 - In a real tenant you'd add the **SharePoint site/library** where HR policies live.
 - **Limits worth knowing** (per agent): up to **20 uploaded (embedded) files**, **100 SharePoint
   files**, **50 OneDrive files**, and **4 public websites**. Uploaded .docx/.pdf/.pptx/.txt files can be
@@ -83,12 +89,14 @@ Point the agent at the Zava HR documents (the same fictional Word files used all
 
 ### Step 4 — Add suggested prompts
 Give users starting points, e.g.:
-- "How much PTO do I get and can I carry it over?"
-- "When is open enrollment and how do I change my plan?"
-- "What are the anchor office days?"
+- "How much PTO do I get at Zava, and can I carry it over?"
+- "When is Zava's open enrollment, and how do I change my plan?"
+- "What are Zava's anchor office days?"
 
 ### Step 5 — Test on the "Try it" tab
-Ask a policy question and confirm the agent answers **in your format with a source**. Then ask an
+Ask a policy question that names Zava, e.g. *"At Zava, when is open enrollment and how do I change
+my medical plan?"*, and confirm the agent answers **in your format with a source**
+(`benefits-summary.docx`: November, effective January 1). Then ask an
 **out-of-scope** question (e.g., *"What's my colleague's salary?"*) and confirm it **declines and
 redirects**.
 

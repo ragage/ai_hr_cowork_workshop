@@ -14,7 +14,7 @@ work, benefits enrollment, overtime, code of conduct, learning budget) with clea
 ## When to use this skill (trigger)
 Use this skill when someone asks a question about **company HR policy or benefits**, for example:
 - "How much PTO do I get and can I carry it over?"
-- "When is open enrollment?"
+- "At Zava, when is open enrollment and how do I change my medical plan?"
 - "What are the anchor office days?"
 - "How does the 401(k) match work?"
 
@@ -22,9 +22,11 @@ Do **not** use this skill for: individual pay/compensation details, performance 
 matters, legal advice, or anything requiring access to a specific person's private records.
 
 ## Sources to ground in
-Ground every answer in the company's official documents — for this workshop, the uploaded
-`employee-handbook-excerpt.docx` and `benefits-summary.docx`. If the answer isn't in the source
-documents, say so rather than guessing.
+Ground every answer **only** in the company's official documents — for this workshop,
+`employee-handbook-excerpt.docx` and `benefits-summary.docx` in the OneDrive folder
+`Documents/ai_hr_cowork_workshop`. Don't use web results or other documents in Microsoft 365: in a
+real tenant those can include a different company's (your own employer's) actual policies. If the
+answer isn't in the source documents, say so rather than guessing.
 
 ## How to answer
 1. Give a **direct, plain-language answer** first (2–4 sentences).

@@ -47,7 +47,7 @@
 - **Red flag:** claims with no citation, or citations that don't open. Ask the attendee to check the
   source themselves.
 
-**Scorecard follow-up** (*"Turn this into an interviewer scorecard in Word AND Excel with the scoring
+**Optional — Task 2c scorecard follow-up** (*"Turn this into an interviewer scorecard in Word AND Excel with the scoring
 scales filled in"*). Expect **two files** in the Output folder:
 
 | | Word scorecard | Excel scorecard |
@@ -87,10 +87,19 @@ competency, and add a total score in Excel."*
   it typing in the DOL **search box** and clicking through (not just jumping to a guessed URL).
 - Nothing was signed in to, filled in, or submitted beyond a search box.
 
-**3b — Word brief for payroll:** one page in the Output folder: what the federal and Washington rules
+**3b (optional) — Word brief for payroll:** one page in the Output folder: what the federal and Washington rules
 say, that the handbook matches, and a next step for **T-2008** (Owen Wright, overtime missing),
 e.g. "correct in the next pay run or an off-cycle payment, confirm hours with the manager, and reply
 to Owen." Not sent anywhere.
+
+**Stretch — exemption check (read only):** DOL **Fact Sheet #17A** (found through the dol.gov site
+search) sets the administrative exemption's tests: paid on a salary basis at or above the federal
+minimum, primary duty is office work related to management or general business operations, and that
+work includes **discretion and independent judgment on matters of significance**. A good answer says
+an HR Coordinator who mainly coordinates logistics, schedules, and records under set procedures
+**likely doesn't** meet the duties test, so is likely **non-exempt**; it depends on actual duties.
+Washington's figure comes from L&I's exempt-salary page and changes every January 1; accept whatever
+the current page says, with a link. Background, not a classification decision.
 
 **Didn't run?** See [reference/10-cowork-browser.md](../reference/10-cowork-browser.md#troubleshooting).
 "Browser tasks run in Microsoft Edge" means the wrong browser; no browser step at all usually means
@@ -104,12 +113,16 @@ facilitator demo.
 **Evaluation:** **Good (70–84)** or better. Common "Needs work" causes: a vague trigger ("HR stuff"),
 or no out-of-scope list. Answer key: [skills/hr-policy-answer/SKILL.md](../skills/hr-policy-answer/SKILL.md).
 
-**In-scope test — "When is open enrollment and how do I change my medical plan?"** Expected facts:
+**In-scope test (in a new task) — "At Zava, when is open enrollment and how do I change my medical
+plan?"** Expected facts:
 - Open enrollment is held every **November**; changes take effect **January 1**.
 - Outside that window, changes are allowed within **30 days** of a qualifying life event (marriage,
   birth/adoption, loss of other coverage).
 - **Source:** Benefits Summary — Enrollment Windows.
 - Ends with *"Policies can change — please confirm with HR."*
+- **Wrong company?** If the answer describes the attendee's **own** employer's enrollment dates or
+  plans, the question didn't name Zava or the skill isn't limited to the two Zava files. Fix the
+  instructions ("only these two files"), re-confirm, and retest in a new task.
 
 **Other good test questions:**
 
@@ -213,9 +226,14 @@ Open tickets to follow up: T-2006 (Benefits), T-2008 (Payroll, **High**), T-2011
 - **Knowledge:** `employee-handbook-excerpt.docx` and `benefits-summary.docx` (the same Word files
   used in Cowork). If someone brings their own Markdown or CSV file, it won't be accepted; Agent
   Builder doesn't take .md or .csv.
-- **"Try it" in-scope:** the same open-enrollment answer as Exercise 4 (November; effective Jan 1;
+- **Settings:** Knowledge → **Only use specified sources** on, **Search all websites** off.
+- **"Try it" in-scope** (*"At Zava, when is open enrollment and how do I change my medical plan?"*):
+  the same open-enrollment answer as Exercise 4 (November; effective Jan 1;
   30 days after a life event) with a **citation** to the benefits document.
 - **"Try it" out-of-scope:** declines to discuss a colleague's salary and redirects to HR.
+- **Common issue:** answers about the attendee's **own** company's benefits → the two settings
+  above are off, or the question didn't name Zava. Agent Builder prioritizes specified sources but
+  can't fully block general knowledge.
 - **Common issue:** answers ignore the files → they're still **"Preparing"**. Wait a few minutes, or
   select **refresh** in the Configure tab's Knowledge section.
 

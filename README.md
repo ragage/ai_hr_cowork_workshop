@@ -60,13 +60,13 @@ later) signed in with their work account (custom skills and browser tasks aren't
 | 5 min | **Copilot vs. Cowork** — the difference and when to use which |
 | 10 min | **Cowork UI walkthrough** + setup check — New task, My tasks, Automations, Customize (attendees sign in and upload the sample files before the session) |
 | 15 min | **Exercise 1** — Executive Command Center (interactive HTML dashboard; approvals one at a time) |
-| 15 min | **Exercise 2** — Research the web with Deep Research (cited briefing + Word/Excel scorecard) |
+| 15 min | **Exercise 2** — Research the web with Deep Research (cited briefing + 5 tailored interview questions) |
 | 15 min | **Exercise 3** — Navigate websites with Cowork's browser (search and click through dol.gov and lni.wa.gov in Edge) |
 | 20 min | **Exercise 4** — Build your own custom skill ("HR Policy Answer") |
 | 10 min | **Exercise 5** — Recruiting + reporting mini-lab |
 | 15 min | Break |
-| 10 min | **Exercise 6** — Onboarding pack (PowerPoint + Scheduling + Communications) |
-| 10 min | **Exercise 7** — Automate & share (Automations, Daily Briefing, skill sharing) |
+| 10 min | **Exercise 6** — Onboarding pack (orientation deck; scheduling + announcement if time allows) |
+| 10 min | **Exercise 7** — Automate & share (Automations, Daily Briefing; skill sharing if time allows) |
 | 15 min | **Exercise 8** — Build a Policy Agent with **Copilot Agent Builder** (non-Cowork) |
 | 5 min | Wrap-up — best practices & next steps |
 

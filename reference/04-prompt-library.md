@@ -106,13 +106,18 @@ The participant workbook (Setup step F) has a weak and a strong version of the s
   `employee-handbook-excerpt.docx` in a table, with a link to every page you used. Only read: don't
   sign in, and don't fill in or submit any form except a site search box." *(Needs Microsoft Edge and
   browser access; see [10-cowork-browser.md](10-cowork-browser.md).)*
-- **Browser use, step through an interactive tool:** "Open the DOL FLSA Overtime Security Advisor at
-  https://webapps.dol.gov/elaws/whd/flsa/overtime/ and step through the first questions for a salaried
-  HR Coordinator. Tell me each answer before you click it. Don't enter personal information."
+- **Browser use, check an exemption (Exercise 3 stretch):** "Use my browser again, step by step, and
+  tell me which page you're on. 1. On https://www.dol.gov, use the site search to find Fact Sheet #17A
+  (exemptions for executive, administrative, and professional employees). Open it and tell me whether
+  a salaried HR Coordinator is likely to meet the administrative exemption's duties test, and why.
+  2. On https://lni.wa.gov, use the menu or search to find Washington's current minimum salary for
+  exempt employees. Give me both answers with a link to each page. Only read: don't sign in or fill in
+  any form except a site search box. If a site won't open or you can't use it, skip it and tell me."
+  *(Stick to regular pages: Cowork may decline interactive tools such as the DOL eLaws advisors.)*
 - **Browser use, adapt for your own sites:** "Open {internal or public site} in my browser, find
   {information}, and summarize it with the link. Only read; ask me before you click anything that
   submits, saves, or sends."
-- **Follow-up after interview research:** "Turn this into an interviewer scorecard in **Word AND
+- **Follow-up after interview research (optional Task 2c):** "Turn this into an interviewer scorecard in **Word AND
   Excel** with the scoring scales filled in." *(Open both from the side panel's Output folder.)*
 
 ## 7. Automations (optional)

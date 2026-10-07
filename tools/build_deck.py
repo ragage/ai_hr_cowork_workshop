@@ -713,13 +713,13 @@ def agenda_slide():
             ("5 min", "Copilot vs. Cowork", "The difference and when to use which", BLUE),
             ("10 min", "Cowork UI walkthrough + setup", "New task \u00b7 My tasks \u00b7 Automations \u00b7 Customize", BLUE),
             ("15 min", "Ex 1 \u00b7 Executive Command Center", "Interactive HTML dashboard \u00b7 approvals one at a time", PURPLE),
-            ("15 min", "Ex 2 \u00b7 Deep Research", "Cited briefing + Word/Excel scorecard", GREEN),
+            ("15 min", "Ex 2 \u00b7 Deep Research", "Cited briefing + 5 tailored questions", GREEN),
             ("15 min", "Ex 3 \u00b7 Navigate websites", "Cowork drives Edge: dol.gov + lni.wa.gov", GREEN),
             ("20 min", "Ex 4 \u00b7 Build a custom skill", "Centerpiece: HR Policy Answer", GREEN)]
     RIGHT = [("10 min", "Ex 5 \u00b7 Recruiting + reporting", "Inclusive job posting + ticket summary", GREEN),
              ("15 min", "Break", "", GRAY),
-             ("10 min", "Ex 6 \u00b7 Onboarding pack", "PowerPoint + Scheduling + Communications", GREEN),
-             ("10 min", "Ex 7 \u00b7 Automate & share", "Automations, Daily Briefing, sharing", GREEN),
+             ("10 min", "Ex 6 \u00b7 Onboarding pack", "Orientation deck (+ kickoff, announcement)", GREEN),
+             ("10 min", "Ex 7 \u00b7 Automate & share", "Automations + Daily Briefing (+ sharing)", GREEN),
              ("15 min", "Ex 8 \u00b7 Agent Builder", "Non-Cowork: build an HR Policy Agent", RED),
              ("5 min", "Wrap-up", "Three tools and next steps", BLUE)]
     for col, rows in enumerate((LEFT, RIGHT)):
@@ -1311,7 +1311,7 @@ band(s, 0.55, 5.25, 12.23, 1.5,
 notes(s, "FACILITATION. Biggest risks with ~25 people: pace variance, account readiness, and quiet mailboxes in "
          "Ex 1 (your demo account is seeded with seed-content.md, loaded through VS Code + the Work IQ MCP server). Attendees use their own work accounts; you're on a separate tenant. Never ask anyone to share their Ex 1 dashboard. "
          "Mirrors facilitator-guide.md, facilitator-answer-key.md, and readiness-checklist.md (timeline, cost "
-         "planning, Plan B). Time checks: 0:20 Ex 1, 1:05 Ex 4, 1:35 break, 2:10 Ex 8; cut in that order (demo the Ex 2 scorecard follow-up, skip 3b, 6a + 6c only, 7a only, Ex 8 as a demo). Never cut Ex 4.")
+         "planning, Plan B). Time checks: 0:20 Ex 1, 1:05 Ex 4, 1:35 break, 2:10 Ex 8; the optional sub-tasks (2c scorecard, 3b brief, 6b + 6c, 7c sharing) are for fast finishers, so demo them rather than wait. If still behind, cut in this order: 7a only, then Ex 8 as a demo. Never cut Ex 4.")
 
 # Knowledge check
 s = white_slide("Quick knowledge check", "Show of hands \u2014 answers in after-the-workshop.md.")

@@ -73,13 +73,13 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
 | 0:05–0:10 | **Copilot vs. Cowork** | Draw the assistant-vs-coworker distinction; when to use which | Ask questions; share HR examples |
 | 0:10–0:20 | **Cowork UI walkthrough + setup** | Tour New task, My tasks, Automations, Customize, model picker, reasoning effort; show copying files | Sign in + smoke test + copy sample files + custom instructions |
 | 0:20–0:35 | **Ex 1 — Executive Command Center** | Show the approval dialog (one at a time); walk the scenario card; demo the HTML dashboard; **show the Output folder** (Preview, Download, OneDrive → Cowork); skill save & schedule | Fill placeholders, run the prompt, open the dashboard from the Output folder |
-| 0:35–0:50 | **Ex 2 — Deep Research (web)** | Demo the cited briefing; run the scorecard follow-up | Run Deep Research, tailor questions, build the Word + Excel scorecard |
-| 0:50–1:05 | **Ex 3 — Navigate websites with the browser** | Demo the browser: consent, progress chips, Switch to tab as it searches dol.gov and lni.wa.gov | Run the two-site navigation, check the links, build the Word brief for payroll |
+| 0:35–0:50 | **Ex 2 — Deep Research (web)** | Demo the cited briefing; demo the optional scorecard | Run Deep Research, ground it in the job description for 5 questions; optional: Word + Excel scorecard |
+| 0:50–1:05 | **Ex 3 — Navigate websites with the browser** | Demo the browser: consent, progress chips, Switch to tab as it searches dol.gov and lni.wa.gov | Run the two-site navigation, check the links; optional: Word brief for payroll |
 | 1:05–1:25 | **Ex 4 — Build a custom skill** | Build "HR Policy Answer" live; read the evaluation aloud | Build, read score, test in/out of scope |
 | 1:25–1:35 | **Ex 5 — Recruiting + reporting** | Demo the inclusive job posting + ticket summary | Do Task 5a & 5b |
 | 1:35–1:50 | **Break** (15 min) | Reset; sweep for blockers; check Ex 4 skills saved | Stretch, coffee |
-| 1:50–2:00 | **Ex 6 — Onboarding pack** | Demo deck + scheduling + announcement; call out new skill chips | Do Task 6a, 6b, 6c |
-| 2:00–2:10 | **Ex 7 — Automate & share** | Create an Automation; demo Daily Briefing + share/re-share | Do Task 7a, 7b, 7c |
+| 1:50–2:00 | **Ex 6 — Onboarding pack** | Demo deck + scheduling + announcement; call out new skill chips | Do Task 6a; optional: 6b, 6c |
+| 2:00–2:10 | **Ex 7 — Automate & share** | Create an Automation; demo Daily Briefing + share/re-share | Do Task 7a, 7b; optional: 7c |
 | 2:10–2:25 | **Ex 8 — Agent Builder (non-Cowork)** | Build the HR Policy Agent live; test on "Try it" | Build, add knowledge, test in/out of scope |
 | 2:25–2:30 | **Wrap-up** | Recap the three tools, quick knowledge check, next steps | Q&A, pick a "next week" task |
 
@@ -124,6 +124,14 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
   **More options → Always allow**. Say plainly: "One at a time. No Approve All." Show where to
   revoke: side panel → **Permissions**. In this exercise they approve saving the skill and the
   schedule.
+- **Set expectations before they paste the prompt** (the dry run showed people weren't sure what
+  would pop up):
+  - **Their own data, not Zava.** Ex 1 is the only exercise on their real mail, calendar, Teams, and
+    transcripts, so the dashboard shows **their** meetings and tasks. That's expected.
+  - **What Cowork will ask:** clarifying questions (answer in the chat), progress messages and skill
+    chips (nothing to do), **two approval cards** near the end (save the skill, create the schedule;
+    one at a time), and **suggested next steps** when it finishes (skip them for now). The workbook
+    lists these in a "What Cowork will ask you" box.
 - This is the first **scenario card** of the day, and every later exercise uses the same format. Walk it: **Goal → Output → Why
   Cowork? → Prompt → Workflow → Data sources**.
 - It shows Cowork at full stretch in **one prompt**: Work IQ gathers calendar, mail, chats,
@@ -154,16 +162,19 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
 ### Ex 2 — Deep Research (0:35–0:50)
 - Deep Research reads and **cites** many web sources; contrast it with a single lookup.
 - Have attendees **open two citations** and check them: the habit matters more than the briefing.
-- **Follow-up prompt, same task:** *"Turn this into an interviewer scorecard in Word AND Excel with
-  the scoring scales filled in."* One follow-up turns research into ready-to-use deliverables in
+- **Required:** the Deep Research briefing (2a) and grounding it in `job-description-sample.docx`
+  for 5 tailored questions (2b). The dry run took about 20 minutes with the scorecard included, so
+  the scorecard is now **optional (Task 2c)** for fast finishers.
+- **Optional follow-up, same task (2c):** *"Turn this into an interviewer scorecard in Word AND Excel
+  with the scoring scales filled in."* One follow-up turns research into ready-to-use deliverables in
   **two formats** at once. Point out the **Word** and **Excel** skill chips, then have attendees
   open both files from the **Output folder** they learned in Ex 1.
 - Check that the scales are actually **filled in** (anchored descriptions for each score), not
   placeholders. If they're blank, have attendees reply: *"Fill in the 1, 3, and 5 anchors for every
   competency."*
 - **Timing:** Deep Research takes a few minutes. Use the wait to ask "When is web research better
-  than our own content, and when is it riskier?" If the room is behind at **0:45**, demo the
-  scorecard follow-up on your screen.
+  than our own content, and when is it riskier?" At **0:45**, demo the optional scorecard on your
+  screen so everyone sees the Word + Excel output.
 
 ### Ex 3 — Navigate websites with Cowork's browser (0:50–1:05)
 - This is the **"use the browser to navigate the web and get things done"** requirement. Cowork
@@ -180,20 +191,28 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
   for a room of 25. A good table: Zava's 1.5× over 40 hours **matches** federal and Washington rules;
   DOL adds the **regular-payday** rule, Washington adds **no waiver** and **no daily overtime**. So
   **T-2008** is time-sensitive. Remind the room: a policy check, not legal advice.
-- **3b** turns the table into a Word brief for payroll; they find it in the **Output folder**.
+- **3b (optional)** turns the table into a Word brief for payroll; fast finishers find it in the
+  **Output folder**.
 - **Requirements** (host; see the [readiness checklist](readiness-checklist.md) and
   [reference/10-cowork-browser.md](../reference/10-cowork-browser.md)): browser access allowed for the
   attendee group, Edge 152 or later, Cowork open **in Edge on the web**, an Edge profile signed in
   with their **work account** (not InPrivate), and the Edge **Cowork** setting on. Anyone blocked
   follows your demo.
-- **Stretch for fast finishers:** the DOL's interactive **FLSA Overtime Security Advisor**, with
-  Cowork saying each answer before it clicks. It shows multi-step form navigation without
-  submitting anything personal.
+- **Stretch for fast finishers:** *is the HR Coordinator exempt from overtime?* Cowork finds DOL
+  **Fact Sheet #17A** through the dol.gov site search and reads the administrative-exemption duties
+  test, then finds Washington's **minimum salary for exempt employees** on lni.wa.gov. Read only,
+  regular pages. Don't point people at interactive tools such as the DOL eLaws **Overtime Security
+  Advisor**: in the dry run Cowork declined to open it.
 
 ### Ex 4 — Build a custom skill (1:05–1:25) — the centerpiece
 - Build it live from **Customize → Skills → Add → Create new**.
 - Read the **auto-evaluation** aloud; explain the four scoring dimensions and the bands.
 - Demo both a **triggering** question and an **out-of-scope** one (salary) to show scope boundaries.
+- **Test in a new task, and name Zava:** *"At Zava, when is open enrollment and how do I change my
+  medical plan?"* Attendees' own tenants hold their company's real benefits content, and in the dry
+  run a generic "When is open enrollment?" pulled that instead of the Zava file. The instructions
+  now say to use **only** the two Zava files. A good answer: November, effective January 1, citing
+  `benefits-summary.docx`.
 - If someone scores "Needs work," coach them: tighten the **trigger wording** and **scope**.
 - **Shared-tenant tip:** tell everyone to keep their skill **"Only you"** (or add initials) so you
   don't end up with 25 identically named skills shared across the tenant.
@@ -222,7 +241,8 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
   and Communications (announcement). Call out each new **skill chip** as it loads.
 - Reinforce shared-tenant safety: for the kickoff invite, attendees invite **themselves only** — no
   real people — and everything stays a reviewed draft.
-- If you're short on time, have them do 6a + 6c and skip 6b, or make 6b a demo-only.
+- **6a (the deck) is the must-do.** 6b and 6c are **optional** for fast finishers; demo them while
+  the room's decks build. In the dry run, 6a alone took about 11 minutes.
 
 ### Ex 7 — Automate & share (2:00–2:10)
 - Create an **Automation** live (weekly Monday ticket digest). The prompt names the **exact file and
@@ -230,6 +250,7 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
   clarification. Choose **Activate and run now** so the room sees a real run, then show the **Runs**
   vs **Manage schedules** tabs so they know where to edit/pause.
 - Demo a **Daily Briefing**, then walk the **Share / Re-share** flow on the custom skill from Ex 4.
+  **7c (sharing) is optional** for attendees; 7a is the must-do.
 - Emphasize etiquette: keep skills **"Only you"** or initialed; sharing stays within this tenant.
 
 > **HR plugins:** the plugins spotlight isn't in the 2½-hour session; attendees get it in the
@@ -244,6 +265,11 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
   standalone helper **others** can chat with in Copilot.
 - Walk the **Describe → Configure → Try it** tabs; add the Zava HR docs as **knowledge**; test a
   policy question (sourced answer) and an out-of-scope one (declines).
+- **Keep it on Zava's files.** In the Configure tab's **Knowledge** section, turn **Only use specified
+  sources** on and **Search all websites** off, and test with *"At Zava, when is open enrollment…?"*
+  In the dry run, the agent answered with the tester's **own company's** open-enrollment details.
+  Agent Builder *prioritizes* the specified sources but can't fully block general knowledge; for
+  stricter control, organizations use Copilot Studio.
 - Note it's **no-code** but a **different tool** — needs a Copilot license, desktop/web only, and for
   external *actions* you'd move to Copilot Studio (out of scope). Good moment to show the breadth of
   the Copilot platform beyond Cowork.
@@ -278,7 +304,9 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
 | Command center is nearly empty (Ex 1) | Quiet week, or a spare account with no history | Expected: focus on the pattern and show your seeded demo; don't ask attendees to share real dashboards |
 | Can't find the output file (any exercise) | Side panel closed, or looking in the chat | Open the **side panel toggle** → **Output folder**; or open **OneDrive → Cowork** |
 | Schedule not created (Ex 1) | Checkpoint declined or `[time]` left blank | Re-run the last line of the prompt with a real time, or create it in Automations |
-| Deep Research slow (Ex 2) | Multi-source research takes several minutes | Expected: discuss while it runs; demo the scorecard if the room is behind |
+| Deep Research slow (Ex 2) | Multi-source research takes several minutes | Expected: discuss while it runs; demo the optional scorecard instead of waiting for it |
+| Answer uses the attendee's **own company's** policies, not Zava's (Ex 4, Ex 8) | Generic question ("When is open enrollment?") matched real HR content in their tenant, or Agent Builder searched beyond its files | Ask again in a new task starting with "At Zava, …"; Ex 4: the skill's instructions say **only** the two Zava files; Ex 8: **Only use specified sources** on, **Search all websites** off, files no longer "Preparing" |
+| Cowork won't open a site (Ex 3) | Some interactive government tools (e.g., DOL eLaws advisors) are declined | Skip that site; the core task and stretch use regular dol.gov and lni.wa.gov pages |
 | "Browser tasks run in Microsoft Edge" (Ex 3) | Not in Edge, Edge profile isn't the work account, InPrivate window, or Edge older than 152 | Open Cowork in Edge in a profile signed in with the work account; update Edge; else watch the facilitator demo |
 | Browser task never starts (Ex 3) | Browser access not allowed for this account, the Edge **Cowork** setting is off, or the consent notice wasn't accepted | Select **I understand** at the consent notice; host checks Copilot → Settings → Cowork settings → **Allow browser access** includes the attendee group |
 | Falling behind | Group pace variance | Use **checkpoints** to sync; [stretch prompts](../participant/participant-workbook.md) for fast finishers |
@@ -288,16 +316,17 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
 
 Two and a half hours with eight exercises has no slack, so check the clock at these points and cut
 **in this order** if you're behind. Play the **demo video** for each exercise instead of waiting on a live
-run. Never cut Ex 4 or the core of Ex 8.
+run. Never cut Ex 4 or the core of Ex 8. The optional sub-tasks (2c, 3b, 6b, 6c, 7c) are already
+outside the core timing, so the first cut is simply not waiting for them.
 
 | Clock | You should be... | If you're more than 5 minutes behind |
 | --- | --- | --- |
 | **0:20** | Starting Ex 1 | Finish sign-in and file uploads during Ex 1; proctors help stragglers |
 | **0:35** | Starting Ex 2 | Skip the Ex 1 discussion; demo the Output folder only |
-| **0:50** | Starting Ex 3 | Demo the Ex 2 scorecard follow-up instead of running it |
-| **1:05** | Starting Ex 4 | Skip Ex 3b (the Word brief) |
+| **0:50** | Starting Ex 3 | Stop Ex 2 after the 5 questions; demo the optional scorecard |
+| **1:05** | Starting Ex 4 | Move on after the comparison table; demo the optional 3b brief |
 | **1:35** | Starting the break | Ex 5: do 5b only; shorten the break to 10 minutes |
-| **2:00** | Starting Ex 7 | Ex 6: do 6a + 6c, demo 6b. Ex 7: do 7a only, demo 7b and 7c |
+| **2:00** | Starting Ex 7 | Ex 6: move on after 6a (6b and 6c are optional). Ex 7: do 7a only, demo 7b and 7c |
 | **2:10** | Starting Ex 8 | Run Ex 8 as a facilitator demo; attendees build it after class |
 
 **Fast room?** Use the **Stretch** prompts (at the end of each exercise in the
@@ -311,8 +340,8 @@ run. Never cut Ex 4 or the core of Ex 8.
 - Keep **stretch prompts** ready (end of each exercise in the [participant workbook](../participant/participant-workbook.md)) so fast
   finishers stay engaged while others catch up.
 - Don't let one tenant issue stall the room — **parking lot** it and keep moving; a proctor follows up.
-- Timings are guidance; if you're running long, shorten Ex 6 (do 6a + 6c, demo 6b) and/or run Ex 8
-  as a **facilitator demo** (attendees watch, then build after) — protect Ex 4 and the Ex 8 concept.
+- Timings are guidance; if you're running long, keep everyone on the required tasks (the optional
+  2c, 3b, 6b, 6c, and 7c are for fast finishers) and/or run Ex 8 as a **facilitator demo** (attendees watch, then build after) — protect Ex 4 and the Ex 8 concept.
 
 ## Success criteria
 
@@ -321,10 +350,11 @@ By the end, each ready attendee has:
 - [ ] Toured the Cowork UI — **New task, My tasks, Automations, Customize** (walkthrough)
 - [ ] Built an **Executive Command Center** HTML dashboard, found it in the **Output folder** and
   OneDrive → Cowork, and saved it as a skill with a schedule, approving one action at a time (Ex 1)
-- [ ] Produced a cited web-research briefing and an interviewer **scorecard in Word and Excel** (Ex 2)
-- [ ] Had Cowork **navigate two websites** in Edge and turn the result into a Word brief (Ex 3)
+- [ ] Produced a cited web-research briefing and 5 interview questions grounded in the job
+  description (Ex 2)
+- [ ] Had Cowork **navigate two websites** in Edge and build a linked comparison table (Ex 3)
 - [ ] Built and tested a custom skill scoring Good+ (Ex 4)
 - [ ] Wrote an inclusive job posting and a ticket report (Ex 5)
-- [ ] Built an onboarding pack — deck, scheduled kickoff, and team announcement (Ex 6)
-- [ ] Created a recurring Automation and walked the skill-sharing flow (Ex 7)
+- [ ] Built an onboarding orientation deck from the Zava files (Ex 6)
+- [ ] Created a recurring Automation and a Daily Briefing (Ex 7)
 - [ ] Built and tested an **HR Policy Agent** in Copilot Agent Builder (Ex 8)
