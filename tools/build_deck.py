@@ -623,7 +623,7 @@ def title_slide(title, subtitle, title_size=None, lines=None):
 
 def break_slide(next_up):
     s = gradient_blank()
-    text(s, 1.0, 2.35, 11.3, 1.3, [{"runs": [("\u2615  Break \u00b7 10 minutes", {"font": SEG_DISP, "size": 54, "color": INK})],
+    text(s, 1.0, 2.35, 11.3, 1.3, [{"runs": [("\u2615  Break \u00b7 15 minutes", {"font": SEG_DISP, "size": 54, "color": INK})],
                                     "align": PP_ALIGN.CENTER}], anchor=MSO_ANCHOR.MIDDLE)
     text(s, 1.5, 3.75, 10.3, 0.6, [{"runs": [("Stretch, refill, and note one task you'd hand to Cowork tomorrow.",
                                               {"font": SEG_DISP, "size": 18, "color": INK})], "align": PP_ALIGN.CENTER}])
@@ -706,23 +706,21 @@ def exercise_divider(ex):
 
 # ---------------------------------------------------------------- slides shared with build_overview.py
 def agenda_slide():
-    """Agenda slide: the 4-hour run of show (shared by the instructor and overview decks)."""
-    s = white_slide("Agenda \u2014 4 hours, hands-on",
-                    "Framing and a UI tour, then eight scenario-based exercises with two breaks.")
-    LEFT = [("10 min", "Welcome & context", "What Cowork is, HR value, the approval model", BLUE),
-            ("10 min", "Copilot vs. Cowork", "The difference and when to use which", BLUE),
-            ("20 min", "Cowork UI walkthrough + setup", "New task \u00b7 My tasks \u00b7 Automations \u00b7 Customize", BLUE),
-            ("25 min", "Ex 1 \u00b7 Executive Command Center", "Interactive HTML dashboard \u00b7 approvals one at a time", PURPLE),
-            ("20 min", "Ex 2 \u00b7 Deep Research", "Cited briefing + Word/Excel scorecard", GREEN),
-            ("10 min", "Break", "", GRAY),
-            ("25 min", "Ex 3 \u00b7 Navigate websites", "Cowork drives Edge: dol.gov + lni.wa.gov", GREEN)]
-    RIGHT = [("30 min", "Ex 4 \u00b7 Build a custom skill", "Centerpiece: HR Policy Answer", GREEN),
-             ("15 min", "Ex 5 \u00b7 Recruiting + reporting", "Inclusive job posting + ticket summary", GREEN),
-             ("10 min", "Break", "", GRAY),
-             ("20 min", "Ex 6 \u00b7 Onboarding pack", "PowerPoint + Scheduling + Communications", GREEN),
-             ("15 min", "Ex 7 \u00b7 Automate & share", "Automations, Daily Briefing, sharing", GREEN),
-             ("5 min", "Spotlight \u00b7 HR plugins", "Customize \u2192 Plugins, talk only", OLIVE),
-             ("20 min", "Ex 8 \u00b7 Agent Builder", "Non-Cowork: build an HR Policy Agent", RED),
+    """Agenda slide: the 2\u00bd-hour run of show (shared by the instructor and overview decks)."""
+    s = white_slide("Agenda \u2014 2\u00bd hours, hands-on",
+                    "Framing and a UI tour, then eight scenario-based exercises with one break.")
+    LEFT = [("5 min", "Welcome & context", "What Cowork is, HR value, the approval model", BLUE),
+            ("5 min", "Copilot vs. Cowork", "The difference and when to use which", BLUE),
+            ("10 min", "Cowork UI walkthrough + setup", "New task \u00b7 My tasks \u00b7 Automations \u00b7 Customize", BLUE),
+            ("15 min", "Ex 1 \u00b7 Executive Command Center", "Interactive HTML dashboard \u00b7 approvals one at a time", PURPLE),
+            ("15 min", "Ex 2 \u00b7 Deep Research", "Cited briefing + Word/Excel scorecard", GREEN),
+            ("15 min", "Ex 3 \u00b7 Navigate websites", "Cowork drives Edge: dol.gov + lni.wa.gov", GREEN),
+            ("20 min", "Ex 4 \u00b7 Build a custom skill", "Centerpiece: HR Policy Answer", GREEN)]
+    RIGHT = [("10 min", "Ex 5 \u00b7 Recruiting + reporting", "Inclusive job posting + ticket summary", GREEN),
+             ("15 min", "Break", "", GRAY),
+             ("10 min", "Ex 6 \u00b7 Onboarding pack", "PowerPoint + Scheduling + Communications", GREEN),
+             ("10 min", "Ex 7 \u00b7 Automate & share", "Automations, Daily Briefing, sharing", GREEN),
+             ("15 min", "Ex 8 \u00b7 Agent Builder", "Non-Cowork: build an HR Policy Agent", RED),
              ("5 min", "Wrap-up", "Three tools and next steps", BLUE)]
     for col, rows in enumerate((LEFT, RIGHT)):
         x = 0.55 + col * 6.2
@@ -736,8 +734,8 @@ def agenda_slide():
             if sub:
                 body.append({"runs": [(sub, {"size": 10.5, "color": W_SUB})], "space_after": 0})
             text(s, x + 1.2, y, 4.7, rh, body, anchor=MSO_ANCHOR.MIDDLE)
-    notes(s, "AGENDA. Framing (what/why + Copilot vs Cowork), a UI tour + setup, then EIGHT exercises with two "
-             "breaks. Each exercise opens with a scenario card, then a hands-on slide with "
+    notes(s, "AGENDA. Framing (what/why + Copilot vs Cowork), a UI tour + setup, then EIGHT exercises with one "
+             "15-minute break after Ex 5. Each exercise opens with a scenario card, then a hands-on slide with "
              "steps and a checkpoint. Ex 1 is the Executive Command Center; Ex 3 has Cowork drive a browser; Ex 4 (custom "
              "skill) is the centerpiece; Ex 8 steps OUTSIDE Cowork into Agent Builder.")
     return s
@@ -759,7 +757,7 @@ def objectives_slide():
         text(s, x + 0.3, y, 0.7, 1.55, [{"runs": [(str(i + 1), {"size": 32, "bold": True, "color": acc})]}], anchor=MSO_ANCHOR.MIDDLE)
         text(s, x + 1.1, y + 0.1, 4.75, 1.35, [{"runs": [(h, {"size": 16, "bold": True, "color": W_TITLE})], "space_after": 4},
                                                {"runs": rich(sub, 13, W_SUB)}], anchor=MSO_ANCHOR.MIDDLE)
-    notes(s, "LEARNING OBJECTIVES (part of Welcome, 0:00-0:10). Read the six out loud and tell the room you'll come "
+    notes(s, "LEARNING OBJECTIVES (part of Welcome, 0:00-0:05). Read the six out loud and tell the room you'll come "
              "back to them at wrap-up with a quick knowledge check. They mirror the README and workbook.")
     return s
 
@@ -769,7 +767,7 @@ def kit_links_slide():
     s = white_slide("Workshop kit \u2014 download links",
                     "Everything participants and instructors need. Select a link to download it.")
     KIT_PARTICIPANT = [("Participant workbook", kit_url("participant/participant-workbook.docx"), "setup + all 8 exercises"),
-                       ("Sample data (zip)", kit_url("participant/zava-sample-knowledge.zip"), "the six Zava files"),
+                       ("Sample data (zip)", kit_url("sample-knowledge/zava-sample-knowledge.zip"), "the six Zava files"),
                        ("Quick-reference card", kit_url("participant/quick-reference-card.docx"), "one-page handout"),
                        ("Prompt library", kit_url("reference/04-prompt-library.docx"), "copy-paste HR prompts"),
                        ("Responsible use", kit_url("reference/06-responsible-use.docx"), "data-handling rules"),
@@ -796,9 +794,8 @@ def kit_links_slide():
     tf.vertical_anchor = MSO_ANCHOR.MIDDLE
     tf.margin_left = tf.margin_right = tf.margin_top = tf.margin_bottom = 0
     p = tf.paragraphs[0]
-    for t, o in (("Everything at once: ", {"bold": True}), ("download the ", {}),
-                 ("whole kit as a zip", {"bold": True, "link": f"{KIT_REPO}/archive/refs/heads/main.zip"}),
-                 (", or browse it on ", {}), ("GitHub", {"bold": True, "link": KIT_REPO}),
+    for t, o in (("Everything else: ", {"bold": True}), ("browse the kit on ", {}),
+                 ("GitHub", {"bold": True, "link": KIT_REPO}),
                  (". Link opens on GitHub? Select the ", {}), ("Download", {"bold": True}),
                  (" icon at the top right of the file. No access? Use the shared Teams/SharePoint folder.", {})):
         r = p.add_run()
@@ -808,7 +805,7 @@ def kit_links_slide():
         if o.get("link"):
             r.font.underline = True
             link_run(r, o["link"])
-    notes(s, "WORKSHOP KIT (part of setup, 0:20-0:40). Leave this up while people sign in. Participants need the "
+    notes(s, "WORKSHOP KIT (part of setup, 0:10-0:20). Leave this up while people sign in. Participants need the "
              "workbook and the sample-data zip today; the quick-reference card, prompt library, responsible-use guide, "
              "and after-the-workshop pack are take-aways. The right column is for you and the proctors. The links point "
              "to the kit's GitHub repo, which is private: before the session, give attendees access or post the files in "
@@ -901,12 +898,12 @@ def exercise_demo(ex):
 # 1 — Title
 mark_section("Welcome & orientation")
 s = title_slide("Getting Things Done with Copilot Cowork for HR Tasks",
-                "Instructor-led, hands-on workshop \u00b7 4 hours \u00b7 ~25 attendees", title_size=40,
+                "Instructor-led, hands-on workshop \u00b7 2\u00bd hours \u00b7 ~25 attendees", title_size=40,
                 lines=["Getting Things Done with Copilot Cowork", "for HR Tasks"])
-notes(s, "WELCOME (0:00-0:10). Introduce yourself and the goal: by the end, every attendee knows when to "
+notes(s, "WELCOME (0:00-0:05). Introduce yourself and the goal: by the end, every attendee knows when to "
          "use Copilot Chat vs. Cowork and has built an executive command center, researched the web, "
          "had Cowork navigate websites in its browser, built a custom skill, an onboarding pack and an automation, and finished "
-         "with a no-code AGENT. 4 hours, two breaks. Tenant note: ATTENDEES use their own work accounts; YOU demo "
+         "with a no-code AGENT. 2\u00bd hours, one 15-minute break after Ex 5. The pace is brisk: play the demo videos instead of waiting on long runs. Tenant note: ATTENDEES use their own work accounts; YOU demo "
          "from a SEPARATE tenant, so your screen may differ. Golden rule all day: every Cowork output is "
          "a DRAFT; Cowork pauses at checkpoints.")
 
@@ -933,7 +930,7 @@ band(s, 0.55, 5.2, 12.23, 1.55,
      "**Rule of thumb:** several steps that end in a file, email, schedule, or report \u2192 **Cowork**. A quick "
      "answer or rewrite \u2192 **Copilot Chat**. Both are grounded in your work through Work IQ and respect the "
      "same permissions. We close with a third tool \u2014 **Agent Builder** \u2014 in Exercise 8.")
-notes(s, "COPILOT vs COWORK (0:10-0:20). Copilot (Chat) = assistant: you ask, it answers, you drive. Cowork = "
+notes(s, "COPILOT vs COWORK (0:05-0:10). Copilot (Chat) = assistant: you ask, it answers, you drive. Cowork = "
          "coworker: you describe an outcome, it does the multi-step work and returns a deliverable, pausing "
          "for approval. Give one HR example of each and land the rule of thumb. Cowork isn't a replacement "
          "for Chat — it's the 'do it for me' mode of the same Copilot family. Detail: "
@@ -977,7 +974,7 @@ for i, (h, sub, acc) in enumerate([
     box(s, 7.2, y, 0.06, 1.2, acc)
     text(s, 7.42, y + 0.12, 5.2, 1.0, [{"runs": [(h, {"size": 14, "bold": True, "color": acc})], "space_after": 3},
                                        {"runs": rich(sub, 12.5, W_BODY)}])
-notes(s, "COWORK UI WALKTHROUGH (part of 0:20-0:40). The screenshot is the NEW TASK home ('What can I do for "
+notes(s, "COWORK UI WALKTHROUGH (part of 0:10-0:20). The screenshot is the NEW TASK home ('What can I do for "
          "you?'): Start a task box, model picker, reasoning effort, attach, dictate, 'Try these next'. Then "
          "MY TASKS (resume past work), AUTOMATIONS (Runs / Manage schedules), CUSTOMIZE (instructions, "
          "skills, plugins). Point out the session side panel — you'll refer to it all day. Detail: "
@@ -1043,7 +1040,7 @@ band(s, 0.55, 5.2, 12.23, 1.55,
      "You\u2019re in **your own work account**, so your screens match each other. The "
      "**facilitator demos from a separate tenant**, so the instructor\u2019s screen may look a little different.",
      fill=PLUM, color="FFFFFF", size=14)
-notes(s, "SETUP (part of 0:20-0:40). Whole room: sign in + smoke test, then download zava-sample-knowledge.zip, "
+notes(s, "SETUP (part of 0:10-0:20). The participant email asks attendees to sign in and upload the files BEFORE the session; here you only confirm it. Anyone who hasn't: sign in + smoke test, then download zava-sample-knowledge.zip, "
          "extract it, and use Folder upload to add the ai_hr_cowork_workshop folder (the six Word and Excel files) "
          "to Documents in their own OneDrive; no Folder upload option? create the folder and upload the files. Show how to attach "
          "a file: + -> Attach cloud files, or type /. EDGE PROFILE CHECK: the browser task in Ex 3 runs in the Edge profile signed in with their work account; anyone in a personal profile adds a work profile now (not InPrivate). Attendees use their OWN work accounts; YOU are on a "
@@ -1072,7 +1069,7 @@ wcard(s, 5.05, 3.5, 7.73, 2.4, PURPLE, "PASTE THIS (WORKBOOK SETUP STEP D)",
 band(s, 0.55, 6.05, 12.23, 0.75,
      "**Personal to you** \u00b7 type **/** to reference a file or person \u00b7 up to ~20 KB, but **shorter is better** "
      "\u00b7 Role samples: workbook step D", fill=PLUM, color="FFFFFF", size=13)
-notes(s, "CUSTOM INSTRUCTIONS (part of 0:20-0:40, about 3 min). Show it live: Customize -> Preferences -> 'Customize "
+notes(s, "CUSTOM INSTRUCTIONS (part of 0:10-0:20, about 1 min). Show it live: Customize -> Preferences -> 'Customize "
          "instructions for Cowork'. Explain: guidance Cowork automatically adds to the START of every task, so tone, "
          "format, and rules don't have to be repeated in each prompt. Everyone pastes the workbook text (Setup step D), "
          "saves, then tests in a new task: 'Draft a two-sentence reminder to employees that open enrollment is in "
@@ -1281,87 +1278,8 @@ def output_folder_slide():
     return s
 
 
-PLUGINS_SHOT = os.path.join(ROOT, "reference", "media", "customize-plugins.png")
-
-
-def plugins_spotlight_slide():
-    s = clone_slide(S_CARD)
-    keep_only(s, {"Title 3", "NavPill_SitesPages", "TextBox 29", "TextBox 30", "TextBox 49"})
-    d = by_name(s)
-    set_first_run(d["Title 3"], "Spotlight \u00b7 Extend Cowork with HR plugins")
-    set_first_run(d["NavPill_SitesPages"], "Talk only")
-    set_first_run(d["TextBox 30"], "Time")
-    set_first_run(d["TextBox 49"], "5 min")
-    # Screenshot (left)
-    box(s, 0.46, 1.3, 7.3, 5.75, PANEL, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.04)
-    pill(s, 4.11, 1.15, "Customize \u2192 Plugins")
-    pic = s.shapes.add_picture(PLUGINS_SHOT, Inches(0.7), Inches(1.6), width=Inches(6.82))
-    pic.name = "Picture Plugins"
-    pic._element.nvPicPr.cNvPr.set(
-        "descr", "Screenshot from Microsoft Learn of Copilot Cowork Customize, Plugins tab, listing installed "
-                 "plugins with on/off toggles, plus Discover and Upload plugin options.")
-    text(s, 0.7, 1.6 + 6.82 * 541 / 1030 + 0.05, 6.82, 0.3,
-         [{"runs": [("Microsoft Learn screenshot (Dynamics 365 plugins shown). HR plugins appear in the same list.",
-                     {"size": 9, "italic": True, "color": W_SUB})]}])
-    lk = text(s, 0.7, 1.6 + 6.82 * 541 / 1030 + 0.3, 6.82, 0.28,
-              [{"runs": [("Full catalog: learn.microsoft.com/microsoft-365/copilot/cowork/cowork-available-plugins",
-                          {"size": 9, "color": BLUE})]}])
-    lk.text_frame.paragraphs[0].runs[0].hyperlink.address = (
-        "https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-available-plugins")
-    box(s, 0.75, 5.8, 6.72, 0.95, PLUM, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.12)
-    text(s, 1.0, 5.8, 6.3, 0.95, [{"runs": [("A plugin = skills + connectors. ",
-                                            {"size": 12.5, "bold": True, "color": "FFFFFF", "font": SEG_SEMI}),
-                                           ("Connectors can be MCP servers, so Cowork can read and act in "
-                                            "your HR systems \u2014 still with your approval.",
-                                            {"size": 12.5, "color": "FFFFFF", "font": SEG_DISP})]}],
-         anchor=MSO_ANCHOR.MIDDLE, line_spacing=1.03)
-    # HR plugins + benefits (right)
-    x0, y0, w = 8.2, 1.3, 4.9
-    box(s, x0, y0, w, 5.75, "FFFFFF", line=W_LINE, shadow=True, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.03)
-    text(s, x0 + 0.25, y0 + 0.12, w - 0.5, 0.35,
-         [{"runs": [("HR plugin examples", {"size": 12, "bold": True, "color": W_SUB})]}])
-    rows = [("Gusto", "Payroll, PTO and employee records"),
-            ("ZipRecruiter \u00b7 Dice.com", "Job posts and candidate pipelines"),
-            ("Cronofy MCP", "Interview scheduling across calendars"),
-            ("Articulate", "Learning and training content"),
-            ("\u2b50 SAP SuccessFactors", "No catalog plugin yet: ESS agent, or a custom MCP plugin")]
-    y = y0 + 0.5
-    for name, val in rows:
-        hi = "SuccessFactors" in name
-        if hi:
-            box(s, x0 + 0.15, y - 0.06, w - 0.3, 0.64, "FBF6FD", line=PURPLE,
-                shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.12)
-        text(s, x0 + 0.3, y, w - 0.6, 0.28, [{"runs": [(name, {"size": 11.5, "bold": True,
-                                                              "color": PURPLE if hi else W_TITLE})]}])
-        text(s, x0 + 0.3, y + 0.27, w - 0.6, 0.26, [{"runs": [(val, {"size": 9.5, "color": W_SUB})]}])
-        y += 0.68
-    y += 0.05
-    box(s, x0 + 0.15, y, w - 0.3, 5.75 + y0 - y - 0.15, "FBF6FD", line=PURPLE,
-        shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.06)
-    ben = ["**Fewer tabs** \u2014 HR data flows into the task",
-           "**Governed** \u2014 admins deploy; activity in Purview audit",
-           "**Your sign-in** \u2014 connectors use your own permissions",
-           "**Per task** \u2014 toggle in Sources & Skills"]
-    text(s, x0 + 0.3, y + 0.08, w - 0.6, 0.3, [{"runs": [("Why it matters", {"size": 11.5, "bold": True, "color": PURPLE})]}])
-    text(s, x0 + 0.3, y + 0.4, w - 0.55, 1.6, bullets(ben, size=10.5, color=INK), space_after=3, line_spacing=1.0)
-    notes(s, "SPOTLIGHT \u2014 HR PLUGINS (3:30-3:35). TALK ONLY, no hands-on. Show Customize \u2192 Plugins: "
-             "Installed (toggles), a plugin's detail page (its skills and connectors), Discover, and Upload plugin. "
-             "A plugin bundles skills and connectors; connectors can be MCP servers, so Cowork can read and act in "
-             "systems like payroll, ATS or your HRIS. Example (illustrative): with a payroll plugin such as Gusto, "
-             "ticket T-2008 (Owen Wright's payroll question) could be answered from the real pay record, with Cowork "
-             "asking approval before any change. Each user signs in to a connector once; admins can deploy plugins "
-             "('Managed by your organization') and activity is in Purview audit logs. Do NOT install plugins in the "
-             "shared attendee tenant \u2014 demo from the facilitator tenant if you have one installed. "
-             "SAP SUCCESSFACTORS: no SuccessFactors plugin in the Cowork catalog yet (checked Oct 1, 2026). Point to "
-             "the Employee Self-Service agent with its SAP SuccessFactors extension pack (a Copilot agent, not a "
-             "Cowork plugin), or a custom plugin with an MCP connector built by IT. Re-check the catalog before each "
-             "delivery: learn.microsoft.com/microsoft-365/copilot/cowork/cowork-available-plugins. "
-             "Details: reference/09-plugins.md.")
-    return s
-
-
-# Exercises 1-8 with breaks after Ex 2 and Ex 5
-NEXT_AFTER = {2: "Ex 3 \u00b7 Navigate websites", 5: "Ex 6 \u00b7 Onboarding pack"}
+# Exercises 1-8 with one break after Ex 5
+NEXT_AFTER = {5: "Ex 6 \u00b7 Onboarding pack"}
 for ex in EXERCISES:
     mark_section(f"Ex {ex['num']} \u00b7 " + {1: "Executive Command Center", 2: "Deep Research", 3: "Navigate websites",
                                            4: "Custom skill", 5: "Recruiting + reporting", 6: "Onboarding pack",
@@ -1372,14 +1290,10 @@ for ex in EXERCISES:
     hands_on(ex)
     if ex["num"] == 1:
         output_folder_slide()
-    if ex["num"] == 7:
-        mark_section("Spotlight \u00b7 HR plugins")
-        plugins_spotlight_slide()
     if ex["num"] in NEXT_AFTER:
         b = break_slide(NEXT_AFTER[ex["num"]])
-        notes(b, "BREAK (10 min). Sweep the room for blockers. " +
-              ("Next: Cowork drives a web browser, then the centerpiece custom-skill build. Proctors: check Edge profiles and the Edge Cowork setting now." if ex["num"] == 2 else
-               "Check everyone's Exercise 4 skill saved — Exercise 7 shares it."))
+        notes(b, "BREAK (15 min, 1:35-1:50). Sweep the room for blockers and check everyone's "
+                 "Exercise 4 skill saved: Exercise 7 shares it.")
 
 # Facilitation
 mark_section("Close")
@@ -1397,7 +1311,7 @@ band(s, 0.55, 5.25, 12.23, 1.5,
 notes(s, "FACILITATION. Biggest risks with ~25 people: pace variance, account readiness, and quiet mailboxes in "
          "Ex 1 (your demo account is seeded with seed-content.md, loaded through VS Code + the Work IQ MCP server). Attendees use their own work accounts; you're on a separate tenant. Never ask anyone to share their Ex 1 dashboard. "
          "Mirrors facilitator-guide.md, facilitator-answer-key.md, and readiness-checklist.md (timeline, cost "
-         "planning, Plan B). Time checks: 0:40 Ex 1, 1:25 break, 2:00 Ex 4, 2:45 break, 3:15 Ex 7, 3:35 Ex 8; cut in that order (shorter breaks, demo the Ex 3 scorecard, 6a + 6c only, 7a only, Ex 8 as a demo). Never cut Ex 4.")
+         "planning, Plan B). Time checks: 0:20 Ex 1, 1:05 Ex 4, 1:35 break, 2:10 Ex 8; cut in that order (demo the Ex 2 scorecard follow-up, skip 3b, 6a + 6c only, 7a only, Ex 8 as a demo). Never cut Ex 4.")
 
 # Knowledge check
 s = white_slide("Quick knowledge check", "Show of hands \u2014 answers in after-the-workshop.md.")
@@ -1435,7 +1349,7 @@ for i, (h, sub, acc) in enumerate(TAKE):
 band(s, 0.55, 5.75, 12.23, 1.0,
      "**Clean up:** pause or delete the schedules you created in Exercises 1 and 7 (Automations \u2192 Manage schedules).",
      fill=PLUM, color="FFFFFF", size=14)
-notes(s, "WRAP-UP (3:55-4:00). Recap the THREE tools and everything they built. Reinforce the golden rules. Ask "
+notes(s, "WRAP-UP (2:25-2:30). Recap the THREE tools and everything they built. Reinforce the golden rules. Ask "
          "each person to name ONE task for next week. Remind them to pause/delete the Ex 1 and Ex 7 schedules.")
 
 # Thank you

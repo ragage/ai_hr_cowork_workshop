@@ -68,10 +68,7 @@ adds up. Before the session:
 - [ ] Confirm the **facilitator's own (demo) tenant** is Copilot- and Cowork-ready for live demos, and
       that **Work IQ MCP write operations** are allowed there so the facilitator can load the seed
       ([seed-content.md](seed-content.md#how-to-load-it)). The change can take 24 hours.
-- [ ] *(Optional)* For the **HR plugins spotlight**, have a plugin installed in the **facilitator's
-      tenant** (e.g., an approved HR or Microsoft plugin) so you can show **Customize → Plugins**
-      live. Otherwise the deck's screenshot is enough. Don't add plugins to the attendee tenant.
-- [ ] **Stage the sample data:** upload **zava-sample-knowledge.zip** (the six Word and Excel sample files,
+- [ ] **Stage the sample data:** upload **zava-sample-knowledge.zip** from `sample-knowledge/` (the one zip; it holds the six Word and Excel sample files,
       in an `ai_hr_cowork_workshop` folder) to a shared location every attendee account can reach (a **Teams channel** or **SharePoint
       library**), so attendees can copy them into their own OneDrive. Getting the files from GitHub?
       If a link opens the file on GitHub, select the **Download** icon (**Download raw file**) at the

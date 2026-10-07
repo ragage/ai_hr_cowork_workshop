@@ -108,7 +108,7 @@ Microsoft 365 and can be MCP servers. Manage plugins in **Customize → Plugins*
 have on/off toggles, and **Discover** lists plugins from the Microsoft 365 App Store. Plugin skills
 appear alongside the built-in skills and activate automatically. HR examples include **Gusto**
 (payroll and benefits) and **ZipRecruiter** (job listings). Availability depends on what your admin
-approves. See [09-plugins.md](09-plugins.md) for the HR plugins spotlight.
+approves. See [09-plugins.md](09-plugins.md) for more on HR plugins.
 
 ## Automations
 

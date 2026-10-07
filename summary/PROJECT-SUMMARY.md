@@ -5,7 +5,7 @@ Handoff notes for maintainers of the "Getting Things Done with Copilot Cowork fo
 
 ## Goal
 
-A 4-hour, no-code, hands-on workshop kit, **"Getting Things Done with Copilot Cowork for HR Tasks"**,
+A 2½-hour, no-code, hands-on workshop kit, **"Getting Things Done with Copilot Cowork for HR Tasks"**,
 that teaches HR staff to use Microsoft Copilot Cowork for day-to-day work and ends with a non-Cowork
 exercise in Agent Builder.
 
@@ -22,13 +22,13 @@ exercise in Agent Builder.
 - **Done and pushed** to the private repo https://github.com/cragage_microsoft/ai_hr_cowork_workshop
   (`main`).
 - **Last verification passed:** no stale text, no broken links in Markdown or Word files, and the
-  deck (57 slides) opens cleanly.
+  deck (55 slides) opens cleanly.
 - **Not yet run end to end in a real tenant.**
 
 ## Architecture
 
-- **Folders by audience:** `participant/` (workbook, quick-reference card, sample-data zip,
-  after-the-workshop pack), `instructor/` (instructor deck, facilitator guide, answer key, readiness
+- **Folders by audience:** `participant/` (workbook, quick-reference card,
+  after-the-workshop pack), `sample-knowledge/` (the Zava files and their one zip), `instructor/` (instructor deck, facilitator guide, answer key, readiness
   checklist, the facilitator's demo seed content), `communication/` (overview deck and emails), and `summary/` (this file).
   Only `README.md` and its Word copy stay at the root.
 - **Guides:** [README.md](../README.md), [participant-workbook.md](../participant/participant-workbook.md),
@@ -37,12 +37,12 @@ exercise in Agent Builder.
   [after-the-workshop.md](../participant/after-the-workshop.md).
 - **Reference pages:** `reference/00`–`10`
   ([02](../reference/02-settings-and-models.md) holds the sample custom instructions,
-  [09](../reference/09-plugins.md) the plugins spotlight with the SuccessFactors note,
+  [09](../reference/09-plugins.md) HR plugins (self-study) with the SuccessFactors note,
   [10](../reference/10-cowork-browser.md) browser use). Screenshots are in `reference/media/`.
 - **Example skill:** [skills/hr-policy-answer/SKILL.md](../skills/hr-policy-answer/SKILL.md). Its Word
   copy sits outside the skill folder.
-- **Sample data:** `sample-knowledge/` holds the .docx/.xlsx files plus their editable .md/.csv
-  sources; `participant/zava-sample-knowledge.zip` holds the six Word/Excel files inside an
+- **Sample data:** `sample-knowledge/` is the only place for it: the six .docx/.xlsx files (the
+  masters; edit them directly) and `zava-sample-knowledge.zip`, the one download, which holds them inside an
   `ai_hr_cowork_workshop/` folder (the same name as the OneDrive folder the prompts use).
 - **Communication:** `communication/` holds the training overview deck (`training-overview.pptx`,
   8 slides) and two paste-ready Outlook emails (`participant-email.html`, `instructor-email.html`).
@@ -57,25 +57,25 @@ exercise in Agent Builder.
   Every exercise card in the deck has a "Prompt key" legend picture (bottom right). Stretch prompts live at the
   end of each workbook exercise; the hands-on slides, the closing slide, and the facilitator guide
   link to the workbook.
-- **Other outputs:** `instructor/instructor-deck.pptx` (57 slides),
+- **Other outputs:** `instructor/instructor-deck.pptx` (55 slides),
   `participant/quick-reference-card.docx`, and a `.docx` copy of every guide (19 in total).
-- **Agenda (240 min):**
+- **Agenda (150 min, one break):**
 
 | Time | Segment |
 | --- | --- |
-| 0:00–0:40 | Welcome, Copilot vs Cowork, UI tour + setup (including custom instructions) |
-| 0:40–1:05 | Ex 1 · Executive Command Center |
-| 1:05–1:25 | Ex 2 · Deep Research |
-| 1:25–1:35 | Break |
-| 1:35–2:00 | Ex 3 · Navigate websites with Cowork's browser |
-| 2:00–2:30 | Ex 4 · Custom skill |
-| 2:30–2:45 | Ex 5 · Recruiting + reporting |
-| 2:45–2:55 | Break |
-| 2:55–3:15 | Ex 6 · Onboarding pack |
-| 3:15–3:30 | Ex 7 · Automate & share |
-| 3:30–3:35 | Plugins spotlight (talk only) |
-| 3:35–3:55 | Ex 8 · Agent Builder |
-| 3:55–4:00 | Wrap-up |
+| 0:00–0:20 | Welcome, Copilot vs Cowork, UI tour + setup check (attendees sign in and upload before the session) |
+| 0:20–0:35 | Ex 1 · Executive Command Center |
+| 0:35–0:50 | Ex 2 · Deep Research |
+| 0:50–1:05 | Ex 3 · Navigate websites with Cowork's browser |
+| 1:05–1:25 | Ex 4 · Custom skill |
+| 1:25–1:35 | Ex 5 · Recruiting + reporting |
+| 1:35–1:50 | Break (15 min) |
+| 1:50–2:00 | Ex 6 · Onboarding pack |
+| 2:00–2:10 | Ex 7 · Automate & share |
+| 2:10–2:25 | Ex 8 · Agent Builder |
+| 2:25–2:30 | Wrap-up |
+
+The HR plugins read (reference/09) is self-study in the after-the-workshop pack.
 
 - **Generators** live in `tools/` (see [tools/README.md](../tools/README.md)):
   - `build_deck.py` and `content.py`: the instructor deck.
@@ -92,7 +92,6 @@ exercise in Agent Builder.
     Word builds if the colours or wording change.
   - `make_download_hint.py`: the "select the Download icon" tip picture
     (`reference/media/download-hint.png`) used in the guides, emails, and both decks' kit slide.
-  - `make_office_samples.py`: the Word/Excel sample files (not the zip; see Build Instructions).
   - `art/ex1-8.png`: Fluent Emoji pictures for the dividers.
   - `assets/cowork-home.png`: the Cowork home-page screenshot.
   - All paths are relative to the repo. The only external input is the source PowerPoint template,
@@ -102,6 +101,13 @@ exercise in Agent Builder.
 
 Latest work:
 
+- **2½-hour format (October 7):** the agenda is now 150 minutes with one 15-minute break after
+  Exercise 5; all eight exercises stay, shortened (15/15/15/20/10/10/10/15 min). Attendees sign in and
+  upload the sample data before the session (participant email). The plugins spotlight slide and
+  workbook section moved to section 4 of the after-the-workshop pack. **One sample-data zip:** it now
+  lives at `sample-knowledge/zava-sample-knowledge.zip` (moved from `participant/`); the .md/.csv
+  sources and `make_office_samples.py` are gone, so the Word/Excel files are the masters; the
+  whole-kit zip links were removed from the deck and instructor email.
 - **Demo video slides (October 4):** ported from `main` (PR #1) into `build_deck.py`: a **Demo** slide
   after every scenario card, plus one after the Copilot and Cowork UI walkthrough (slide 7) and one
   after Prompting best practices (slide 16). Each has a 16:9 media placeholder, "Watch for" cues, and
@@ -154,7 +160,7 @@ Latest work:
 - **Access** comes from a Cowork spending policy, per Microsoft Learn.
 - **SuccessFactors:** no catalog plugin exists, so the kit points to the Employee Self-Service agent
   extension pack or a custom MCP plugin.
-- **Total time stays 240 minutes.** The repo is private. The divider pictures are Fluent Emoji (MIT,
+- **Total time is 150 minutes with one 15-minute break** (October 7: cut from 240; all eight exercises kept, shortened; sign-in and upload move before the session; the plugins spotlight moved to the after-the-workshop pack). The repo is private. The divider pictures are Fluent Emoji (MIT,
   credited in the README).
 - **Custom skills keep the documented `/Documents/Cowork/skills/` path.** Only the sample-data
   folder moved.
@@ -181,7 +187,7 @@ If the sample Word/Excel files change, rebuild the zip so the six files sit insi
 cd c:\source\ai_hr_cowork_workshop
 $z = New-Item -ItemType Directory -Force "$env:TEMP\zava-zip\ai_hr_cowork_workshop"
 Copy-Item sample-knowledge\*.docx, sample-knowledge\*.xlsx $z -Force
-Compress-Archive -Path $z -DestinationPath participant\zava-sample-knowledge.zip -Force
+Compress-Archive -Path $z -DestinationPath sample-knowledge\zava-sample-knowledge.zip -Force
 Remove-Item "$env:TEMP\zava-zip" -Recurse -Force
 ```
 

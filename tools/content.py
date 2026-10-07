@@ -73,7 +73,7 @@ EXEC_PROMPT = [
 EXERCISES = [
     dict(
         num=1, pill="Ex 01", title="Executive Command Center", short="Executive Command Center", function="Executive",
-        minutes="25 min",
+        minutes="15 min",
         goal="Turn your calendar, communications, and priority work into a daily executive view of decisions, "
              "risks, and actions requiring attention.",
         output="An interactive executive command center covering meetings, priorities, and org pulse, with labeled "
@@ -99,12 +99,12 @@ EXERCISES = [
         checkpoint="An HTML command center opened from the Output folder and found in OneDrive \u2192 Cowork, a "
                    "saved skill, and a weekday schedule. Pause it after class.",
         stretch="Make an HR Leader variant with a view for open requisitions and HR ticket trends.",
-        notes_card="EXERCISE 1 CARD (0:40-1:05, 25 min). SAY: 'Watch one prompt gather signals, build a dashboard, save itself as a skill, and schedule itself.' APPROVALS FIRST: this is the first exercise where Cowork asks permission (saving the skill, creating the schedule). Point back to the approvals slide: one at a time, no Approve All. It previews Ex 4 (skills) and Ex 7 (Automations). Read the guardrail in the prompt aloud: workstreams, not people.",
+        notes_card="EXERCISE 1 CARD (0:20-0:35, 15 min). SAY: 'Watch one prompt gather signals, build a dashboard, save itself as a skill, and schedule itself.' APPROVALS FIRST: this is the first exercise where Cowork asks permission (saving the skill, creating the schedule). Point back to the approvals slide: one at a time, no Approve All. It previews Ex 4 (skills) and Ex 7 (Automations). Read the guardrail in the prompt aloud: workstreams, not people.",
         notes_hands="EXERCISE 1 HANDS-ON. DO: show how to fill [Priority Folder] (their own priority-documents folder, or Documents/ai_hr_cowork_workshop) and [time] (e.g., 8:00 AM), then start your demo. WATCH FOR: Work IQ gathering; the HTML file in the Output folder; in YOUR seeded demo, the Thursday conflict and T-2008 (seed-content.md). Attendees run it on their own mail, calendar, and Teams: results vary and stay private, so debrief on the pattern, never ask them to share screens; a quiet week gives a light dashboard. SLOW DOWN at step 3: the next slide walks the Output folder. CLEANUP: skill stays 'Only you'; pause or delete the weekday schedule after class. NEXT: Output folder slide, then Deep Research.",
     ),
     dict(
         num=2, pill="Ex 02", title="Research the Web with Deep Research", short="Deep Research",
-        function="HR \u00b7 Talent", minutes="20 min",
+        function="HR \u00b7 Talent", minutes="15 min",
         goal="Get an evidence-based view of structured behavioral interviewing and turn it into questions for a "
              "real open role.",
         output="A cited one-page briefing, five tailored questions for Zava\u2019s HR Coordinator role, and an "
@@ -136,12 +136,12 @@ EXERCISES = [
         checkpoint="A cited briefing, five tailored questions, and a Word + Excel interviewer scorecard with every "
                    "scale filled in.",
         stretch="Benchmark PTO / annual-leave norms for mid-size tech firms against the Zava handbook.",
-        notes_card="EXERCISE 2 CARD (1:05-1:25, 20 min). SAY: 'Deep Research reads many web sources and cites them, then we make it useful by grounding it in our own job description and turning it into documents.' Point out the three stages on the card: research, ground, build (Word + Excel). Next exercise shows the OTHER way Cowork uses the web: driving a browser.",
-        notes_hands="EXERCISE 2 HANDS-ON. DO: start Deep Research on your screen first (it takes a few minutes), then the room starts theirs. Use the wait: 'When is web research better than our own content, and when is it riskier?' WATCH FOR: the Deep Research chip; citations that open; Word and Excel chips for the scorecard. IF STUCK: blank scales -> reply 'Fill in the 1, 3, and 5 anchors for every competency.' Only one file -> 'Also create the Excel version.' TIME CHECK: at 1:20, demo the scorecard follow-up on your screen if most are still researching. NEXT: break, then the browser.",
+        notes_card="EXERCISE 2 CARD (0:35-0:50, 15 min). SAY: 'Deep Research reads many web sources and cites them, then we make it useful by grounding it in our own job description and turning it into documents.' Point out the three stages on the card: research, ground, build (Word + Excel). Next exercise shows the OTHER way Cowork uses the web: driving a browser.",
+        notes_hands="EXERCISE 2 HANDS-ON. DO: start Deep Research on your screen first (it takes a few minutes), then the room starts theirs. Use the wait: 'When is web research better than our own content, and when is it riskier?' WATCH FOR: the Deep Research chip; citations that open; Word and Excel chips for the scorecard. IF STUCK: blank scales -> reply 'Fill in the 1, 3, and 5 anchors for every competency.' Only one file -> 'Also create the Excel version.' TIME CHECK: at 0:45, demo the scorecard follow-up on your screen if most are still researching. NEXT: the browser.",
     ),
     dict(
         num=3, pill="Ex 03", title="Navigate Websites with Cowork\u2019s Browser", short="Browser",
-        function="HR \u00b7 Compliance", minutes="25 min",
+        function="HR \u00b7 Compliance", minutes="15 min",
         goal="Have Cowork drive a real web browser for you \u2014 search a site, click through, move to a second "
              "site \u2014 and bring back a sourced comparison.",
         output="An overtime comparison (U.S. DOL vs. Washington L&I vs. Zava handbook) with a link to every page "
@@ -179,12 +179,12 @@ EXERCISES = [
         checkpoint="Two sites navigated by search and menus, a comparison table linking the DOL fact sheet and the "
                    "Washington L&I overtime page, and a Word brief about T-2008.",
         stretch="Step through the DOL FLSA Overtime Security Advisor, with Cowork telling you each answer before it clicks.",
-        notes_card="EXERCISE 3 CARD (1:35-2:00, 25 min). SAY: 'This is Cowork driving a real browser, like a person or a test tool such as Playwright: it types in a site's search box, clicks links and menus, and moves to another site. There's no browser skill to pick and no skill chip; ask for something that needs a website and Cowork opens a hidden tab in your own Edge, with your sign-ins and your company's policies.' Contrast with Deep Research (reads and cites) from Ex 2.",
-        notes_hands="EXERCISE 3 HANDS-ON. DO: demo first. Show the consent notice (I understand), the progress chips, and Switch to tab so the room sees Edge typing in the DOL search box and clicking through to Fact Sheet #23, then lni.wa.gov. WATCH FOR: a table showing Zava's 1.5x over 40 hours matches federal and Washington rules; DOL adds the regular-payday rule; Washington adds no waiver and no daily overtime; links to both pages. IF STUCK: 'Browser tasks run in Microsoft Edge' -> wrong browser; no browser at all -> Edge profile isn't their work account, InPrivate, the Edge setting is off, or the admin hasn't allowed browser access (reference/10-cowork-browser.md). They follow your demo. TIME CHECK: at 1:55 skip 3b and demo it. NEXT: 'You've used built-in skills and the browser. Now build your own skill.'",
+        notes_card="EXERCISE 3 CARD (0:50-1:05, 15 min). SAY: 'This is Cowork driving a real browser, like a person or a test tool such as Playwright: it types in a site's search box, clicks links and menus, and moves to another site. There's no browser skill to pick and no skill chip; ask for something that needs a website and Cowork opens a hidden tab in your own Edge, with your sign-ins and your company's policies.' Contrast with Deep Research (reads and cites) from Ex 2.",
+        notes_hands="EXERCISE 3 HANDS-ON. DO: demo first. Show the consent notice (I understand), the progress chips, and Switch to tab so the room sees Edge typing in the DOL search box and clicking through to Fact Sheet #23, then lni.wa.gov. WATCH FOR: a table showing Zava's 1.5x over 40 hours matches federal and Washington rules; DOL adds the regular-payday rule; Washington adds no waiver and no daily overtime; links to both pages. IF STUCK: 'Browser tasks run in Microsoft Edge' -> wrong browser; no browser at all -> Edge profile isn't their work account, InPrivate, the Edge setting is off, or the admin hasn't allowed browser access (reference/10-cowork-browser.md). They follow your demo. TIME CHECK: at 1:00 skip 3b and demo it. NEXT: 'You've used built-in skills and the browser. Now build your own skill.'",
     ),
     dict(
         num=4, pill="Ex 04", title="Build a Custom Skill: HR Policy Answer", short="Custom Skill",
-        function="HR \u00b7 Policy", minutes="30 min",
+        function="HR \u00b7 Policy", minutes="20 min",
         goal="Teach Cowork to answer policy and benefits questions the same clear, sourced way \u2014 every time.",
         output="A saved custom skill, \u201cHR Policy Answer,\u201d with a quality score, that triggers on policy "
                "questions and answers Answer \u2192 Details \u2192 Source \u2192 \u201cconfirm with HR.\u201d",
@@ -223,12 +223,12 @@ EXERCISES = [
         checkpoint="Your skill scores Good or better, triggers on its own, follows the format, and declines "
                    "out-of-scope questions.",
         stretch="Add a rule to link to the HR portal whenever a change requires a form.",
-        notes_card="EXERCISE 4 CARD (2:00-2:30, 30 min) - CENTERPIECE. SAY: 'In Ex 1 a skill was saved for you from a prompt. Now you build one on purpose and Cowork grades it.' Explain why a skill beats re-typing instructions: same format, sources, and guardrails every time. Scoring bands: Excellent 85+, Good 70-84, Needs work 50-69, Poor <50.",
+        notes_card="EXERCISE 4 CARD (1:05-1:25, 20 min) - CENTERPIECE. SAY: 'In Ex 1 a skill was saved for you from a prompt. Now you build one on purpose and Cowork grades it.' Explain why a skill beats re-typing instructions: same format, sources, and guardrails every time. Scoring bands: Excellent 85+, Good 70-84, Needs work 50-69, Poor <50.",
         notes_hands="EXERCISE 4 HANDS-ON. DO: build it live from Customize -> Skills -> Add -> Create new; paste the instructions; read the evaluation ALOUD and name the four dimensions (trigger clarity, instruction specificity, scope boundaries, robustness). Then test both questions. WATCH FOR: the skill triggering WITHOUT being named; Answer -> Details -> Source -> confirm-with-HR; the salary question declined. IF STUCK: 'Needs work' -> tighten trigger wording and the out-of-scope list; wrong facts -> check the two file names in the instructions match their OneDrive. Keep skills 'Only you'. Answer key: facilitator-answer-key.md and skills/hr-policy-answer/SKILL.md. NEXT: 'This skill helps YOU. In Ex 8 we build an agent that helps OTHERS.'",
     ),
     dict(
         num=5, pill="Ex 05", title="Recruiting + Reporting", short="Recruiting + Reporting",
-        function="HR \u00b7 Talent & Ops", minutes="15 min",
+        function="HR \u00b7 Talent & Ops", minutes="10 min",
         goal="Attract the right candidates for an open role and get on top of the HR service queue in minutes.",
         output="An inclusive HR Coordinator job posting in Word, with off-putting wording flagged, and a ticket "
                "summary highlighting today\u2019s high-priority open items.",
@@ -259,12 +259,12 @@ EXERCISES = [
         checkpoint="A Word job posting with a wording-review table, and a ticket summary: 6 open / 14 closed, with "
                    "T-2008 as the only high-priority open ticket.",
         stretch="Summarize employee-roster-sample.xlsx: headcount by department, remote vs. on-site, average PTO used.",
-        notes_card="EXERCISE 5 CARD (2:30-2:45, 15 min). SAY: 'Two quick wins. In Ex 2 we prepared to interview for the HR Coordinator role; now we write the posting that attracts the right candidates. Then we get on top of the ticket queue.' Point out that Cowork picks Word for writing and Excel for analysis on its own.",
+        notes_card="EXERCISE 5 CARD (1:25-1:35, 10 min). SAY: 'Two quick wins. In Ex 2 we prepared to interview for the HR Coordinator role; now we write the posting that attracts the right candidates. Then we get on top of the ticket queue.' Point out that Cowork picks Word for writing and Excel for analysis on its own.",
         notes_hands='EXERCISE 5 HANDS-ON. DO: run 5a and 5b back to back; attendees can start 5b while 5a is still working. WATCH FOR: 5a -> a posting under 350 words with the hybrid schedule, plus a wording-review table (e.g., degree requirement, years of experience framed as must-haves); discuss whether every flag is fair. 5b -> 6 open / 14 closed, T-2008 as the ONLY high-priority open ticket. TRAP: T-2003 and T-2013 are High but Closed; listing them means Status was ignored. IF STUCK: wrong counts -> ask Cowork to show the table it counted from. NEXT: break, then they automate this report in Ex 7.',
     ),
     dict(
         num=6, pill="Ex 06", title="Onboarding Orientation Pack", short="Onboarding Pack",
-        function="HR \u00b7 Onboarding", minutes="20 min",
+        function="HR \u00b7 Onboarding", minutes="10 min",
         goal="Give a new hire a polished first-day experience without assembling it by hand.",
         output="A 6\u20138 slide orientation deck, a scheduled kickoff with a Teams link, and a team announcement "
                "draft for Sofia Alvarez, Zava\u2019s new HR Coordinator.",
@@ -296,12 +296,12 @@ EXERCISES = [
                "Your real calendar: invite only yourself", "Short on time? Do 6a + 6c; watch 6b as a demo"],
         checkpoint="An orientation deck, a reviewed kickoff invite, and a team announcement draft for Sofia Alvarez.",
         stretch="Turn the orientation deck into a one-page PDF handout.",
-        notes_card="EXERCISE 6 CARD (2:55-3:15, 20 min). SAY: 'Sofia Alvarez accepted the HR Coordinator role and starts next Monday. Let's get her first day ready.' This is the story arc from Ex 2 (interview) and Ex 5 (posting). Several built-in skills chain together: PowerPoint, Scheduling, Communications. Call out each new skill chip.",
+        notes_card="EXERCISE 6 CARD (1:50-2:00, 10 min). SAY: 'Sofia Alvarez accepted the HR Coordinator role and starts next Monday. Let's get her first day ready.' This is the story arc from Ex 2 (interview) and Ex 5 (posting). Several built-in skills chain together: PowerPoint, Scheduling, Communications. Call out each new skill chip.",
         notes_hands="EXERCISE 6 HANDS-ON. DO: 6a first (the deck takes longest), then 6b and 6c while it builds. WATCH FOR: PowerPoint, Scheduling/Calendar, and Communications chips; an approval dialog before the invite is sent; the announcement saved as a draft, not sent. SAFETY: invite yourself only; Sofia is fictional and has no account. IF STUCK: no Teams link -> ask Cowork to add one before approving. TIME CHECK: short on time, do 6a + 6c and watch 6b as a demo. NEXT: 'Now let's stop re-asking for the same work.'",
     ),
     dict(
         num=7, pill="Ex 07", title="Automate & Share", short="Automate & Share", function="HR \u00b7 Operations",
-        minutes="15 min",
+        minutes="10 min",
         goal="Stop re-asking for the same work \u2014 put it on a schedule and share what you built.",
         output="An active weekly automation (Monday HR-ticket digest), a Daily Briefing, and your custom skill shared "
                "(or kept private) and re-shared after an edit.",
@@ -334,12 +334,12 @@ EXERCISES = [
         checkpoint="An active weekly schedule with a completed run naming T-2008, a Daily Briefing, and the "
                    "share / re-share flow completed.",
         stretch="Send the Monday digest as an email draft to your manager instead of a report.",
-        notes_card="EXERCISE 7 CARD (3:15-3:30, 15 min). SAY: 'You built a skill and a report. Now put recurring work on a schedule and share what you built.' They already created one schedule in Ex 1; now they see where schedules live and how to control them.",
-        notes_hands="EXERCISE 7 HANDS-ON. DO: create the Automation live; choose 'Activate and run now'; show Runs vs Manage schedules (edit, pause, resume, delete). Demo a Daily Briefing, then Share / Re-share on the Ex 4 skill. WATCH FOR: an Active schedule and a completed run naming T-2008. IF STUCK: run can't find the file -> the prompt must name the exact file and folder. Sharing stays inside the attendee tenant: 'Only you' or initialed names. TIME CHECK: 7a is the must-do; 7b and 7c can be demo-only. NEXT: the plugins spotlight.",
+        notes_card="EXERCISE 7 CARD (2:00-2:10, 10 min). SAY: 'You built a skill and a report. Now put recurring work on a schedule and share what you built.' They already created one schedule in Ex 1; now they see where schedules live and how to control them.",
+        notes_hands="EXERCISE 7 HANDS-ON. DO: create the Automation live; choose 'Activate and run now'; show Runs vs Manage schedules (edit, pause, resume, delete). Demo a Daily Briefing, then Share / Re-share on the Ex 4 skill. WATCH FOR: an Active schedule and a completed run naming T-2008. IF STUCK: run can't find the file -> the prompt must name the exact file and folder. Sharing stays inside the attendee tenant: 'Only you' or initialed names. TIME CHECK: 7a is the must-do; 7b and 7c can be demo-only. NEXT: Agent Builder, the non-Cowork finale.",
     ),
     dict(
         num=8, pill="Ex 08", title="HR Policy Agent with Agent Builder", short="HR Policy Agent",
-        function="Agent Builder", minutes="20 min", why_label="Agent Builder",
+        function="Agent Builder", minutes="15 min", why_label="Agent Builder",
         goal="Stand up a reusable Q&A agent employees can chat with to get sourced policy answers.",
         output="A working \u201cHR Policy Agent\u201d in Microsoft 365 Copilot, grounded in Zava\u2019s HR documents, that "
                "cites sources and declines out-of-scope questions.",
@@ -371,7 +371,7 @@ EXERCISES = [
                "Skill (Ex 4) helps you; this agent helps others", "New files show \u201cPreparing\u201d for a few minutes"],
         checkpoint="A working HR Policy Agent that gives grounded, sourced answers and declines out-of-scope questions.",
         stretch="Add the onboarding checklist as a third knowledge source and a new-hire suggested prompt.",
-        notes_card="EXERCISE 8 CARD (3:35-3:55, 20 min) - NON-COWORK CAPSTONE. SAY: 'Everything so far helped YOU. Now we build something OTHER people can use: an agent, in Microsoft 365 Copilot's Agent Builder.' Same no-code spirit, different tool: a persistent, shareable agent grounded in the same Zava files.",
+        notes_card="EXERCISE 8 CARD (2:10-2:25, 15 min) - NON-COWORK CAPSTONE. SAY: 'Everything so far helped YOU. Now we build something OTHER people can use: an agent, in Microsoft 365 Copilot's Agent Builder.' Same no-code spirit, different tool: a persistent, shareable agent grounded in the same Zava files.",
         notes_hands="EXERCISE 8 HANDS-ON. DO: build live via Describe -> Configure -> Try it; add the two Zava Word files as KNOWLEDGE; test the open-enrollment question (sourced answer) and the salary question (declines). WATCH FOR: files showing 'Preparing' for a few minutes; .md or .csv files are rejected. IF STUCK: answers ignore the files -> wait, or refresh Knowledge in Configure; no Create agent -> desktop/web Microsoft 365 Copilot with a license. External ACTIONS need Copilot Studio (out of scope). TIME CHECK: if behind, run it as a demo and have attendees build it after class. Detail: reference/08-agent-builder-policy-agent.md. NEXT: wrap-up.",
     ),
 ]

@@ -57,7 +57,7 @@ Where you make Cowork **yours**. The page has three tabs:
   sharing.
 - **Plugins** — the plugins you or your admin installed (each with an on/off toggle), plus **Discover**
   for plugins from the Microsoft 365 App Store. Plugins connect Cowork to systems such as payroll or
-  recruiting. See [09-plugins.md](09-plugins.md) for the HR plugins spotlight and a screenshot.
+  recruiting. See [09-plugins.md](09-plugins.md) for more on HR plugins and a screenshot.
 
 ## The session side panel (while a task runs)
 

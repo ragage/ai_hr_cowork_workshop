@@ -1,7 +1,7 @@
-# 09 · Extend Cowork with HR Plugins (Spotlight)
+# 09 · Extend Cowork with HR Plugins (Self-study)
 
 > Reference sheet for the "Getting Things Done with Copilot Cowork for HR Tasks" workshop.
-> **Talk-only spotlight, not a hands-on exercise.** It shows how plugins connect Cowork to the HR
+> **Self-study, not part of the live session** (it's in the after-the-workshop pack). It shows how plugins connect Cowork to the HR
 > systems you already use, and where you manage them on the **Customize** page.
 
 ## What a plugin is

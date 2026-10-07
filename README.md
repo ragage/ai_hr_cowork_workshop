@@ -1,7 +1,7 @@
 # Getting Things Done with Copilot Cowork for HR Tasks
-### A 4-hour, hands-on workshop kit for HR teams
+### A 2½-hour, hands-on workshop kit for HR teams
 
-This kit contains everything you need to run (or attend) a 4-hour, hands-on workshop that teaches
+This kit contains everything you need to run (or attend) a 2½-hour, hands-on workshop that teaches
 **HR professionals** how to use **Microsoft Copilot Cowork** — no code required — for everyday HR
 work: onboarding, policy and benefits Q&A, recruiting and interview prep, employee communications,
 and reporting.
@@ -52,25 +52,27 @@ the Exercise 3 browser task. Attendees need a **laptop/desktop** with **Microsof
 later) signed in with their work account (custom skills and browser tasks aren't supported on mobile). Full details and a host checklist:
 [readiness-checklist.md](instructor/readiness-checklist.md).
 
-## Agenda (240 minutes)
+## Agenda (2½ hours)
 
 | Time | Segment |
 | --- | --- |
-| 10 min | Welcome & context — what Cowork is, HR value, the approval model |
-| 10 min | **Copilot vs. Cowork** — the difference and when to use which |
-| 20 min | **Cowork UI walkthrough** + setup — New task, My tasks, Automations, Customize, sign in, copy data |
-| 25 min | **Exercise 1** — Executive Command Center (interactive HTML dashboard; approvals one at a time) |
-| 20 min | **Exercise 2** — Research the web with Deep Research (cited briefing + Word/Excel scorecard) |
-| 10 min | Break |
-| 25 min | **Exercise 3** — Navigate websites with Cowork's browser (search and click through dol.gov and lni.wa.gov in Edge) |
-| 30 min | **Exercise 4** — Build your own custom skill ("HR Policy Answer") |
-| 15 min | **Exercise 5** — Recruiting + reporting mini-lab |
-| 10 min | Break |
-| 20 min | **Exercise 6** — Onboarding pack (PowerPoint + Scheduling + Communications) |
-| 15 min | **Exercise 7** — Automate & share (Automations, Daily Briefing, skill sharing) |
-| 5 min | **Spotlight** — Extend Cowork with HR plugins (Customize → Plugins; talk only, no hands-on) |
-| 20 min | **Exercise 8** — Build a Policy Agent with **Copilot Agent Builder** (non-Cowork) |
+| 5 min | Welcome & context — what Cowork is, HR value, the approval model |
+| 5 min | **Copilot vs. Cowork** — the difference and when to use which |
+| 10 min | **Cowork UI walkthrough** + setup check — New task, My tasks, Automations, Customize (attendees sign in and upload the sample files before the session) |
+| 15 min | **Exercise 1** — Executive Command Center (interactive HTML dashboard; approvals one at a time) |
+| 15 min | **Exercise 2** — Research the web with Deep Research (cited briefing + Word/Excel scorecard) |
+| 15 min | **Exercise 3** — Navigate websites with Cowork's browser (search and click through dol.gov and lni.wa.gov in Edge) |
+| 20 min | **Exercise 4** — Build your own custom skill ("HR Policy Answer") |
+| 10 min | **Exercise 5** — Recruiting + reporting mini-lab |
+| 15 min | Break |
+| 10 min | **Exercise 6** — Onboarding pack (PowerPoint + Scheduling + Communications) |
+| 10 min | **Exercise 7** — Automate & share (Automations, Daily Briefing, skill sharing) |
+| 15 min | **Exercise 8** — Build a Policy Agent with **Copilot Agent Builder** (non-Cowork) |
 | 5 min | Wrap-up — best practices & next steps |
+
+The pace is brisk: the facilitator plays a short **demo video** before each exercise instead of waiting
+on long Cowork runs, and the **HR plugins** read (Customize → Plugins) is in the
+[after-the-workshop pack](participant/after-the-workshop.md) for self-study.
 
 ## What's in this kit
 
@@ -84,14 +86,15 @@ later) signed in with their work account (custom skills and browser tasks aren't
 
 The kit is organized by audience:
 
-- **[participant/](participant)** — what attendees use: the workbook, the quick-reference card, the
-  sample-data zip, and the after-the-workshop pack.
+- **[participant/](participant)** — what attendees use: the workbook, the quick-reference card, and the
+  after-the-workshop pack.
 - **[instructor/](instructor)** — what the facilitator and host use: the instructor deck, facilitator
   guide, answer key, readiness checklist, and the facilitator's demo seed content.
 - **[communication/](communication)** — what you send out: the training overview deck and paste-ready
   Outlook emails for participants and instructors.
-- **[reference/](reference)**, **[skills/](skills)**, and **[sample-knowledge/](sample-knowledge)** —
-  background guides, the example custom skill, and the editable sample data.
+- **[sample-knowledge/](sample-knowledge)** — the **only** place for the Zava sample data: the six Word and
+  Excel files, and **one zip** with all six for attendees to download.
+- **[reference/](reference)** and **[skills/](skills)** — background guides and the example custom skill.
 
 > **Downloading a file from GitHub:** if a link opens the file on GitHub instead of downloading it,
 > select the **Download** icon (**Download raw file**) at the top right of the file.
@@ -102,7 +105,7 @@ The kit is organized by audience:
 | --- | --- | --- |
 | README | [.md](README.md) · [.docx](README.docx) | This overview |
 | summary/PROJECT-SUMMARY | [.md](summary/PROJECT-SUMMARY.md) (maintainers only) | Handoff notes: status, architecture, decisions, how to build and test, remaining work |
-| [instructor/instructor-deck.pptx](instructor/instructor-deck.pptx) | pptx | Instructor deck (57 slides, speaker notes, alt text) — a **prompting best-practices slide** (Goal, Source, Expectations, Constraints, with a weak vs. strong HR prompt), a divider slide with a picture and progress tracker before each exercise, one PowerPoint section per exercise for quick navigation, objectives, approvals, a **workshop kit slide with download links** for participants and instructors, a scenario card, **demo video slide** (an empty video frame for your recording), and hands-on slide per exercise (its speaker notes carry the full prompt, ready to copy), demo video slides for the UI walkthrough and the prompting slide, an Output folder walkthrough, an HR plugins spotlight, and a knowledge check |
+| [instructor/instructor-deck.pptx](instructor/instructor-deck.pptx) | pptx | Instructor deck (55 slides, speaker notes, alt text) — a **prompting best-practices slide** (Goal, Source, Expectations, Constraints, with a weak vs. strong HR prompt), a divider slide with a picture and progress tracker before each exercise, one PowerPoint section per exercise for quick navigation, objectives, approvals, a **workshop kit slide with download links** for participants and instructors, a scenario card, **demo video slide** (an empty video frame for your recording), and hands-on slide per exercise (its speaker notes carry the full prompt, ready to copy), demo video slides for the UI walkthrough and the prompting slide, an Output folder walkthrough, and a knowledge check |
 | [communication/training-overview.pptx](communication/training-overview.pptx) | pptx | Training overview deck (8 slides) for HR leaders and prospective attendees — what the training is, objectives, agenda, the eight exercises, what to prepare, and the same **download links** slide |
 | [communication/participant-email.html](communication/participant-email.html) | html | Paste-ready Outlook invitation for attendees: session details, what to bring, and links to the workbook, sample data, and handouts |
 | [communication/instructor-email.html](communication/instructor-email.html) | html | Paste-ready Outlook email for the instructor: links to every kit asset, the preparation timeline, and key reminders |
@@ -122,17 +125,16 @@ The kit is organized by audience:
 | reference/06-responsible-use | [.md](reference/06-responsible-use.md) · [.docx](reference/06-responsible-use.docx) | Data handling and responsible-use rules |
 | reference/07-cowork-ui-walkthrough | [.md](reference/07-cowork-ui-walkthrough.md) · [.docx](reference/07-cowork-ui-walkthrough.docx) | UI tour — New task, My tasks, Automations, Customize |
 | reference/08-agent-builder-policy-agent | [.md](reference/08-agent-builder-policy-agent.md) · [.docx](reference/08-agent-builder-policy-agent.docx) | Build a Policy Agent with Copilot Agent Builder (Exercise 8) |
-| reference/09-plugins | [.md](reference/09-plugins.md) · [.docx](reference/09-plugins.docx) | Spotlight: extend Cowork with HR plugins (Customize → Plugins), with an MCP example for IT |
+| reference/09-plugins | [.md](reference/09-plugins.md) · [.docx](reference/09-plugins.docx) | Self-study: extend Cowork with HR plugins (Customize → Plugins), with an MCP example for IT |
 | reference/10-cowork-browser | [.md](reference/10-cowork-browser.md) · [.docx](reference/10-cowork-browser.docx) | Navigate websites with Cowork's browser: what it is, how to turn it on, troubleshooting (Exercise 3) |
 | skills/hr-policy-answer/SKILL | [.md](skills/hr-policy-answer/SKILL.md) (used by Cowork) · [.docx](skills/hr-policy-answer.SKILL.docx) (read-only copy) | Example custom skill (reference/answer key) |
-| [sample-knowledge/](sample-knowledge) | folder | Fictional *Zava* HR data: the Word/Excel files used in the exercises, plus their editable .md/.csv sources |
-| [participant/zava-sample-knowledge.zip](participant/zava-sample-knowledge.zip) | zip | The six Word and Excel sample files in an `ai_hr_cowork_workshop` folder, ready to upload to OneDrive |
+| [sample-knowledge/](sample-knowledge) | folder | Fictional *Zava* HR data: the six Word/Excel files used in the exercises, and [zava-sample-knowledge.zip](sample-knowledge/zava-sample-knowledge.zip), the **one download** for attendees (all six in an `ai_hr_cowork_workshop` folder, ready to upload to OneDrive) |
 
 ### Sample data (all fictional — no real PII)
 
 The exercises use the **Word and Excel** sample files (Exercise 1 also reads each attendee's own mail and
 calendar). They work in both Cowork and Agent Builder
-(which doesn't accept .md or .csv). Download **[zava-sample-knowledge.zip](participant/zava-sample-knowledge.zip)**
+(which doesn't accept .md or .csv). Download **[zava-sample-knowledge.zip](sample-knowledge/zava-sample-knowledge.zip)**
 to get all six at once. It extracts to a folder named **`ai_hr_cowork_workshop`**; upload that folder
 to **Documents** in your OneDrive (`Documents/ai_hr_cowork_workshop`). The prompts use that path.
 
@@ -145,9 +147,9 @@ to **Documents** in your OneDrive (`Documents/ai_hr_cowork_workshop`). The promp
 | [employee-roster-sample.xlsx](sample-knowledge/employee-roster-sample.xlsx) | 20 fictional employees | Ex 5 (stretch) |
 | [hr-tickets-sample.xlsx](sample-knowledge/hr-tickets-sample.xlsx) | 20 fictional HR tickets | Ex 1 (stretch), 5, 7 |
 
-> **Editing the sample data?** The `.md` and `.csv` files in `sample-knowledge/` are the editable
-> sources the Word and Excel files are generated from. Attendees don't need them, and they aren't in
-> the zip. If you change one, regenerate its Word or Excel copy so the two stay in sync.
+> **Editing the sample data?** The Word and Excel files in `sample-knowledge/` are the master copies:
+> edit them directly, then rebuild the zip ([how](summary/PROJECT-SUMMARY.md#build-instructions)) so
+> attendees always download one zip that matches.
 
 ## How to use this kit
 
@@ -184,7 +186,7 @@ to **Documents** in your OneDrive (`Documents/ai_hr_cowork_workshop`). The promp
   websites in Microsoft Edge**, searching and clicking through two sites (Exercise 3)
 - ✅ Using **Automations** for recurring HR work (Exercises 1 & 7)
 - ✅ A **non-Cowork** finale: build a Policy Agent with **Copilot Agent Builder** (Exercise 8)
-- ✅ A talk-only **HR plugins spotlight** on **Customize → Plugins**, with a screenshot and benefits
+- ✅ An **HR plugins** read on **Customize → Plugins** for self-study in the after-the-workshop pack
 - ✅ Every exercise introduced with a **scenario card** (workbook + deck)
 - ✅ **Learning objectives**, a verified **answer key**, facilitator **demo seed data**, a prep **timeline** with cost
   planning and **Plan B**, a **knowledge check**, and a **30-day adoption plan**

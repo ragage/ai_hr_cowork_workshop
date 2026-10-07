@@ -18,7 +18,7 @@ DECK_SUBJECT = "Training overview"
 # 1 — Title
 mark_section("Overview")
 s = title_slide("Getting Things Done with Copilot Cowork for HR Tasks",
-                "Training overview \u00b7 a 4-hour, hands-on workshop for HR teams", title_size=40,
+                "Training overview \u00b7 a 2\u00bd-hour, hands-on workshop for HR teams", title_size=40,
                 lines=["Getting Things Done with Copilot Cowork", "for HR Tasks"])
 notes(s, "TRAINING OVERVIEW. Use this short deck to introduce the workshop to HR leaders, managers, and people "
          "thinking about attending. The instructor deck (instructor/instructor-deck.pptx) is what's presented on "
@@ -30,7 +30,7 @@ wcard(s, 0.55, 1.6, 3.95, 3.35, BLUE, "WHO IT\u2019S FOR",
       bullets(["HR practitioners doing day-to-day operations", "No-code and beginner-friendly",
                "About **25 attendees** per session"], size=15))
 wcard(s, 4.69, 1.6, 3.95, 3.35, PURPLE, "FORMAT",
-      bullets(["**4 hours**, instructor-led and hands-on", "**Eight** scenario-based exercises, two breaks",
+      bullets(["**2\u00bd hours**, instructor-led and hands-on", "**Eight** scenario-based exercises, one 15-minute break",
                "Your **own work account**: your real calendar and mail for Ex 1, fictional Zava files for the rest"], size=15))
 wcard(s, 8.83, 1.6, 3.95, 3.35, GREEN, "THREE TOOLS",
       bullets(["**Copilot Chat** for quick answers", "**Cowork** for multi-step work that ends in a deliverable",
@@ -49,7 +49,7 @@ notes(s, "LEARNING OBJECTIVES. The six outcomes attendees leave with. They mirro
 
 # 4 — Agenda
 s = agenda_slide()
-notes(s, "AGENDA. Four hours: framing and a UI tour with setup, then eight hands-on exercises with two breaks. "
+notes(s, "AGENDA. Two and a half hours: framing and a UI tour with setup, then eight hands-on exercises with one 15-minute break. "
          "Exercise 4 (a custom skill) is the centerpiece; Exercise 8 builds a no-code agent in Agent Builder.")
 
 # 5 — The eight exercises
@@ -95,7 +95,7 @@ notes(s, "BEFORE THE SESSION. Attendees need only a laptop with Edge and their o
 # 7 — Download links
 mark_section("Workshop kit")
 s = kit_links_slide()
-notes(s, "DOWNLOAD LINKS. Everything participants and instructors need, plus the whole kit as one zip. The links "
+notes(s, "DOWNLOAD LINKS. Everything participants and instructors need; the Zava sample data is one zip. The links "
          "point to the kit's private GitHub repo: give people access, or post the files in a shared Teams/SharePoint "
          "folder and share that link instead.")
 

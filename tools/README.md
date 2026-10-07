@@ -13,7 +13,6 @@ Edit the content here (or in the Markdown guides), then rebuild; don't hand-edit
 | `make_quickref.py` | `participant/quick-reference-card.docx` (must stay 1 page) |
 | `make_prompt_key.py` | `reference/media/prompt-key*.png`: the Goal / Source / Expectations / Constraints legend (workbook, prompt library, quick-reference card, deck) |
 | `make_download_hint.py` | `reference/media/download-hint.png` |
-| `make_office_samples.py` | the Word/Excel copies in `sample-knowledge/` (not the zip) |
 | `art/ex1.png`–`ex8.png` | Fluent Emoji pictures for the exercise dividers |
 | `assets/cowork-home.png` | the Cowork home-page screenshot on the "What is Copilot Cowork?" slide |
 
@@ -44,5 +43,6 @@ powershell -ExecutionPolicy Bypass -File tools\finalize_word.ps1
 Other settings: `KIT_REPO` changes the base URL of the download links on the "Workshop kit" slide.
 Build files and previews go to `.build/` (ignored by Git).
 
-If the sample Word/Excel files change, rebuild `participant/zava-sample-knowledge.zip` as described in
+The Word/Excel files in `sample-knowledge/` are the masters (edit them directly). If they change, rebuild
+`sample-knowledge/zava-sample-knowledge.zip` as described in
 [summary/PROJECT-SUMMARY.md](../summary/PROJECT-SUMMARY.md#build-instructions).

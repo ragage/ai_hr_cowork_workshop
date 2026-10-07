@@ -1,7 +1,7 @@
 # Participant Workbook
 ## Getting Things Done with Copilot Cowork for HR Tasks
 
-Welcome! Over the next four hours you'll use **Microsoft Copilot Cowork** to do real work — no code
+Welcome! Over the next two and a half hours you'll use **Microsoft Copilot Cowork** to do real work — no code
 required. You'll build an **executive command center**, research the web, have Cowork **drive a web
 browser** for you, and
 **build your own custom skill** — then finish by building a reusable **agent** with **Copilot Agent
@@ -34,7 +34,10 @@ Builder**.
 
 ---
 
-## Setup (20 minutes, with the UI walkthrough) — do this before Exercise 1
+## Setup (about 10 minutes) — do A and B before the session
+
+> The session is brisk, so please do **A** (sign in) and **B** (copy the sample data) **before the day**,
+> as the invitation email asks. During the session's 10-minute setup check, you'll do **C** and **D**.
 
 ### A. Sign in and smoke test
 1. Sign in with **your own work account**, then open
@@ -50,7 +53,7 @@ Builder**.
 
 ### B. Copy the sample data into your OneDrive
 The facilitator will point you to **`zava-sample-knowledge.zip`** (shared in your tenant, e.g. a
-Teams/SharePoint folder). Put the files in a workshop folder in your **own** OneDrive:
+Teams/SharePoint folder). It's the **only** file you need to download for the sample data. Put the files in a workshop folder in your **own** OneDrive:
 
 > **Downloading from GitHub?** If the link opens the file on GitHub instead of downloading it, select
 > the **Download** icon (**Download raw file**) at the top right of the file.
@@ -94,12 +97,12 @@ The left navigation has four places you'll use today:
   picker**, **reasoning effort**, attach (+), and *"Try these next"* starter cards.
 - **My tasks** — find and resume your previous tasks.
 - **Automations** — schedule tasks or run them on events (you'll use this in Exercise 7).
-- **Customize** — custom instructions, your personal skills, and plugins (more in the plugins
-  spotlight before Exercise 8).
+- **Customize** — custom instructions, your personal skills, and plugins (more in the
+  [after-the-workshop pack](after-the-workshop.md#4-go-further-extend-cowork-with-hr-plugins)).
 
 See [reference/07-cowork-ui-walkthrough.md](../reference/07-cowork-ui-walkthrough.md) for the full tour.
 
-### D. Customize instructions for Cowork (3 min)
+### D. Customize instructions for Cowork (1 min)
 Custom instructions are guidance Cowork **automatically adds to the start of every task**, so you
 don't have to repeat your tone, format, or rules in each prompt. Set them once now and they apply
 to every exercise today.
@@ -182,7 +185,7 @@ one of the four. Add it in a follow-up instead of starting over.
 
 ---
 
-## Exercise 1 — Executive Command Center (25 min)
+## Exercise 1 — Executive Command Center (15 min)
 
 > **Scenario card — Ex 01 · Executive Command Center** · Function: **Executive**
 > - **Goal:** Turn your calendar, communications, and priority work into a daily executive view of
@@ -284,7 +287,7 @@ HR ticket trends from `hr-tickets-sample.xlsx`.
 
 ---
 
-## Exercise 2 — Research the web with Deep Research (20 min)
+## Exercise 2 — Research the web with Deep Research (15 min)
 
 > **Scenario card — Ex 02 · Research the Web with Deep Research** · Function: **HR · Talent
 > acquisition**
@@ -336,14 +339,7 @@ short benchmark I can compare to our handbook. Cite sources.
 
 ---
 
-## ☕ Break (10 min)
-
-Stretch and grab a coffee. Next up: Cowork drives a real web browser for you, then the custom-skill
-build, the centerpiece of the day.
-
----
-
-## Exercise 3 — Navigate websites with Cowork's browser (25 min)
+## Exercise 3 — Navigate websites with Cowork's browser (15 min)
 
 > **Scenario card — Ex 03 · Navigate Websites with Cowork's Browser** · Function: **HR ·
 > Compliance**
@@ -423,7 +419,7 @@ any personal information.
 
 ---
 
-## Exercise 4 — Build your own custom skill (30 min)
+## Exercise 4 — Build your own custom skill (20 min)
 
 > **Scenario card — Ex 04 · Build a Custom Skill: HR Policy Answer** · Function: **HR · Policy &
 > benefits**
@@ -489,7 +485,7 @@ do share to **specific users**, add your **initials** to the skill name first to
 
 ---
 
-## Exercise 5 — Recruiting + reporting mini-lab (15 min)
+## Exercise 5 — Recruiting + reporting mini-lab (10 min)
 
 > **Scenario card — Ex 05 · Recruiting + Reporting** · Function: **HR · Talent & operations**
 > - **Goal:** Attract the right candidates for an open role and get on top of the HR service queue
@@ -538,13 +534,13 @@ department**, **remote vs. on-site**, and **average PTO used**, with a short wri
 
 ---
 
-## ☕ Break (10 min)
+## ☕ Break (15 min)
 
 Stretch and reset. When we're back: an onboarding pack, automations, and the Agent Builder finale.
 
 ---
 
-## Exercise 6 — Onboarding orientation pack (20 min)
+## Exercise 6 — Onboarding orientation pack (10 min)
 
 > **Scenario card — Ex 06 · Onboarding Orientation Pack** · Function: **HR · Onboarding**
 > - **Goal:** Give a new hire a polished first-day experience without assembling it by hand.
@@ -593,7 +589,7 @@ before it goes out?
 
 ---
 
-## Exercise 7 — Automate & share (15 min)
+## Exercise 7 — Automate & share (10 min)
 
 > **Scenario card — Ex 07 · Automate & Share** · Function: **HR · Operations**
 > - **Goal:** Stop re-asking for the same work — put it on a schedule and share what you built.
@@ -640,44 +636,7 @@ report.
 
 ---
 
-## 🔌 Spotlight — Extend Cowork with HR plugins (5 min, no hands-on)
-
-You've packaged your own work as a **skill** and put it on a **schedule**. **Plugins** extend Cowork
-further, into the **HR systems you already use**: payroll, recruiting, scheduling, or your HR
-system. This is a short talk by the facilitator; there's nothing to do on your own screen.
-
-![The Cowork Customize page with the Plugins tab selected, showing installed plugins with on/off toggles.](../reference/media/customize-plugins.png)
-
-*Customize → Plugins (screenshot: Microsoft Learn). HR plugins appear in the same **Installed** list
-once your admin adds them.*
-
-- **What:** a plugin adds **skills** (HR know-how) and/or **connectors** to systems outside
-  Microsoft 365. Connectors can be **MCP servers**.
-- **Where:** **Customize → Plugins**. **Installed** plugins have on/off toggles; the detail page shows
-  what each one connects to; **Discover** lists plugins your admin made available.
-- **HR examples:** **Gusto** (payroll, employee records, benefits enrollment), **ZipRecruiter** and
-  **Dice.com** (job listings), **Cronofy MCP** (interview scheduling across real calendar
-  availability), **Articulate** (training course outlines), or your organization's **own HR system**
-  connected through an MCP server. Full list:
-  [Available plugins for Copilot Cowork](https://learn.microsoft.com/en-us/microsoft-365/copilot/cowork/cowork-available-plugins).
-- **⭐ SAP SuccessFactors?** No SuccessFactors plugin is in the Cowork catalog yet. Today, use the
-  **Employee Self-Service agent** with its SAP SuccessFactors extension pack, or have IT build a
-  **custom plugin** with an MCP connector. Details in
-  [reference/09-plugins.md](../reference/09-plugins.md#hr-plugins-you-can-use-today).
-- **Imagine:** "Which open tickets in `hr-tickets-sample.xlsx` are payroll issues? Check each
-  employee's latest pay run and draft a reply." With a payroll plugin, Cowork answers T-2008 from the
-  spreadsheet **and** live payroll data, then waits for your approval.
-- **Why it matters:** fewer copy-and-paste hand-offs between systems; consistent answers across the
-  team; governed by IT (approval, deployment, Purview audit logs); and no extra access, because each
-  connector uses **your own sign-in**.
-
-> Don't add or upload plugins in the shared workshop tenant; most plugins need admin approval.
-> Details, the full example, and how IT can build an HR plugin:
-> [reference/09-plugins.md](../reference/09-plugins.md).
-
----
-
-## Exercise 8 — Build a Policy Agent with Copilot Agent Builder (20 min)
+## Exercise 8 — Build a Policy Agent with Copilot Agent Builder (15 min)
 
 > **Scenario card — Ex 08 · HR Policy Agent** · Function: **Non-Cowork · Copilot Agent Builder**
 > - **Goal:** Stand up a reusable Q&A agent employees can chat with to get sourced policy answers.
@@ -769,4 +728,4 @@ prompt for new hires.
 - Naming clashes when sharing a skill → keep skills **"Only you"** or add your initials to the name
   (everyone's in the same tenant).
 - Finished early → try the **Stretch** prompt at the end of each exercise:
-  [Ex 1](#exercise-1--executive-command-center-25-min) · [Ex 2](#exercise-2--research-the-web-with-deep-research-20-min) · [Ex 3](#exercise-3--navigate-websites-with-coworks-browser-25-min) · [Ex 4](#exercise-4--build-your-own-custom-skill-30-min) · [Ex 5](#exercise-5--recruiting--reporting-mini-lab-15-min) · [Ex 6](#exercise-6--onboarding-orientation-pack-20-min) · [Ex 7](#exercise-7--automate--share-15-min) · [Ex 8](#exercise-8--build-a-policy-agent-with-copilot-agent-builder-20-min).
+  [Ex 1](#exercise-1--executive-command-center-15-min) · [Ex 2](#exercise-2--research-the-web-with-deep-research-15-min) · [Ex 3](#exercise-3--navigate-websites-with-coworks-browser-15-min) · [Ex 4](#exercise-4--build-your-own-custom-skill-20-min) · [Ex 5](#exercise-5--recruiting--reporting-mini-lab-10-min) · [Ex 6](#exercise-6--onboarding-orientation-pack-10-min) · [Ex 7](#exercise-7--automate--share-10-min) · [Ex 8](#exercise-8--build-a-policy-agent-with-copilot-agent-builder-15-min).
