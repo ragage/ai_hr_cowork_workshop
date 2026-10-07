@@ -31,6 +31,10 @@
 - **Approvals:** saving the skill and creating the schedule each showed an approval dialog, approved
   **one at a time**. If an attendee clicked **Approve All** or **Always allow**, have them revoke it in
   the side panel's **Permissions** section.
+- **Cost (`/cost`, optional step):** typed in the same task, it shows the approximate credits this
+  task used, credits used this month, and credits remaining. Numbers vary by run and account. It costs
+  nothing to run, may lag a few minutes behind recent actions, and isn't a billing record. If the
+  remaining balance looks low, the attendee may be on a shared group limit; refer them to the host.
 
 ---
 
@@ -223,6 +227,8 @@ Open tickets to follow up: T-2006 (Benefits), T-2008 (Payroll, **High**), T-2011
 
 ## Exercise 8 — HR Policy Agent (Agent Builder)
 
+- **Not Cowork:** attendees should be in **Microsoft 365 Copilot → Create agent**, not a Cowork task.
+  If someone pastes the Describe text into Cowork, redirect them to Agent Builder.
 - **Knowledge:** `employee-handbook-excerpt.docx` and `benefits-summary.docx` (the same Word files
   used in Cowork). If someone brings their own Markdown or CSV file, it won't be accepted; Agent
   Builder doesn't take .md or .csv.

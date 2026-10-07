@@ -72,7 +72,7 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
 | 0:00–0:05 | **Welcome & context** | Explain what Cowork is, HR value, the approval/checkpoint model | Listen; open Cowork |
 | 0:05–0:10 | **Copilot vs. Cowork** | Draw the assistant-vs-coworker distinction; when to use which | Ask questions; share HR examples |
 | 0:10–0:20 | **Cowork UI walkthrough + setup** | Tour New task, My tasks, Automations, Customize, model picker, reasoning effort; show copying files | Sign in + smoke test + copy sample files + custom instructions |
-| 0:20–0:35 | **Ex 1 — Executive Command Center** | Show the approval dialog (one at a time); walk the scenario card; demo the HTML dashboard; **show the Output folder** (Preview, Download, OneDrive → Cowork); skill save & schedule | Fill placeholders, run the prompt, open the dashboard from the Output folder |
+| 0:20–0:35 | **Ex 1 — Executive Command Center** | Show the approval dialog (one at a time); walk the scenario card; demo the HTML dashboard; **show the Output folder** (Preview, Download, OneDrive → Cowork); skill save & schedule; optional: check the cost with `/cost` | Fill placeholders, run the prompt, open the dashboard from the Output folder |
 | 0:35–0:50 | **Ex 2 — Deep Research (web)** | Demo the cited briefing; demo the optional scorecard | Run Deep Research, ground it in the job description for 5 questions; optional: Word + Excel scorecard |
 | 0:50–1:05 | **Ex 3 — Navigate websites with the browser** | Demo the browser: consent, progress chips, Switch to tab as it searches dol.gov and lni.wa.gov | Run the two-site navigation, check the links; optional: Word brief for payroll |
 | 1:05–1:20 | **Ex 4 — Build a custom skill** | Build "HR Policy Answer" live; read the evaluation aloud | Build, read score, test in/out of scope |
@@ -158,6 +158,13 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
   decisions, not evaluating individual people** — an important norm for HR.
 - **Cleanup:** skill stays **"Only you"**; ask everyone to **pause or delete the weekday schedule**
   after class (Automations → Manage schedules) so it doesn't keep consuming usage.
+- **Optional last step if you're on time: check the cost (about 2 minutes, slide after the Output
+  folder).** In the same task, type **`/cost`**: Cowork shows the approximate credits this task used,
+  credits used this month, and credits remaining. `/cost` itself is free and works on any earlier
+  task. Stress that it's an **estimate, not a bill**, you **can't see the cost before** a task runs,
+  and the schedule they just created uses credits on every run. If you're behind, skip the slide and
+  just mention `/cost` at the break. Source:
+  [Credit usage for Copilot Cowork tasks](https://learn.microsoft.com/microsoft-365/copilot/usage-based-billing-copilot-credits-cost).
 
 ### Ex 2 — Deep Research (0:35–0:50)
 - Deep Research reads and **cites** many web sources; contrast it with a single lookup.
@@ -263,6 +270,9 @@ because it took about 11.
 > example SAP SuccessFactors), point them there.
 
 ### Ex 8 — Agent Builder, non-Cowork (2:10–2:25)
+- **Say it out loud: "This one is not Cowork."** The divider, scenario card, and demo slides carry a
+  **Not Cowork** banner. Attendees close their Cowork task and work in Agent Builder, which has no
+  tasks, side panel, approvals, or skills.
 - Step **outside Cowork**: open Microsoft 365 Copilot → **Create agent** and build the **HR Policy
   Agent** live. See [reference/08-agent-builder-policy-agent.md](../reference/08-agent-builder-policy-agent.md).
 - Make the skill-vs-agent distinction explicit: the Ex 4 skill helps **you**; this **agent** is a

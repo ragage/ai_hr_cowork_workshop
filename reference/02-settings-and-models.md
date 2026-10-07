@@ -31,6 +31,12 @@ The **reasoning effort** setting controls how Cowork balances **quality, speed, 
 Because Cowork runs on **usage-based billing**, higher effort and heavier models generally consume
 more. Match the effort to the task.
 
+**See what a task cost:** type **`/cost`** in any task. Cowork shows the approximate Copilot Credits
+the task has used so far, how many you've used this month, and how many remain. `/cost` itself is
+free. It's an estimate, not a bill, and it only works after a task has run. You can try it as an
+optional last step of Exercise 1. Details:
+[Credit usage for Copilot Cowork tasks](https://learn.microsoft.com/microsoft-365/copilot/usage-based-billing-copilot-credits-cost).
+
 ## Custom instructions
 
 **Custom instructions** are guidance Cowork **automatically adds to the start of every task**. Set them

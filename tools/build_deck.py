@@ -23,10 +23,12 @@ from content import EXERCISES, GUIDE_CARD
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo root (this file is in tools/)
 BUILD = os.path.join(ROOT, ".build")
 os.makedirs(BUILD, exist_ok=True)
-# The source PowerPoint template isn't in the repo; point DECK_TEMPLATE at a local copy.
-TEMPLATE = os.environ.get("DECK_TEMPLATE", "")
+# The source PowerPoint template isn't in the repo; point DECK_TEMPLATE at a local copy
+# or save it as tools/template.pptx (git-ignored).
+TEMPLATE = os.environ.get("DECK_TEMPLATE", os.path.join(ROOT, "tools", "template.pptx"))
 if not os.path.isfile(TEMPLATE):
-    raise SystemExit("Set DECK_TEMPLATE to the path of the source PowerPoint template (.pptx).")
+    raise SystemExit("Set DECK_TEMPLATE to the path of the source PowerPoint template (.pptx), "
+                     "or save it as tools/template.pptx.")
 OUT = os.environ.get("DECK_OUT", os.path.join(ROOT, "instructor", "instructor-deck.pptx"))
 DECK_SUBJECT = "Instructor deck"
 # Download links on the "Workshop kit" slide (both decks); same URLs as the emails in communication/.
@@ -543,6 +545,13 @@ def scenario_card(ex):
             ext = blip.find(qn("a:extLst"))
             if ext is not None:
                 blip.remove(ext)
+    if ex.get("not_cowork"):
+        box(s, 8.75, 3.98, 4.1, 0.5, RED, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.5)
+        text(s, 8.75, 3.98, 4.1, 0.5, [{"runs": [("\u26a0  Not Cowork \u00b7 ", {"size": 13, "bold": True, "color": "FFFFFF",
+                                                                                   "font": SEG_SEMI}),
+                                                 ("this one is Copilot Agent Builder",
+                                                  {"size": 13, "color": "FFFFFF", "font": SEG_DISP})],
+                                        "align": PP_ALIGN.CENTER}], anchor=MSO_ANCHOR.MIDDLE)
     prompt_key(s)
     dedupe_ids(s)
     notes(s, ex["notes_card"])
@@ -649,6 +658,9 @@ def mark_section(name):
     SECTION_MARKS.append((name, len(prs.slides._sldIdLst) - N_ORIG + 1))
 
 
+NOT_COWORK = "Not Cowork \u00b7 this exercise uses Copilot Agent Builder (Microsoft 365 Copilot \u2192 Create agent)"
+
+
 def exercise_divider(ex):
     """Full-bleed divider before each exercise: big number, title, time, and an 8-step progress tracker."""
     import re as _re
@@ -660,6 +672,11 @@ def exercise_divider(ex):
     text(s, 0.85, 1.8, 3.2, 2.0, [{"runs": [(f"{num:02d}", {"font": SEG_DISP, "size": 120, "bold": True,
                                                              "color": PURPLE})]}], anchor=MSO_ANCHOR.TOP)
     title = ex["title"]
+    if ex.get("not_cowork"):
+        box(s, 4.1, 0.62, 8.6, 0.58, RED, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.5)
+        text(s, 4.1, 0.62, 8.6, 0.58, [{"runs": [("\u26a0  " + NOT_COWORK, {"font": SEG_SEMI, "size": 13,
+                                                                             "color": "FFFFFF"})],
+                                        "align": PP_ALIGN.CENTER}], anchor=MSO_ANCHOR.MIDDLE)
     text(s, 4.1, 1.55, 5.95, 1.65, [{"runs": [(title, {"font": SEG_DISP, "size": 38 if len(title) < 26 else 32,
                                                        "color": INK})]}], anchor=MSO_ANCHOR.BOTTOM, line_spacing=0.95)
     text(s, 4.1, 3.3, 5.95, 1.1, [{"runs": [(ex["goal"], {"font": SEG_DISP, "size": 16, "color": W_SUB})]}],
@@ -700,7 +717,9 @@ def exercise_divider(ex):
                                        "align": PP_ALIGN.CENTER}])
     notes(s, f"DIVIDER \u2014 EXERCISE {num}: {title} ({ex['minutes']}{', ' + clock if clock else ''}). "
              "Pause here: check the room is ready (anyone still finishing the last exercise?), then introduce the "
-             "scenario card on the next slide.")
+             "scenario card on the next slide."
+             + (" SAY: 'This last exercise is NOT Cowork. We switch to Copilot Agent Builder: Microsoft 365 Copilot "
+                "-> Create agent.' Ask everyone to leave their Cowork task." if ex.get("not_cowork") else ""))
     return s
 
 
@@ -1278,6 +1297,60 @@ def output_folder_slide():
     return s
 
 
+def cost_slide():
+    """Optional Exercise 1 closing step: /cost shows the approximate credits a Cowork task used."""
+    s = clone_slide(S_CARD)
+    keep_only(s, {"Title 3", "NavPill_SitesPages", "TextBox 29", "TextBox 30", "TextBox 49"})
+    d = by_name(s)
+    set_first_run(d["Title 3"], "Optional \u00b7 Check what the task cost")
+    set_first_run(d["NavPill_SitesPages"], "Ex 01")
+    set_first_run(d["TextBox 30"], "Time")
+    set_first_run(d["TextBox 49"], "2 min")
+    # Steps panel (left)
+    box(s, 0.46, 1.3, 7.3, 5.75, PANEL, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.04)
+    pill(s, 4.11, 1.15, "If time allows")
+    steps = ["Stay in your **Executive Command Center** task.",
+             "Type **/cost** and send it. It\u2019s free: /cost doesn\u2019t use any credits.",
+             "Read the three numbers (right): this task, this month, and what\u2019s left.",
+             "Any time later: open a task from **My tasks** and type **/cost** to see what it used."]
+    text(s, 0.85, 1.72, 6.6, 3.9, bullets(steps, size=15, color=INK, kind="num"), font=SEG_DISP,
+         space_after=12, line_spacing=1.05)
+    box(s, 0.75, 5.85, 6.72, 1.0, PLUM, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.12)
+    text(s, 1.0, 5.85, 6.3, 1.0, [{"runs": [("Your weekday schedule uses credits on every run. ",
+                                            {"size": 12.5, "bold": True, "color": "FFFFFF", "font": SEG_SEMI}),
+                                           ("Pause it after class: Automations \u2192 Manage schedules.",
+                                            {"size": 12.5, "color": "FFFFFF", "font": SEG_DISP})]}],
+         anchor=MSO_ANCHOR.MIDDLE, line_spacing=1.03)
+    # What /cost shows (right)
+    x0, y0, w = 8.2, 1.3, 4.9
+    box(s, x0, y0, w, 5.75, "FFFFFF", line=W_LINE, shadow=True, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.03)
+    text(s, x0 + 0.25, y0 + 0.12, w - 0.5, 0.35, [{"runs": [("What /cost shows", {"size": 12, "bold": True, "color": W_SUB})]}])
+    rows = [("This task", "Approximate credits used so far, all actions combined", BLUE),
+            ("This month", "Credits you\u2019ve used in your monthly limit", PURPLE),
+            ("Remaining", "What\u2019s left until the limit resets", GREEN)]
+    y = y0 + 0.55
+    for name, val, acc in rows:
+        box(s, x0 + 0.25, y, w - 0.5, 0.78, "FFFFFF", line=W_LINE, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.08)
+        box(s, x0 + 0.25, y + 0.12, 0.06, 0.54, acc)
+        text(s, x0 + 0.45, y + 0.06, w - 0.8, 0.3, [{"runs": [(name, {"size": 13, "bold": True, "color": acc})]}])
+        text(s, x0 + 0.45, y + 0.38, w - 0.8, 0.32, [{"runs": [(val, {"size": 10.5, "color": W_BODY})]}])
+        y += 0.9
+    text(s, x0 + 0.25, y + 0.05, w - 0.5, 0.3, [{"runs": [("Good to know", {"size": 12, "bold": True, "color": W_SUB})]}])
+    notes_b = ["An **estimate, not a bill**; may lag a few minutes",
+               "No preview: you see the cost only **after** a task runs",
+               "Limits are set by your org, reset monthly (00:00 UTC), and may be shared by a group"]
+    text(s, x0 + 0.25, y + 0.4, w - 0.5, 1.6, bullets(notes_b, size=11, color=INK), font=SEG_DISP, space_after=4)
+    notes(s, "CHECK THE COST (Ex 1, ~2 min, OPTIONAL: skip it if you are behind and mention /cost at the break). SAY: 'Cowork is usage-billed, so let's see what that dashboard cost.' DO: in "
+             "your Ex 1 task type /cost and send it; point to the three numbers: credits for this task (all actions in "
+             "the task, not a line-by-line breakdown), credits used this month, and credits remaining. Then have "
+             "everyone do it. KEY POINTS: /cost is free; it's an approximation, not a billing record, and can lag a few "
+             "minutes; you can't check the cost before running a task; you can go back to any earlier task and type "
+             "/cost; limits are set by the organization, reset at 00:00 UTC on the 1st, and may be a shared group "
+             "limit. The weekday schedule uses credits on every run, so pause it after class. Source: Microsoft Learn, "
+             "'Credit usage for Microsoft Copilot Cowork tasks'.")
+    return s
+
+
 # Exercises 1-8 with one break after Ex 5
 NEXT_AFTER = {5: "Ex 6 \u00b7 Onboarding pack"}
 for ex in EXERCISES:
@@ -1290,6 +1363,7 @@ for ex in EXERCISES:
     hands_on(ex)
     if ex["num"] == 1:
         output_folder_slide()
+        cost_slide()
     if ex["num"] in NEXT_AFTER:
         b = break_slide(NEXT_AFTER[ex["num"]])
         notes(b, "BREAK (15 min, 1:30-1:45). Sweep the room for blockers and check everyone's "

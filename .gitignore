@@ -1,6 +1,9 @@
 # Build scratch folder (icons, reference.docx, QA PDFs, deck previews)
 .build/
 
+# Source PowerPoint template for the deck build (not distributed with the kit)
+tools/template.pptx
+
 # Office lock and temp files
 ~$*
 *.tmp

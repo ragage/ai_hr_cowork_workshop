@@ -11,6 +11,7 @@
 
 | When | Owner | Do this |
 | --- | --- | --- |
+| **T − 4 to 6 weeks** | Account team + facilitator | **Customer preview meeting:** present [customer-preview-deck.pptx](customer-preview-deck.pptx), fill in its feedback capture slide with the customer, and agree on any changes to scenarios, data, format, and dates. |
 | **T − 3 weeks** | Host / admin | Confirm Microsoft 365 Copilot licenses and **usage-based billing** for the attendee tenant, create a **Cowork spending policy** for the attendee group, and turn on **Cowork Browsing** for that group. Estimate cost and set spend guardrails (see [Cost planning](#cost-planning)). Book the room and Wi-Fi. |
 | **T − 2 weeks** | Host / admin + facilitator | Collect the **attendee list** and add everyone (plus **1–2 licensed spare accounts**) to the workshop security group. In the **facilitator's demo tenant**, allow **Work IQ MCP write operations** and set up the seed sender accounts ([seed-content.md](seed-content.md#how-to-load-it)). Confirm the demo tenant is Cowork-ready. |
 | **T − 1 week** | Facilitator | **Full dry run** of all 8 exercises with a licensed account in the attendees' tenant (a spare is fine), checking against the [answer key](facilitator-answer-key.md). **Record the demo videos** (Exercises 2–8, the UI walkthrough, and the weak vs. strong prompt) from your demo account and insert them on the deck's **Demo** slides ([how](facilitator-guide.md#before-you-start)). Stage `zava-sample-knowledge.zip` and the other six files the participant email lists (overview deck, workbook, quick-reference card, prompt library, responsible use, Copilot vs. Cowork) in the shared Teams/SharePoint folder. Send attendees a joining note (bring a laptop, not a phone); the [participant email](../communication/participant-email.html) is ready to paste into Outlook. **Before you send either email, fill in and check its download links:** the participant email has `[link: …]` placeholders for your Teams/SharePoint copies of the files. Open each link in an InPrivate window. It must download the file without a GitHub sign-in. If you get a sign-in page (the kit repo is private), replace the link with your Teams/SharePoint copy. Maintainers can run `tools/check_download_links.py --online` to check every link in the decks and emails at once. |
@@ -36,6 +37,9 @@ adds up. Before the session:
   accounts shouldn't keep Cowork access.
 - **Reduce cost:** leave the model picker on **Let Cowork decide** and reasoning effort on the default
   unless an exercise calls for more.
+- **Track it during the day:** attendees can type **`/cost`** in a task (an optional step at the end
+  of Exercise 1) to see the approximate credits it used and what's left of their monthly limit. For
+  the official totals, use the Copilot Credits reports in the Microsoft 365 admin center.
 
 ## Plan B — if Cowork is down for the whole room
 

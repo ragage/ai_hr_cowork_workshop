@@ -3,6 +3,10 @@
 > Reference sheet for the "Getting Things Done with Copilot Cowork for HR Tasks" workshop.
 > This backs **Exercise 8** — the closing, **non-Cowork** capstone.
 
+> ⚠️ **Not Cowork.** Exercise 8 uses **Copilot Agent Builder** (Microsoft 365 Copilot → **Create
+> agent**), a different tool from Cowork. There are no Cowork tasks, side panel, approvals, or skills
+> in this exercise.
+
 ## Cowork skill vs. Agent Builder agent — why both?
 
 In Exercise 4 you built a **custom skill** *inside Cowork* — great for a recurring task **you**

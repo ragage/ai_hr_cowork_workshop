@@ -105,7 +105,8 @@ The kit is organized by audience:
 | --- | --- | --- |
 | README | [.md](README.md) · [.docx](README.docx) | This overview |
 | summary/PROJECT-SUMMARY | [.md](summary/PROJECT-SUMMARY.md) (maintainers only) | Handoff notes: status, architecture, decisions, how to build and test, remaining work |
-| [instructor/instructor-deck.pptx](instructor/instructor-deck.pptx) | pptx | Instructor deck (55 slides, speaker notes, alt text) — a **prompting best-practices slide** (Goal, Source, Expectations, Constraints, with a weak vs. strong HR prompt), a divider slide with a picture and progress tracker before each exercise, one PowerPoint section per exercise for quick navigation, objectives, approvals, a **workshop kit slide with download links** for participants and instructors, a scenario card, **demo video slide** (an empty video frame for your recording), and hands-on slide per exercise (its speaker notes carry the full prompt, ready to copy), demo video slides for the UI walkthrough and the prompting slide, an Output folder walkthrough, and a knowledge check |
+| [instructor/instructor-deck.pptx](instructor/instructor-deck.pptx) | pptx | Instructor deck (56 slides, speaker notes, alt text) — a **prompting best-practices slide** (Goal, Source, Expectations, Constraints, with a weak vs. strong HR prompt), a divider slide with a picture and progress tracker before each exercise, one PowerPoint section per exercise for quick navigation, objectives, approvals, a **workshop kit slide with download links** for participants and instructors, a scenario card, **demo video slide** (an empty video frame for your recording), and hands-on slide per exercise (its speaker notes carry the full prompt, ready to copy), demo video slides for the UI walkthrough and the prompting slide, an Output folder walkthrough, an optional **check-the-cost** (`/cost`) slide for Exercise 1, red **Not Cowork** banners on Exercise 8, and a knowledge check |
+| [instructor/customer-preview-deck.pptx](instructor/customer-preview-deck.pptx) | pptx | Customer preview deck (17 slides) for the account team and facilitator to walk the customer through before delivery — format, agenda, the eight exercises, safety, prerequisites, cost planning, and questions for their feedback; title slide has `[Customer name]` and `[Date]` placeholders |
 | [communication/training-overview.pptx](communication/training-overview.pptx) | pptx | Training overview deck (8 slides) for HR leaders and prospective attendees — what the training is, objectives, agenda, the eight exercises, what to prepare, and the same **download links** slide |
 | [communication/participant-email.html](communication/participant-email.html) | html | Paste-ready Outlook invitation for attendees: session details, what to bring, and links to the workbook, sample data, and handouts |
 | [communication/instructor-email.html](communication/instructor-email.html) | html | Paste-ready Outlook email for the instructor: links to every kit asset, the preparation timeline, and key reminders |
@@ -153,7 +154,10 @@ to **Documents** in your OneDrive (`Documents/ai_hr_cowork_workshop`). The promp
 
 ## How to use this kit
 
-1. **Host (3 weeks out):** follow the [preparation timeline](instructor/readiness-checklist.md#preparation-timeline).
+1. **Account team + facilitator (4 to 6 weeks out):** walk the customer through the
+   [customer preview deck](instructor/customer-preview-deck.pptx) to confirm the format, the exercises,
+   and the cost plan, and collect their feedback.
+2. **Host (3 weeks out):** follow the [preparation timeline](instructor/readiness-checklist.md#preparation-timeline).
    Confirm licenses and Cowork access, estimate cost, and stage the sample files. The facilitator loads
    [seed-content.md](instructor/seed-content.md) into their own demo account 1–2 days before.
    Send the instructor the [instructor email](communication/instructor-email.html), and attendees the
@@ -162,15 +166,15 @@ to **Documents** in your OneDrive (`Documents/ai_hr_cowork_workshop`). The promp
    either email, open it in a browser, copy the email, and paste it into Outlook. The participant email
    has highlighted `[link: …]` placeholders for your Teams/SharePoint copies of the files. The instructor
    email links to this private repo, so give the instructor access first.
-2. **Facilitator:** read [facilitator-guide.md](instructor/facilitator-guide.md), do a full dry run against the
+3. **Facilitator:** read [facilitator-guide.md](instructor/facilitator-guide.md), do a full dry run against the
    [answer key](instructor/facilitator-answer-key.md), and present with
    [instructor-deck.pptx](instructor/instructor-deck.pptx) (speaker notes carry the run sheet).
-3. **Attendees:** on the day, follow [participant-workbook.md](participant/participant-workbook.md) start to
+4. **Attendees:** on the day, follow [participant-workbook.md](participant/participant-workbook.md) start to
    finish, with the printed [quick-reference card](participant/quick-reference-card.docx) and the
    [prompt library](reference/04-prompt-library.md) open.
-4. **Afterward:** send [after-the-workshop.md](participant/after-the-workshop.md) (knowledge check, survey, and
+5. **Afterward:** send [after-the-workshop.md](participant/after-the-workshop.md) (knowledge check, survey, and
    30-day plan) and pause the Exercise 1 and 7 schedules.
-5. **Everyone:** treat every Cowork output as a **draft to review**, approve **one action at a
+6. **Everyone:** treat every Cowork output as a **draft to review**, approve **one action at a
    time**, keep Exercise 1 results private, and use the fictional sample data for the other exercises.
 
 ## Requirement coverage
@@ -186,7 +190,11 @@ to **Documents** in your OneDrive (`Documents/ai_hr_cowork_workshop`). The promp
 - ✅ Using the **browser / web** to get things done: **Deep Research** (Exercise 2) and Cowork **navigating
   websites in Microsoft Edge**, searching and clicking through two sites (Exercise 3)
 - ✅ Using **Automations** for recurring HR work (Exercises 1 & 7)
-- ✅ A **non-Cowork** finale: build a Policy Agent with **Copilot Agent Builder** (Exercise 8)
+- ✅ A **non-Cowork** finale: build a Policy Agent with **Copilot Agent Builder** (Exercise 8), flagged
+  **Not Cowork** on its slides and in the guides
+- ✅ **Cost awareness:** an optional `/cost` check at the end of Exercise 1, plus cost planning in the
+  readiness checklist
+- ✅ A **customer preview deck** to agree the format and gather feedback before delivery
 - ✅ An **HR plugins** read on **Customize → Plugins** for self-study in the after-the-workshop pack
 - ✅ Every exercise introduced with a **scenario card** (workbook + deck)
 - ✅ **Learning objectives**, a verified **answer key**, facilitator **demo seed data**, a prep **timeline** with cost

@@ -1,7 +1,7 @@
 # Project Summary
 
 Handoff notes for maintainers of the "Getting Things Done with Copilot Cowork for HR Tasks" kit
-(as of October 3, 2026).
+(as of October 7, 2026).
 
 ## Goal
 
@@ -14,15 +14,15 @@ exercise in Agent Builder.
   (private: no screen sharing); every other exercise uses the Zava sample files. Nothing is provisioned
   for attendees. The facilitator demos from a separate demo tenant, seeded for Exercise 1.
 - **Sample data:** the fictional company Zava.
-- **Deliverables:** Markdown guides with Word copies, an instructor PowerPoint, Word/Excel sample
-  data, and a zip of the sample files.
+- **Deliverables:** Markdown guides with Word copies, an instructor PowerPoint, a customer preview
+  deck, Word/Excel sample data, and a zip of the sample files.
 
 ## Current Status
 
 - **Done and pushed** to the private repo https://github.com/cragage_microsoft/ai_hr_cowork_workshop
   (`main`).
 - **Last verification passed:** no stale text, no broken links in Markdown or Word files, and the
-  deck (55 slides) opens cleanly.
+  deck (56 slides) opens cleanly.
 - **Not yet run end to end in a real tenant.**
 
 ## Architecture
@@ -57,7 +57,14 @@ exercise in Agent Builder.
   Every exercise card in the deck has a "Prompt key" legend picture (bottom right). Stretch prompts live at the
   end of each workbook exercise; the hands-on slides, the closing slide, and the facilitator guide
   link to the workbook.
-- **Other outputs:** `instructor/instructor-deck.pptx` (55 slides),
+- **Exercise flags:** Exercise 1 ends with an **optional** "Check what the task cost" slide (`/cost`),
+  skipped when the room is behind. Exercise 8 carries a red **Not Cowork** banner on its divider,
+  scenario card, and demo slide (`not_cowork=True` in `content.py`), plus matching callouts in the guides.
+- **Customer preview deck:** `instructor/customer-preview-deck.pptx` (17 slides) for a meeting with
+  the customer 4 to 6 weeks before delivery: agenda, exercises, safety, cost, and questions for their
+  feedback. Built by `tools/build_preview_deck.py` (no template needed), reusing the exercise text in
+  `content.py`; `PREVIEW_CUSTOMER` and `PREVIEW_DATE` fill the title slide.
+- **Other outputs:** `instructor/instructor-deck.pptx` (56 slides),
   `participant/quick-reference-card.docx`, and a `.docx` copy of every guide (19 in total).
 - **Agenda (150 min, one break):**
 
@@ -67,11 +74,11 @@ exercise in Agent Builder.
 | 0:20–0:35 | Ex 1 · Executive Command Center |
 | 0:35–0:50 | Ex 2 · Deep Research |
 | 0:50–1:05 | Ex 3 · Navigate websites with Cowork's browser |
-| 1:05–1:25 | Ex 4 · Custom skill |
-| 1:25–1:35 | Ex 5 · Recruiting + reporting |
-| 1:35–1:50 | Break (15 min) |
-| 1:50–2:00 | Ex 6 · Onboarding pack |
-| 2:00–2:10 | Ex 7 · Automate & share |
+| 1:05–1:20 | Ex 4 · Custom skill |
+| 1:20–1:30 | Ex 5 · Recruiting + reporting |
+| 1:30–1:45 | Break (15 min) |
+| 1:45–1:55 | Ex 6 · Onboarding pack |
+| 1:55–2:10 | Ex 7 · Automate & share |
 | 2:10–2:25 | Ex 8 · Agent Builder |
 | 2:25–2:30 | Wrap-up |
 
@@ -85,6 +92,7 @@ The HR plugins read (reference/09) is self-study in the after-the-workshop pack.
   - `make_word_docs.py` and `callouts.lua`: Markdown to Word.
   - `finalize_word.ps1`: Word COM updates contents pages and fields, one child PowerShell process
     and Word instance per file, with a time limit; QA PDFs only with `-Pdf`.
+  - `build_preview_deck.py`: the customer preview deck.
   - `make_quickref.py`: the quick-reference card.
   - `make_prompt_key.py`: the Goal / Source / Expectations / Constraints legend pictures
     (`reference/media/prompt-key*.png`) used by the workbook, prompt library, quick-reference card,
@@ -94,13 +102,23 @@ The HR plugins read (reference/09) is self-study in the after-the-workshop pack.
     (`reference/media/download-hint.png`) used in the guides, emails, and both decks' kit slide.
   - `art/ex1-8.png`: Fluent Emoji pictures for the dividers.
   - `assets/cowork-home.png`: the Cowork home-page screenshot.
+  - `check_kit.py`: Markdown links and anchors, Word links, and stale text (exits 1 on a problem).
+  - `check_download_links.py`: the GitHub download links in the decks, emails, workbook, and card.
   - All paths are relative to the repo. The only external input is the source PowerPoint template,
-    which isn't committed: set `DECK_TEMPLATE` to a local copy.
+    which isn't committed: set `DECK_TEMPLATE` to a local copy, or save it as the git-ignored
+    `tools/template.pptx`.
 
 ## Files Modified
 
 Latest work:
 
+- **Merged `main` (October 7):** `main` had three PRs (#1 to #3) built on the old 4-hour layout
+  (`participants/`, a top-level summary, `make_office_samples.py`). The merge kept this branch's
+  layout and 2½-hour agenda and ported what was new: an **optional** `/cost` step at the end of
+  Exercise 1 (slide, workbook step 7, guide notes), **Not Cowork** banners and callouts for
+  Exercise 8, the **customer preview deck** (rewritten for 150 minutes and one break, Exercise 1 on
+  attendees' own work), `tools/check_kit.py`, the `tools/template.pptx` fallback, and a T − 4 to 6
+  weeks preview meeting in the readiness checklist. The duplicate files from `main` were dropped.
 - **Dry-run feedback (October 7):** the dry run ran about 146 minutes of exercises against a
   110-minute budget, so secondary tasks are now optional for fast finishers (2c scorecard, 3b payroll
   brief, 6b kickoff, 6c announcement, 7c skill sharing) and facilitators demo them. Exercise 4 and
@@ -181,12 +199,14 @@ Latest work:
 ```powershell
 cd c:\source\ai_hr_cowork_workshop
 python -m venv .venv; .venv\Scripts\python -m pip install -r tools\requirements.txt   # first time only
-$env:PYTHONIOENCODING = "utf-8"; $env:DECK_TEMPLATE = "<path to the source template .pptx>"
+$env:PYTHONIOENCODING = "utf-8"; $env:DECK_TEMPLATE = "<path to the source template .pptx>"   # or save it as tools\template.pptx
 .venv\Scripts\python tools\build_deck.py      # close PowerPoint first, or set $env:DECK_OUT to a preview path
 .venv\Scripts\python tools\build_overview.py  # or set $env:OVERVIEW_OUT to a preview path
 .venv\Scripts\python tools\make_quickref.py
+.venv\Scripts\python tools\build_preview_deck.py
 .venv\Scripts\python tools\make_word_docs.py
 powershell -ExecutionPolicy Bypass -File tools\finalize_word.ps1   # add -Pdf for QA PDFs
+.venv\Scripts\python tools\check_kit.py
 ```
 
 Run `.venv\Scripts\python tools\make_prompt_key.py` first if the legend colours or wording change.
@@ -216,22 +236,23 @@ Requirements:
 - **Word:** run `finalize_word.ps1 -Pdf`, then render pages from the QA PDFs (in `.build`) with PyMuPDF
   and inspect.
   `quick-reference-card.docx` must stay 1 page.
-- **Links:** a Python check that every Markdown link and anchor resolves, and every external target in
-  each `.docx` exists.
+- **Links:** `tools/check_kit.py` checks that every Markdown link and anchor resolves and every
+  external target in each `.docx` exists. Set `KIT_STALE_TERMS` to the template name to scan for it too.
 - **Download links:** before you send the emails or hand out the decks, run
   `.venv\Scripts\python tools\check_download_links.py --online`. It lists every GitHub link in the two
   decks, the two emails, the workbook, and the quick-reference card, and fails if a linked file is
   missing here or on `origin/main` (merge and push first). It warns when `main` has an older copy.
   `[online: ...]` shows what someone who isn't signed in to GitHub gets.
 - **Stale text:** scan all .md files and the XML inside the Office files for the template name, the old
-  sample folder `Documents/Cowork` (except `/skills`), and the old title. Expect zero hits.
+  sample folder (`Cowork` directly under `Documents`, except its `skills` subfolder), and the old title.
+  `tools/check_kit.py` does this and the link checks in one run. Expect zero hits.
 - **Live:** a dry run in the attendees' tenant with one licensed work account, compared against
   [facilitator-answer-key.md](../instructor/facilitator-answer-key.md).
 
 ## Remaining Work
 
-1. Do the tenant dry run (browser use, skill evaluation score, "Activate and run now") and update the
-   answer key.
+1. Do the tenant dry run (browser use, skill evaluation score, "Activate and run now", `/cost`
+   output) and update the answer key.
 2. Optionally:
    - add dividers for the spotlight and wrap-up
    - script the demo seeding (Graph PowerShell) if you reseed often
@@ -242,8 +263,8 @@ Requirements:
 
 ## Known Issues
 
-- The deck build needs a local copy of the source PowerPoint template (`DECK_TEMPLATE`); it isn't in
-  the repo.
+- The deck build needs a local copy of the source PowerPoint template (`DECK_TEMPLATE` or
+  `tools/template.pptx`); it isn't in the repo.
 - `finalize_word.ps1` used to hang intermittently (one Word instance for all files never returned).
   It now runs each file in its own child PowerShell process and Word instance with a time limit,
   stops only the Word processes it started, and logs to `.build/finalize.log`. A file that times
@@ -271,4 +292,4 @@ Requirements:
 > and `tools/README.md` first. The generators are in `tools/`; `build_deck.py` needs `DECK_TEMPLATE`
 > set to the local PowerPoint template. Keep the "Getting Things Done" title, the
 > `Documents/ai_hr_cowork_workshop` sample folder, and the Exercise 1–8 order. Don't name the source
-> template in any artifact.
+> template in any artifact. Run `tools/check_kit.py` before you commit.

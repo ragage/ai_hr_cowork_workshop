@@ -91,7 +91,8 @@ EXERCISES = [
                "**New task** \u2192 paste the Executive Command Center prompt.",
                "**Side panel \u2192 Output folder \u2192 Preview** the HTML dashboard (see the next slide).",
                "Check the top summary, the three views, the action labels, and the links.",
-               "Answer any **questions** in chat; **approve** the skill and schedule cards one at a time; skip suggested follow-ups."],
+               "Answer any **questions** in chat; **approve** the skill and schedule cards one at a time; skip suggested follow-ups.",
+               "Optional, if time allows: type **/cost** in the task to see what it cost (last slide of this exercise)."],
         watch=["Work IQ gathering calendar, mail, chats, and files",
                "Labels: Lean in \u00b7 Delegate \u00b7 Re-engage \u00b7 Protect time",
                "Focus on workstreams \u2014 not on evaluating people",
@@ -341,7 +342,7 @@ EXERCISES = [
         notes_hands="EXERCISE 7 HANDS-ON. DO: create the Automation live; choose 'Activate and run now'; show Runs vs Manage schedules (edit, pause, resume, delete). Demo a Daily Briefing, then Share / Re-share on the Ex 4 skill. WATCH FOR: an Active schedule and a completed run naming T-2008. IF STUCK: run can't find the file -> the prompt must name the exact file and folder. Sharing stays inside the attendee tenant: 'Only you' or initialed names. TIME CHECK: 7a is the must-do; 7b is quick; 7c is OPTIONAL, so demo it. NEXT: Agent Builder, the non-Cowork finale.",
     ),
     dict(
-        num=8, pill="Ex 08", title="HR Policy Agent with Agent Builder", short="HR Policy Agent",
+        num=8, pill="Ex 08", title="HR Policy Agent with Agent Builder", short="HR Policy Agent", not_cowork=True,
         function="Agent Builder", minutes="15 min", why_label="Agent Builder",
         goal="Stand up a reusable Q&A agent employees can chat with to get sourced policy answers.",
         output="A working \u201cHR Policy Agent\u201d in Microsoft 365 Copilot, grounded in Zava\u2019s HR documents, that "
