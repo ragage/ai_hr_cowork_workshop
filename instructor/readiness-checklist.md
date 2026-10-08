@@ -18,7 +18,7 @@
 | **T − 1 to 2 days** | Facilitator | Load the **seed emails, meetings, and Teams chat** into **your demo account only** with VS Code and the Work IQ MCP server ([seed-content.md](seed-content.md#how-to-load-it)), so your live Exercise 1 demo has a rich command center, then **record the Exercise 1 demo video** from it. Attendees need no seed. |
 | **T − 1 day** | Host / admin | With a spare or test account in the attendees' tenant, run the smoke test **and** the Exercise 3 browser prompt in an **Edge** profile (accept the consent notice). Print the [quick-reference card](../participant/quick-reference-card.docx). |
 | **Day of, T − 45 min** | Facilitator + proctors | Test the projector, Wi-Fi, and demo tenant. Open the deck, the answer key, and a ready Cowork session. Brief proctors on the [troubleshooting triage](facilitator-guide.md#troubleshooting-triage-hand-to-proctors). |
-| **Day after** | Host | **Pause or delete** Exercise 1 and 7 schedules (or have attendees do it), send the [after-the-workshop pack](../participant/after-the-workshop.md) and survey, and review usage and spend. |
+| **Day after** | Host | **Clean up the training data:** remind attendees to delete or pause their Exercise 1 and 7 schedules and follow the [attendee clean-up steps](../participant/participant-workbook.md#clean-up-the-training-data); remove the workshop group from the Cowork spending policy (or delete the policy) if attendees shouldn't keep Cowork access; and clean up the facilitator's demo tenant (the [seed content](seed-content.md) and any demo schedules, skills, and agents). Send the [after-the-workshop pack](../participant/after-the-workshop.md) and survey, and review usage and spend. |
 
 ## Cost planning
 
@@ -82,7 +82,8 @@ adds up. Before the session:
       stay private to them. Tell attendees this in the invitation (the
       [participant email](../communication/participant-email.html) does).
 - [ ] **After class:** remind attendees (or clean up centrally) to **pause/delete the schedules**
-      created in Exercises 1 and 7 so they stop consuming usage.
+      created in Exercises 1 and 7 so they stop consuming usage, and to follow the
+      [clean-up steps](../participant/participant-workbook.md#clean-up-the-training-data) in the workbook.
 - [ ] *(Optional)* **Frontier** enrollment — only if you want to demo the built-in **App** skill;
       not required for the core exercises.
 - [ ] Confirm any **model/subprocessor policy** (e.g., use of Anthropic models as a subprocessor) so

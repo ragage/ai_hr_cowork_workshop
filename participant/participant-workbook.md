@@ -782,8 +782,8 @@ prompt for new hires.
 - Keep the **prompt library** ([reference/04-prompt-library.md](../reference/04-prompt-library.md)) handy.
 - Remember the golden rules ([reference/06-responsible-use.md](../reference/06-responsible-use.md)):
   **draft, review, approve at checkpoints, cite and confirm, keep real data private.**
-- **Before you leave:** pause or delete the schedules you created in Exercises 1 and 7
-  (**Automations → Manage schedules**).
+- **Before you leave:** follow [Clean up the training data](#clean-up-the-training-data) below. At
+  minimum, delete or pause the schedules you created in Exercises 1 and 7.
 - **Tomorrow:** you'll receive [after-the-workshop.md](after-the-workshop.md), with a knowledge
   check, a short survey, and a 30-day plan to make this a habit.
 
@@ -793,3 +793,48 @@ prompt for new hires.
   (everyone's in the same tenant).
 - Finished early → try the **Stretch** prompt at the end of each exercise:
   [Ex 1](#exercise-1--executive-command-center-15-min) · [Ex 2](#exercise-2--research-the-web-with-deep-research-15-min) · [Ex 3](#exercise-3--navigate-websites-with-coworks-browser-15-min) · [Ex 4](#exercise-4--build-your-own-custom-skill-15-min) · [Ex 5](#exercise-5--recruiting--reporting-mini-lab-10-min) · [Ex 6](#exercise-6--onboarding-orientation-pack-10-min) · [Ex 7](#exercise-7--automate--share-15-min) · [Ex 8](#exercise-8--build-a-policy-agent-with-copilot-agent-builder-15-min).
+
+---
+
+## Clean up the training data
+
+Do this **before you leave** (about 5 minutes), or later today. You used **your own work account**, so
+delete only what you made in the workshop, and keep anything you want to use again. Don't delete the
+shared download folder or anything the host shared with everyone.
+
+Work in this order, so a schedule doesn't create new files after you've cleaned up:
+
+1. **Delete or pause your schedules (they're usage-billed).** In Cowork, open **Automations → Manage
+   schedules**. Delete or pause the weekday **Executive Command Center** schedule (Exercise 1) and the
+   Monday **HR-ticket digest** (Exercise 7), plus any other schedule you made today.
+   - ✅ **Check:** **Manage schedules** has no active workshop schedules.
+2. **Review your custom skills.** Open **Customize → Skills → Your skills**. Delete **Executive
+   Command Center** and **HR Policy Answer** (including any copy with your initials) unless you'll use
+   them. Keep any you keep set to **"Only you"**. Delete skills here, not by deleting their files in
+   OneDrive.
+3. **Update your custom instructions.** Open **Customize → Preferences**. The workshop instructions
+   mention Zava and apply to **every** Cowork task, so delete them or rewrite them for your real work.
+4. **Delete the HR Policy Agent** if you don't need it. In Microsoft 365 Copilot, select the **More**
+   (**...**) menu next to **HR Policy Agent** in the left pane (or find it under **All agents**), then
+   select **Delete**. Deleting an agent is **permanent** and also removes it for anyone you shared it
+   with.
+5. **Delete the Zava files in OneDrive.**
+   - Delete the **Documents › ai_hr_cowork_workshop** folder.
+   - Open the **Cowork** folder and delete the Zava files Cowork created today (the briefing,
+     scorecard, brief, recruiting doc, onboarding deck, and reports). Keep your Executive Command
+     Center if you want it; it holds your own data, so don't share it.
+6. **Clean up Outlook** (if you did the optional Exercise 6 tasks). In **Drafts**, delete the Sofia
+   Alvarez team announcement and any other workshop drafts. In **Calendar**, delete the **onboarding
+   kickoff** you scheduled for next Monday.
+7. **Clean up your laptop.** Delete `zava-sample-knowledge.zip`, the extracted folder, and any files or
+   **Download All** zips you saved from Cowork's Output folder. Empty the Recycle Bin. On a **shared
+   or loaner laptop**, also sign out of Microsoft 365.
+
+✅ **Checkpoint:** no active workshop schedules; only the skills and agent you chose to keep, set to
+"Only you"; custom instructions that fit your real work; and no Zava files left in OneDrive, Outlook,
+or on your laptop.
+
+> **For the host (the day after):** remind attendees to delete or pause their schedules, remove the
+> workshop group from the Cowork spending policy (or delete the policy) if attendees shouldn't keep
+> Cowork access, and clean up the facilitator's demo tenant. See the
+> [readiness checklist](../instructor/readiness-checklist.md#preparation-timeline).

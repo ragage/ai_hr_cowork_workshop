@@ -294,6 +294,10 @@ because it took about 11.
   (stand up a reusable helper).
 - Remind everyone to **pause or delete the Exercise 1 and Exercise 7 schedules** if they don't want
   them to keep running.
+- End on the deck's last slide, **Clean up the training data**, and leave it up while people pack
+  up. The [clean-up steps](../participant/participant-workbook.md#clean-up-the-training-data) at the
+  end of the workbook take about 5 minutes; attendees can finish them later today. Deleting the
+  Exercise 1 and Exercise 7 schedules comes first, because they're usage-billed.
 - Recap the five golden rules from [reference/06-responsible-use.md](../reference/06-responsible-use.md).
 - Point to the [prompt library](../reference/04-prompt-library.md) as their takeaway.
 - Run a **quick knowledge check** as a show of hands (deck slide: pick 2–3 of the 4 questions;

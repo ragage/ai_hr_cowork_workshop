@@ -22,7 +22,7 @@ exercise in Agent Builder.
 - **Done and pushed** to the private repo https://github.com/cragage_microsoft/ai_hr_cowork_workshop
   (`main`).
 - **Last verification passed:** no stale text, no broken links in Markdown or Word files, and the
-  deck (56 slides) opens cleanly.
+  deck (56 slides) opens cleanly. The clean-up slide added since then makes 57 once the deck is rebuilt.
 - **Not yet run end to end in a real tenant.**
 
 ## Architecture
@@ -64,7 +64,7 @@ exercise in Agent Builder.
   the customer 4 to 6 weeks before delivery: agenda, exercises, safety, cost, and questions for their
   feedback. Built by `tools/build_preview_deck.py` (no template needed), reusing the exercise text in
   `content.py`; `PREVIEW_CUSTOMER` and `PREVIEW_DATE` fill the title slide.
-- **Other outputs:** `instructor/instructor-deck.pptx` (56 slides),
+- **Other outputs:** `instructor/instructor-deck.pptx` (57 slides once rebuilt),
   `participant/quick-reference-card.docx`, and a `.docx` copy of every guide (19 in total).
 - **Agenda (150 min, one break):**
 
@@ -112,6 +112,14 @@ The HR plugins read (reference/09) is self-study in the after-the-workshop pack.
 
 Latest work:
 
+- **Clean up the training data (October 7):** ported from an unmerged October 2 commit on
+  `agents/organize-training-content-folders` and adapted to attendees' own work accounts: a
+  "Clean up the training data" section at the end of the workbook (schedules first, then skills,
+  custom instructions, the HR Policy Agent, Zava files, Outlook items, and the laptop; keep what
+  you'll reuse), a closing deck slide after "Thank you" (`build_deck.py`), a wrap-up note in the
+  facilitator guide, a day-after row and after-class item in the readiness checklist, a line in the
+  after-the-workshop housekeeping list, and a quick-reference card item. It doesn't add agenda time:
+  the slide stays up while people pack up, and attendees can finish later that day.
 - **Merged `main` (October 7):** `main` had three PRs (#1 to #3) built on the old 4-hour layout
   (`participants/`, a top-level summary, `make_office_samples.py`). The merge kept this branch's
   layout and 2½-hour agenda and ported what was new: an **optional** `/cost` step at the end of
@@ -251,13 +259,15 @@ Requirements:
 
 ## Remaining Work
 
-1. Do the tenant dry run (browser use, skill evaluation score, "Activate and run now", `/cost`
+1. Rebuild `instructor/instructor-deck.pptx` with the template: the committed deck predates the
+   clean-up slide in `build_deck.py`.
+2. Do the tenant dry run (browser use, skill evaluation score, "Activate and run now", `/cost`
    output) and update the answer key.
-2. Optionally:
+3. Optionally:
    - add dividers for the spotlight and wrap-up
    - script the demo seeding (Graph PowerShell) if you reseed often
    - rebuild the zip if the samples change
-3. Re-check the Microsoft Learn pages before each delivery: cowork-available-plugins,
+4. Re-check the Microsoft Learn pages before each delivery: cowork-available-plugins,
    cowork-local-browser, cowork-admin-governance, cowork-customize, and the Work IQ MCP pages
    (overview, policy governance) used in seed-content.md.
 

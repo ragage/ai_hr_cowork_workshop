@@ -158,6 +158,7 @@ table([["Where", "Use"],
 
 h("7 · Before you leave today")
 for t in ("Pause or delete the schedules from Exercises 1 and 7 (Automations → Manage schedules).",
+          "Clean up the training data: follow the last section of your workbook.",
           "Keep your custom skills set to “Only you” unless you meant to share them.",
           "Pick one task to hand to Cowork next week."):
     para([("☐ ", True), (t, False)])

@@ -1421,10 +1421,12 @@ for i, (h, sub, acc) in enumerate(TAKE):
     text(s, 0.8, y, 2.6, 0.88, [{"runs": [(h, {"size": 15, "bold": True, "color": acc})]}], anchor=MSO_ANCHOR.MIDDLE)
     text(s, 3.45, y, 9.2, 0.88, [{"runs": rich(sub, 14, W_BODY)}], anchor=MSO_ANCHOR.MIDDLE)
 band(s, 0.55, 5.75, 12.23, 1.0,
-     "**Clean up:** pause or delete the schedules you created in Exercises 1 and 7 (Automations \u2192 Manage schedules).",
+     "**Before you leave:** clean up the training data with the steps on the last slide. At minimum, delete or "
+     "pause your Exercise 1 and 7 schedules.",
      fill=PLUM, color="FFFFFF", size=14)
 notes(s, "WRAP-UP (2:25-2:30). Recap the THREE tools and everything they built. Reinforce the golden rules. Ask "
-         "each person to name ONE task for next week. Remind them to pause/delete the Ex 1 and Ex 7 schedules.")
+         "each person to name ONE task for next week. Remind them to pause/delete the Ex 1 and Ex 7 schedules, "
+         "then leave the clean-up slide up while people pack up.")
 
 # Thank you
 s = title_slide("Thank you", "Questions? Try the stretch prompts, then explore the kit\u2019s README.")
@@ -1433,7 +1435,34 @@ link_segments(by_name(s)["Text Placeholder 4"],
                (" at the end of each exercise in the participant workbook, then explore the kit\u2019s ", None),
                ("README", f"{KIT_REPO}/blob/main/README.md"), (".", None)])
 notes(s, "CLOSE. Thank the group and take questions. Point to README.md, the prompt library, and the "
-         "custom-skill and Agent Builder guides.")
+         "custom-skill and Agent Builder guides. Then show the clean-up slide.")
+
+# Clean-up
+s = white_slide("Clean up the training data",
+                "Before you leave (or later today): delete only what you made in the workshop, in this order.")
+wcard(s, 0.55, 1.6, 5.98, 3.45, BLUE, "1  STOP AND REVIEW IN COPILOT",
+      bullets(["**Automations \u2192 Manage schedules:** delete or pause the Ex 1 command center and Ex 7 ticket digest",
+               "**Customize \u2192 Skills:** delete Executive Command Center and HR Policy Answer unless you\u2019ll use them",
+               "**Customize \u2192 Preferences:** delete or rewrite the Zava custom instructions",
+               "**Copilot \u2192 agent \u2026 menu:** delete HR Policy Agent if you don\u2019t need it (permanent)"], size=13))
+wcard(s, 6.8, 1.6, 5.98, 3.45, GREEN, "2  DELETE THE ZAVA FILES",
+      bullets(["**OneDrive:** delete Documents/ai_hr_cowork_workshop and the Zava files in **Cowork**",
+               "**Outlook:** delete the Sofia announcement draft and the kickoff meeting (optional Ex 6 tasks)",
+               "**Laptop:** delete the zip, the extracted files, and any **Download All** zips",
+               "**Shared laptop:** sign out of Microsoft 365"], size=13))
+band(s, 0.55, 5.25, 12.23, 1.5,
+     "**Host, day after:** remind attendees about their schedules; remove the workshop group from the Cowork "
+     "spending policy if attendees shouldn\u2019t keep access. **Facilitator:** clean up your demo tenant "
+     "(seed content, demo schedules, skills, and agents).",
+     fill=PLUM, color="FFFFFF", size=13)
+notes(s, "CLEAN UP THE TRAINING DATA (end of session; leave this up while people pack up). Attendees used their "
+         "own work accounts, so they delete only what they made today and keep anything they want to reuse. "
+         "Deleting or pausing the Ex 1 and Ex 7 schedules comes first: they're usage-billed. Delete skills from "
+         "Customize rather than deleting their OneDrive files. The Zava custom instructions apply to every future "
+         "Cowork task, so they should delete or rewrite them. Deleting the Agent Builder agent is permanent and "
+         "also removes access for anyone it was shared with. Full steps: the end of "
+         "participant/participant-workbook.md. Host: also follow the day-after row in "
+         "instructor/readiness-checklist.md.")
 
 # ---------------------------------------------------------------- remove template slides, renumber, sections
 sld_lst = prs.slides._sldIdLst
