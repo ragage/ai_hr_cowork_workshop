@@ -1310,43 +1310,48 @@ def cost_slide():
     box(s, 0.46, 1.3, 7.3, 5.75, PANEL, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.04)
     pill(s, 4.11, 1.15, "If time allows")
     steps = ["Stay in your **Executive Command Center** task.",
-             "Type **/cost** and send it. It\u2019s free: /cost doesn\u2019t use any credits.",
-             "Read the three numbers (right): this task, this month, and what\u2019s left.",
-             "Any time later: open a task from **My tasks** and type **/cost** to see what it used."]
-    text(s, 0.85, 1.72, 6.6, 3.9, bullets(steps, size=15, color=INK, kind="num"), font=SEG_DISP,
-         space_after=12, line_spacing=1.05)
+             "Type **/cost**, select the skill below, and send it.",
+             "Read the approximate **credits used by this task so far**."]
+    text(s, 0.85, 1.65, 6.6, 1.4, bullets(steps, size=14, color=INK, kind="num"), font=SEG_DISP,
+         space_after=7, line_spacing=1.05)
+    cost_pic = s.shapes.add_picture(
+        os.path.join(ROOT, "tools", "assets", "cowork-cost-command.png"),
+        Inches(0.75), Inches(3.2), width=Inches(6.72))
+    cost_pic._element.nvPicPr.cNvPr.set(
+        "descr", "Cowork skill picker: /cost shows credits used so far and does not cost credits to use.")
+    text(s, 0.85, 4.42, 6.4, 1.15, bullets([
+        "**/cost is free**; the result is an estimate, not a bill.",
+        "Usage totals may be delayed. Reopen any earlier task to check it.",
+        "The Usage panel shows **monthly consumption**, not this task alone."
+    ], size=12, color=INK), font=SEG_DISP, space_after=6)
     box(s, 0.75, 5.85, 6.72, 1.0, PLUM, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.12)
     text(s, 1.0, 5.85, 6.3, 1.0, [{"runs": [("Your weekday schedule uses credits on every run. ",
                                             {"size": 12.5, "bold": True, "color": "FFFFFF", "font": SEG_SEMI}),
                                            ("Pause it after class: Automations \u2192 Manage schedules.",
                                             {"size": 12.5, "color": "FFFFFF", "font": SEG_DISP})]}],
          anchor=MSO_ANCHOR.MIDDLE, line_spacing=1.03)
-    # What /cost shows (right)
+    # Monthly Usage screenshot (right), separate from the per-task /cost result.
     x0, y0, w = 8.2, 1.3, 4.9
     box(s, x0, y0, w, 5.75, "FFFFFF", line=W_LINE, shadow=True, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.03)
-    text(s, x0 + 0.25, y0 + 0.12, w - 0.5, 0.35, [{"runs": [("What /cost shows", {"size": 12, "bold": True, "color": W_SUB})]}])
-    rows = [("This task", "Approximate credits used so far, all actions combined", BLUE),
-            ("This month", "Credits you\u2019ve used in your monthly limit", PURPLE),
-            ("Remaining", "What\u2019s left until the limit resets", GREEN)]
-    y = y0 + 0.55
-    for name, val, acc in rows:
-        box(s, x0 + 0.25, y, w - 0.5, 0.78, "FFFFFF", line=W_LINE, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.08)
-        box(s, x0 + 0.25, y + 0.12, 0.06, 0.54, acc)
-        text(s, x0 + 0.45, y + 0.06, w - 0.8, 0.3, [{"runs": [(name, {"size": 13, "bold": True, "color": acc})]}])
-        text(s, x0 + 0.45, y + 0.38, w - 0.8, 0.32, [{"runs": [(val, {"size": 10.5, "color": W_BODY})]}])
-        y += 0.9
-    text(s, x0 + 0.25, y + 0.05, w - 0.5, 0.3, [{"runs": [("Good to know", {"size": 12, "bold": True, "color": W_SUB})]}])
-    notes_b = ["An **estimate, not a bill**; may lag a few minutes",
-               "No preview: you see the cost only **after** a task runs",
-               "Limits are set by your org, reset monthly (00:00 UTC), and may be shared by a group"]
-    text(s, x0 + 0.25, y + 0.4, w - 0.5, 1.6, bullets(notes_b, size=11, color=INK), font=SEG_DISP, space_after=4)
+    text(s, x0 + 0.25, y0 + 0.12, w - 0.5, 0.35, [{"runs": [("Usage \u00b7 monthly consumption", {"size": 12, "bold": True, "color": W_SUB})]}])
+    usage_pic = s.shapes.add_picture(
+        os.path.join(ROOT, "tools", "assets", "cowork-usage.png"),
+        Inches(x0 + 0.15), Inches(y0 + 0.55), width=Inches(w - 0.3))
+    usage_pic._element.nvPicPr.cNvPr.set(
+        "descr", "Example Usage panel: 732 credits used this month, unlimited credit limit, "
+        "daily usage chart for October 3 to 9, and a notice that totals may be delayed.")
+    text(s, x0 + 0.25, 6.65, w - 0.5, 0.3, [{"runs": [
+        ("Example account; your limits and totals may differ.", {"size": 9, "color": W_SUB})]}])
     notes(s, "CHECK THE COST (Ex 1, ~2 min, OPTIONAL: skip it if you are behind and mention /cost at the break). SAY: 'Cowork is usage-billed, so let's see what that dashboard cost.' DO: in "
-             "your Ex 1 task type /cost and send it; point to the three numbers: credits for this task (all actions in "
+             "your Ex 1 task type /cost, select the skill shown in the screenshot, and send it; point to the result: credits for this task (all actions in "
              "the task, not a line-by-line breakdown), credits used this month, and credits remaining. Then have "
              "everyone do it. KEY POINTS: /cost is free; it's an approximation, not a billing record, and can lag a few "
              "minutes; you can't check the cost before running a task; you can go back to any earlier task and type "
              "/cost; limits are set by the organization, reset at 00:00 UTC on the 1st, and may be a shared group "
-             "limit. The weekday schedule uses credits on every run, so pause it after class. Source: Microsoft Learn, "
+             "limit. Show the Usage screenshot separately: it is monthly consumption, not the Ex 1 task's cost. "
+             "The example has 732 credits used this month and an unlimited limit; do not present those as the "
+             "attendee's balance or a currency amount. Point out the daily chart and delayed-total notice. "
+             "The weekday schedule uses credits on every run, so pause it after class. Source: Microsoft Learn, "
              "'Credit usage for Microsoft Copilot Cowork tasks'.")
     return s
 
