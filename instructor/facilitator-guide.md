@@ -299,6 +299,10 @@ because it took about 11.
 Use the **Appendix** divider to introduce the optional slides after the closing and cleanup slides. Cover them only
 if time allows, or share them after the workshop; preserve wrap-up and schedule cleanup.
 
+### Facilitation & troubleshooting
+- This instructor reference is in the Appendix after the required closing and cleanup slides.
+- Use its fallback guidance for common blockers, and the readiness checklist for pre-session setup.
+
 ### What you'll be able to do by the end
 - Use the learning-objectives slide after Exercise 8 as an optional recap of the six outcomes:
   choose the right tool, delegate safely, ground in real content, package repeatable work,

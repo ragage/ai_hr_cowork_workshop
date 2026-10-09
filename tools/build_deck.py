@@ -1315,24 +1315,8 @@ for ex in EXERCISES:
         notes(b, "BREAK (15 min, 1:20-1:35). Sweep the room for blockers and check everyone's "
                  "Exercise 3 skill saved: Exercise 6 shares it.")
 
-mark_section("Close")
-s = white_slide("Facilitation & troubleshooting", "For instructors \u2014 skip live or use during a break.")
-wcard(s, 0.55, 1.6, 5.98, 3.35, BLUE, "KEEP 25 PEOPLE TOGETHER",
-      bullets(["1 facilitator + 1\u20132 floaters", "Use each hands-on slide\u2019s **checkpoint** to sync",
-               "Seed **your demo account** 1\u20132 days ahead (seed-content.md)", "Check results with the **answer key**", "Watch the clock: **time checks** at each break"], size=14))
-wcard(s, 6.8, 1.6, 5.98, 3.35, PURPLE, "COMMON BLOCKERS",
-      bullets(["No Cowork toggle \u2192 spare licensed account", "Acted without asking \u2192 revoke in side panel **Permissions**",
-               "Light dashboard \u2192 quiet week; show your demo", "No browser task \u2192 Edge, signed in with the work account", "Agent ignores files \u2192 wait for \u201cPreparing\u201d, then refresh"], size=14))
-band(s, 0.55, 5.25, 12.23, 1.5,
-     "**Fallback:** anyone blocked follows your demo, using **facilitator-answer-key.md**. Whole room down? Stop after "
-     "10 minutes and switch to **Plan B** (readiness-checklist.md). Running long? Use the time checks in the facilitator guide.",
-     fill=PLUM, color="FFFFFF", size=14)
-notes(s, "FACILITATION. Biggest risks with ~25 people: pace variance, account readiness, and quiet mailboxes in "
-         "Ex 8 (your demo account is seeded with seed-content.md, loaded through VS Code + the Work IQ MCP server). Attendees use their own work accounts; you're on a separate tenant. Never ask anyone to share their Ex 8 dashboard. "
-         "Mirrors facilitator-guide.md, facilitator-answer-key.md, and readiness-checklist.md (timeline, cost "
-         "planning, Plan B). Time checks: 0:20 Ex 1, 0:50 Ex 3, 1:20 break, 2:00 Ex 7, 2:15 Ex 8; the optional sub-tasks (1c scorecard, 2b brief, 5b + 5c, 6c sharing) are for fast finishers, so demo them rather than wait. If still behind, cut in this order: 6a only, then Ex 7 as a demo. Never cut Ex 3.")
-
 # Wrap-up
+mark_section("Close")
 s = white_slide("Wrap-up & next steps", "Three tools, eight exercises, one habit: draft \u2192 review \u2192 approve.")
 TAKE = [("Three tools", "Copilot Chat for quick answers, **Cowork** to get multi-step work done, **Agent Builder** for a reusable helper.", BLUE),
         ("What you built", "A command center, a cited briefing, a browser task across two sites, a custom skill, an onboarding pack, an automation, and an agent.", PURPLE),
@@ -1390,10 +1374,28 @@ notes(s, "CLEAN UP THE TRAINING DATA (end of required session; leave this up whi
 
 mark_section("Appendix")
 s = title_slide("Appendix", "Optional recaps, walkthroughs, and workshop resources")
-notes(s, "APPENDIX DIVIDER (after Exercise 8). The following slides are optional: learning objectives, "
-         "workshop download links, Cowork settings, approvals, custom instructions, and responsible use. Cover them "
+notes(s, "APPENDIX DIVIDER (after the required closing and cleanup slides). The following slides are optional: "
+         "facilitation and troubleshooting, learning objectives, workshop download links, Cowork settings, approvals, custom instructions, and responsible use. Cover them "
          "only if time allows, or share them after the workshop. Preserve wrap-up and schedule cleanup; "
          "the required workshop timing is unchanged.")
+s = white_slide("Facilitation & troubleshooting", "For instructors \u2014 optional reference after the workshop.")
+wcard(s, 0.55, 1.6, 5.98, 3.35, BLUE, "KEEP 25 PEOPLE TOGETHER",
+      bullets(["1 facilitator + 1\u20132 floaters", "Use each hands-on slide\u2019s **checkpoint** to sync",
+               "Seed **your demo account** 1\u20132 days ahead (seed-content.md)", "Check results with the **answer key**", "Watch the clock: **time checks** at each break"], size=14))
+wcard(s, 6.8, 1.6, 5.98, 3.35, PURPLE, "COMMON BLOCKERS",
+      bullets(["No Cowork toggle \u2192 spare licensed account", "Acted without asking \u2192 revoke in side panel **Permissions**",
+               "Light dashboard \u2192 quiet week; show your demo", "No browser task \u2192 Edge, signed in with the work account", "Agent ignores files \u2192 wait for \u201cPreparing\u201d, then refresh"], size=14))
+band(s, 0.55, 5.25, 12.23, 1.5,
+     "**Fallback:** anyone blocked follows your demo, using **facilitator-answer-key.md**. Whole room down? Stop after "
+     "10 minutes and switch to **Plan B** (readiness-checklist.md). Running long? Use the time checks in the facilitator guide.",
+     fill=PLUM, color="FFFFFF", size=14)
+notes(s, "FACILITATION & TROUBLESHOOTING (Appendix reference). Biggest risks with ~25 people: pace variance, "
+         "account readiness, and quiet mailboxes in Ex 8 (your demo account is seeded with seed-content.md, loaded "
+         "through VS Code + the Work IQ MCP server). Attendees use their own work accounts; you're on a separate "
+         "tenant. Never ask anyone to share their Ex 8 dashboard. Mirrors facilitator-guide.md, "
+         "facilitator-answer-key.md, and readiness-checklist.md (timeline, cost planning, Plan B). Time checks: "
+         "0:20 Ex 1, 0:50 Ex 3, 1:20 break, 2:00 Ex 7, 2:15 Ex 8; optional sub-tasks are for fast finishers. "
+         "If behind, demo optional work; never cut Ex 3.")
 s = objectives_slide()
 notes(s, "OPTIONAL LEARNING OBJECTIVES (after Exercise 8, if time allows). Use the six objectives as "
          "a recap of what attendees practiced. They mirror the participant workbook. Skip this slide "
