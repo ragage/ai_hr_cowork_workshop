@@ -32,7 +32,7 @@ if not os.path.isfile(TEMPLATE):
 OUT = os.environ.get("DECK_OUT", os.path.join(ROOT, "instructor", "instructor-deck.pptx"))
 DECK_SUBJECT = "Instructor deck"
 # Download links on the "Workshop kit" slide (both decks); same URLs as the emails in communication/.
-KIT_REPO = os.environ.get("KIT_REPO", "https://github.com/cragage_microsoft/ai_hr_cowork_workshop")
+KIT_REPO = os.environ.get("KIT_REPO", "https://github.com/ragage/ai_hr_cowork_workshop")
 HINT_IMG = os.path.join(ROOT, "reference", "media", "download-hint.png")  # from make_download_hint.py
 KEY_GRID = os.path.join(ROOT, "reference", "media", "prompt-key-grid.png")  # from make_prompt_key.py
 KEY_ROW = os.path.join(ROOT, "reference", "media", "prompt-key-slide.png")

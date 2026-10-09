@@ -19,7 +19,7 @@ exercise in Agent Builder.
 
 ## Current Status
 
-- **Done and pushed** to the private repo https://github.com/cragage_microsoft/ai_hr_cowork_workshop
+- **Copied and pushed** to the private repo https://github.com/ragage/ai_hr_cowork_workshop
   (`main`).
 - **Last verification passed:** no stale text, no broken links in Markdown or Word files, and the
   deck (56 slides) opens cleanly. The clean-up slide added since then makes 57 once the deck is rebuilt.
@@ -298,7 +298,7 @@ Requirements:
 ## Next Session Starting Prompt
 
 > Continue work on the HR Copilot Cowork workshop kit in `c:\source\ai_hr_cowork_workshop` (GitHub:
-> cragage_microsoft/ai_hr_cowork_workshop, private, `main`). Read `README.md`, `summary/PROJECT-SUMMARY.md`
+> ragage/ai_hr_cowork_workshop, private, `main`). Read `README.md`, `summary/PROJECT-SUMMARY.md`
 > and `tools/README.md` first. The generators are in `tools/`; `build_deck.py` needs `DECK_TEMPLATE`
 > set to the local PowerPoint template. Keep the "Getting Things Done" title, the
 > `Documents/ai_hr_cowork_workshop` sample folder, and the Exercise 1–8 order. Don't name the source

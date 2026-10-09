@@ -17,7 +17,7 @@ import urllib.request
 import zipfile
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-REPO = os.environ.get("KIT_REPO", "https://github.com/cragage_microsoft/ai_hr_cowork_workshop").rstrip("/")
+REPO = os.environ.get("KIT_REPO", "https://github.com/ragage/ai_hr_cowork_workshop").rstrip("/")
 SOURCES = [
     "instructor/instructor-deck.pptx",
     "communication/training-overview.pptx",
