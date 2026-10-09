@@ -86,9 +86,6 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
 ## Segment talking points
 
 ### Welcome & context (0:00–0:05)
-- Share the **six learning objectives** (README / workbook / deck slide 3): choose the right tool,
-  delegate safely, ground in real content, package repeatable work, build a no-code agent, apply HR
-  guardrails. Come back to them at wrap-up.
 - Cowork = describe the **outcome**, it **plans → picks skills → pauses for approval → returns
   artifacts**. Powered by Work IQ.
 - HR value: less time on repetitive drafting, research, and reporting; more time on people.
@@ -116,6 +113,15 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
   **Cowork** setting), the **smoke test** worked, and the **sample folder** is in their OneDrive. Anyone
   who hasn't does it now with a proctor. Proctors triage while you keep going with those who are ready.
   Don't set custom instructions during setup; that walkthrough is optional after Exercise 8.
+
+### Sample Cowork prompts to get started (end of setup, before Exercise 1)
+- Show the three screenshots: **Cowork → New task**, **Try these next**, and **Task ideas**.
+- Suggestions such as **Organize my inbox**, **Arrange my week**, **Prep for a meeting**,
+  **Morning briefing**, and **Calendar audit** are starting points. Tailor the outcome,
+  sources, output format, and guardrails before running.
+- Example: *"Review next week's calendar and suggest focus time; do not change any meetings."*
+- Keep this a quick orientation within setup, not another live task. Use the demo account;
+  attendee suggestions may differ. Review drafts and approve actions one at a time.
 
 ### Ex 1 — Deep Research (0:20–0:35)
 - Deep Research reads and **cites** many web sources; contrast it with a single lookup.
@@ -252,7 +258,7 @@ because it took about 11.
 - Return to **Cowork** from Agent Builder. This capstone combines the skills, outputs, and schedules
   attendees practiced earlier.
 - Remind attendees to review and approve the skill and schedule **one at a time**, or decline them.
-  Don't use **Approve All** or **Always allow**. The detailed dialog walkthrough is in Optional Sections.
+  Don't use **Approve All** or **Always allow**. The detailed dialog walkthrough is in the Appendix.
 - **Set expectations before they paste the prompt** (the dry run showed people weren't sure what
   would pop up):
   - **Their own data, not Zava.** Ex 8 is the only exercise on their real mail, calendar, Teams, and
@@ -288,7 +294,14 @@ because it took about 11.
 - **Cleanup:** skill stays **"Only you"**; ask everyone to **pause or delete the weekday schedule**
   after class (Automations → Manage schedules) so it doesn't keep consuming usage.
 
-## Optional Sections
+## Appendix
+
+### What you'll be able to do by the end
+- Use the learning-objectives slide after Exercise 8 as an optional recap of the six outcomes:
+  choose the right tool, delegate safely, ground in real content, package repeatable work,
+  build a no-code agent, and apply HR guardrails.
+- Skip the slide if time is short; preserve wrap-up and schedule cleanup. The objectives remain
+  in the README and workbook for reference.
 
 ### Workshop kit / Download links
 - Use the kit slide after Exercise 8 for take-away downloads, or share it after the workshop.
@@ -296,7 +309,7 @@ because it took about 11.
   don't wait until this optional section to distribute the workbook and sample-data zip.
 
 ### How approvals work — one at a time (after Exercise 8, if time allows)
-- Use the approvals slide in the deck's **Optional Sections** and the
+- Use the approvals slide in the deck's **Appendix** and the
   [workbook walkthrough](../participant/participant-workbook.md#how-approvals-work--one-at-a-time).
 - Show an approval dialog and explain the action button, **Cancel**, **Show parameters**,
   **Approve All (n)**, and **More options → Always allow**. Demonstrate revoking permissions in
@@ -307,15 +320,15 @@ because it took about 11.
 ### Customize instructions for Cowork (after Exercise 8, if time allows)
 - This is optional, outside the required 155-minute agenda. Skip it when time is short; preserve
   the wrap-up and schedule cleanup.
-- Use the deck's **Optional Sections** slide and the
-  [workbook walkthrough](../participant/participant-workbook.md#optional-sections).
+- Use the deck's **Appendix** slide and the
+  [workbook walkthrough](../participant/participant-workbook.md#appendix).
 - Demo **Customize → Preferences → Customize instructions for Cowork**. Attendees who opt in
   paste the sample, save it, and test in a **new task**. It applies to future tasks, not earlier ones.
 - Keep preferences short and personal. Choose one role sample, rather than stacking all of them.
   Clear or adapt the Zava instructions before returning to real work.
 
 ### Responsible use — the golden rules (optional recap after Exercise 8)
-- The detailed slide is in **Optional Sections**. Use it if time allows, or share it after the workshop.
+- The detailed slide is in the **Appendix**. Use it if time allows, or share it after the workshop.
   The rules themselves still apply to every exercise: draft, review, approve one action at a time,
   keep real data private, and cite and confirm policy answers.
 - See [responsible-use guidance](../reference/06-responsible-use.md).

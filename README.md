@@ -74,9 +74,10 @@ The pace is brisk: the facilitator plays a short **demo video** before each exer
 on long Cowork runs, and the **HR plugins** read (Customize → Plugins) is in the
 [after-the-workshop pack](participant/after-the-workshop.md) for self-study.
 
-The **Workshop kit / Download links** slide, detailed **How approvals work** walkthrough,
+The **What you'll be able to do by the end** learning-objectives slide,
+**Workshop kit / Download links** slide, detailed **How approvals work** walkthrough,
 **Customize instructions for Cowork**, and **Responsible use — the golden rules** slide are in
-**Optional Sections** after Exercise 8; cover them
+the **Appendix** after Exercise 8; cover them
 only if time allows, or after the workshop.
 Brief one-at-a-time approval reminders remain in the exercises.
 

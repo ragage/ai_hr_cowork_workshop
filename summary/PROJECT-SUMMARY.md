@@ -175,7 +175,7 @@ Latest work:
   - the inbox exercise removed and the remaining exercises renumbered
   - a new browser exercise
   - setup steps for the OneDrive folder (B) and prompting (D); the detailed approvals walkthrough
-    and custom instructions with samples are now in Optional Sections after Exercise 8
+    and custom instructions with samples are now in the Appendix after Exercise 8
   - new-hire name changed to Sofia Alvarez; the inclusive job posting is now Task 4a
 - **New files:** `reference/10-cowork-browser.md`, `reference/09-plugins.md`, `.gitignore`, and two
   screenshots in `reference/media/`.
@@ -196,13 +196,15 @@ Latest work:
   and the Agent 365 per-workload servers (legacy) weren't suitable.
 - **Browser use is its own exercise.** It's a built-in capability, not a skill, and the exercise is
   read-only on dol.gov and lni.wa.gov.
-- **Approvals** have a detailed walkthrough in Optional Sections after Exercise 8, with brief
+- **Approvals** have a detailed walkthrough in the Appendix after Exercise 8, with brief
   one-at-a-time safety reminders retained during exercises.
-- **Workshop kit / Download links** is in Optional Sections after Exercise 8. Distribute setup
+- **Learning objectives** slide is in the instructor deck's Appendix after Exercise 8
+  as an optional recap. The objectives remain in the README, workbook, and training overview.
+- **Workshop kit / Download links** is in the Appendix after Exercise 8. Distribute setup
   files before the session through the invitation or shared Teams/SharePoint folder.
 - **Responsible use — the golden rules** is an optional recap after Exercise 8. The safety rules
   still apply throughout the training.
-- **Custom instructions** are optional after Exercise 8, in the deck and workbook's Optional Sections;
+- **Custom instructions** are optional after Exercise 8, in the deck and workbook's Appendix;
   they aren't a prerequisite for the exercises or part of the required 155-minute agenda.
 - **Access** comes from a Cowork spending policy, per Microsoft Learn.
 - **SuccessFactors:** no catalog plugin exists, so the kit points to the Employee Self-Service agent

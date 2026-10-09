@@ -102,7 +102,7 @@ adds up. Before the session:
 - [ ] I'm on a **laptop/desktop** (custom skills aren't supported on mobile).
 
 Custom instructions aren't a setup prerequisite. The workbook's
-[Optional Sections](../participant/participant-workbook.md#optional-sections) introduces them after Exercise 8.
+[Appendix](../participant/participant-workbook.md#appendix) introduces them after Exercise 8.
 
 ## Data and shared-tenant etiquette
 

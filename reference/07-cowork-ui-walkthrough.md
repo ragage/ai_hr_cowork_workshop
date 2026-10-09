@@ -95,7 +95,7 @@ places:
 ## How approvals work
 
 The detailed walkthrough is in the workbook's
-[Optional Sections](../participant/participant-workbook.md#optional-sections), after Exercise 8.
+[Appendix](../participant/participant-workbook.md#appendix), after Exercise 8.
 During exercises, review and approve one action at a time; don't use Approve All or Always allow.
 
 Before a sensitive action (sending an email, posting to Teams, deleting, creating a meeting), Cowork

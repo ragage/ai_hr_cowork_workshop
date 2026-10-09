@@ -93,7 +93,7 @@ notes(s, "BEFORE THE SESSION. Attendees need only a laptop with Edge and their o
          "timeline, cost planning, and Plan B.")
 
 # 7 — Download links
-mark_section("Optional Sections")
+mark_section("Appendix")
 s = kit_links_slide()
 notes(s, "DOWNLOAD LINKS. Everything participants and instructors need; the Zava sample data is one zip. The links "
          "point to the kit's private GitHub repo: give people access, or post the files in a shared Teams/SharePoint "

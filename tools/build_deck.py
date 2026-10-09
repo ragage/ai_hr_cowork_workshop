@@ -931,9 +931,6 @@ notes(s, "WELCOME (0:00-0:05). Introduce yourself and the goal: by the end, ever
 # 2 — Agenda
 agenda_slide()
 
-# 1b — Learning objectives
-objectives_slide()
-
 # 3 — Copilot vs Cowork
 s = white_slide("Copilot vs. Cowork \u2014 what\u2019s the difference?",
                 "Start here: the mental model for the whole day.")
@@ -1275,6 +1272,33 @@ def cost_slide():
     return s
 
 
+s = white_slide("Sample Cowork prompts to get started",
+                "Open a new task, pick a suggestion, then tailor the outcome and guardrails.")
+for x, w, label, filename, description in [
+        (0.55, 2.0, "1 · Cowork → New task", "cowork-new-task.png",
+         "Copilot navigation with Cowork selected and New task highlighted."),
+        (2.8, 5.95, "2 · Try these next", "cowork-starter-prompts.png",
+         "Cowork home page with Start a task and suggestions: Organize my inbox, Arrange my week, Prep for a meeting."),
+        (9.0, 3.78, "3 · Browse Task ideas", "cowork-task-ideas.png",
+         "Task ideas categorized by Triage, Research, Create, Meetings, and Automate; examples include Morning briefing and Calendar audit.")]:
+    text(s, x, 1.55, w, 0.4, [{"runs": [(label, {"size": 13, "bold": True, "color": W_TITLE})]}])
+    pic = s.shapes.add_picture(os.path.join(ROOT, "tools", "assets", filename),
+                               Inches(x), Inches(2.05), width=Inches(w))
+    pic._element.nvPicPr.cNvPr.set("descr", description)
+band(s, 0.55, 6.0, 12.23, 0.95,
+     '**Try:** "Draft a morning briefing from today\'s calendar and unread emails; cite sources."\n'
+     '**Or:** "Review next week\'s calendar and suggest focus time; do not change any meetings."',
+     size=13)
+notes(s, "STARTER PROMPTS (part of setup, before Exercise 1; no extra exercise time). Show the three screenshots "
+         "from left to right: select Cowork, open New task, then explore Try these next and Task ideas. "
+         "Suggestions such as Organize my inbox, Arrange my week, and Prep for a meeting are starting points, "
+         "not fixed instructions. Tailor the goal, sources, output format, and constraints before running. "
+         "Examples: draft a cited morning briefing; audit next week's calendar and suggest focus time without "
+         "changing meetings; prepare a meeting brief with an agenda and open questions, without sending messages. "
+         "Keep this a quick orientation, not another live task. Use the instructor demo account; screenshots "
+         "are examples and attendee suggestions may differ. Review drafts and approve actions one at a time. "
+         "Then move straight into Exercise 1.")
+
 # Exercises 1-8 with one break after Ex 4
 NEXT_AFTER = {4: "Ex 5 \u00b7 Onboarding pack"}
 for ex in EXERCISES:
@@ -1291,7 +1315,11 @@ for ex in EXERCISES:
         notes(b, "BREAK (15 min, 1:20-1:35). Sweep the room for blockers and check everyone's "
                  "Exercise 3 skill saved: Exercise 6 shares it.")
 
-mark_section("Optional Sections")
+mark_section("Appendix")
+s = objectives_slide()
+notes(s, "OPTIONAL LEARNING OBJECTIVES (after Exercise 8, if time allows). Use the six objectives as "
+         "a recap of what attendees practiced. They mirror the README and workbook. Skip this slide "
+         "if time is short; preserve wrap-up and schedule cleanup.")
 kit_links_slide()
 s = white_slide("How approvals work \u2014 one at a time",
                 "Optional walkthrough after Exercise 8: sending, posting, deleting, creating meetings.")
@@ -1340,16 +1368,16 @@ wcard(s, 5.05, 3.5, 7.73, 2.4, PURPLE, "PASTE THIS (WORKBOOK OPTIONAL SECTIONS)"
                   {"size": 13.5, "italic": True, "color": W_BODY})]}])
 band(s, 0.55, 6.05, 12.23, 0.75,
      "**Personal to you** \u00b7 type **/** to reference a file or person \u00b7 up to ~20 KB, but **shorter is better** "
-     "\u00b7 Role samples: workbook Optional Sections", fill=PLUM, color="FFFFFF", size=13)
+     "\u00b7 Role samples: workbook Appendix", fill=PLUM, color="FFFFFF", size=13)
 notes(s, "OPTIONAL CUSTOM INSTRUCTIONS (after Exercise 8, about 1 min; outside the required agenda). Skip this "
-         "if time is short and point to the workbook's Optional Sections for later. Show it live: Customize -> "
+         "if time is short and point to the workbook's Appendix for later. Show it live: Customize -> "
          "Preferences -> 'Customize instructions for Cowork'. Explain: guidance Cowork automatically adds to the "
          "START of every new task, so tone, format, and rules don't have to be repeated in each prompt. "
          "Attendees who opt in paste the workbook sample, save, then test in a new task: 'Draft a two-sentence "
          "reminder to employees that open enrollment is in November.' The reply should use the tone and end with "
          "the confirm-with-HR note. Instructions are personal, support rich text and / references, up to about "
          "20 KB; keep them short. Clear or adapt the Zava sample before returning to real work. Role-based samples "
-         "are in the workbook's Optional Sections and reference/02-settings-and-models.md. Pick ONE, not stack them.")
+         "are in the workbook's Appendix and reference/02-settings-and-models.md. Pick ONE, not stack them.")
 
 s = white_slide("Responsible use \u2014 the golden rules", "HR handles sensitive people data. Make these non-negotiable.")
 RULES = [("Every output is a draft", "Review before you send, share, or file \u2014 especially employee comms.", BLUE),

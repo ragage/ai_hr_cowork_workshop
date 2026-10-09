@@ -39,7 +39,7 @@ Builder**.
 > The session is brisk, so please do **A** (sign in) and **B** (copy the sample data) **before the day**,
 > as the invitation email asks. During the session's 10-minute setup check, you'll do **C–D**.
 > The detailed approval walkthrough and custom instructions are after Exercise 8 in
-> [Optional Sections](#optional-sections).
+> [Appendix](#appendix).
 
 ### A. Sign in and smoke test
 1. Sign in with **your own work account**, then open
@@ -733,7 +733,7 @@ HR ticket trends from `hr-tickets-sample.xlsx`.
 
 ---
 
-## Optional Sections
+## Appendix
 
 These are not required for any exercise. Try them after Exercise 8 if time allows, or after the
 workshop; keep the five-minute wrap-up and schedule cleanup.
