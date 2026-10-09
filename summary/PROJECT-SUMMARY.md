@@ -52,7 +52,7 @@ exercise in Agent Builder, and ends with an Executive Command Center capstone.
   their elements instead of labelling them: Goal (blue), Source (green), Expectations (orange),
   Constraints (purple). In Markdown this is `<span class="goal|source|expect|constraint">`, which
   `tools/callouts.lua` maps to the Word character styles "Prompt Goal" etc.; in `tools/content.py`
-  the deck uses `{g}…{/g}`, `{s}`, `{e}`, `{c}` markers. Workbook Setup step F and deck slide 15
+  the deck uses `{g}…{/g}`, `{s}`, `{e}`, `{c}` markers. Workbook Setup step E and the prompting slide
   teach the four elements with a weak vs. strong open-enrollment prompt.
   Every exercise card in the deck has a "Prompt key" legend picture (bottom right). Stretch prompts live at the
   end of each workbook exercise; the hands-on slides, the closing slide, and the facilitator guide
@@ -174,7 +174,8 @@ Latest work:
 - **Workbook:**
   - the inbox exercise removed and the remaining exercises renumbered
   - a new browser exercise
-  - setup steps for the OneDrive folder (B), custom instructions with samples (D) and approvals (E)
+  - setup steps for the OneDrive folder (B) and approvals (D); custom instructions with samples
+    are now in Optional Sections after Exercise 8
   - new-hire name changed to Sofia Alvarez; the inclusive job posting is now Task 4a
 - **New files:** `reference/10-cowork-browser.md`, `reference/09-plugins.md`, `.gitignore`, and two
   screenshots in `reference/media/`.
@@ -195,7 +196,9 @@ Latest work:
   and the Agent 365 per-workload servers (legacy) weren't suitable.
 - **Browser use is its own exercise.** It's a built-in capability, not a skill, and the exercise is
   read-only on dol.gov and lni.wa.gov.
-- **Approvals** are taught in setup step E and in Exercise 8.
+- **Approvals** are taught in setup step D and in Exercise 8.
+- **Custom instructions** are optional after Exercise 8, in the deck and workbook's Optional Sections;
+  they aren't a prerequisite for the exercises or part of the required 150-minute agenda.
 - **Access** comes from a Cowork spending policy, per Microsoft Learn.
 - **SuccessFactors:** no catalog plugin exists, so the kit points to the Employee Self-Service agent
   extension pack or a custom MCP plugin.

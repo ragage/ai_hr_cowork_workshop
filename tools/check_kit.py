@@ -1,4 +1,4 @@
-"""Check the kit: Markdown links and anchors, Word hyperlinks, and stale text.
+"""Check the kit: links, stale text, and duplicate PowerPoint text highlights.
 
 Usage:  python tools/check_kit.py
 Extra stale terms (for example, the source template's name) can be passed in the
@@ -9,6 +9,7 @@ import pathlib
 import re
 import sys
 import zipfile
+import xml.etree.ElementTree as ET
 from urllib.parse import unquote
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -108,13 +109,32 @@ def check_stale(problems):
     return count
 
 
+def check_pptx_highlights(problems):
+    count = 0
+    ns = {"a": "http://schemas.openxmlformats.org/drawingml/2006/main"}
+    for deck in kit_files("*.pptx"):
+        count += 1
+        with zipfile.ZipFile(deck) as archive:
+            for part in archive.namelist():
+                if not part.startswith("ppt/") or not part.endswith(".xml"):
+                    continue
+                root = ET.fromstring(archive.read(part))
+                for tag in ("rPr", "defRPr", "endParaRPr"):
+                    for properties in root.findall(f".//a:{tag}", ns):
+                        if len(properties.findall("a:highlight", ns)) > 1:
+                            problems.append(
+                                f"duplicate PowerPoint highlight: {deck.relative_to(ROOT)} {part}")
+    return count
+
+
 def main():
     problems = []
     n_md = check_markdown(problems)
     n_docx = check_docx(problems)
     n_files = check_stale(problems)
+    n_decks = check_pptx_highlights(problems)
     print(f"checked {n_md} Markdown links, {n_docx} Word links, {n_files} files for stale text "
-          f"({len(STALE)} patterns)")
+          f"({len(STALE)} patterns), {n_decks} decks for duplicate highlights")
     for p in problems:
         print("  " + p)
     print("OK" if not problems else f"{len(problems)} problem(s)")

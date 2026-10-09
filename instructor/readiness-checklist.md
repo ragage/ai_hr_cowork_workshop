@@ -99,9 +99,10 @@ adds up. Before the session:
 - [ ] I ran a smoke-test prompt in Cowork and got a response (e.g., *"Give me a one-sentence hello."*).
 - [ ] I copied the **sample-knowledge** files from the shared location into my **own OneDrive**
       folder **Documents/ai_hr_cowork_workshop** (I created it in OneDrive → My files → Documents).
-- [ ] I set my **custom instructions**: **Customize → Preferences → Customize instructions for Cowork**
-      (workbook Setup step D).
 - [ ] I'm on a **laptop/desktop** (custom skills aren't supported on mobile).
+
+Custom instructions aren't a setup prerequisite. The workbook's
+[Optional Sections](../participant/participant-workbook.md#optional-sections) introduces them after Exercise 8.
 
 ## Data and shared-tenant etiquette
 

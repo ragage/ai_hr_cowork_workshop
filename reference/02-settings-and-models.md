@@ -40,7 +40,8 @@ optional last step of Exercise 1. Details:
 ## Custom instructions
 
 **Custom instructions** are guidance Cowork **automatically adds to the start of every task**. Set them
-once on **Customize → Preferences → Customize instructions for Cowork** (you do this in Setup step D).
+once on **Customize → Preferences → Customize instructions for Cowork**. This is optional, after
+Exercise 8 in the workbook's [Optional Sections](../participant/participant-workbook.md#optional-sections).
 Great for encoding how your HR team likes to work.
 
 ![The "Customize instructions for Cowork" card.](media/customize-instructions.png)

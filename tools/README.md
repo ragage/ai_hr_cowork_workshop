@@ -15,7 +15,7 @@ Edit the content here (or in the Markdown guides), then rebuild; don't hand-edit
 | `make_prompt_key.py` | `reference/media/prompt-key*.png`: the Goal / Source / Expectations / Constraints legend (workbook, prompt library, quick-reference card, deck) |
 | `make_download_hint.py` | `reference/media/download-hint.png` |
 | `check_download_links.py` | builds nothing: checks the GitHub download links in the decks, emails, workbook, and quick-reference card against the working copy and `origin/main`; `--online` also opens each one without signing in |
-| `check_kit.py` | builds nothing: checks Markdown links and anchors, Word links, and stale text (the old title and sample folder, plus any terms in `KIT_STALE_TERMS`, separated by semicolons); exits 1 on a problem |
+| `check_kit.py` | builds nothing: checks Markdown links and anchors, Word links, stale text (the old title and sample folder, plus any terms in `KIT_STALE_TERMS`, separated by semicolons), and duplicate PowerPoint text highlights that trigger repair warnings; exits 1 on a problem |
 | `art/ex1.png`–`ex8.png` | Fluent Emoji pictures for the exercise dividers |
 | `assets/cowork-home.png` | the Cowork home-page screenshot on the "What is Copilot Cowork?" slide |
 | `assets/cowork-cost-command.png` + `assets/cowork-usage.png` | supplied screenshots on Exercise 1's closing cost-check slide: the `/cost` skill picker and monthly Usage panel |
@@ -49,6 +49,10 @@ powershell -ExecutionPolicy Bypass -File tools\finalize_word.ps1
 
 Other settings: `KIT_REPO` changes the base URL of the download links on the "Workshop kit" slide.
 Build files and previews go to `.build/` (ignored by Git).
+
+Prompt highlights replace any highlighting inherited from the template; unmarked prompt text has
+no highlight. Keep this behavior when changing the template or generator: duplicate `a:highlight`
+elements in a run's properties violate the PowerPoint XML schema and can trigger a repair warning.
 
 The Word/Excel files in `sample-knowledge/` are the masters (edit them directly). If they change, rebuild
 `sample-knowledge/zava-sample-knowledge.zip` as described in

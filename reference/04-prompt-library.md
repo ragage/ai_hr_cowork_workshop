@@ -23,7 +23,7 @@ Example:
 > **onboarding checklist I attached**</span>. <span class="expect">Keep it **under 200 words** and **save it as a draft**</span>;
 > <span class="constraint">don't send it.</span>"
 
-The participant workbook (Setup step F) has a weak and a strong version of the same HR prompt.
+The participant workbook (Setup step E) has a weak and a strong version of the same HR prompt.
 
 ---
 

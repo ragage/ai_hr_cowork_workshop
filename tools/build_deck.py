@@ -408,6 +408,8 @@ def highlight(r, fill):
     if rPr is None:
         rPr = etree.Element(qn("a:rPr"))
         r.insert(0, rPr)
+    for existing in rPr.findall(qn("a:highlight")):
+        rPr.remove(existing)
     hl = etree.Element(qn("a:highlight"))
     etree.SubElement(hl, qn("a:srgbClr"), val=fill)
     before = [c for c in rPr if c.tag in RPR_BEFORE_HL]
@@ -440,6 +442,11 @@ def prompt_p(proto, line):
     for r, (_, key) in zip(para.findall(qn("a:r")), segs):
         if key:
             highlight(r, PROMPT_EL[key][1])
+        else:
+            rPr = r.find(qn("a:rPr"))
+            if rPr is not None:
+                for existing in rPr.findall(qn("a:highlight")):
+                    rPr.remove(existing)
     return para
 
 
@@ -1059,39 +1066,6 @@ notes(s, "SETUP (part of 0:10-0:20). The participant email asks attendees to sig
          "SEPARATE demo tenant. DATA: Ex 8 reads their own mail and calendar (private: no screen sharing); everything else uses the Zava files. "
          "Proctors triage; anyone blocked follows your demo. readiness-checklist.md has the triage.")
 
-# 5b — Setup: custom instructions
-CI_SHOT = os.path.join(ROOT, "reference", "media", "customize-instructions.png")
-s = white_slide("Setup \u2014 Customize instructions for Cowork",
-                "Guidance Cowork automatically adds to the start of every task. Set it once; it applies all day.")
-pic = s.shapes.add_picture(CI_SHOT, Inches(0.55), Inches(1.55), width=Inches(12.23))
-pic.name = "Picture CustomInstructions"
-pic._element.nvPicPr.cNvPr.set("descr", "Screenshot of the Cowork card 'Customize instructions for Cowork: Give Cowork "
-                               "guidance that is automatically added to the start of every task.'")
-wcard(s, 0.55, 3.5, 4.3, 2.4, BLUE, "HOW",
-      bullets(["**Customize \u2192 Preferences**", "Select **Customize instructions for Cowork**",
-               "Paste the text, then **save**", "Test it in a **new task**"], size=14, kind="num"))
-wcard(s, 5.05, 3.5, 7.73, 2.4, PURPLE, "PASTE THIS (WORKBOOK SETUP STEP D)",
-      [{"runs": [("I work in HR at Zava. Write in a warm, professional, inclusive tone suitable for employee "
-                  "communications. When you answer a policy or benefits question, cite the source document and add "
-                  "\u201cPolicies can change \u2014 please confirm with HR.\u201d Save emails and messages as drafts for "
-                  "me to review; during this workshop, never send anything to anyone but me. Unless I ask you to use my "
-                  "mail, calendar, or Teams, use only the Zava sample files in my OneDrive folder Documents/ai_hr_cowork_workshop, "
-                  "and never copy real employee personal data into files or drafts.",
-                  {"size": 13.5, "italic": True, "color": W_BODY})]}])
-band(s, 0.55, 6.05, 12.23, 0.75,
-     "**Personal to you** \u00b7 type **/** to reference a file or person \u00b7 up to ~20 KB, but **shorter is better** "
-     "\u00b7 Role samples: workbook step D", fill=PLUM, color="FFFFFF", size=13)
-notes(s, "CUSTOM INSTRUCTIONS (part of 0:10-0:20, about 1 min). Show it live: Customize -> Preferences -> 'Customize "
-         "instructions for Cowork'. Explain: guidance Cowork automatically adds to the START of every task, so tone, "
-         "format, and rules don't have to be repeated in each prompt. Everyone pastes the workbook text (Setup step D), "
-         "saves, then tests in a new task: 'Draft a two-sentence reminder to employees that open enrollment is in "
-         "November.' The reply should use the tone and end with the confirm-with-HR note. Instructions are personal "
-         "(neighbors don't see them), support rich text and / references, up to about 20 KB; "
-         "keep them short because they're included in every task. Source: Microsoft Learn, 'Customize Copilot Cowork "
-         "-> Custom instructions in Cowork'. MORE SAMPLES: workbook step D has role-based samples to paste back at work "
-         "(HR business partner, recruiter, HR operations, employee comms); the full set is in "
-         "reference/02-settings-and-models.md. Tell people to pick ONE, not stack them.")
-
 # 7 — Settings & models
 s = white_slide("Settings & models", "Shape how Cowork works \u2014 you won\u2019t change these every task.")
 tiles = [("MODEL PICKER", "Pick a model or let Cowork decide (default).", BLUE),
@@ -1200,7 +1174,7 @@ notes(s, "PROMPTING BEST PRACTICES (about 4 min, before the exercises). Read the
          "November, so a weak prompt invites a made-up deadline. Key message: no labels and no fixed order; just check "
          "all four are there. Context about the situation belongs in the Goal. Every exercise prompt, in the "
          "workbook and on the exercise cards, uses these same colors, and each card has a Prompt key at the bottom right "
-         "(setup step F has the legend and this example). When Cowork asks a clarifying question or misses, the missing piece is "
+         "(setup step E has the legend and this example). When Cowork asks a clarifying question or misses, the missing piece is "
          "usually one of the four: add it in a follow-up.")
 
 # 9c \u2014 Demo video: weak vs. strong prompt
@@ -1365,6 +1339,38 @@ for ex in EXERCISES:
         notes(b, "BREAK (15 min, 1:15-1:30). Sweep the room for blockers and check everyone's "
                  "Exercise 3 skill saved: Exercise 6 shares it.")
 
+mark_section("Optional Sections")
+CI_SHOT = os.path.join(ROOT, "reference", "media", "customize-instructions.png")
+s = white_slide("Optional \u2014 Customize instructions for Cowork",
+                "After Exercise 8, if time allows; otherwise try this after the workshop.")
+pic = s.shapes.add_picture(CI_SHOT, Inches(0.55), Inches(1.55), width=Inches(12.23))
+pic.name = "Picture CustomInstructions"
+pic._element.nvPicPr.cNvPr.set("descr", "Screenshot of the Cowork card 'Customize instructions for Cowork: Give Cowork "
+                               "guidance that is automatically added to the start of every task.'")
+wcard(s, 0.55, 3.5, 4.3, 2.4, BLUE, "HOW",
+      bullets(["**Customize \u2192 Preferences**", "Select **Customize instructions for Cowork**",
+               "Paste the text, then **save**", "Test it in a **new task**"], size=14, kind="num"))
+wcard(s, 5.05, 3.5, 7.73, 2.4, PURPLE, "PASTE THIS (WORKBOOK OPTIONAL SECTIONS)",
+      [{"runs": [("I work in HR at Zava. Write in a warm, professional, inclusive tone suitable for employee "
+                  "communications. When you answer a policy or benefits question, cite the source document and add "
+                  "\u201cPolicies can change \u2014 please confirm with HR.\u201d Save emails and messages as drafts for "
+                  "me to review; during this workshop, never send anything to anyone but me. Unless I ask you to use my "
+                  "mail, calendar, or Teams, use only the Zava sample files in my OneDrive folder Documents/ai_hr_cowork_workshop, "
+                  "and never copy real employee personal data into files or drafts.",
+                  {"size": 13.5, "italic": True, "color": W_BODY})]}])
+band(s, 0.55, 6.05, 12.23, 0.75,
+     "**Personal to you** \u00b7 type **/** to reference a file or person \u00b7 up to ~20 KB, but **shorter is better** "
+     "\u00b7 Role samples: workbook Optional Sections", fill=PLUM, color="FFFFFF", size=13)
+notes(s, "OPTIONAL CUSTOM INSTRUCTIONS (after Exercise 8, about 1 min; outside the required agenda). Skip this "
+         "if time is short and point to the workbook's Optional Sections for later. Show it live: Customize -> "
+         "Preferences -> 'Customize instructions for Cowork'. Explain: guidance Cowork automatically adds to the "
+         "START of every new task, so tone, format, and rules don't have to be repeated in each prompt. "
+         "Attendees who opt in paste the workbook sample, save, then test in a new task: 'Draft a two-sentence "
+         "reminder to employees that open enrollment is in November.' The reply should use the tone and end with "
+         "the confirm-with-HR note. Instructions are personal, support rich text and / references, up to about "
+         "20 KB; keep them short. Clear or adapt the Zava sample before returning to real work. Role-based samples "
+         "are in the workbook's Optional Sections and reference/02-settings-and-models.md. Pick ONE, not stack them.")
+
 # Facilitation
 mark_section("Close")
 s = white_slide("Facilitation & troubleshooting", "For instructors \u2014 skip live or use during a break.")
@@ -1418,7 +1424,7 @@ s = white_slide("Clean up the training data",
 wcard(s, 0.55, 1.6, 5.98, 3.45, BLUE, "1  STOP AND REVIEW IN COPILOT",
       bullets(["**Automations \u2192 Manage schedules:** delete or pause the Ex 8 command center and Ex 6 ticket digest",
                "**Customize \u2192 Skills:** delete Executive Command Center and HR Policy Answer unless you\u2019ll use them",
-               "**Customize \u2192 Preferences:** delete or rewrite the Zava custom instructions",
+               "**Customize \u2192 Preferences:** if set in the optional section, delete or rewrite the Zava instructions",
                "**Copilot \u2192 agent \u2026 menu:** delete HR Policy Agent if you don\u2019t need it (permanent)"], size=13))
 wcard(s, 6.8, 1.6, 5.98, 3.45, GREEN, "2  DELETE THE ZAVA FILES",
       bullets(["**OneDrive:** delete Documents/ai_hr_cowork_workshop and the Zava files in **Cowork**",

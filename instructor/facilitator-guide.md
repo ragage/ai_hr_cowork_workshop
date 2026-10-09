@@ -71,7 +71,7 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
 | --- | --- | --- | --- |
 | 0:00–0:05 | **Welcome & context** | Explain what Cowork is, HR value, the approval/checkpoint model | Listen; open Cowork |
 | 0:05–0:10 | **Copilot vs. Cowork** | Draw the assistant-vs-coworker distinction; when to use which | Ask questions; share HR examples |
-| 0:10–0:20 | **Cowork UI walkthrough + setup** | Tour New task, My tasks, Automations, Customize, model picker, reasoning effort; show copying files | Sign in + smoke test + copy sample files + custom instructions |
+| 0:10–0:20 | **Cowork UI walkthrough + setup** | Tour New task, My tasks, Automations, Customize, model picker, reasoning effort; show copying files | Sign in + smoke test + copy sample files |
 | 0:20–0:35 | **Ex 1 — Deep Research (web)** | Walk the first scenario card; demo the cited briefing, optional scorecard, Output folder, and `/cost` screenshots | Run Deep Research, ground it in the job description for 5 questions; optional: scorecard and cost check |
 | 0:35–0:50 | **Ex 2 — Navigate websites with the browser** | Demo the browser: consent, progress chips, Switch to tab as it searches dol.gov and lni.wa.gov | Run the two-site navigation, check the links; optional: Word brief for payroll |
 | 0:50–1:05 | **Ex 3 — Build a custom skill** | Build "HR Policy Answer" live; read the evaluation aloud | Build, read score, test in/out of scope |
@@ -114,9 +114,8 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
 - Then **check the pre-session setup**: everyone is **signed in in Microsoft Edge**, their **Edge
   profile** is their work account (needed for the Ex 2 browser task; a proctor also checks the Edge
   **Cowork** setting), the **smoke test** worked, and the **sample folder** is in their OneDrive. Anyone
-  who hasn't does it now with a proctor. Everyone sets their **custom instructions** (Customize → Preferences → **Customize instructions for
-  Cowork**; paste the workbook's text, Setup step D) — this is where sign-in/account issues surface. Proctors triage while you keep going with
-  those who are ready.
+  who hasn't does it now with a proctor. Proctors triage while you keep going with those who are ready.
+  Don't set custom instructions during setup; that walkthrough is optional after Exercise 8.
 
 ### Ex 1 — Deep Research (0:20–0:35)
 - Deep Research reads and **cites** many web sources; contrast it with a single lookup.
@@ -291,6 +290,20 @@ because it took about 11.
   decisions, not evaluating individual people** — an important norm for HR.
 - **Cleanup:** skill stays **"Only you"**; ask everyone to **pause or delete the weekday schedule**
   after class (Automations → Manage schedules) so it doesn't keep consuming usage.
+
+## Optional Sections
+
+### Customize instructions for Cowork (after Exercise 8, if time allows)
+- This is optional, outside the required 150-minute agenda. Skip it when time is short; preserve
+  the wrap-up and schedule cleanup.
+- Use the deck's **Optional Sections** slide and the
+  [workbook walkthrough](../participant/participant-workbook.md#optional-sections).
+- Demo **Customize → Preferences → Customize instructions for Cowork**. Attendees who opt in
+  paste the sample, save it, and test in a **new task**. It applies to future tasks, not earlier ones.
+- Keep preferences short and personal. Choose one role sample, rather than stacking all of them.
+  Clear or adapt the Zava instructions before returning to real work.
+
+## Closing
 
 ### Wrap-up (2:25–2:30)
 - Keep it tight: this segment is 5 minutes.

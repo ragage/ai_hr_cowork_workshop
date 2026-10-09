@@ -74,6 +74,9 @@ The pace is brisk: the facilitator plays a short **demo video** before each exer
 on long Cowork runs, and the **HR plugins** read (Customize → Plugins) is in the
 [after-the-workshop pack](participant/after-the-workshop.md) for self-study.
 
+**Customize instructions for Cowork** is in **Optional Sections** after Exercise 8, not a setup
+prerequisite; cover it only if time allows, or after the workshop.
+
 ## What's in this kit
 
 > **Every guide comes in two formats:** Markdown (`.md`, for viewing and editing in GitHub or VS Code)

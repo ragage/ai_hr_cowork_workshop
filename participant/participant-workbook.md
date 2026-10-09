@@ -37,7 +37,8 @@ Builder**.
 ## Setup (about 10 minutes) — do A and B before the session
 
 > The session is brisk, so please do **A** (sign in) and **B** (copy the sample data) **before the day**,
-> as the invitation email asks. During the session's 10-minute setup check, you'll do **C** and **D**.
+> as the invitation email asks. During the session's 10-minute setup check, you'll do **C–E**.
+> Custom instructions are optional, after Exercise 8 in [Optional Sections](#optional-sections).
 
 ### A. Sign in and smoke test
 1. Sign in with **your own work account**, then open
@@ -102,45 +103,7 @@ The left navigation has four places you'll use today:
 
 See [reference/07-cowork-ui-walkthrough.md](../reference/07-cowork-ui-walkthrough.md) for the full tour.
 
-### D. Customize instructions for Cowork (1 min)
-Custom instructions are guidance Cowork **automatically adds to the start of every task**, so you
-don't have to repeat your tone, format, or rules in each prompt. Set them once now and they apply
-to every exercise today.
-
-![The "Customize instructions for Cowork" card: Give Cowork guidance that is automatically added to the start of every task.](../reference/media/customize-instructions.png)
-
-1. In the left navigation, select **Customize**, then the **Preferences** tab.
-2. Select **Customize instructions for Cowork** (the card above).
-3. Paste this **sample instruction** (or adapt it), then save:
-   > I work in HR at Zava. Write in a warm, professional, inclusive tone suitable for employee
-   > communications. When you answer a policy or benefits question, cite the source document and add
-   > "Policies can change — please confirm with HR." Save emails and messages as drafts for me to
-   > review; during this workshop, never send anything to anyone but me. Unless I ask you to use my
-   > mail, calendar, or Teams, use only the Zava sample files in my OneDrive folder
-   > Documents/ai_hr_cowork_workshop, and never copy real employee personal data into files or drafts.
-4. **Check it works:** start a **new task** and ask: *"Draft a two-sentence reminder to employees that
-   open enrollment is in November."* The reply should use your tone and end with the
-   confirm-with-HR note.
-
-**More sample instructions for after the workshop.** Use the one above today. Back at work, pick the
-**one** sample closest to your role, replace the `{placeholders}`, and paste it in instead:
-
-| Your role | Sample instruction to paste |
-| --- | --- |
-| **HR generalist / business partner** | *I'm an HR business partner supporting {teams}. Lead with the answer, then up to five bullets, in plain language a manager could forward without editing. Flag anything that touches pay, performance, discipline, leave, or legal risk, and suggest I check with Employee Relations or Legal. Never make or recommend a decision about an individual employee. Save every email and Teams message as a draft for me to review.* |
-| **Recruiter** | *I'm a recruiter hiring for {roles}. Use inclusive, bias-free language in job posts and candidate emails, with no degree or years-of-experience requirements unless I say they're essential. Keep candidate emails under 150 words with one clear next step. When scheduling interviews, offer times between 9:00 and 16:00 {my time zone} and always add a Teams link. Save candidate messages as drafts.* |
-| **HR operations / reporting** | *When you analyze HR data, show the numbers in a table first, then three takeaways. Name the source file and date range, and call out any rows you excluded. Round percentages to one decimal place. Never overwrite my source files; save new versions with today's date in the name. Don't include employee names in summaries unless I ask.* |
-| **Employee communications** | *For messages to all employees: aim for an 8th-grade reading level, open with what's changing and when, then what employees need to do, then where to get help ({HR help mailbox}). Keep subject lines under eight words, and offer a shorter Teams version too.* |
-
-Full set, including formatting preferences you can add to any of them:
-[reference/02-settings-and-models.md](../reference/02-settings-and-models.md#sample-custom-instructions-to-paste).
-
-> **Good to know:** instructions are **personal** to your account (your neighbors don't see them). They support rich text, and you can type **/** to reference a skill, file, person,
-> or meeting. The limit is about **20 KB** (roughly 3,000 words; a counter shows how much you've
-> used), but **shorter is better**: Cowork includes them in every task, so long or conflicting
-> instructions leave less room for the task itself. Change or clear them any time on the same page.
-
-### E. Approvals — one at a time (read before Exercise 1)
+### D. Approvals — one at a time (read before Exercise 1)
 Cowork **pauses before it acts** — before it sends, schedules, saves a skill, or does something
 consequential in a website — and shows an approval dialog. You'll meet these all day.
 
@@ -151,7 +114,7 @@ consequential in a website — and shows an approval dialog. You'll meet these a
 > side panel's **Permissions** section. Details:
 > [How approvals work](../reference/07-cowork-ui-walkthrough.md#how-approvals-work-read-this-before-exercise-1).
 
-### F. Prompting best practices
+### E. Prompting best practices
 
 A strong Cowork prompt includes four elements. You don't have to label them; just make sure each one
 is there. In the **Word workbook** and on the exercise slides, every exercise prompt is color-coded so
@@ -777,6 +740,52 @@ HR ticket trends from `hr-tickets-sample.xlsx`.
 
 ---
 
+## Optional Sections
+
+These are not required for any exercise. Try them after Exercise 8 if time allows, or after the
+workshop; keep the five-minute wrap-up and schedule cleanup.
+
+### Customize instructions for Cowork (1 min)
+Custom instructions are guidance Cowork **automatically adds to the start of every new task**, so
+you don't have to repeat your tone, format, or rules in each prompt. They are optional and aren't
+needed for Exercises 1–8.
+
+![The "Customize instructions for Cowork" card: Give Cowork guidance that is automatically added to the start of every task.](../reference/media/customize-instructions.png)
+
+1. In the left navigation, select **Customize**, then the **Preferences** tab.
+2. Select **Customize instructions for Cowork** (the card above).
+3. Paste this **sample instruction** (or adapt it), then save:
+   > I work in HR at Zava. Write in a warm, professional, inclusive tone suitable for employee
+   > communications. When you answer a policy or benefits question, cite the source document and add
+   > "Policies can change — please confirm with HR." Save emails and messages as drafts for me to
+   > review; during this workshop, never send anything to anyone but me. Unless I ask you to use my
+   > mail, calendar, or Teams, use only the Zava sample files in my OneDrive folder
+   > Documents/ai_hr_cowork_workshop, and never copy real employee personal data into files or drafts.
+4. **Check it works:** start a **new task** and ask: *"Draft a two-sentence reminder to employees that
+   open enrollment is in November."* The reply should use your tone and end with the
+   confirm-with-HR note.
+
+**More sample instructions for after the workshop.** If you use the Zava sample above, clear or
+adapt it before returning to real work. Pick the **one** sample closest to your role, replace the
+`{placeholders}`, and paste it in instead:
+
+| Your role | Sample instruction to paste |
+| --- | --- |
+| **HR generalist / business partner** | *I'm an HR business partner supporting {teams}. Lead with the answer, then up to five bullets, in plain language a manager could forward without editing. Flag anything that touches pay, performance, discipline, leave, or legal risk, and suggest I check with Employee Relations or Legal. Never make or recommend a decision about an individual employee. Save every email and Teams message as a draft for me to review.* |
+| **Recruiter** | *I'm a recruiter hiring for {roles}. Use inclusive, bias-free language in job posts and candidate emails, with no degree or years-of-experience requirements unless I say they're essential. Keep candidate emails under 150 words with one clear next step. When scheduling interviews, offer times between 9:00 and 16:00 {my time zone} and always add a Teams link. Save candidate messages as drafts.* |
+| **HR operations / reporting** | *When you analyze HR data, show the numbers in a table first, then three takeaways. Name the source file and date range, and call out any rows you excluded. Round percentages to one decimal place. Never overwrite my source files; save new versions with today's date in the name. Don't include employee names in summaries unless I ask.* |
+| **Employee communications** | *For messages to all employees: aim for an 8th-grade reading level, open with what's changing and when, then what employees need to do, then where to get help ({HR help mailbox}). Keep subject lines under eight words, and offer a shorter Teams version too.* |
+
+Full set, including formatting preferences you can add to any of them:
+[reference/02-settings-and-models.md](../reference/02-settings-and-models.md#sample-custom-instructions-to-paste).
+
+> **Good to know:** instructions are **personal** to your account (your neighbors don't see them). They support rich text, and you can type **/** to reference a skill, file, person,
+> or meeting. The limit is about **20 KB** (roughly 3,000 words; a counter shows how much you've
+> used), but **shorter is better**: Cowork includes them in every task, so long or conflicting
+> instructions leave less room for the task itself. Change or clear them any time on the same page.
+
+---
+
 ## Wrap-up (5 min)
 
 - Which task will save you the most time next week?
@@ -790,8 +799,8 @@ HR ticket trends from `hr-tickets-sample.xlsx`.
   **draft, review, approve at checkpoints, cite and confirm, keep real data private.**
 - **Before you leave:** follow [Clean up the training data](#clean-up-the-training-data) below. At
   minimum, delete or pause the schedules you created in Exercises 8 and 6.
-- **Tomorrow:** you'll receive [after-the-workshop.md](after-the-workshop.md), with a knowledge
-  check, a short survey, and a 30-day plan to make this a habit.
+- **Tomorrow:** you'll receive [after-the-workshop.md](after-the-workshop.md), with a short survey
+  and a 30-day plan to make this a habit.
 
 ### If you get stuck
 - Cowork toggle missing or no response → [readiness checklist](../instructor/readiness-checklist.md), then a proctor.
@@ -818,7 +827,7 @@ Work in this order, so a schedule doesn't create new files after you've cleaned 
    Command Center** and **HR Policy Answer** (including any copy with your initials) unless you'll use
    them. Keep any you keep set to **"Only you"**. Delete skills here, not by deleting their files in
    OneDrive.
-3. **Update your custom instructions.** Open **Customize → Preferences**. The workshop instructions
+3. **If you tried the optional section, update your custom instructions.** Open **Customize → Preferences**. The workshop instructions
    mention Zava and apply to **every** Cowork task, so delete them or rewrite them for your real work.
 4. **Delete the HR Policy Agent** if you don't need it. In Microsoft 365 Copilot, select the **More**
    (**...**) menu next to **HR Policy Agent** in the left pane (or find it under **All agents**), then
