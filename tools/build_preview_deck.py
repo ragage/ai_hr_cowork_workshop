@@ -248,7 +248,7 @@ for r in tf.paragraphs[0].runs:
     r.font.name, r.font.size = DISP, Pt(40)
     r.font.color.rgb = RGBColor.from_string(INK)
 tf.paragraphs[0].alignment = PP_ALIGN.LEFT
-text(s, 0.8, 4.05, 8.0, 0.8, [{"runs": [("A 2-hour 35-minute, hands-on, no-code workshop that helps HR teams hand everyday "
+text(s, 0.8, 4.05, 8.0, 0.8, [{"runs": [("An about-3-hour, hands-on, no-code workshop that helps HR teams hand everyday "
                                          "work to Microsoft Copilot Cowork", {"size": 17, "color": SUB, "font": DISP})]}],
      line_spacing=1.05)
 box(s, 0.8, 5.15, 0.06, 0.75, PURPLE)
@@ -279,7 +279,7 @@ notes(s, "WHY WE'RE MEETING. Set expectations: about 45 minutes, half walkthroug
 
 # ================================================================ 3 — At a glance
 s = new_slide("The workshop at a glance", "Instructor-led, hands-on, and built for HR practitioners")
-for i, (big, small, acc) in enumerate((("155 min", "one session, one break", BLUE), ("~25", "attendees per session", PURPLE),
+for i, (big, small, acc) in enumerate((("About 3 hours", "one session, one break", BLUE), ("~25", "attendees per session", PURPLE),
                                        ("8", "hands-on exercises", GREEN), ("0", "lines of code", ORANGE))):
     x = 0.6 + i * 3.08
     box(s, x, 2.0, 2.85, 1.55, WHITE, line=LINE, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.08)
@@ -334,7 +334,7 @@ notes(s, "THREE TOOLS. Cowork is the focus (7 of 8 exercises). Exercise 7 delibe
          "the difference between a skill that helps them and an agent that helps others.")
 
 # ================================================================ 6 — Agenda
-s = new_slide("Agenda \u00b7 155 minutes", "Short framing, then mostly hands-on")
+s = new_slide("Agenda \u00b7 About 3 hours", "Short framing, then mostly hands-on")
 AGENDA = [("0:00\u20130:20", "Welcome, Copilot vs. Cowork, UI tour, and setup check")]
 for ex in EXERCISES:
     AGENDA.append((ex_clock(ex), f"Ex {ex['num']} \u00b7 {ex['title']}" + (" (not Cowork)" if ex.get("not_cowork") else "")))
@@ -554,7 +554,7 @@ NEXT = [("Today", "Your feedback on scenarios, data, and format", BLUE),
         ("Within 1 week", "We share a tailored agenda and exercise list", PURPLE),
         ("T \u2212 3 weeks", "Tenant readiness starts with your admin", GREEN),
         ("T \u2212 1 week", "Full dry run in your tenant", ORANGE),
-        ("Workshop day", "155 minutes, hands-on", TEAL),
+        ("Workshop day", "About 3 hours, hands-on", TEAL),
         ("+ 30 days", "Adoption check-in", RED)]
 for i, (when, what, acc) in enumerate(NEXT):
     x = 0.6 + i * 2.05

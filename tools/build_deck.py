@@ -725,8 +725,8 @@ def exercise_divider(ex):
 
 # ---------------------------------------------------------------- slides shared with build_overview.py
 def agenda_slide():
-    """Agenda slide: the 2-hour 35-minute run of show (shared by the instructor and overview decks)."""
-    s = white_slide("Agenda \u2014 2 hours 35 minutes, hands-on",
+    """Agenda slide: the hands-on run of show (shared by the instructor and overview decks)."""
+    s = white_slide("Agenda \u2014 About 3 hours, hands-on",
                     "Framing and a UI tour, then eight scenario-based exercises with one break.")
     LEFT = [("5 min", "Welcome & context", "What Cowork is, HR value, the approval model", BLUE),
             ("5 min", "Copilot vs. Cowork", "The difference and when to use which", BLUE),
@@ -919,12 +919,12 @@ def exercise_demo(ex):
 # 1 — Title
 mark_section("Welcome & orientation")
 s = title_slide("Getting Things Done with Copilot Cowork for HR Tasks",
-                "Instructor-led, hands-on workshop \u00b7 2 hours 35 minutes \u00b7 ~25 attendees", title_size=40,
+                "Instructor-led, hands-on workshop \u00b7 About 3 hours \u00b7 ~25 attendees", title_size=40,
                 lines=["Getting Things Done with Copilot Cowork", "for HR Tasks"])
 notes(s, "WELCOME (0:00-0:05). Introduce yourself and the goal: by the end, every attendee knows when to "
          "use Copilot Chat vs. Cowork and has built an executive command center, researched the web, "
          "had Cowork navigate websites in its browser, built a custom skill, an onboarding pack, an automation, and a no-code agent, and finished "
-         "with the Executive Command Center capstone. 2 hours 35 minutes, one 15-minute break after Ex 4. The pace is brisk: play the demo videos instead of waiting on long runs. Tenant note: ATTENDEES use their own work accounts; YOU demo "
+         "with the Executive Command Center capstone. About 3 hours, including one 15-minute break after Ex 4. The pace is brisk: play the demo videos instead of waiting on long runs. Tenant note: ATTENDEES use their own work accounts; YOU demo "
          "from a SEPARATE tenant, so your screen may differ. Golden rule all day: every Cowork output is "
          "a DRAFT; Cowork pauses at checkpoints.")
 
@@ -1138,6 +1138,31 @@ demo_video_slide("Prompting best practices", "Demo", "the weak and strong open-e
                  "STRONG one, in two tasks side by side. Point to each colored element as Cowork uses it, and to "
                  "the invented-vs-sourced dates.",
                  ("Same topic, two prompts. ", "Watch what Cowork does with each, then spot the four elements."))
+
+s = white_slide("Prompt Coach \u2014 improve a weak prompt",
+                "Find Prompt Coach in Copilot Chat \u2192 Agents, then ask it to analyze before you run.")
+text(s, 0.65, 1.45, 4.0, 0.35, [{"runs": [("1 \u00b7 Find the agent", {"size": 14, "bold": True, "color": W_TITLE})]}])
+pic = s.shapes.add_picture(os.path.join(ROOT, "tools", "assets", "prompt-coach-agent-picker.png"),
+                           Inches(0.65), Inches(1.9), width=Inches(4.0))
+pic._element.nvPicPr.cNvPr.set(
+    "descr", "Copilot Chat with Agents selected and the search panel showing Prompt Coach as an agent result.")
+text(s, 4.95, 1.45, 7.7, 0.35, [{"runs": [("2 \u00b7 Ask for feedback on a weak prompt", {"size": 14, "bold": True, "color": W_TITLE})]}])
+pic = s.shapes.add_picture(os.path.join(ROOT, "tools", "assets", "prompt-coach-example.png"),
+                           Inches(4.95), Inches(1.9), width=Inches(7.7))
+pic._element.nvPicPr.cNvPr.set(
+    "descr", "Prompt asks Prompt Coach to analyze and suggest improvements to the weak prompt: Write an email about open enrollment.")
+band(s, 0.65, 5.15, 12.0, 1.35,
+     '**Try:** "Analyze this prompt and suggest a stronger version using Goal, Source, Expectations, and Constraints: '
+     'Write an email about open enrollment."\n'
+     '**Then review:** add the right audience, trusted files, desired format, and limits; verify dates and details before running.',
+     size=14)
+notes(s, "PROMPT COACH (brief optional aid after Prompting best Practices). Show where to find Prompt Coach under "
+         "Copilot Chat > Agents, then ask it to critique and suggest a rewrite for the weak open-enrollment prompt. "
+         "Treat its advice as a draft: verify the sources, dates, audience, and constraints, then edit the prompt "
+         "yourself using Goal, Source, Expectations, Constraints. Prompt Coach reviews the prompt; it does not "
+         "replace checking outputs or HR review. Don't enter real employee or confidential data. Agent availability "
+         "may depend on tenant configuration; skip if it isn't available. Keep this optional and within the existing "
+         "prompting segment; no extra workshop time.")
 
 # 10 — How to read an exercise card (the template itself, annotated)
 scenario_card(GUIDE_CARD)

@@ -20,6 +20,7 @@ Edit the content here (or in the Markdown guides), then rebuild; don't hand-edit
 | `assets/cowork-home.png` | the Cowork home-page screenshot on the "What is Copilot Cowork?" slide |
 | `assets/cowork-spending-policy.png` | supplied admin-policy screenshot on the Appendix's "Cowork settings — Edge browsing & Copilot Credits" slide; example settings, not recommended unlimited spending |
 | `assets/cowork-browser-settings.png` | supplied browser-access screenshot on the same Cowork settings slide; use attendee-scoped access rather than copying the example's All users setting |
+| `assets/prompt-coach-agent-picker.png` + `assets/prompt-coach-example.png` | supplied screenshots on "Prompt Coach — improve a weak prompt", after Prompting best practices |
 | `assets/cowork-new-task.png` + `assets/cowork-starter-prompts.png` + `assets/cowork-task-ideas.png` | supplied screenshots on "Sample Cowork prompts to get started", immediately before Exercise 1 |
 | `assets/cowork-cost-command.png` + `assets/cowork-usage.png` | supplied screenshots on Exercise 1's closing cost-check slide: the `/cost` skill picker and monthly Usage panel |
 

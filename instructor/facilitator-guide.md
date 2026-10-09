@@ -123,6 +123,15 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
 - Keep this a quick orientation within setup, not another live task. Use the demo account;
   attendee suggestions may differ. Review drafts and approve actions one at a time.
 
+### Prompt Coach — improve a weak prompt
+- After **Prompting best practices**, optionally show the Prompt Coach agent in Copilot Chat →
+  **Agents** and ask it to critique the weak open-enrollment example.
+- Review and edit its suggestions against **Goal, Source, Expectations, Constraints**; verify
+  dates and details before running. Prompt Coach critiques prompts; it does not replace output
+  checks or HR review.
+- Don't enter real employee or confidential data. Availability depends on tenant configuration;
+  skip if it isn't available. Keep this within the existing prompting segment.
+
 ### Ex 1 — Deep Research (0:20–0:35)
 - Deep Research reads and **cites** many web sources; contrast it with a single lookup.
 - Have attendees **open two citations** and check them: the habit matters more than the briefing.
