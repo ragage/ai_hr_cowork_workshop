@@ -98,7 +98,7 @@ The left navigation has four places you'll use today:
 - **My tasks** — find and resume your previous tasks.
 - **Automations** — schedule tasks or run them on events (you'll use this in Exercise 6).
 - **Customize** — custom instructions, your personal skills, and plugins (more in the
-  [after-the-workshop pack](after-the-workshop.md#4-go-further-extend-cowork-with-hr-plugins)).
+  [after-the-workshop pack](after-the-workshop.md#3-go-further-extend-cowork-with-hr-plugins)).
 
 See [reference/07-cowork-ui-walkthrough.md](../reference/07-cowork-ui-walkthrough.md) for the full tour.
 

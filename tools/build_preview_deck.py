@@ -432,7 +432,7 @@ TAKE = [("Participant workbook", "Every exercise, step by step, with checkpoints
         ("Prompt library", "Copy-paste HR prompts by scenario"),
         ("Their own custom skill", "An HR Policy Answer skill they built and tested"),
         ("A working HR agent", "Built in Agent Builder, grounded in HR documents"),
-        ("After-the-workshop pack", "Knowledge check, feedback survey, and a 30-day adoption plan")]
+        ("After-the-workshop pack", "Feedback survey and a 30-day adoption plan")]
 for i, (h, b) in enumerate(TAKE):
     x, y = 0.6 + (i % 2) * 6.13, 2.05 + (i // 2) * 1.5
     box(s, x, y, 5.9, 1.3, WHITE, line=LINE, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.1)

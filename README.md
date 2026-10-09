@@ -105,7 +105,7 @@ The kit is organized by audience:
 | --- | --- | --- |
 | README | [.md](README.md) · [.docx](README.docx) | This overview |
 | summary/PROJECT-SUMMARY | [.md](summary/PROJECT-SUMMARY.md) (maintainers only) | Handoff notes: status, architecture, decisions, how to build and test, remaining work |
-| [instructor/instructor-deck.pptx](instructor/instructor-deck.pptx) | pptx | Instructor deck (57 slides, speaker notes, alt text) — a **prompting best-practices slide** (Goal, Source, Expectations, Constraints, with a weak vs. strong HR prompt), a divider slide with a picture and progress tracker before each exercise, one PowerPoint section per exercise for quick navigation, objectives, approvals, a **workshop kit slide with download links** for participants and instructors, a scenario card, **demo video slide** (an empty video frame for your recording), and hands-on slide per exercise (its speaker notes carry the full prompt, ready to copy), demo video slides for the UI walkthrough and the prompting slide, an Output folder walkthrough, an optional **check-the-cost** (`/cost`) slide for Exercise 1, red **Not Cowork** banners on Exercise 7, a knowledge check, and a closing **clean up the training data** slide |
+| [instructor/instructor-deck.pptx](instructor/instructor-deck.pptx) | pptx | Instructor deck (56 slides, speaker notes, alt text) — a **prompting best-practices slide** (Goal, Source, Expectations, Constraints, with a weak vs. strong HR prompt), a divider slide with a picture and progress tracker before each exercise, one PowerPoint section per exercise for quick navigation, objectives, approvals, a **workshop kit slide with download links** for participants and instructors, a scenario card, **demo video slide** (an empty video frame for your recording), and hands-on slide per exercise (its speaker notes carry the full prompt, ready to copy), demo video slides for the UI walkthrough and the prompting slide, an Output folder walkthrough, an optional **check-the-cost** (`/cost`) slide for Exercise 1, red **Not Cowork** banners on Exercise 7, and a closing **clean up the training data** slide |
 | [instructor/customer-preview-deck.pptx](instructor/customer-preview-deck.pptx) | pptx | Customer preview deck (17 slides) for the account team and facilitator to walk the customer through before delivery — format, agenda, the eight exercises, safety, prerequisites, cost planning, and questions for their feedback; title slide has `[Customer name]` and `[Date]` placeholders |
 | [communication/training-overview.pptx](communication/training-overview.pptx) | pptx | Training overview deck (8 slides) for HR leaders and prospective attendees — what the training is, objectives, agenda, the eight exercises, what to prepare, and the same **download links** slide |
 | [communication/participant-email.html](communication/participant-email.html) | html | Paste-ready Outlook invitation for attendees: session details, what to bring, and links to the workbook, sample data, and handouts |
@@ -116,7 +116,7 @@ The kit is organized by audience:
 | instructor/facilitator-answer-key | [.md](instructor/facilitator-answer-key.md) · [.docx](instructor/facilitator-answer-key.docx) | Expected results and verified figures for every exercise; fallback walkthrough |
 | participant/participant-workbook | [.md](participant/participant-workbook.md) · [.docx](participant/participant-workbook.docx) | Step-by-step attendee exercises with checkpoints, ending with training-data clean-up steps |
 | [participant/quick-reference-card.docx](participant/quick-reference-card.docx) | docx | One-page printable handout: tools, prompt recipe, approvals, UI map, golden rules |
-| participant/after-the-workshop | [.md](participant/after-the-workshop.md) · [.docx](participant/after-the-workshop.docx) | Knowledge check, feedback survey (for Microsoft Forms), and 30-day adoption plan |
+| participant/after-the-workshop | [.md](participant/after-the-workshop.md) · [.docx](participant/after-the-workshop.docx) | Feedback survey (for Microsoft Forms) and 30-day adoption plan |
 | reference/00-copilot-vs-cowork | [.md](reference/00-copilot-vs-cowork.md) · [.docx](reference/00-copilot-vs-cowork.docx) | Copilot Chat vs. Cowork — the difference (training opener) |
 | reference/01-cowork-overview | [.md](reference/01-cowork-overview.md) · [.docx](reference/01-cowork-overview.docx) | What Cowork is and where to use it |
 | reference/02-settings-and-models | [.md](reference/02-settings-and-models.md) · [.docx](reference/02-settings-and-models.docx) | Settings, model picker, reasoning effort, automations |
@@ -172,7 +172,7 @@ to **Documents** in your OneDrive (`Documents/ai_hr_cowork_workshop`). The promp
 4. **Attendees:** on the day, follow [participant-workbook.md](participant/participant-workbook.md) start to
    finish, with the printed [quick-reference card](participant/quick-reference-card.docx) and the
    [prompt library](reference/04-prompt-library.md) open.
-5. **Afterward:** send [after-the-workshop.md](participant/after-the-workshop.md) (knowledge check, survey, and
+5. **Afterward:** send [after-the-workshop.md](participant/after-the-workshop.md) (survey and
    30-day plan) and pause the Exercise 8 and 6 schedules.
 6. **Everyone:** treat every Cowork output as a **draft to review**, approve **one action at a
    time**, keep Exercise 8 results private, and use the fictional sample data for the other exercises.
@@ -198,7 +198,7 @@ to **Documents** in your OneDrive (`Documents/ai_hr_cowork_workshop`). The promp
 - ✅ An **HR plugins** read on **Customize → Plugins** for self-study in the after-the-workshop pack
 - ✅ Every exercise introduced with a **scenario card** (workbook + deck)
 - ✅ **Learning objectives**, a verified **answer key**, facilitator **demo seed data**, a prep **timeline** with cost
-  planning and **Plan B**, a **knowledge check**, and a **30-day adoption plan**
+  planning and **Plan B**, and a **30-day adoption plan**
 - ✅ Broad HR-lifecycle focus: onboarding, policy/benefits, recruiting, communications, reporting
 
 ---

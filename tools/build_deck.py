@@ -770,7 +770,7 @@ def objectives_slide():
         text(s, x + 1.1, y + 0.1, 4.75, 1.35, [{"runs": [(h, {"size": 16, "bold": True, "color": W_TITLE})], "space_after": 4},
                                                {"runs": rich(sub, 13, W_SUB)}], anchor=MSO_ANCHOR.MIDDLE)
     notes(s, "LEARNING OBJECTIVES (part of Welcome, 0:00-0:05). Read the six out loud and tell the room you'll come "
-             "back to them at wrap-up with a quick knowledge check. They mirror the README and workbook.")
+             "back to them at wrap-up with a recap. They mirror the README and workbook.")
     return s
 
 
@@ -1382,27 +1382,6 @@ notes(s, "FACILITATION. Biggest risks with ~25 people: pace variance, account re
          "Ex 8 (your demo account is seeded with seed-content.md, loaded through VS Code + the Work IQ MCP server). Attendees use their own work accounts; you're on a separate tenant. Never ask anyone to share their Ex 8 dashboard. "
          "Mirrors facilitator-guide.md, facilitator-answer-key.md, and readiness-checklist.md (timeline, cost "
          "planning, Plan B). Time checks: 0:20 Ex 1, 0:50 Ex 3, 1:15 break, 1:55 Ex 7, 2:10 Ex 8; the optional sub-tasks (1c scorecard, 2b brief, 5b + 5c, 6c sharing) are for fast finishers, so demo them rather than wait. If still behind, cut in this order: 6a only, then Ex 7 as a demo. Never cut Ex 3.")
-
-# Knowledge check
-s = white_slide("Quick knowledge check", "Show of hands \u2014 answers in after-the-workshop.md.")
-KC = [("1", "You need a 3-bullet summary of one policy. Which tool?", "Copilot Chat", BLUE),
-      ("2", "Cowork shows **Approve All (5)**. What happens if you click it?", "All five run, with no individual review", PURPLE),
-      ("3", "Why can\u2019t you add **.md** files as Agent Builder knowledge?", "Unsupported \u2014 use .docx, .pdf, or .xlsx", GREEN),
-      ("4", "Skill vs. agent \u2014 who benefits?", "A skill helps **you**; an agent helps **others**", RED)]
-for i, (n, q, a, acc) in enumerate(KC):
-    y = 1.6 + i * 1.05
-    box(s, 0.55, y, 12.23, 0.92, "FFFFFF", line=W_LINE, shadow=True)
-    box(s, 0.55, y, 0.06, 0.92, acc)
-    text(s, 0.8, y, 0.5, 0.92, [{"runs": [(n, {"size": 24, "bold": True, "color": acc})]}], anchor=MSO_ANCHOR.MIDDLE)
-    text(s, 1.4, y, 6.9, 0.92, [{"runs": rich(q, 15, W_TITLE)}], anchor=MSO_ANCHOR.MIDDLE)
-    text(s, 8.5, y, 4.1, 0.92, [{"runs": rich(a, 13, W_SUB)}], anchor=MSO_ANCHOR.MIDDLE)
-band(s, 0.55, 5.9, 12.23, 0.85,
-     "**Reveal answers one at a time** \u2014 the right column is for you. Tomorrow: the full 8-question check, survey, and 30-day plan.",
-     size=13)
-notes(s, "KNOWLEDGE CHECK (start of wrap-up). Read each question, take a show of hands, THEN reveal the answer (the "
-         "right column; consider covering it or using an animation). Then return to the six learning objectives. "
-         "The full 8-question check, feedback survey, and 30-day adoption plan are in after-the-workshop.md; send "
-         "it the next day.")
 
 # Wrap-up
 s = white_slide("Wrap-up & next steps", "Three tools, eight exercises, one habit: draft \u2192 review \u2192 approve.")

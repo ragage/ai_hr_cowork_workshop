@@ -45,7 +45,7 @@ notes(s, "ABOUT. Who it's for, the format, and the three tools. Attendees use th
 # 3 — Learning objectives
 s = objectives_slide()
 notes(s, "LEARNING OBJECTIVES. The six outcomes attendees leave with. They mirror the README and the participant "
-         "workbook, and the workshop closes with a quick knowledge check against them.")
+         "workbook, and the workshop closes with a recap and next steps.")
 
 # 4 — Agenda
 s = agenda_slide()

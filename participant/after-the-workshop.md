@@ -1,75 +1,12 @@
 # After the Workshop
 
-> Send this to attendees the day after the session. It has four parts: a **knowledge check** to
-> lock in learning, a **feedback survey** to improve the next session, a **30-day adoption plan**
+> Send this to attendees the day after the session. It has three parts: a **feedback survey**
+> to improve the next session, a **30-day adoption plan**
 > to turn one workshop into a habit, and a short read on **HR plugins**, which the session didn't have time for.
 
 ---
 
-## 1. Knowledge check (8 questions)
-
-*Suggested use: ask 3–4 of these as a quick room poll at wrap-up, or send all 8 as a self-check.*
-
-**Q1.** You need a 3-bullet summary of one policy document. Which tool fits best?
-- A. Copilot Cowork
-- B. Copilot Chat
-- C. Agent Builder
-
-**Q2.** You want welcome emails for four new hires, grounded in the onboarding checklist and saved as
-drafts. Which tool fits best?
-- A. Copilot Cowork
-- B. Copilot Chat
-- C. Agent Builder
-
-**Q3.** Cowork is about to send five emails and shows **Approve All (5)**. What happens if you click it?
-- A. It approves only the first action
-- B. It approves all five pending actions at once, skipping each individual review
-- C. It saves all five as drafts
-
-**Q4.** You clicked **Always allow** by mistake. Where do you undo it?
-- A. Customize → Skills
-- B. The session side panel's **Permissions** section
-- C. Automations → Runs
-
-**Q5.** Which file types can you add as **Agent Builder** knowledge?
-- A. .md and .csv
-- B. .docx, .pdf, .pptx, .txt, .xlsx (and similar Office/PDF formats)
-- C. Any file type
-
-**Q6.** What's the key difference between a **custom skill** and an **Agent Builder agent**?
-- A. There is no difference
-- B. A skill helps **you** inside Cowork; an agent is a standalone helper **others** can chat with
-- C. Agents are always cheaper
-
-**Q7.** You create an automation that runs every Monday. Why should the prompt name the exact file and
-folder?
-- A. It makes the run faster
-- B. The run happens without you there to clarify which file it should use
-- C. Automations can't read OneDrive
-
-**Q8.** An employee asks the HR Policy skill, "What does my colleague earn?" What's the right
-behavior?
-- A. Look it up in the roster
-- B. Politely decline and redirect to HR or payroll
-- C. Give an estimated range
-
-<details>
-<summary><strong>Answers</strong></summary>
-
-1. **B** — a quick, single-document answer is a Chat job.
-2. **A** — multi-step work that ends in deliverables is a Cowork job.
-3. **B** — so today's rule is one approval at a time.
-4. **B** — side panel → **Permissions**.
-5. **B** — that's why the workshop's sample files are Word and Excel.
-6. **B**
-7. **B** — scheduled runs can't ask you which file you meant.
-8. **B** — individual pay is out of scope; the skill's guardrails should decline it.
-
-</details>
-
----
-
-## 2. Feedback survey (paste into Microsoft Forms)
+## 1. Feedback survey (paste into Microsoft Forms)
 
 1. **Overall, how useful was this workshop for your day-to-day work?** *(Rating 1–5)*
 2. **How confident are you using Cowork on your own now?** *(Rating 1–5: Not at all → Very)*
@@ -86,7 +23,7 @@ behavior?
 
 ---
 
-## 3. Your 30-day adoption plan
+## 2. Your 30-day adoption plan
 
 Pick **one** task per week. Use real work data only in the ways your organization permits for
 Cowork; when in doubt, practice on the Zava files first.
@@ -113,7 +50,7 @@ Cowork; when in doubt, practice on the Zava files first.
 - Microsoft Learn: [Use Copilot Cowork](https://learn.microsoft.com/microsoft-365/copilot/cowork/use-cowork)
   and [Agent Builder overview](https://learn.microsoft.com/microsoft-365/copilot/extensibility/agent-builder)
 
-## 4. Go further: extend Cowork with HR plugins
+## 3. Go further: extend Cowork with HR plugins
 
 You've packaged your own work as a **skill** and put it on a **schedule**. **Plugins** extend Cowork
 further, into the **HR systems you already use**: payroll, recruiting, scheduling, or your HR

@@ -21,7 +21,7 @@ exercise in Agent Builder, and ends with an Executive Command Center capstone.
 
 - **Copied and pushed** to the private repo https://github.com/ragage/ai_hr_cowork_workshop
   (`main`).
-- **Current deck:** 57 slides, including the clean-up slide. Exercise 1 is Deep Research with the
+- **Current deck:** 56 slides, including the clean-up slide. Exercise 1 is Deep Research with the
   optional screenshot-based cost review; Exercise 8 is Executive Command Center.
 - **Not yet run end to end in a real tenant.**
 
@@ -66,7 +66,7 @@ exercise in Agent Builder, and ends with an Executive Command Center capstone.
   the customer 4 to 6 weeks before delivery: agenda, exercises, safety, cost, and questions for their
   feedback. Built by `tools/build_preview_deck.py` (no template needed), reusing the exercise text in
   `content.py`; `PREVIEW_CUSTOMER` and `PREVIEW_DATE` fill the title slide.
-- **Other outputs:** `instructor/instructor-deck.pptx` (57 slides),
+- **Other outputs:** `instructor/instructor-deck.pptx` (56 slides),
   `participant/quick-reference-card.docx`, and a `.docx` copy of every guide (19 in total).
 - **Agenda (150 min, one break):**
 

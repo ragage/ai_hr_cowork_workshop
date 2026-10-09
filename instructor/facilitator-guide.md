@@ -81,7 +81,7 @@ Cowork? · Prompt · Workflow · Data sources). Walk the card top-left to bottom
 | 1:40–1:55 | **Ex 6 — Automate & share** | Create an Automation; demo Daily Briefing + share/re-share | Do Task 6a, 6b; optional: 6c |
 | 1:55–2:10 | **Ex 7 — Agent Builder (non-Cowork)** | Build the HR Policy Agent live; test on "Try it" | Build, add knowledge, test in/out of scope |
 | 2:10–2:25 | **Ex 8 — Executive Command Center** | Return to Cowork; combine Work IQ, HTML outputs, skill save, and scheduling; review approvals one at a time | Fill placeholders, run the prompt, open the dashboard privately, and pause the schedule after class |
-| 2:25–2:30 | **Wrap-up** | Recap the three tools, quick knowledge check, next steps | Q&A, pick a "next week" task |
+| 2:25–2:30 | **Wrap-up** | Recap the three tools and next steps | Q&A, pick a "next week" task |
 
 ## Segment talking points
 
@@ -304,11 +304,9 @@ because it took about 11.
   Exercise 8 and Exercise 6 schedules comes first, because they're usage-billed.
 - Recap the five golden rules from [reference/06-responsible-use.md](../reference/06-responsible-use.md).
 - Point to the [prompt library](../reference/04-prompt-library.md) as their takeaway.
-- Run a **quick knowledge check** as a show of hands (deck slide: pick 2–3 of the 4 questions;
-  questions and answers in [after-the-workshop.md](../participant/after-the-workshop.md)), then revisit the learning
-  objectives.
+- Revisit the learning objectives.
 - Have them name one task they'll try in real work next week.
-- **Next day:** send [after-the-workshop.md](../participant/after-the-workshop.md) (full knowledge check, feedback
+- **Next day:** send [after-the-workshop.md](../participant/after-the-workshop.md) (feedback
   survey, and 30-day adoption plan).
 
 ## Troubleshooting triage (hand to proctors)
