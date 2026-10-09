@@ -1413,22 +1413,29 @@ wcard(s, 0.55, 4.15, 6.0, 2.6, PURPLE, "COPILOT CREDITS \u00b7 HOST / ADMIN",
                "Confirm **enough remaining credits / budget** at policy, user, and group levels for all exercises and retries.",
                "Use the estimator and a dry run to set limits with headroom; check **/cost** during training and pause schedules."],
               size=12), hsize=14)
-text(s, 6.85, 1.6, 5.9, 0.45, [{"runs": [("Example admin spending policy", {"size": 14, "bold": True, "color": W_TITLE})]}])
+text(s, 6.85, 1.55, 5.9, 0.35, [{"runs": [("Admin \u00b7 Cowork browser settings", {"size": 13, "bold": True, "color": W_TITLE})]}])
+pic = s.shapes.add_picture(os.path.join(ROOT, "tools", "assets", "cowork-browser-settings.png"),
+                           Inches(8.25), Inches(1.95), width=Inches(3.0))
+pic._element.nvPicPr.cNvPr.set(
+    "descr", "Cowork admin settings: Allow Cowork to use the Microsoft Edge browser is checked; "
+    "All users is selected, with Specific users and groups available. Scope access to workshop attendees.")
+text(s, 6.85, 4.2, 5.9, 0.35, [{"runs": [("Admin \u00b7 Copilot Credits spending policy", {"size": 13, "bold": True, "color": W_TITLE})]}])
 pic = s.shapes.add_picture(os.path.join(ROOT, "tools", "assets", "cowork-spending-policy.png"),
-                           Inches(6.85), Inches(2.1), width=Inches(5.9))
+                           Inches(8.25), Inches(4.6), width=Inches(3.0))
 pic._element.nvPicPr.cNvPr.set(
     "descr", "Example All Users Policy: enabled, Cowork included, Capacity Packs plus pay-as-you-go billing, "
     "no spending limit, user and group limits off, and alerts off. These are example settings, not recommendations.")
-text(s, 6.85, 6.4, 5.9, 0.45, [{"runs": [
-    ("Example only: use workshop-scoped limits and alerts, not unlimited spend.", {"size": 11, "color": W_SUB})]}])
+text(s, 6.85, 6.8, 5.9, 0.4, [{"runs": [
+    ("Examples only: scope access to attendees; set spending limits and alerts.", {"size": 10, "color": W_SUB})]}])
 notes(s, "COWORK SETTINGS (Appendix reference). These are mandatory readiness checks, not optional prerequisites. "
          "Before class, the host enables usage-based billing and an enabled spending policy selecting Cowork "
          "that includes every attendee. Verify remaining policy budget and user/group credit limits have enough "
          "headroom for the workshop, retries, and scheduled runs until paused. There is no fixed credit amount "
          "guaranteed for every training run: estimate with the Customer Cowork Estimator and test in the attendee "
-         "tenant. A tiny limit grants access but can interrupt work when exhausted. The screenshot is an example, "
+         "tenant. A tiny limit grants access but can interrupt work when exhausted. The screenshots are examples, "
          "not a recommendation for All users, No limit, or alerts off. Prefer the workshop group and appropriate "
-         "limits and alerts. Separately enable Cowork Browsing for attendees in the admin center, and check "
+         "limits and alerts. Show the browser-settings screenshot: enable browser use and choose the workshop "
+         "users or group rather than copying All users. Separately enable Cowork Browsing for attendees in the admin center, and check "
          "Edge 152+, the matching work profile, and Allow Cowork to take actions on your behalf. Managed-device "
          "policy may require admin help. Run the smoke test and Exercise 2 browser prompt before class. "
          "Source: https://learn.microsoft.com/microsoft-365/copilot/cowork/cowork-admin-governance "

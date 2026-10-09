@@ -316,7 +316,7 @@ if time allows, or share them after the workshop; preserve wrap-up and schedule 
   don't wait until this optional section to distribute the workbook and sample-data zip.
 
 ### Cowork settings — Edge browsing & Copilot Credits
-- Use the Appendix slide and its example spending-policy screenshot as a setup reference.
+- Use the Appendix slide and its browser-settings and spending-policy screenshots as setup references.
   Browser access and credit availability must be checked **before training**, not after Exercise 8.
 - Host/admin: enable usage-based billing, include attendees in an enabled policy selecting Cowork,
   and confirm enough remaining policy budget and user/group credits for the exercises and retries.
