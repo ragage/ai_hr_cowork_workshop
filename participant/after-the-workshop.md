@@ -152,7 +152,7 @@ once your admin adds them.*
 
 ## Housekeeping (please do this today)
 
-- [ ] **Pause or delete** the schedules from Exercises 1 and 7 (**Automations → Manage schedules**).
+- [ ] **Pause or delete** the schedules from Exercises 8 and 6 (**Automations → Manage schedules**).
 - [ ] If you didn't finish it in class, follow
       [Clean up the training data](participant-workbook.md#clean-up-the-training-data) in the workbook.
 - [ ] Check that your custom skills are still **"Only you"** unless you meant to share them.

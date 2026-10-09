@@ -1,19 +1,19 @@
 # 08 · Build a Policy Agent with Copilot Agent Builder
 
 > Reference sheet for the "Getting Things Done with Copilot Cowork for HR Tasks" workshop.
-> This backs **Exercise 8** — the closing, **non-Cowork** capstone.
+> This backs **Exercise 7** — the closing, **non-Cowork** capstone.
 
-> ⚠️ **Not Cowork.** Exercise 8 uses **Copilot Agent Builder** (Microsoft 365 Copilot → **Create
+> ⚠️ **Not Cowork.** Exercise 7 uses **Copilot Agent Builder** (Microsoft 365 Copilot → **Create
 > agent**), a different tool from Cowork. There are no Cowork tasks, side panel, approvals, or skills
 > in this exercise.
 
 ## Cowork skill vs. Agent Builder agent — why both?
 
-In Exercise 4 you built a **custom skill** *inside Cowork* — great for a recurring task **you**
+In Exercise 3 you built a **custom skill** *inside Cowork* — great for a recurring task **you**
 do in your own sessions. Now we step **outside Cowork** to build a **persistent, shareable agent**
 that **other people** can chat with directly in Microsoft 365 Copilot.
 
-| | **Custom skill (Cowork, Ex 4)** | **Agent (Agent Builder, Ex 8)** |
+| | **Custom skill (Cowork, Ex 3)** | **Agent (Agent Builder, Ex 7)** |
 | --- | --- | --- |
 | Lives in | Your Cowork sessions | Microsoft 365 Copilot (Chat / Teams) |
 | Who uses it | You (or people you share the skill with) | Anyone you share/publish the agent to |
@@ -49,7 +49,7 @@ Copilot** app/tab in **Teams**) and select **Create agent** / **New agent**.
 - **Configure** — set the name, description, instructions, knowledge, and suggested prompts manually.
 - **Try it** — test the agent's responses before sharing.
 
-## Exercise 8 — Build the "HR Policy Agent"
+## Exercise 7 — Build the "HR Policy Agent"
 
 **Goal:** stand up a no-code agent that answers employee policy/benefits questions, grounded in the
 Zava HR documents, and test it.

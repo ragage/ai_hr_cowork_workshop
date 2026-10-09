@@ -144,7 +144,7 @@ table([["Go to…", "To…"],
 h("5 · Golden rules for HR")
 for b, t in (("Every output is a draft. ", "Review before you send, share, or file."),
              ("Approve one at a time. ", "Read the preview before you confirm."),
-             ("Keep real data private. ", "Ex 1 results stay yours; Zava files for the rest."),
+             ("Keep real data private. ", "Ex 8 results stay yours; Zava files for the rest."),
              ("Cite and confirm. ", "Name the source; note “please confirm with HR.”"),
              ("People decisions stay with people. ", "Cowork only sees what you’re allowed to see.")):
     bullet(b, t)
@@ -157,7 +157,7 @@ table([["Where", "Use"],
       [Inches(1.9), Inches(3.1)])
 
 h("7 · Before you leave today")
-for t in ("Pause or delete the schedules from Exercises 1 and 7 (Automations → Manage schedules).",
+for t in ("Pause or delete the schedules from Exercises 8 and 6 (Automations → Manage schedules).",
           "Clean up the training data: follow the last section of your workbook.",
           "Keep your custom skills set to “Only you” unless you meant to share them.",
           "Pick one task to hand to Cowork next week."):

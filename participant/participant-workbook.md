@@ -11,7 +11,7 @@ Builder**.
   other attendees are in the same tenant, so **your screen matches your neighbors'**. The
   **facilitator demos from a separate demo tenant**, so their screen may look a little different;
   that's expected.
-- **Exercise 1 uses your own mail, calendar, and Teams.** Cowork sees only what you can already see,
+- **Exercise 8 uses your own mail, calendar, and Teams.** Cowork sees only what you can already see,
   and the results stay private to you (keep them off the projector).
 - **Every other exercise uses the fictional *Zava* sample files**, so we're all on the same page. Keep
   real employee records out of those exercises.
@@ -42,11 +42,11 @@ Builder**.
 ### A. Sign in and smoke test
 1. Sign in with **your own work account**, then open
    **https://copilot.cloud.microsoft** in **Microsoft Edge** (needed for the browser task in
-   Exercise 3; Chrome works for everything else).
+   Exercise 2; Chrome works for everything else).
 2. At the top, select **Cowork** (next to **Chat**).
 3. In the chat input, type: *"Give me a one-sentence hello and tell me today's date."* Send it.
    - ✅ **Checkpoint:** You get a response. If not, tell a proctor — see the [readiness checklist](../instructor/readiness-checklist.md).
-4. **Edge profile check (for Exercise 3):** in Edge, select your profile picture at the top left.
+4. **Edge profile check (for Exercise 2):** in Edge, select your profile picture at the top left.
    It must show **your work account** (the one you use for Microsoft 365). If it shows a personal
    account, select **Add profile → Sign in** with your work account and use that window all day. (InPrivate and
    guest windows can't run browser tasks.)
@@ -75,12 +75,12 @@ These six Word and Excel files are used throughout the day, in both Cowork and A
 
 | File | Contents | Used in |
 | --- | --- | --- |
-| `employee-handbook-excerpt.docx` | PTO, remote work, code of conduct, overtime, reviews | Ex 3, 4, 6, 8 |
-| `benefits-summary.docx` | Health, retirement, enrollment windows | Ex 4, 6, 8 |
-| `onboarding-checklist.docx` | New-hire onboarding steps | Ex 6 |
-| `job-description-sample.docx` | Open HR Coordinator role | Ex 2, 5 |
-| `employee-roster-sample.xlsx` | 20 fictional employees | Ex 5 (stretch) |
-| `hr-tickets-sample.xlsx` | 20 fictional HR tickets | Ex 1 (stretch), 5, 7 |
+| `employee-handbook-excerpt.docx` | PTO, remote work, code of conduct, overtime, reviews | Ex 2, 3, 5, 7 |
+| `benefits-summary.docx` | Health, retirement, enrollment windows | Ex 3, 5, 7 |
+| `onboarding-checklist.docx` | New-hire onboarding steps | Ex 5 |
+| `job-description-sample.docx` | Open HR Coordinator role | Ex 1, 4 |
+| `employee-roster-sample.xlsx` | 20 fictional employees | Ex 4 (stretch) |
+| `hr-tickets-sample.xlsx` | 20 fictional HR tickets | Ex 4, 6, 8 (stretch) |
 
 > You share the tenant with the other attendees, but each person grounds on the copy in **their own
 > OneDrive** — that keeps everyone's results identical and avoids stepping on each other's files.
@@ -96,7 +96,7 @@ The left navigation has four places you'll use today:
 - **New task** — the *"What can I do for you?"* home, with the **Start a task** box, **model
   picker**, **reasoning effort**, attach (+), and *"Try these next"* starter cards.
 - **My tasks** — find and resume your previous tasks.
-- **Automations** — schedule tasks or run them on events (you'll use this in Exercise 7).
+- **Automations** — schedule tasks or run them on events (you'll use this in Exercise 6).
 - **Customize** — custom instructions, your personal skills, and plugins (more in the
   [after-the-workshop pack](after-the-workshop.md#4-go-further-extend-cowork-with-hr-plugins)).
 
@@ -185,138 +185,9 @@ one of the four. Add it in a follow-up instead of starting over.
 
 ---
 
-## Exercise 1 — Executive Command Center (15 min)
+## Exercise 1 — Research the web with Deep Research (15 min)
 
-> **Scenario card — Ex 01 · Executive Command Center** · Function: **Executive**
-> - **Goal:** Turn your calendar, communications, and priority work into a daily executive view of
->   decisions, risks, and actions requiring attention.
-> - **Output:** An interactive executive command center covering meetings, priorities, and org
->   pulse, with labeled recommendations and links to supporting context.
-> - **Why Cowork?** What needs your attention is scattered across calendar, email, chats, and
->   documents. Cowork combines calendar and priority documents, emails, chats and transcripts,
->   signal detection across workstreams, and an interactive daily dashboard into one recurring
->   workflow.
-> - **Workflow:** 1. **Work IQ** → gather calendar, emails, chats, documents · 2. **Analyze** →
->   surface urgent items, blockers, quiet signals · 3. **Build** → interactive HTML command center ·
->   4. **Schedule** → daily run every weekday morning
-> - **Data sources:** M365 Data
-> - **You'll learn:** How one prompt can **gather signals, build an artifact, save itself as a
->   skill, and schedule itself**, and where to find everything Cowork creates (**Output folder**
->   and **OneDrive → Cowork**).
-
-**Why it's here:** it shows Cowork at full stretch — gathering signals across Microsoft 365,
-building an **interactive HTML dashboard**, then **saving itself as a skill** and **scheduling
-itself** in one prompt. HR leaders juggle the same scattered signals, so watch for the pattern
-you'd reuse.
-
-> **Before you start:**
-> - **This one uses your real work, not Zava.** Exercise 1 is the only exercise built on **your
->   own** mail, calendar, Teams, and meeting transcripts, so the dashboard shows **your** meetings,
->   tasks, and emails. That's expected. Cowork sees nothing beyond what you can already open. The
->   dashboard and the saved skill live in **your** OneDrive; keep the skill **"Only you,"** and don't
->   project or share your results. The schedule is an Automation on **your** account; **pause or
->   delete it after class** (it's usage-billed).
-> - Replace **`[Priority Folder]`** with a OneDrive folder of your own priority documents, or the
->   folder holding your Zava files (`Documents/ai_hr_cowork_workshop`).
-> - Replace **`[time]`** with a weekday time, e.g., **8:00 AM**.
-> - **Quiet week?** If your mailbox or calendar is light, results will be too. Focus on the
->   **gather → analyze → build → schedule** pattern; the facilitator's demo shows a busy example.
-
-> **What Cowork will ask you along the way:**
-> - **Clarifying questions** (for example, which folder you meant or which time zone): answer them
->   in the chat, the same way you'd answer a colleague.
-> - **Progress messages and skill chips** (Work IQ, the HTML or skill-creation skill): nothing to
->   do; they show what Cowork is working on.
-> - **Two approval cards near the end:** one to **save the skill**, one to **create the schedule**.
->   Read each card and approve it on its own; don't use **Approve All** or **Always allow**. You can
->   decline the schedule if you'd rather not have one.
-> - **Suggested next steps** when it finishes (for example, *"Want me to add more?"*): optional.
->   Skip them for now and move on to step 3.
-
-### Prompt
-1. In a **new task**, paste this prompt (with your placeholders filled in):
-   > <span class="goal">Build an interactive HTML Executive Command Center that shows what requires my attention today
-   > and this week.</span>
-   >
-   > <span class="source">Use my calendar, recent emails, Teams conversations, meeting transcripts, and priority
-   > documents from [Priority Folder].</span> <span class="goal">Focus on decisions, commitments, risks, and workstreams where
-   > my involvement could change the outcome.</span>
-   >
-   > <span class="expect">At the top, show:</span>
-   > - <span class="expect">One or two urgent items requiring action</span>
-   > - <span class="expect">Today's most important meeting or priority</span>
-   > - <span class="expect">My busiest day this week</span>
-   > - <span class="expect">Remaining working days this week</span>
-   >
-   > <span class="expect">Organize the command center into three views:</span>
-   > - <span class="expect">Meetings: Key meetings, preparation needed, conflicts, and follow-ups</span>
-   > - <span class="expect">Priorities: Active commitments, approaching deadlines, blockers, and decisions waiting on me</span>
-   > - <span class="expect">Org pulse: Workstreams receiving significant attention, areas with limited recent activity,
-   >   and important commitments that may have gone quiet</span>
-   >
-   > <span class="expect">For each recommended action, label it:</span>
-   > - <span class="expect">Lean in; OR, Delegate; OR, Re-engage; OR, Protect time</span>
-   >
-   > <span class="expect">Explain the signal behind the recommendation and give me one clear next action.</span> <span class="constraint">Keep
-   > recommendations focused on workstreams, decisions, and commitments rather than evaluating
-   > individual people.</span> <span class="expect">Make the dashboard executive-ready and easy to scan, with expandable
-   > sections, traffic-light indicators, and links to the supporting emails, meetings, chats, and
-   > files.</span> <span class="goal">The most important content should answer: What needs my attention, and what should I do
-   > differently today?</span>
-   >
-   > <span class="expect">Save this as a skill named [Executive Command Center] and schedule it to run every weekday at
-   > [time], using the latest available context.</span>
-2. Watch the side panel: Cowork gathers signals through **Work IQ**, loads its skills, and the
-   **HTML command center** appears in the **Output folder**.
-3. **Find your output (take a minute here, you'll use this all day):**
-   - **Open the side panel** if it's hidden: select the **side panel toggle** at the right of the
-     session.
-   - Scroll to **Output folder**. It lists every file Cowork created in this task, each with
-     **Preview** and **Download** buttons. (**Input folder** above it lists the files *you*
-     attached.)
-   - Select **Preview** on the HTML file. It opens in a **split view** next to the chat; use the
-     **full-screen toggle** for a closer look, or **Open in native app** to open it in your browser.
-   - Want a copy? **Download** saves one file; **Download All** (top of the list) saves every output
-     as a zip.
-   - The same files are also saved in your **OneDrive → Cowork** folder, so you can find them later
-     without reopening the task (open OneDrive and look for the **Cowork** folder).
-4. In the preview, check the **top summary**, the **three views**, the **action labels**
-   (Lean in / Delegate / Re-engage / Protect time), traffic-light indicators, and supporting links.
-5. At the checkpoint, **approve** saving the skill and creating the schedule (or decline the
-   schedule if you prefer).
-6. Confirm the results: **Customize → Skills** shows *Executive Command Center*; **Automations →
-   Manage schedules** shows the weekday run.
-7. **Optional, if you have time: check what the task cost.** In the same task, type **`/cost`**
-   and send it. Cowork shows:
-   - the approximate **Copilot Credits this task has used so far** (a total for every action in the
-     task, not a line-by-line breakdown)
-   - how many credits **you've used this month**
-   - how many credits **remain** in your monthly limit
-
-   Running `/cost` doesn't use any credits. You can also open any earlier task from **My tasks** and
-   type `/cost` to see what it used.
-
-> **Good to know about cost:** `/cost` is an **estimate, not a bill**, and it may lag a few minutes
-> behind actions you just finished. You **can't check the cost before** a task runs, only after.
-> Monthly limits are set by your organization, reset on the 1st (00:00 UTC), and may be shared with
-> a group. The weekday schedule you just created **uses credits every time it runs**, so pause it
-> after class. Details: [Credit usage for Copilot Cowork tasks](https://learn.microsoft.com/microsoft-365/copilot/usage-based-billing-copilot-credits-cost).
-
-✅ **Checkpoint:** An interactive **HTML command center** with the top summary and three views,
-opened from the **Output folder** and located in **OneDrive → Cowork**; a saved **Executive Command
-Center** skill; and a weekday schedule in **Automations** (or consciously skipped).
-
-**Discuss:** Which recommendations would you trust? What would an **HR-leader** version track —
-open requisitions, employee-relations cases, policy deadlines?
-
-**Stretch:** Create an **HR Leader Command Center** variant: add a view for open requisitions and
-HR ticket trends from `hr-tickets-sample.xlsx`.
-
----
-
-## Exercise 2 — Research the web with Deep Research (15 min)
-
-> **Scenario card — Ex 02 · Research the Web with Deep Research** · Function: **HR · Talent
+> **Scenario card — Ex 01 · Research the Web with Deep Research** · Function: **HR · Talent
 > acquisition**
 > - **Goal:** Get an evidence-based view of structured behavioral interviewing and turn it into
 >   questions for a real open role.
@@ -335,7 +206,7 @@ HR ticket trends from `hr-tickets-sample.xlsx`.
 >   your own files, and (if you have time) how one follow-up prompt produces deliverables in **two
 >   formats**.
 
-### Task 2a — Research
+### Task 1a — Research
 1. In a **new task**, prompt:
    > <span class="goal">Use **Deep Research** to summarize **current best practices for structured behavioral
    > interviews**</span> <span class="source">from multiple reputable sources</span>. <span class="expect">Produce a **1-page briefing** with the key
@@ -343,24 +214,44 @@ HR ticket trends from `hr-tickets-sample.xlsx`.
 2. Watch the **Deep Research** skill load and work across sources. It takes a few minutes.
 3. **Open two citations** and check that each one supports the claim it's attached to.
 
-### Task 2b — Ground it in the job description
+### Task 1b — Ground it in the job description
 In the same task, **attach `job-description-sample.docx`** (📎 **+ → Attach cloud files**, or type
 **/**) and prompt:
 > <span class="goal">Now compare these best practices to our **HR Coordinator** interview needs</span> <span class="source">in
 > `job-description-sample.docx`</span>, <span class="expect">and suggest 5 interview questions.</span>
 
-### Task 2c (optional, if you have time) — Build a scorecard
+### Task 1c (optional, if you have time) — Build a scorecard
 1. In the same task, prompt:
    > <span class="goal">Turn this into an interviewer scorecard</span> <span class="expect">in **Word AND Excel** with the scoring scales filled in.</span>
 2. Watch Cowork load both the **Word** and **Excel** skills. When it finishes, open the **Output
-   folder** (as in Exercise 1) and **Preview** both files:
+   folder** in the side panel and **Preview** both files. Use the side panel toggle if it is hidden; **Download** saves a copy, and the same files are in **OneDrive → Cowork**:
    - **Word:** a printable scorecard with each competency, the question(s) for it, and a **filled-in
      rating scale** (e.g., 1–5, with what a 1, 3, and 5 answer looks like), plus space for notes.
    - **Excel:** the same competencies as rows, rating columns and notes, ideally with a **total or
      weighted score** calculated.
 
+### Optional — Check what the task cost
+
+**Optional, if you have time: check what the task cost.** In the same task, type **`/cost`**
+and send it. Cowork shows:
+- the approximate **Copilot Credits this task has used so far** (a total for every action in the
+  task, not a line-by-line breakdown)
+- how many credits **you've used this month**
+- how many credits **remain** in your monthly limit
+
+Running `/cost` doesn't use any credits. You can also open any earlier task from **My tasks** and
+type `/cost` to see what it used.
+
+> **Good to know about cost:** `/cost` is an **estimate, not a bill**, and it may lag a few minutes
+> behind actions you just finished. You **can't check the cost before** a task runs, only after.
+> Monthly limits are set by your organization, reset on the 1st (00:00 UTC), and may be shared with
+> a group. Scheduled tasks in later exercises **use credits every time they run**, so pause them
+> after class. Details: [Credit usage for Copilot Cowork tasks](https://learn.microsoft.com/microsoft-365/copilot/usage-based-billing-copilot-credits-cost).
+
+The deck shows the **`/cost` skill picker** and an example **Usage panel**. The panel's monthly total and daily chart are not the cost of this task alone; your limits and totals may differ.
+
 ✅ **Checkpoint:** A one-page briefing with citations that open, and 5 interview questions tied to
-the HR Coordinator's responsibilities. (Did Task 2c? The scorecard is in **both Word and Excel**
+the HR Coordinator's responsibilities. (Did Task 1c? The scorecard is in **both Word and Excel**
 and its rating scales are filled in, with no blank "define later" placeholders.)
 
 **Discuss:** When is web research better than searching your organization's own content — and when
@@ -371,9 +262,9 @@ short benchmark I can compare to our handbook. Cite sources.
 
 ---
 
-## Exercise 3 — Navigate websites with Cowork's browser (15 min)
+## Exercise 2 — Navigate websites with Cowork's browser (15 min)
 
-> **Scenario card — Ex 03 · Navigate Websites with Cowork's Browser** · Function: **HR ·
+> **Scenario card — Ex 02 · Navigate Websites with Cowork's Browser** · Function: **HR ·
 > Compliance**
 > - **Goal:** Have Cowork drive a real web browser for you (search a site, click through its pages,
 >   move to a second site) and bring back a sourced comparison against your own policy.
@@ -391,7 +282,7 @@ short benchmark I can compare to our handbook. Cite sources.
 > - **You'll learn:** How Cowork's **browser use** works (consent, progress chips, **Switch to tab**,
 >   approvals, hand-back for sign-ins), and when to use it instead of Deep Research.
 
-**How this differs from Exercise 2:** Deep Research *reads and cites* many sources. Browser use
+**How this differs from Exercise 1:** Deep Research *reads and cites* many sources. Browser use
 *operates* a website step by step, like a person (or a test tool such as Playwright) would: it types
 in search boxes, clicks links and menus, and reads the pages it lands on. There's no "browser" skill
 to pick; ask for something that needs a website and Cowork opens the browser itself.
@@ -406,7 +297,7 @@ to pick; ask for something that needs a website and Cowork opens the browser its
 > - Not working? See [reference/10-cowork-browser.md](../reference/10-cowork-browser.md), tell a proctor,
 >   and follow the facilitator's demo.
 
-### Task 3a — Navigate two websites
+### Task 2a — Navigate two websites
 1. In a **new task**, attach `employee-handbook-excerpt.docx` (📎 **+ → Attach cloud files**, or type
    **/**), then prompt:
    > <span class="expect">Use my browser to do this step by step, and tell me which page you're on at each step:</span>
@@ -429,7 +320,7 @@ to pick; ask for something that needs a website and Cowork opens the browser its
    sign-in or a CAPTCHA), don't enter anything: tell it to skip that site.
 5. Read the table, then **open two of the links** and check one claim on each page yourself.
 
-### Task 3b (optional, if you have time) — Turn it into a brief for payroll
+### Task 2b (optional, if you have time) — Turn it into a brief for payroll
 In the same task, prompt:
 > <span class="goal">Turn this into a one-page **Word brief** for our payroll team about ticket **T-2008** (overtime
 > missing from Owen Wright's paycheck)</span>: <span class="expect">what the federal and Washington rules say, what our handbook
@@ -439,7 +330,7 @@ Open the brief from the **Output folder**.
 
 ✅ **Checkpoint:** Cowork used the **site search or menus** on two websites (not just one guessed
 URL), and your table links to the **DOL overtime fact sheet** and the **Washington L&I overtime
-page**. (Did Task 3b? A **Word brief** about T-2008 is in your Output folder.)
+page**. (Did Task 2b? A **Word brief** about T-2008 is in your Output folder.)
 
 **Discuss:** When would you use **browser use** and when **Deep Research**? What would you **never**
 let Cowork do in a browser without watching?
@@ -462,9 +353,9 @@ classification decision; that belongs to HR and legal.
 
 ---
 
-## Exercise 4 — Build your own custom skill (15 min)
+## Exercise 3 — Build your own custom skill (15 min)
 
-> **Scenario card — Ex 04 · Build a Custom Skill: HR Policy Answer** · Function: **HR · Policy &
+> **Scenario card — Ex 03 · Build a Custom Skill: HR Policy Answer** · Function: **HR · Policy &
 > benefits**
 > - **Goal:** Teach Cowork to answer policy and benefits questions the same clear, sourced way —
 >   every time.
@@ -480,8 +371,8 @@ classification decision; that belongs to HR and legal.
 > - **You'll learn:** How to **write, evaluate, and test a custom skill**, including clear triggers
 >   and scope limits.
 
-Full background: [reference/05-custom-skill-guide.md](../reference/05-custom-skill-guide.md). You saved
-a skill *from a prompt* in Exercise 1 — here you use the **guided** flow and read the evaluation.
+Full background: [reference/05-custom-skill-guide.md](../reference/05-custom-skill-guide.md). You'll save
+a skill *from a prompt* later in Exercise 8 — here you use the **guided** flow and read the evaluation.
 
 ### Build it (guided Customize page)
 1. Open **Customize** → **Skills** tab → **Add** → **Create new**. Cowork starts a guided session.
@@ -534,9 +425,9 @@ do share to **specific users**, add your **initials** to the skill name first to
 
 ---
 
-## Exercise 5 — Recruiting + reporting mini-lab (10 min)
+## Exercise 4 — Recruiting + reporting mini-lab (10 min)
 
-> **Scenario card — Ex 05 · Recruiting + Reporting** · Function: **HR · Talent & operations**
+> **Scenario card — Ex 04 · Recruiting + Reporting** · Function: **HR · Talent & operations**
 > - **Goal:** Attract the right candidates for an open role and get on top of the HR service queue
 >   in minutes.
 > - **Output:** An inclusive HR Coordinator job posting in Word (with wording that could put off
@@ -551,8 +442,8 @@ do share to **specific users**, add your **initials** to the skill name first to
 > - **You'll learn:** How Cowork picks **different skills** (Word, Excel) for writing vs. data
 >   analysis, and how to verify the numbers.
 
-### Task 5a — Inclusive job posting
-In Exercise 2 you prepared to **interview** for the HR Coordinator role. Now write the posting that
+### Task 4a — Inclusive job posting
+In Exercise 1 you prepared to **interview** for the HR Coordinator role. Now write the posting that
 **attracts** the candidates.
 
 📎 Attach `job-description-sample.docx`, then prompt:
@@ -563,7 +454,7 @@ In Exercise 2 you prepared to **interview** for the HR Coordinator role. Now wri
 > qualified applicants**, with a suggested alternative for each. Save it as a Word doc.</span>
 > <span class="constraint">Don't add pay figures, perks, or requirements that aren't in the description.</span>
 
-### Task 5b — Ticket summary report
+### Task 4b — Ticket summary report
 📎 Attach `hr-tickets-sample.xlsx`, then prompt:
 > <span class="source">Using `hr-tickets-sample.xlsx`</span>, <span class="goal">summarize **open vs. closed tickets by category and priority**, and
 > list the **high-priority open items** I should follow up on today.</span> <span class="expect">Put it in a short report.</span>
@@ -575,7 +466,7 @@ The sample data has **6 open and 14 closed** tickets, and exactly **one high-pri
 **Discuss:** Do you agree with every wording flag Cowork raised? Which recruiting or reporting task
 takes up most of your week today? Did the report's numbers match the data? How would you check?
 
-**Optional — go further in Exercise 7:** you'll turn this ticket summary into a recurring
+**Optional — go further in Exercise 6:** you'll turn this ticket summary into a recurring
 **Automation** later. For now, keep the one-off report.
 
 **Stretch:** Attach `employee-roster-sample.xlsx` and ask for an Excel summary of **headcount by
@@ -585,13 +476,13 @@ department**, **remote vs. on-site**, and **average PTO used**, with a short wri
 
 ## ☕ Break (15 min)
 
-Stretch and reset. When we're back: an onboarding pack, automations, and the Agent Builder finale.
+Stretch and reset. When we're back: an onboarding pack, automations, Agent Builder, and the Executive Command Center capstone.
 
 ---
 
-## Exercise 6 — Onboarding orientation pack (10 min)
+## Exercise 5 — Onboarding orientation pack (10 min)
 
-> **Scenario card — Ex 06 · Onboarding Orientation Pack** · Function: **HR · Onboarding**
+> **Scenario card — Ex 05 · Onboarding Orientation Pack** · Function: **HR · Onboarding**
 > - **Goal:** Give a new hire a polished first-day experience without assembling it by hand.
 > - **Output:** A 6–8 slide orientation deck for Sofia Alvarez, Zava's new HR Coordinator. *If you
 >   have time:* a scheduled kickoff with a Teams link and a team announcement draft.
@@ -606,10 +497,10 @@ Stretch and reset. When we're back: an onboarding pack, automations, and the Age
 >   in one workflow.
 
 **The story:** **Sofia Alvarez** accepted the HR Coordinator offer, the role you researched in
-Exercise 2 and advertised in Exercise 5. She starts **next Monday**, and you're getting her first day
+Exercise 1 and advertised in Exercise 4. She starts **next Monday**, and you're getting her first day
 ready. (Sofia is fictional, so invite and address only yourself, and nothing reaches anyone.)
 
-### Task 6a — Orientation deck (PowerPoint skill)
+### Task 5a — Orientation deck (PowerPoint skill)
 📎 Attach `onboarding-checklist.docx`, `employee-handbook-excerpt.docx`, and `benefits-summary.docx`, then
 prompt:
 > <span class="source">Using `onboarding-checklist.docx`, `employee-handbook-excerpt.docx`, and `benefits-summary.docx`</span>, <span class="goal">build
@@ -617,19 +508,19 @@ prompt:
 > remote/hybrid work, and benefits basics.</span> <span class="expect">Keep it clean and friendly.</span> <span class="constraint">Use only facts from these files.</span>
 - → Watch the **PowerPoint** skill chip load.
 
-### Task 6b (optional, if you have time) — Schedule the kickoff (Scheduling / Calendar skill)
+### Task 5b (optional, if you have time) — Schedule the kickoff (Scheduling / Calendar skill)
 > <span class="goal">Schedule a 30-minute **onboarding kickoff** for Sofia Alvarez's first day</span>, <span class="expect">**next Monday at
 > 9:30 AM**, add a Teams meeting link</span>, <span class="constraint">and invite only me. Show it to me before you send it.</span>
 - → Watch the **Scheduling** / **Calendar** skill chip load. This is your real calendar, so invite
   **yourself** only; don't add real people.
 
-### Task 6c (optional, if you have time) — Team announcement (Communications skill)
+### Task 5c (optional, if you have time) — Team announcement (Communications skill)
 > <span class="goal">Draft a warm, inclusive **team announcement** introducing Sofia Alvarez, our new HR Coordinator
 > starting next Monday, and her first-week plan</span>, <span class="source">using `onboarding-checklist.docx`</span>. <span class="expect">Save it as an
 > **Outlook email draft addressed to me**</span>; <span class="constraint">don't send it.</span>
 
-✅ **Checkpoint:** a 6–8 slide orientation deck that uses only facts from the Zava files. (Did 6b
-and 6c? A kickoff you reviewed before it was sent, and an announcement saved as a draft.)
+✅ **Checkpoint:** a 6–8 slide orientation deck that uses only facts from the Zava files. (Did 5b
+and 5c? A kickoff you reviewed before it was sent, and an announcement saved as a draft.)
 
 **Discuss:** What else belongs in a new-hire pack at your organization, and who should review it
 before it goes out?
@@ -638,9 +529,9 @@ before it goes out?
 
 ---
 
-## Exercise 7 — Automate & share (15 min)
+## Exercise 6 — Automate & share (15 min)
 
-> **Scenario card — Ex 07 · Automate & Share** · Function: **HR · Operations**
+> **Scenario card — Ex 06 · Automate & Share** · Function: **HR · Operations**
 > - **Goal:** Stop re-asking for the same work — put it on a schedule and share what you built.
 > - **Output:** An active weekly automation (Monday HR-ticket digest) and a Daily Briefing. *If you
 >   have time:* your custom skill shared (or kept private) and re-shared after an edit.
@@ -653,7 +544,7 @@ before it goes out?
 > - **You'll learn:** How to put work on a **schedule** with Automations, and how to **share** a
 >   skill.
 
-### Task 7a — Schedule a recurring digest (Automations)
+### Task 6a — Schedule a recurring digest (Automations)
 1. Open **Automations** → **Create**.
 2. Enter this prompt. Name the **exact file and folder**, because the automation runs later without
    you there to clarify:
@@ -666,12 +557,12 @@ before it goes out?
 - ✅ **Checkpoint:** an **Active** weekly schedule under **Manage schedules**, and a completed run
   whose report names **T-2008** as the high-priority open ticket.
 
-### Task 7b — Daily Briefing (Daily Briefing skill)
+### Task 6b — Daily Briefing (Daily Briefing skill)
 > <span class="goal">Give me a **Daily Briefing**</span> <span class="source">focused on my HR tasks and meetings for today</span>. <span class="expect">List the most urgent items first.</span>
 - → Watch the **Daily Briefing** skill chip load.
 
-### Task 7c (optional, if you have time) — Share your custom skill (sharing flow)
-1. Open the **HR Policy Answer** skill from Ex 4 on the **Customize** page.
+### Task 6c (optional, if you have time) — Share your custom skill (sharing flow)
+1. Open the **HR Policy Answer** skill from Ex 3 on the **Customize** page.
 2. Select **Share**. Everyone here is in the same tenant, so either keep it **"Only you"** or share to
    **one specific colleague** — and add your **initials** to the name first to avoid collisions.
 3. Make a small edit to the skill, then use **Re-share** to see how updates propagate.
@@ -685,9 +576,9 @@ report.
 
 ---
 
-## Exercise 8 — Build a Policy Agent with Copilot Agent Builder (15 min)
+## Exercise 7 — Build a Policy Agent with Copilot Agent Builder (15 min)
 
-> **Scenario card — Ex 08 · HR Policy Agent** · Function: **Non-Cowork · Copilot Agent Builder**
+> **Scenario card — Ex 07 · HR Policy Agent** · Function: **Non-Cowork · Copilot Agent Builder**
 > - **Goal:** Stand up a reusable Q&A agent employees can chat with to get sourced policy answers.
 > - **Output:** A working *HR Policy Agent* in Microsoft 365 Copilot, grounded in Zava's HR
 >   documents, that cites sources and declines out-of-scope questions.
@@ -709,7 +600,7 @@ Step **outside Cowork** and build a **reusable, shareable agent** with **Copilot
 Background & the skill-vs-agent comparison:
 [reference/08-agent-builder-policy-agent.md](../reference/08-agent-builder-policy-agent.md).
 
-> **Why this, after a custom skill?** Your Ex 4 skill helps **you** in your own Cowork sessions. An
+> **Why this, after a custom skill?** Your Ex 3 skill helps **you** in your own Cowork sessions. An
 > **agent** is a standalone helper **other people** can use directly. Same no-code spirit, different
 > job.
 
@@ -771,6 +662,121 @@ prompt for new hires.
 
 ---
 
+## Exercise 8 — Executive Command Center (15 min)
+
+Return to **Cowork** from Agent Builder for this final exercise.
+
+> **Scenario card — Ex 08 · Executive Command Center** · Function: **Executive**
+> - **Goal:** Turn your calendar, communications, and priority work into a daily executive view of
+>   decisions, risks, and actions requiring attention.
+> - **Output:** An interactive executive command center covering meetings, priorities, and org
+>   pulse, with labeled recommendations and links to supporting context.
+> - **Why Cowork?** What needs your attention is scattered across calendar, email, chats, and
+>   documents. Cowork combines calendar and priority documents, emails, chats and transcripts,
+>   signal detection across workstreams, and an interactive daily dashboard into one recurring
+>   workflow.
+> - **Workflow:** 1. **Work IQ** → gather calendar, emails, chats, documents · 2. **Analyze** →
+>   surface urgent items, blockers, quiet signals · 3. **Build** → interactive HTML command center ·
+>   4. **Schedule** → daily run every weekday morning
+> - **Data sources:** M365 Data
+> - **You'll learn:** How one prompt can **gather signals, build an artifact, save itself as a
+>   skill, and schedule itself**, and where to find everything Cowork creates (**Output folder**
+>   and **OneDrive → Cowork**).
+
+**Why it's here:** it shows Cowork at full stretch — gathering signals across Microsoft 365,
+building an **interactive HTML dashboard**, then **saving itself as a skill** and **scheduling
+itself** in one prompt. HR leaders juggle the same scattered signals, so watch for the pattern
+you'd reuse.
+
+> **Before you start:**
+> - **This one uses your real work, not Zava.** Exercise 8 is the only exercise built on **your
+>   own** mail, calendar, Teams, and meeting transcripts, so the dashboard shows **your** meetings,
+>   tasks, and emails. That's expected. Cowork sees nothing beyond what you can already open. The
+>   dashboard and the saved skill live in **your** OneDrive; keep the skill **"Only you,"** and don't
+>   project or share your results. The schedule is an Automation on **your** account; **pause or
+>   delete it after class** (it's usage-billed).
+> - Replace **`[Priority Folder]`** with a OneDrive folder of your own priority documents, or the
+>   folder holding your Zava files (`Documents/ai_hr_cowork_workshop`).
+> - Replace **`[time]`** with a weekday time, e.g., **8:00 AM**.
+> - **Quiet week?** If your mailbox or calendar is light, results will be too. Focus on the
+>   **gather → analyze → build → schedule** pattern; the facilitator's demo shows a busy example.
+
+> **What Cowork will ask you along the way:**
+> - **Clarifying questions** (for example, which folder you meant or which time zone): answer them
+>   in the chat, the same way you'd answer a colleague.
+> - **Progress messages and skill chips** (Work IQ, the HTML or skill-creation skill): nothing to
+>   do; they show what Cowork is working on.
+> - **Two approval cards near the end:** one to **save the skill**, one to **create the schedule**.
+>   Read each card and approve it on its own; don't use **Approve All** or **Always allow**. You can
+>   decline the schedule if you'd rather not have one.
+> - **Suggested next steps** when it finishes (for example, *"Want me to add more?"*): optional.
+>   Skip them for now and move on to step 3.
+
+### Prompt
+1. In a **new task**, paste this prompt (with your placeholders filled in):
+   > <span class="goal">Build an interactive HTML Executive Command Center that shows what requires my attention today
+   > and this week.</span>
+   >
+   > <span class="source">Use my calendar, recent emails, Teams conversations, meeting transcripts, and priority
+   > documents from [Priority Folder].</span> <span class="goal">Focus on decisions, commitments, risks, and workstreams where
+   > my involvement could change the outcome.</span>
+   >
+   > <span class="expect">At the top, show:</span>
+   > - <span class="expect">One or two urgent items requiring action</span>
+   > - <span class="expect">Today's most important meeting or priority</span>
+   > - <span class="expect">My busiest day this week</span>
+   > - <span class="expect">Remaining working days this week</span>
+   >
+   > <span class="expect">Organize the command center into three views:</span>
+   > - <span class="expect">Meetings: Key meetings, preparation needed, conflicts, and follow-ups</span>
+   > - <span class="expect">Priorities: Active commitments, approaching deadlines, blockers, and decisions waiting on me</span>
+   > - <span class="expect">Org pulse: Workstreams receiving significant attention, areas with limited recent activity,
+   >   and important commitments that may have gone quiet</span>
+   >
+   > <span class="expect">For each recommended action, label it:</span>
+   > - <span class="expect">Lean in; OR, Delegate; OR, Re-engage; OR, Protect time</span>
+   >
+   > <span class="expect">Explain the signal behind the recommendation and give me one clear next action.</span> <span class="constraint">Keep
+   > recommendations focused on workstreams, decisions, and commitments rather than evaluating
+   > individual people.</span> <span class="expect">Make the dashboard executive-ready and easy to scan, with expandable
+   > sections, traffic-light indicators, and links to the supporting emails, meetings, chats, and
+   > files.</span> <span class="goal">The most important content should answer: What needs my attention, and what should I do
+   > differently today?</span>
+   >
+   > <span class="expect">Save this as a skill named [Executive Command Center] and schedule it to run every weekday at
+   > [time], using the latest available context.</span>
+2. Watch the side panel: Cowork gathers signals through **Work IQ**, loads its skills, and the
+   **HTML command center** appears in the **Output folder**.
+3. **Find your output (use the Output folder workflow from Exercise 1):**
+   - **Open the side panel** if it's hidden: select the **side panel toggle** at the right of the
+     session.
+   - Scroll to **Output folder**. It lists every file Cowork created in this task, each with
+     **Preview** and **Download** buttons. (**Input folder** above it lists the files *you*
+     attached.)
+   - Select **Preview** on the HTML file. It opens in a **split view** next to the chat; use the
+     **full-screen toggle** for a closer look, or **Open in native app** to open it in your browser.
+   - Want a copy? **Download** saves one file; **Download All** (top of the list) saves every output
+     as a zip.
+   - The same files are also saved in your **OneDrive → Cowork** folder, so you can find them later
+     without reopening the task (open OneDrive and look for the **Cowork** folder).
+4. In the preview, check the **top summary**, the **three views**, the **action labels**
+   (Lean in / Delegate / Re-engage / Protect time), traffic-light indicators, and supporting links.
+5. At the checkpoint, **approve** saving the skill and creating the schedule (or decline the
+   schedule if you prefer).
+6. Confirm the results: **Customize → Skills** shows *Executive Command Center*; **Automations →
+   Manage schedules** shows the weekday run.
+✅ **Checkpoint:** An interactive **HTML command center** with the top summary and three views,
+opened from the **Output folder** and located in **OneDrive → Cowork**; a saved **Executive Command
+Center** skill; and a weekday schedule in **Automations** (or consciously skipped).
+
+**Discuss:** Which recommendations would you trust? What would an **HR-leader** version track —
+open requisitions, employee-relations cases, policy deadlines?
+
+**Stretch:** Create an **HR Leader Command Center** variant: add a view for open requisitions and
+HR ticket trends from `hr-tickets-sample.xlsx`.
+
+---
+
 ## Wrap-up (5 min)
 
 - Which task will save you the most time next week?
@@ -783,7 +789,7 @@ prompt for new hires.
 - Remember the golden rules ([reference/06-responsible-use.md](../reference/06-responsible-use.md)):
   **draft, review, approve at checkpoints, cite and confirm, keep real data private.**
 - **Before you leave:** follow [Clean up the training data](#clean-up-the-training-data) below. At
-  minimum, delete or pause the schedules you created in Exercises 1 and 7.
+  minimum, delete or pause the schedules you created in Exercises 8 and 6.
 - **Tomorrow:** you'll receive [after-the-workshop.md](after-the-workshop.md), with a knowledge
   check, a short survey, and a 30-day plan to make this a habit.
 
@@ -792,7 +798,7 @@ prompt for new hires.
 - Naming clashes when sharing a skill → keep skills **"Only you"** or add your initials to the name
   (everyone's in the same tenant).
 - Finished early → try the **Stretch** prompt at the end of each exercise:
-  [Ex 1](#exercise-1--executive-command-center-15-min) · [Ex 2](#exercise-2--research-the-web-with-deep-research-15-min) · [Ex 3](#exercise-3--navigate-websites-with-coworks-browser-15-min) · [Ex 4](#exercise-4--build-your-own-custom-skill-15-min) · [Ex 5](#exercise-5--recruiting--reporting-mini-lab-10-min) · [Ex 6](#exercise-6--onboarding-orientation-pack-10-min) · [Ex 7](#exercise-7--automate--share-15-min) · [Ex 8](#exercise-8--build-a-policy-agent-with-copilot-agent-builder-15-min).
+  [Ex 1](#exercise-1--research-the-web-with-deep-research-15-min) · [Ex 2](#exercise-2--navigate-websites-with-coworks-browser-15-min) · [Ex 3](#exercise-3--build-your-own-custom-skill-15-min) · [Ex 4](#exercise-4--recruiting--reporting-mini-lab-10-min) · [Ex 5](#exercise-5--onboarding-orientation-pack-10-min) · [Ex 6](#exercise-6--automate--share-15-min) · [Ex 7](#exercise-7--build-a-policy-agent-with-copilot-agent-builder-15-min) · [Ex 8](#exercise-8--executive-command-center-15-min).
 
 ---
 
@@ -805,8 +811,8 @@ shared download folder or anything the host shared with everyone.
 Work in this order, so a schedule doesn't create new files after you've cleaned up:
 
 1. **Delete or pause your schedules (they're usage-billed).** In Cowork, open **Automations → Manage
-   schedules**. Delete or pause the weekday **Executive Command Center** schedule (Exercise 1) and the
-   Monday **HR-ticket digest** (Exercise 7), plus any other schedule you made today.
+   schedules**. Delete or pause the weekday **Executive Command Center** schedule (Exercise 8) and the
+   Monday **HR-ticket digest** (Exercise 6), plus any other schedule you made today.
    - ✅ **Check:** **Manage schedules** has no active workshop schedules.
 2. **Review your custom skills.** Open **Customize → Skills → Your skills**. Delete **Executive
    Command Center** and **HR Policy Answer** (including any copy with your initials) unless you'll use
@@ -823,7 +829,7 @@ Work in this order, so a schedule doesn't create new files after you've cleaned 
    - Open the **Cowork** folder and delete the Zava files Cowork created today (the briefing,
      scorecard, brief, recruiting doc, onboarding deck, and reports). Keep your Executive Command
      Center if you want it; it holds your own data, so don't share it.
-6. **Clean up Outlook** (if you did the optional Exercise 6 tasks). In **Drafts**, delete the Sofia
+6. **Clean up Outlook** (if you did the optional Exercise 5 tasks). In **Drafts**, delete the Sofia
    Alvarez team announcement and any other workshop drafts. In **Calendar**, delete the **onboarding
    kickoff** you scheduled for next Monday.
 7. **Clean up your laptop.** Delete `zava-sample-knowledge.zip`, the extracted folder, and any files or

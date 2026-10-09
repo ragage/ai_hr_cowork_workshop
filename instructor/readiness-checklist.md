@@ -2,7 +2,7 @@
 
 > In this workshop **the ~25 attendees sign in with their own work accounts** in their organization's
 > Microsoft 365 tenant, while the **facilitator demos from a separate demo tenant**. Attendees run
-> Exercise 1 on **their own mail, calendar, and Teams** and use the **Zava sample files** for everything
+> Exercise 8 on **their own mail, calendar, and Teams** and use the **Zava sample files** for everything
 > else, so there are no attendee accounts to provision or data to seed. Readiness is mostly the
 > **host's** job (licenses, Cowork access, browser settings, the sample files) plus the
 > **facilitator's** demo account.
@@ -14,11 +14,11 @@
 | **T − 4 to 6 weeks** | Account team + facilitator | **Customer preview meeting:** present [customer-preview-deck.pptx](customer-preview-deck.pptx), fill in its feedback capture slide with the customer, and agree on any changes to scenarios, data, format, and dates. |
 | **T − 3 weeks** | Host / admin | Confirm Microsoft 365 Copilot licenses and **usage-based billing** for the attendee tenant, create a **Cowork spending policy** for the attendee group, and turn on **Cowork Browsing** for that group. Estimate cost and set spend guardrails (see [Cost planning](#cost-planning)). Book the room and Wi-Fi. |
 | **T − 2 weeks** | Host / admin + facilitator | Collect the **attendee list** and add everyone (plus **1–2 licensed spare accounts**) to the workshop security group. In the **facilitator's demo tenant**, allow **Work IQ MCP write operations** and set up the seed sender accounts ([seed-content.md](seed-content.md#how-to-load-it)). Confirm the demo tenant is Cowork-ready. |
-| **T − 1 week** | Facilitator | **Full dry run** of all 8 exercises with a licensed account in the attendees' tenant (a spare is fine), checking against the [answer key](facilitator-answer-key.md). **Record the demo videos** (Exercises 2–8, the UI walkthrough, and the weak vs. strong prompt) from your demo account and insert them on the deck's **Demo** slides ([how](facilitator-guide.md#before-you-start)). Stage `zava-sample-knowledge.zip` and the other six files the participant email lists (overview deck, workbook, quick-reference card, prompt library, responsible use, Copilot vs. Cowork) in the shared Teams/SharePoint folder. Send attendees a joining note (bring a laptop, not a phone); the [participant email](../communication/participant-email.html) is ready to paste into Outlook. **Before you send either email, fill in and check its download links:** the participant email has `[link: …]` placeholders for your Teams/SharePoint copies of the files. Open each link in an InPrivate window. It must download the file without a GitHub sign-in. If you get a sign-in page (the kit repo is private), replace the link with your Teams/SharePoint copy. Maintainers can run `tools/check_download_links.py --online` to check every link in the decks and emails at once. |
-| **T − 1 to 2 days** | Facilitator | Load the **seed emails, meetings, and Teams chat** into **your demo account only** with VS Code and the Work IQ MCP server ([seed-content.md](seed-content.md#how-to-load-it)), so your live Exercise 1 demo has a rich command center, then **record the Exercise 1 demo video** from it. Attendees need no seed. |
-| **T − 1 day** | Host / admin | With a spare or test account in the attendees' tenant, run the smoke test **and** the Exercise 3 browser prompt in an **Edge** profile (accept the consent notice). Print the [quick-reference card](../participant/quick-reference-card.docx). |
+| **T − 1 week** | Facilitator | **Full dry run** of all 8 exercises with a licensed account in the attendees' tenant (a spare is fine), checking against the [answer key](facilitator-answer-key.md). **Record the demo videos** (Exercises 1–8, the UI walkthrough, and the weak vs. strong prompt) from your demo account and insert them on the deck's **Demo** slides ([how](facilitator-guide.md#before-you-start)). Stage `zava-sample-knowledge.zip` and the other six files the participant email lists (overview deck, workbook, quick-reference card, prompt library, responsible use, Copilot vs. Cowork) in the shared Teams/SharePoint folder. Send attendees a joining note (bring a laptop, not a phone); the [participant email](../communication/participant-email.html) is ready to paste into Outlook. **Before you send either email, fill in and check its download links:** the participant email has `[link: …]` placeholders for your Teams/SharePoint copies of the files. Open each link in an InPrivate window. It must download the file without a GitHub sign-in. If you get a sign-in page (the kit repo is private), replace the link with your Teams/SharePoint copy. Maintainers can run `tools/check_download_links.py --online` to check every link in the decks and emails at once. |
+| **T − 1 to 2 days** | Facilitator | Load the **seed emails, meetings, and Teams chat** into **your demo account only** with VS Code and the Work IQ MCP server ([seed-content.md](seed-content.md#how-to-load-it)), so your live Exercise 8 demo has a rich command center, then **record the Exercise 8 demo video** from it. Attendees need no seed. |
+| **T − 1 day** | Host / admin | With a spare or test account in the attendees' tenant, run the smoke test **and** the Exercise 2 browser prompt in an **Edge** profile (accept the consent notice). Print the [quick-reference card](../participant/quick-reference-card.docx). |
 | **Day of, T − 45 min** | Facilitator + proctors | Test the projector, Wi-Fi, and demo tenant. Open the deck, the answer key, and a ready Cowork session. Brief proctors on the [troubleshooting triage](facilitator-guide.md#troubleshooting-triage-hand-to-proctors). |
-| **Day after** | Host | **Clean up the training data:** remind attendees to delete or pause their Exercise 1 and 7 schedules and follow the [attendee clean-up steps](../participant/participant-workbook.md#clean-up-the-training-data); remove the workshop group from the Cowork spending policy (or delete the policy) if attendees shouldn't keep Cowork access; and clean up the facilitator's demo tenant (the [seed content](seed-content.md) and any demo schedules, skills, and agents). Send the [after-the-workshop pack](../participant/after-the-workshop.md) and survey, and review usage and spend. |
+| **Day after** | Host | **Clean up the training data:** remind attendees to delete or pause their Exercise 8 and 6 schedules and follow the [attendee clean-up steps](../participant/participant-workbook.md#clean-up-the-training-data); remove the workshop group from the Cowork spending policy (or delete the policy) if attendees shouldn't keep Cowork access; and clean up the facilitator's demo tenant (the [seed content](seed-content.md) and any demo schedules, skills, and agents). Send the [after-the-workshop pack](../participant/after-the-workshop.md) and survey, and review usage and spend. |
 
 ## Cost planning
 
@@ -28,7 +28,7 @@ adds up. Before the session:
 - **Set up billing:** [aka.ms/CopilotCredits/Setup](https://aka.ms/CopilotCredits/Setup)
 - **Estimate the cost:** the [Customer cost estimator](https://aka.ms/CustomerCoworkEstimator) and the
   Copilot Credit Planning Model ([aka.ms/CopilotCreditPlanningMod](https://aka.ms/CopilotCreditPlanningMod)).
-  Estimate for ~25 users × 8 exercises, plus spares, the facilitator's dry run, and the Exercise 1 and
+  Estimate for ~25 users × 8 exercises, plus spares, the facilitator's dry run, and the Exercise 8 and
   7 schedules that keep running until paused.
 - **Set guardrails:** set a per-user credit limit and alerts on the workshop spending policy, and plan to
   **pause every schedule the day after**. A low limit doesn't block access: people can work until they
@@ -46,11 +46,11 @@ adds up. Before the session:
 1. **Don't troubleshoot for more than 10 minutes.** Announce the switch.
 2. **Demo from the facilitator tenant**, projected. Run each exercise live while the room follows the
    workbook, and use the [answer key](facilitator-answer-key.md) as the "expected result" handout.
-3. **Keep the non-Cowork pieces hands-on:** Exercise 8 (Agent Builder) and the Copilot Chat
+3. **Keep the non-Cowork pieces hands-on:** Exercise 7 (Agent Builder) and the Copilot Chat
    comparison work without Cowork, if Microsoft 365 Copilot is up.
 4. **Turn practice into judgment:** have attendees critique the demo outputs with the answer key and
    the [responsible-use checklist](../reference/06-responsible-use.md#quick-pre-send-checklist).
-5. **Reschedule a 90-minute hands-on follow-up** for Exercises 1, 3, 4, and 7, with the same
+5. **Reschedule a 90-minute hands-on follow-up** for Exercises 8, 2, 3, and 7, with the same
    accounts and sample files.
 
 ## For the host / tenant admin (do this before the workshop)
@@ -61,7 +61,7 @@ adds up. Before the session:
 - [ ] **Usage-based billing** set up, with a **spending policy that selects Cowork** and is scoped to
       that group. The spending policy is what **grants access** to Cowork (the older *Agents → Cowork*
       setting no longer controls access). Add an estimate and guardrails (see [Cost planning](#cost-planning)).
-- [ ] **Cowork Browsing** (for the Exercise 3 browser task): in the Microsoft 365 admin center, **Copilot →
+- [ ] **Cowork Browsing** (for the Exercise 2 browser task): in the Microsoft 365 admin center, **Copilot →
       Settings → View all → Cowork settings → Allow browser access**, and allow it for the attendee
       group. It's **off by default**. Also check that web filtering doesn't block **dol.gov** or
       **lni.wa.gov**, and that the Edge policy **CopilotCoworkToolActionsEnabled** isn't set to
@@ -77,12 +77,12 @@ adds up. Before the session:
       library**), so attendees can copy them into their own OneDrive. Getting the files from GitHub?
       If a link opens the file on GitHub, select the **Download** icon (**Download raw file**) at the
       top right of the file (see the picture after this list).
-- [ ] **No attendee seed data.** Exercise 1 (Executive Command Center) runs on each attendee's **own**
+- [ ] **No attendee seed data.** Exercise 8 (Executive Command Center) runs on each attendee's **own**
       mail, calendar, and Teams; Cowork only reads what that person can already see, and the results
       stay private to them. Tell attendees this in the invitation (the
       [participant email](../communication/participant-email.html) does).
 - [ ] **After class:** remind attendees (or clean up centrally) to **pause/delete the schedules**
-      created in Exercises 1 and 7 so they stop consuming usage, and to follow the
+      created in Exercises 8 and 6 so they stop consuming usage, and to follow the
       [clean-up steps](../participant/participant-workbook.md#clean-up-the-training-data) in the workbook.
 - [ ] *(Optional)* **Frontier** enrollment — only if you want to demo the built-in **App** skill;
       not required for the core exercises.
@@ -105,8 +105,8 @@ adds up. Before the session:
 
 ## Data and shared-tenant etiquette
 
-- **Exercise 1 uses your real mail, calendar, and Teams.** Cowork sees only what you can already see,
-  and the results stay in your account. **Don't project or screen-share** your Exercise 1 results.
+- **Exercise 8 uses your real mail, calendar, and Teams.** Cowork sees only what you can already see,
+  and the results stay in your account. **Don't project or screen-share** your Exercise 8 results.
 - **Every other exercise uses the fictional Zava sample files.** Don't add real employee records or
   personal data to the exercise files, prompts, or skills.
 - Your **OneDrive, drafts, and skills** are tied to **your account**. Keep any **custom skill you build
@@ -116,7 +116,7 @@ adds up. Before the session:
 ## If something isn't ready
 
 - **Account/license/Cowork issue** → the host lends a **spare account** (the attendee uses the Zava
-  files; Exercise 1 will show little in a spare); meanwhile the attendee
+  files; Exercise 8 will show little in a spare); meanwhile the attendee
   follows the **facilitator demo** (fallback follow-along), checking results against the
   [facilitator answer key](facilitator-answer-key.md), so they still learn the flow.
 - **Can't find the sample files** → point to the staged Teams/SharePoint copy; a proctor helps copy
@@ -130,8 +130,8 @@ adds up. Before the session:
 | --- | --- |
 | Licensed work account (Microsoft 365 Copilot) | All of Cowork |
 | Cowork spending policy (usage-based billing) | Access to Cowork, and running tasks (Cowork is usage-billed) |
-| Cowork Browsing + Edge 152+ signed in with your work account | The Exercise 3 browser task |
+| Cowork Browsing + Edge 152+ signed in with your work account | The Exercise 2 browser task |
 | Staged sample files + OneDrive | Grounding exercises; saving custom skills |
-| Your own mail, calendar, and Teams | Exercise 1 (the facilitator demos with [seed content](seed-content.md)) |
+| Your own mail, calendar, and Teams | Exercise 8 (the facilitator demos with [seed content](seed-content.md)) |
 | Laptop/desktop | Building custom skills (not available on mobile) |
 | Frontier (optional) | The built-in **App** skill only |

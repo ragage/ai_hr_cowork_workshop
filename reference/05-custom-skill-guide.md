@@ -1,7 +1,7 @@
 # 05 · Custom Skill Guide
 
 > How to build, evaluate, and share a custom skill in Copilot Cowork.
-> This backs **Exercise 4**, where you build the "HR Policy Answer" skill.
+> This backs **Exercise 3**, where you build the "HR Policy Answer" skill.
 
 ## What a custom skill is (and when to build one)
 

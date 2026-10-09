@@ -1,13 +1,13 @@
-# Seed Content Pack — Exercise 1 demo (instructor only)
+# Seed Content Pack — Exercise 8 demo (instructor only)
 
-> **For the facilitator's demo account only.** Attendees don't need any of this: they run Exercise 1
+> **For the facilitator's demo account only.** Attendees don't need any of this: they run Exercise 8
 > on **their own work mail, calendar, and Teams** and use the **Zava sample files** for everything
 > else. Your demo account (in your separate demo tenant) is usually quiet, so load the items below
-> into it **1–2 days before the session**. Then your live Exercise 1 demo shows a rich, predictable
+> into it **1–2 days before the session**. Then your live Exercise 8 demo shows a rich, predictable
 > command center, whatever the room's own data looks like.
 >
 > All content is **fictional Zava** material. What the command center should surface is in the
-> [facilitator answer key](facilitator-answer-key.md#exercise-1--executive-command-center).
+> [facilitator answer key](facilitator-answer-key.md#exercise-8--executive-command-center).
 
 ## How to load it
 
@@ -92,8 +92,8 @@ email and meeting before it goes.
 - In VS Code (signed in as your demo account): *"Using Work IQ, list my unread emails from the last
   two days and my meetings on [Thursday]."* You should see the 7 emails, the **Thursday conflict**,
   and the Wednesday kickoff.
-- Then run your Exercise 1 dry run in Cowork and compare with the
-  [answer key](facilitator-answer-key.md#exercise-1--executive-command-center).
+- Then run your Exercise 8 dry run in Cowork and compare with the
+  [answer key](facilitator-answer-key.md#exercise-8--executive-command-center).
 
 ---
 
@@ -178,7 +178,7 @@ deadline** (the Thursday input).
 
 ---
 
-## What Exercise 1 should surface with this seed
+## What Exercise 8 should surface with this seed
 
 - **Urgent items:** **T-2008** (the high-importance payroll email, plus the Teams chat if seeded) and
   the **Thursday deadline** for Avery's Q4 onboarding input.

@@ -53,5 +53,5 @@ permissions. You'll switch between them: Chat for quick help, Cowork for finishe
 - We spend the workshop in **Cowork** because HR work is full of multi-step, deliverable-producing
   tasks.
 - At the very end we step **outside Cowork** to build a **persistent agent** with **Copilot Agent
-  Builder** (Exercise 8) — a different tool for when you want a **reusable, shareable Q&A agent**
+  Builder** (Exercise 7) — a different tool for when you want a **reusable, shareable Q&A agent**
   rather than a one-off task. See [08-agent-builder-policy-agent.md](08-agent-builder-policy-agent.md).

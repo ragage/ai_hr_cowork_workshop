@@ -1,7 +1,7 @@
 # 10 · Navigate Websites with Cowork's Browser
 
 > Reference sheet for the "Getting Things Done with Copilot Cowork for HR Tasks" workshop.
-> Backs **Exercise 3**. Covers what browser use is, how to turn it on, and what to do when it doesn't
+> Backs **Exercise 2**. Covers what browser use is, how to turn it on, and what to do when it doesn't
 > start.
 
 ## What it is (and why you don't see a "browser" skill)
@@ -16,7 +16,7 @@ Ask for something that needs a website (*"Go to dol.gov and use the site search 
 Cowork decides to open the browser. You'll see **progress chips** such as *Opening dol.gov* and a
 **Switch to tab** option to watch it work.
 
-| | Deep Research (Exercise 2) | Browser use (Exercise 3) |
+| | Deep Research (Exercise 1) | Browser use (Exercise 2) |
 | --- | --- | --- |
 | What it does | Searches and **reads** many sources, then writes a **cited** synthesis | **Operates** specific websites step by step: search, click, navigate, read |
 | Where it runs | In the Cowork service | In a hidden tab in **your** Edge, on your device |

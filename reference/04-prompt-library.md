@@ -59,7 +59,7 @@ The participant workbook (Setup step F) has a weak and a strong version of the s
   you'll bring, and What we offer sections. Then add a table that **flags wording that could
   discourage qualified applicants**, with a suggested alternative for each. Save it as a Word doc.
   Don't add pay figures, perks, or requirements that aren't in the description."
-  *(Exercise 5a)*
+  *(Exercise 4a)*
 - "Using `job-description-sample.docx`, create an **interview prep pack** for the HR Coordinator role:
   8 competency-based questions, what a strong answer looks like, and 3 red flags to watch for."
 - "Draft a **candidate outreach email** inviting an applicant to a first interview for the HR
@@ -99,14 +99,14 @@ The participant workbook (Setup step F) has a weak and a strong version of the s
   benchmark briefing I can compare against our handbook. Cite sources."
 - "Do deep research on **effective employee onboarding practices for the first 90 days** and give me
   a summary with 5 actionable recommendations and links."
-- **Browser use, navigate two sites (Exercise 3):** "Use my browser to do this step by step, and tell
+- **Browser use, navigate two sites (Exercise 2):** "Use my browser to do this step by step, and tell
   me which page you're on at each step: 1. Go to https://www.dol.gov and use the site's search box to
   find the overtime pay fact sheet (Fact Sheet #23), and note the rules. 2. Go to https://lni.wa.gov and
   use the menu or search to find Washington's overtime page. 3. Compare both with the overtime rule in
   `employee-handbook-excerpt.docx` in a table, with a link to every page you used. Only read: don't
   sign in, and don't fill in or submit any form except a site search box." *(Needs Microsoft Edge and
   browser access; see [10-cowork-browser.md](10-cowork-browser.md).)*
-- **Browser use, check an exemption (Exercise 3 stretch):** "Use my browser again, step by step, and
+- **Browser use, check an exemption (Exercise 2 stretch):** "Use my browser again, step by step, and
   tell me which page you're on. 1. On https://www.dol.gov, use the site search to find Fact Sheet #17A
   (exemptions for executive, administrative, and professional employees). Open it and tell me whether
   a salaried HR Coordinator is likely to meet the administrative exemption's duties test, and why.
@@ -117,7 +117,7 @@ The participant workbook (Setup step F) has a weak and a strong version of the s
 - **Browser use, adapt for your own sites:** "Open {internal or public site} in my browser, find
   {information}, and summarize it with the link. Only read; ask me before you click anything that
   submits, saves, or sends."
-- **Follow-up after interview research (optional Task 2c):** "Turn this into an interviewer scorecard in **Word AND
+- **Follow-up after interview research (optional Task 1c):** "Turn this into an interviewer scorecard in **Word AND
   Excel** with the scoring scales filled in." *(Open both from the side panel's Output folder.)*
 
 ## 7. Automations (optional)
@@ -134,7 +134,7 @@ The participant workbook (Setup step F) has a weak and a strong version of the s
 ## 8. Personal productivity & leadership (generic)
 
 The full command-center prompt is in the [participant workbook](../participant/participant-workbook.md)
-(Exercise 1). Short versions to adapt; the inbox prompt is a good everyday habit:
+(Exercise 8). Short versions to adapt; the inbox prompt is a good everyday habit:
 
 - **Organize my inbox:** "Help me organize my inbox. Review my Outlook email from the last 24 hours:
   summarize volume, anything from my management chain, and anything urgent. Triage each email —

@@ -61,7 +61,7 @@ For a full tour of each area, see [07-cowork-ui-walkthrough.md](07-cowork-ui-wal
   your work account, and your admin must turn on **Cowork Browsing** (off by default). The first
   browser task shows a consent notice; select **I understand**.
 
-You'll use Deep Research in Exercise 2 and browser use in Exercise 3. Setup and troubleshooting:
+You'll use Deep Research in Exercise 1 and browser use in Exercise 2. Setup and troubleshooting:
 [10-cowork-browser.md](10-cowork-browser.md). Learn: [Use the local browser with Copilot Cowork](https://learn.microsoft.com/microsoft-365/copilot/cowork/cowork-local-browser).
 
 ## The approval / checkpoint model (why HR should care)
@@ -76,7 +76,7 @@ treat every Cowork output as a **draft to review before it's used**.
 - You sign in with **your own work account**, so you have your own OneDrive, drafts, and skills. The
   other attendees are in the same tenant. The **facilitator demos from a separate demo tenant**, so
   the instructor's screen may look a little different from yours; that's expected.
-- **Exercise 1** runs on **your own mail, calendar, and Teams**. Cowork reaches only what you can
+- **Exercise 8** runs on **your own mail, calendar, and Teams**. Cowork reaches only what you can
   already see, and the results stay private to you.
 - **Every other exercise** uses **provided sample files** you copy into your own OneDrive, so everyone
   works from the same fictional HR data (*Zava*).
@@ -89,7 +89,7 @@ treat every Cowork output as a **draft to review before it's used**.
 - **Usage-based billing**, with your account in the scope of a **spending policy that selects Cowork**;
   that policy is what grants access.
 - **Microsoft Edge** (152 or later), signed in with your work account, with **Cowork Browsing**
-  turned on by the admin, for the Exercise 3 browser task. Chrome works for everything else.
+  turned on by the admin, for the Exercise 2 browser task. Chrome works for everything else.
 - *(Optional)* Enrollment in the **Frontier** program — only needed for the built-in **App** skill,
   which is awareness-only in this workshop.
 

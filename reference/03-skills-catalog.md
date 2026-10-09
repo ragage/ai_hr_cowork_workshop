@@ -12,7 +12,7 @@ see a message like *"Preparing to compose emails,"* and the skill appears as a *
 There are three kinds of skills:
 
 1. **Built-in (out-of-the-box) skills** — included with Cowork.
-2. **Custom skills** — ones you create (see Exercise 4 and [05-custom-skill-guide.md](05-custom-skill-guide.md)).
+2. **Custom skills** — ones you create (see Exercise 3 and [05-custom-skill-guide.md](05-custom-skill-guide.md)).
 3. **Plugin skills** — added from the Microsoft 365 App Store.
 
 ## Built-in skills
@@ -39,28 +39,29 @@ There are three kinds of skills:
 
 ## Skills we focus on in this workshop
 
-- **Exercise 1** — Work IQ signals across mail, calendar, chats & files → an interactive **HTML**
-  dashboard, saved as a skill and scheduled (Executive Command Center).
-- **Exercise 2** — **Deep Research** (gathers and cites multiple web sources for a briefing), then
-  **Word + Excel** for an interviewer scorecard from one follow-up prompt.
-- **Exercise 3** — **browser use** in Microsoft Edge (not a skill: Cowork searches and clicks through
+- **Exercise 1** — **Deep Research** (gathers and cites multiple web sources for a briefing), then
+  **Word + Excel** for an interviewer scorecard from one follow-up prompt; optional `/cost` review.
+- **Exercise 2** — **browser use** in Microsoft Edge (not a skill: Cowork searches and clicks through
   dol.gov and lni.wa.gov), then **Word** for a brief to payroll.
-- **Exercise 4** — a **custom skill** you build ("HR Policy Answer").
-- **Exercise 5** — Word + Excel (inclusive job posting + ticket reporting).
-- **Exercise 6** — PowerPoint + Scheduling/Calendar + Communications (onboarding pack).
-- **Exercise 7** — Automations + Daily Briefing + skill sharing.
+- **Exercise 3** — a **custom skill** you build ("HR Policy Answer").
+- **Exercise 4** — Word + Excel (inclusive job posting + ticket reporting).
+- **Exercise 5** — PowerPoint + Scheduling/Calendar + Communications (onboarding pack).
+- **Exercise 6** — Automations + Daily Briefing + skill sharing.
+- **Exercise 7** — Agent Builder (not a Cowork skill).
+- **Exercise 8** — Work IQ signals across mail, calendar, chats & files → an interactive **HTML**
+  dashboard, saved as a skill and scheduled (Executive Command Center capstone).
 
 ## How Deep Research uses the web
 
 The **Deep Research** skill conducts in-depth research **across multiple sources**, including the
 web, to compile a comprehensive answer or briefing on a complex topic. This is how Cowork
 "navigates the web to get things done" — you describe the question, and it gathers, synthesizes, and
-cites information from several sources rather than a single lookup. We use it in Exercise 2.
+cites information from several sources rather than a single lookup. We use it in Exercise 1.
 
 **Browser use** is the other way Cowork works on the web: it opens a real site in a hidden tab in
 **your own Microsoft Edge** and works through it, with your sign-ins and your organization's
 policies (no new access). It isn't a skill you pick; Cowork decides when a task needs the browser.
-It needs Edge 152 or later and an admin to turn on **Cowork Browsing**. We use it in Exercise 3. See
+It needs Edge 152 or later and an admin to turn on **Cowork Browsing**. We use it in Exercise 2. See
 [10-cowork-browser.md](10-cowork-browser.md).
 
 > **Grounding note:** In this workshop everyone signs in to their **own organization's tenant**, so

@@ -9,8 +9,8 @@ and reporting.
 By the end, attendees will understand **when to use Copilot Chat vs. Cowork**, will have built an
 **executive command center**, **researched the web** with Deep Research, had Cowork **navigate websites**
 in its browser,
-**built their own custom skill**, and finished by building a reusable **agent** with **Copilot Agent
-Builder**. Every exercise is introduced with a **scenario card** (Function, Goal, Output, Why
+**built their own custom skill** and a reusable **agent** with **Copilot Agent
+Builder**, and finished with an **Executive Command Center** capstone. Every exercise is introduced with a **scenario card** (Function, Goal, Output, Why
 Cowork?, Prompt, Workflow, Data sources).
 
 ## Learning objectives
@@ -36,7 +36,7 @@ By the end of the workshop, attendees will be able to:
 - **Level:** No-code, beginner-friendly.
 - **Group size:** designed for ~25 attendees.
 - **Tenant and data model:** the **~25 attendees sign in with their own work accounts** in their
-  organization's tenant, so each person has their own OneDrive, drafts, and skills. **Exercise 1** runs
+  organization's tenant, so each person has their own OneDrive, drafts, and skills. **Exercise 8** runs
   on each attendee's **own mail, calendar, and Teams** (the results stay private to them); **every other
   exercise** uses the fictional **Zava sample files** each person copies into their own OneDrive. The
   **facilitator demos from a separate demo tenant**, seeded with [seed-content.md](instructor/seed-content.md),
@@ -48,7 +48,7 @@ The **~25 attendees use their own work accounts** (no workshop accounts to provi
 **facilitator uses a separate (demo) tenant**. The host/tenant admin ensures
 each attendee has a **Microsoft 365 Copilot** license and is covered by a **Cowork spending
 policy** (usage-based billing; this is what grants Cowork access), with **Cowork Browsing** allowed for
-the Exercise 3 browser task. Attendees need a **laptop/desktop** with **Microsoft Edge** (version 152 or
+the Exercise 2 browser task. Attendees need a **laptop/desktop** with **Microsoft Edge** (version 152 or
 later) signed in with their work account (custom skills and browser tasks aren't supported on mobile). Full details and a host checklist:
 [readiness-checklist.md](instructor/readiness-checklist.md).
 
@@ -59,15 +59,15 @@ later) signed in with their work account (custom skills and browser tasks aren't
 | 5 min | Welcome & context — what Cowork is, HR value, the approval model |
 | 5 min | **Copilot vs. Cowork** — the difference and when to use which |
 | 10 min | **Cowork UI walkthrough** + setup check — New task, My tasks, Automations, Customize (attendees sign in and upload the sample files before the session) |
-| 15 min | **Exercise 1** — Executive Command Center (interactive HTML dashboard; approvals one at a time) |
-| 15 min | **Exercise 2** — Research the web with Deep Research (cited briefing + 5 tailored interview questions) |
-| 15 min | **Exercise 3** — Navigate websites with Cowork's browser (search and click through dol.gov and lni.wa.gov in Edge) |
-| 15 min | **Exercise 4** — Build your own custom skill ("HR Policy Answer") |
-| 10 min | **Exercise 5** — Recruiting + reporting mini-lab |
+| 15 min | **Exercise 1** — Research the web with Deep Research (cited briefing + 5 tailored interview questions; optional cost review) |
+| 15 min | **Exercise 2** — Navigate websites with Cowork's browser (search and click through dol.gov and lni.wa.gov in Edge) |
+| 15 min | **Exercise 3** — Build your own custom skill ("HR Policy Answer") |
+| 10 min | **Exercise 4** — Recruiting + reporting mini-lab |
 | 15 min | Break |
-| 10 min | **Exercise 6** — Onboarding pack (orientation deck; scheduling + announcement if time allows) |
-| 15 min | **Exercise 7** — Automate & share (Automations, Daily Briefing; skill sharing if time allows) |
-| 15 min | **Exercise 8** — Build a Policy Agent with **Copilot Agent Builder** (non-Cowork) |
+| 10 min | **Exercise 5** — Onboarding pack (orientation deck; scheduling + announcement if time allows) |
+| 15 min | **Exercise 6** — Automate & share (Automations, Daily Briefing; skill sharing if time allows) |
+| 15 min | **Exercise 7** — Build a Policy Agent with **Copilot Agent Builder** (non-Cowork) |
+| 15 min | **Exercise 8** — Executive Command Center (interactive HTML dashboard; approvals one at a time) |
 | 5 min | Wrap-up — best practices & next steps |
 
 The pace is brisk: the facilitator plays a short **demo video** before each exercise instead of waiting
@@ -105,13 +105,13 @@ The kit is organized by audience:
 | --- | --- | --- |
 | README | [.md](README.md) · [.docx](README.docx) | This overview |
 | summary/PROJECT-SUMMARY | [.md](summary/PROJECT-SUMMARY.md) (maintainers only) | Handoff notes: status, architecture, decisions, how to build and test, remaining work |
-| [instructor/instructor-deck.pptx](instructor/instructor-deck.pptx) | pptx | Instructor deck (57 slides, speaker notes, alt text) — a **prompting best-practices slide** (Goal, Source, Expectations, Constraints, with a weak vs. strong HR prompt), a divider slide with a picture and progress tracker before each exercise, one PowerPoint section per exercise for quick navigation, objectives, approvals, a **workshop kit slide with download links** for participants and instructors, a scenario card, **demo video slide** (an empty video frame for your recording), and hands-on slide per exercise (its speaker notes carry the full prompt, ready to copy), demo video slides for the UI walkthrough and the prompting slide, an Output folder walkthrough, an optional **check-the-cost** (`/cost`) slide for Exercise 1, red **Not Cowork** banners on Exercise 8, a knowledge check, and a closing **clean up the training data** slide |
+| [instructor/instructor-deck.pptx](instructor/instructor-deck.pptx) | pptx | Instructor deck (57 slides, speaker notes, alt text) — a **prompting best-practices slide** (Goal, Source, Expectations, Constraints, with a weak vs. strong HR prompt), a divider slide with a picture and progress tracker before each exercise, one PowerPoint section per exercise for quick navigation, objectives, approvals, a **workshop kit slide with download links** for participants and instructors, a scenario card, **demo video slide** (an empty video frame for your recording), and hands-on slide per exercise (its speaker notes carry the full prompt, ready to copy), demo video slides for the UI walkthrough and the prompting slide, an Output folder walkthrough, an optional **check-the-cost** (`/cost`) slide for Exercise 1, red **Not Cowork** banners on Exercise 7, a knowledge check, and a closing **clean up the training data** slide |
 | [instructor/customer-preview-deck.pptx](instructor/customer-preview-deck.pptx) | pptx | Customer preview deck (17 slides) for the account team and facilitator to walk the customer through before delivery — format, agenda, the eight exercises, safety, prerequisites, cost planning, and questions for their feedback; title slide has `[Customer name]` and `[Date]` placeholders |
 | [communication/training-overview.pptx](communication/training-overview.pptx) | pptx | Training overview deck (8 slides) for HR leaders and prospective attendees — what the training is, objectives, agenda, the eight exercises, what to prepare, and the same **download links** slide |
 | [communication/participant-email.html](communication/participant-email.html) | html | Paste-ready Outlook invitation for attendees: session details, what to bring, and links to the workbook, sample data, and handouts |
 | [communication/instructor-email.html](communication/instructor-email.html) | html | Paste-ready Outlook email for the instructor: links to every kit asset, the preparation timeline, and key reminders |
 | instructor/readiness-checklist | [.md](instructor/readiness-checklist.md) · [.docx](instructor/readiness-checklist.docx) | Prep timeline, cost planning, whole-room Plan B, and setup for hosts + attendees |
-| instructor/seed-content | [.md](instructor/seed-content.md) · [.docx](instructor/seed-content.docx) | Zava emails, meetings, and a Teams chat for the **facilitator's demo account** (Exercise 1), with how to load them through VS Code and the Work IQ MCP server |
+| instructor/seed-content | [.md](instructor/seed-content.md) · [.docx](instructor/seed-content.docx) | Zava emails, meetings, and a Teams chat for the **facilitator's demo account** (Exercise 8), with how to load them through VS Code and the Work IQ MCP server |
 | instructor/facilitator-guide | [.md](instructor/facilitator-guide.md) · [.docx](instructor/facilitator-guide.docx) | Minute-by-minute run sheet, talking points, troubleshooting |
 | instructor/facilitator-answer-key | [.md](instructor/facilitator-answer-key.md) · [.docx](instructor/facilitator-answer-key.docx) | Expected results and verified figures for every exercise; fallback walkthrough |
 | participant/participant-workbook | [.md](participant/participant-workbook.md) · [.docx](participant/participant-workbook.docx) | Step-by-step attendee exercises with checkpoints, ending with training-data clean-up steps |
@@ -125,15 +125,15 @@ The kit is organized by audience:
 | reference/05-custom-skill-guide | [.md](reference/05-custom-skill-guide.md) · [.docx](reference/05-custom-skill-guide.docx) | How to build, evaluate, and share a custom skill |
 | reference/06-responsible-use | [.md](reference/06-responsible-use.md) · [.docx](reference/06-responsible-use.docx) | Data handling and responsible-use rules |
 | reference/07-cowork-ui-walkthrough | [.md](reference/07-cowork-ui-walkthrough.md) · [.docx](reference/07-cowork-ui-walkthrough.docx) | UI tour — New task, My tasks, Automations, Customize |
-| reference/08-agent-builder-policy-agent | [.md](reference/08-agent-builder-policy-agent.md) · [.docx](reference/08-agent-builder-policy-agent.docx) | Build a Policy Agent with Copilot Agent Builder (Exercise 8) |
+| reference/08-agent-builder-policy-agent | [.md](reference/08-agent-builder-policy-agent.md) · [.docx](reference/08-agent-builder-policy-agent.docx) | Build a Policy Agent with Copilot Agent Builder (Exercise 7) |
 | reference/09-plugins | [.md](reference/09-plugins.md) · [.docx](reference/09-plugins.docx) | Self-study: extend Cowork with HR plugins (Customize → Plugins), with an MCP example for IT |
-| reference/10-cowork-browser | [.md](reference/10-cowork-browser.md) · [.docx](reference/10-cowork-browser.docx) | Navigate websites with Cowork's browser: what it is, how to turn it on, troubleshooting (Exercise 3) |
+| reference/10-cowork-browser | [.md](reference/10-cowork-browser.md) · [.docx](reference/10-cowork-browser.docx) | Navigate websites with Cowork's browser: what it is, how to turn it on, troubleshooting (Exercise 2) |
 | skills/hr-policy-answer/SKILL | [.md](skills/hr-policy-answer/SKILL.md) (used by Cowork) · [.docx](skills/hr-policy-answer.SKILL.docx) (read-only copy) | Example custom skill (reference/answer key) |
 | [sample-knowledge/](sample-knowledge) | folder | Fictional *Zava* HR data: the six Word/Excel files used in the exercises, and [zava-sample-knowledge.zip](sample-knowledge/zava-sample-knowledge.zip), the **one download** for attendees (all six in an `ai_hr_cowork_workshop` folder, ready to upload to OneDrive) |
 
 ### Sample data (all fictional — no real PII)
 
-The exercises use the **Word and Excel** sample files (Exercise 1 also reads each attendee's own mail and
+The exercises use the **Word and Excel** sample files (Exercise 8 also reads each attendee's own mail and
 calendar). They work in both Cowork and Agent Builder
 (which doesn't accept .md or .csv). Download **[zava-sample-knowledge.zip](sample-knowledge/zava-sample-knowledge.zip)**
 to get all six at once. It extracts to a folder named **`ai_hr_cowork_workshop`**; upload that folder
@@ -141,12 +141,12 @@ to **Documents** in your OneDrive (`Documents/ai_hr_cowork_workshop`). The promp
 
 | File | Contents | Used in |
 | --- | --- | --- |
-| [employee-handbook-excerpt.docx](sample-knowledge/employee-handbook-excerpt.docx) | PTO, remote work, code of conduct, overtime, reviews | Ex 3, 4, 6, 8 |
-| [benefits-summary.docx](sample-knowledge/benefits-summary.docx) | Health, retirement, enrollment windows | Ex 4, 6, 8 |
-| [onboarding-checklist.docx](sample-knowledge/onboarding-checklist.docx) | New-hire onboarding steps | Ex 6 |
-| [job-description-sample.docx](sample-knowledge/job-description-sample.docx) | Open HR Coordinator role | Ex 2, 5 |
-| [employee-roster-sample.xlsx](sample-knowledge/employee-roster-sample.xlsx) | 20 fictional employees | Ex 5 (stretch) |
-| [hr-tickets-sample.xlsx](sample-knowledge/hr-tickets-sample.xlsx) | 20 fictional HR tickets | Ex 1 (stretch), 5, 7 |
+| [employee-handbook-excerpt.docx](sample-knowledge/employee-handbook-excerpt.docx) | PTO, remote work, code of conduct, overtime, reviews | Ex 2, 3, 5, 7 |
+| [benefits-summary.docx](sample-knowledge/benefits-summary.docx) | Health, retirement, enrollment windows | Ex 3, 5, 7 |
+| [onboarding-checklist.docx](sample-knowledge/onboarding-checklist.docx) | New-hire onboarding steps | Ex 5 |
+| [job-description-sample.docx](sample-knowledge/job-description-sample.docx) | Open HR Coordinator role | Ex 1, 4 |
+| [employee-roster-sample.xlsx](sample-knowledge/employee-roster-sample.xlsx) | 20 fictional employees | Ex 4 (stretch) |
+| [hr-tickets-sample.xlsx](sample-knowledge/hr-tickets-sample.xlsx) | 20 fictional HR tickets | Ex 4, 6, 8 (stretch) |
 
 > **Editing the sample data?** The Word and Excel files in `sample-knowledge/` are the master copies:
 > edit them directly, then rebuild the zip ([how](summary/PROJECT-SUMMARY.md#build-instructions)) so
@@ -173,9 +173,9 @@ to **Documents** in your OneDrive (`Documents/ai_hr_cowork_workshop`). The promp
    finish, with the printed [quick-reference card](participant/quick-reference-card.docx) and the
    [prompt library](reference/04-prompt-library.md) open.
 5. **Afterward:** send [after-the-workshop.md](participant/after-the-workshop.md) (knowledge check, survey, and
-   30-day plan) and pause the Exercise 1 and 7 schedules.
+   30-day plan) and pause the Exercise 8 and 6 schedules.
 6. **Everyone:** treat every Cowork output as a **draft to review**, approve **one action at a
-   time**, keep Exercise 1 results private, and use the fictional sample data for the other exercises.
+   time**, keep Exercise 8 results private, and use the fictional sample data for the other exercises.
 
 ## Requirement coverage
 
@@ -183,14 +183,14 @@ to **Documents** in your OneDrive (`Documents/ai_hr_cowork_workshop`). The promp
 - ✅ **Cowork UI walkthrough** — New task, My tasks, Automations, Customize (walkthrough segment)
 - ✅ Sample knowledge, instructions, prompt library, settings & models overview
 - ✅ Using **predefined skills** — Deep Research, Word, Excel, PowerPoint, Scheduling, Calendar,
-  Communications, Daily Briefing (Exercises 2, 5, 6 & 7)
-- ✅ An **executive scenario** — the **Executive Command Center** (Exercise 1), which also saves
+  Communications, Daily Briefing (Exercises 1, 4, 5 & 6)
+- ✅ An **executive scenario** — the **Executive Command Center** (Exercise 8), which also saves
   itself as a skill and schedules itself
-- ✅ Creating at least one **custom skill** and **sharing** it (Exercises 1, 4 & 7)
-- ✅ Using the **browser / web** to get things done: **Deep Research** (Exercise 2) and Cowork **navigating
-  websites in Microsoft Edge**, searching and clicking through two sites (Exercise 3)
-- ✅ Using **Automations** for recurring HR work (Exercises 1 & 7)
-- ✅ A **non-Cowork** finale: build a Policy Agent with **Copilot Agent Builder** (Exercise 8), flagged
+- ✅ Creating at least one **custom skill** and **sharing** it (Exercises 3, 6 & 8)
+- ✅ Using the **browser / web** to get things done: **Deep Research** (Exercise 1) and Cowork **navigating
+  websites in Microsoft Edge**, searching and clicking through two sites (Exercise 2)
+- ✅ Using **Automations** for recurring HR work (Exercises 8 & 7)
+- ✅ A **non-Cowork** exercise: build a Policy Agent with **Copilot Agent Builder** (Exercise 7), flagged
   **Not Cowork** on its slides and in the guides
 - ✅ **Cost awareness:** an optional `/cost` check at the end of Exercise 1, plus cost planning in the
   readiness checklist

@@ -44,7 +44,7 @@ Where Cowork works **on a schedule or in response to events** — no need to re-
   pause, resume, delete).
 - Select **Create** to define a new schedule directly.
 
-You'll build one in **Exercise 7**.
+You'll build one in **Exercise 6**.
 
 ## Customize
 
@@ -53,7 +53,7 @@ Where you make Cowork **yours**. The page has three tabs:
 - **Preferences** — **Customize instructions for Cowork**: guidance automatically added to the start of
   *every* task (tone,
   spelling, "always cite the source").
-- **Skills** — add your own **personal/custom skills** (you build one in **Exercise 4**), and manage
+- **Skills** — add your own **personal/custom skills** (you build one in **Exercise 3**), and manage
   sharing.
 - **Plugins** — the plugins you or your admin installed (each with an on/off toggle), plus **Discover**
   for plugins from the Microsoft 365 App Store. Plugins connect Cowork to systems such as payroll or
@@ -89,7 +89,8 @@ places:
 2. **In OneDrive:** every output is also saved to your **OneDrive → Cowork** folder, so you can find
    it later without reopening the task (or reopen the task from **My tasks**).
 
-> **Tip:** You'll practice this in **Exercise 1**, then use it in every exercise that creates a file.
+> **Tip:** The facilitator introduces this with the optional scorecard in **Exercise 1**.
+> Use it in every exercise that creates a file, including the HTML dashboard in **Exercise 8**.
 
 ## How approvals work (read this before Exercise 1)
 

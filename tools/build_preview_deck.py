@@ -293,7 +293,7 @@ card(s, 0.6, 3.85, 6.0, 2.95, PURPLE, "Who it\u2019s for", bullets([
     "One facilitator plus **1\u20132 proctors** for a group of ~25"], size=13))
 card(s, 6.73, 3.85, 6.0, 2.95, BLUE, "How it works", bullets([
     "Every exercise: **scenario card \u2192 recorded demo \u2192 hands-on**",
-    "Practice data is **fictional** (the company \u201cZava\u201d); Exercise 1 uses each attendee\u2019s own work, privately",
+    "Practice data is **fictional** (the company \u201cZava\u201d); Exercise 8 uses each attendee\u2019s own work, privately",
     "Attendees keep a **workbook**, a **quick-reference card**, and a **prompt library**",
     "Ends with a **30-day adoption plan**"], size=13))
 notes(s, "AT A GLANCE. Ask: is ~25 the right group size? Do attendees have laptops with Edge? Mention we can run "
@@ -318,27 +318,28 @@ s = new_slide("Three Copilot tools, one workshop", "Attendees learn when to use 
 TOOLS3 = [("Copilot Chat", "Quick answers and rewrites", "\u201cSummarize this policy in 3 bullets.\u201d", BLUE,
            "Opening segment"),
           ("Copilot Cowork", "Multi-step work that ends in a document, email, deck, report, or schedule",
-           "\u201cBuild a new-hire orientation deck and schedule the welcome meeting.\u201d", PURPLE, "Exercises 1\u20137"),
+           "\u201cBuild a new-hire orientation deck and schedule the welcome meeting.\u201d", PURPLE, "Exercises 1–6 and 8"),
           ("Copilot Agent Builder", "A reusable helper other people can chat with",
-           "An HR Policy Agent that answers benefits and PTO questions with sources", GREEN, "Exercise 8 (not Cowork)")]
+           "An HR Policy Agent that answers benefits and PTO questions with sources", GREEN, "Exercise 7 (not Cowork)")]
 for i, (name, use, eg, acc, where) in enumerate(TOOLS3):
     x = 0.6 + i * 4.13
     card(s, x, 2.05, 3.87, 3.3, acc, name, [{"runs": rich("**Use it when:** " + use, 15, INK)},
                                             {"runs": rich("**HR example:** " + eg, 15, INK), "space_after": 10}],
          hsize=17)
     chip(s, x + 0.25, 4.8, where, size=11.5)
-band(s, 5.65, "**Cowork is the focus** (Exercises 1\u20137). The finale switches to **Agent Builder**, so attendees "
+band(s, 5.65, "**Cowork is the focus** (Exercises 1–6 and 8). Exercise 7 switches to **Agent Builder**; the finale returns to **Cowork**, so attendees "
               "leave knowing when each tool fits.", h=0.85, size=15)
-notes(s, "THREE TOOLS. Cowork is the focus (7 of 8 exercises). The finale is deliberately NOT Cowork: Agent Builder, "
-         "so attendees leave knowing the difference between a skill that helps them and an agent that helps others.")
+notes(s, "THREE TOOLS. Cowork is the focus (7 of 8 exercises). Exercise 7 deliberately uses Agent Builder, "
+         "then Exercise 8 returns to Cowork for the Executive Command Center capstone. Attendees leave knowing "
+         "the difference between a skill that helps them and an agent that helps others.")
 
 # ================================================================ 6 — Agenda
 s = new_slide("Agenda \u00b7 150 minutes", "Short framing, then mostly hands-on")
 AGENDA = [("0:00\u20130:20", "Welcome, Copilot vs. Cowork, UI tour, and setup check")]
 for ex in EXERCISES:
     AGENDA.append((ex_clock(ex), f"Ex {ex['num']} \u00b7 {ex['title']}" + (" (not Cowork)" if ex.get("not_cowork") else "")))
-    if ex["num"] == 5:
-        AGENDA.append(("1:30\u20131:45", "Break"))
+    if ex["num"] == 4:
+        AGENDA.append(("1:15\u20131:30", "Break"))
 AGENDA.append(("2:25\u20132:30", "Wrap-up and next steps"))
 half = (len(AGENDA) + 1) // 2
 for col, rows in enumerate((AGENDA[:half], AGENDA[half:])):
@@ -381,7 +382,7 @@ def exercise_slide(exs, title):
         chip(s, cx, y + h - 0.5, ex["function"], size=10, h=0.3)
     notes(s, "EXERCISES. For each card, give one sentence on the HR value. ASK: which of these would your team use "
              "next week? Which would you drop or swap for one of your own HR scenarios? "
-             + ("Exercise 8 is deliberately NOT Cowork: it's Copilot Agent Builder." if any(e.get("not_cowork") for e in exs) else ""))
+             + ("Exercise 7 is deliberately NOT Cowork: it's Copilot Agent Builder." if any(e.get("not_cowork") for e in exs) else ""))
     return s
 
 
@@ -413,7 +414,7 @@ notes(s, "EXERCISE RHYTHM. Highlight the recorded demos: Cowork tasks can take s
 
 # ================================================================ 10 — Safety
 s = new_slide("Built-in safety for HR work", "Habits we practice in every exercise")
-SAFE = [("Fictional practice data", "Exercises 2\u20138 use the fictional company Zava. Exercise 1 runs privately on each attendee\u2019s own work.", BLUE),
+SAFE = [("Fictional practice data", "Exercises 1\u20137 use the fictional company Zava. Exercise 8 runs privately on each attendee\u2019s own work.", BLUE),
         ("Approve one at a time", "Cowork asks before it sends, posts, or schedules. No \u201cApprove All\u201d.", PURPLE),
         ("Every output is a draft", "Review before anything is sent, shared, or filed.", GREEN),
         ("Cite and confirm", "Policy answers name their source and say \u201cplease confirm with HR\u201d.", ORANGE),
@@ -447,7 +448,7 @@ s = new_slide("What we need from you", "Tenant readiness is the biggest success 
 card(s, 0.6, 2.0, 6.0, 4.85, PURPLE, "Prerequisites", bullets([
     "A **Microsoft 365 Copilot** license for each attendee",
     "**Usage-based billing** and a **Cowork spending policy** for the attendee group (this grants Cowork access)",
-    "**Cowork Browsing** allowed for the group (Exercise 3)",
+    "**Cowork Browsing** allowed for the group (Exercise 2)",
     "~25 attendee accounts **plus 2\u20133 spares** in one tenant",
     "Laptops with **Microsoft Edge 152 or later**",
     "A shared Teams or SharePoint folder for the sample files"], size=14.5))
@@ -513,7 +514,7 @@ OPTS = [("Swap in your scenarios", "Replace an exercise with one of your own HR 
         ("Spotlight your HR system", "How your HR system could connect, e.g., an agent or a plugin for SAP "
                                      "SuccessFactors.", GREEN),
         ("Change the format", "Two sessions with more hands-on time, or a 90-minute overview for HR leaders.", ORANGE),
-        ("Go deeper on agents", "Extend Exercise 8, or plan a follow-up on Copilot Studio.", TEAL),
+        ("Go deeper on agents", "Extend Exercise 7, or plan a follow-up on Copilot Studio.", TEAL),
         ("Follow-up support", "Office hours and a 30-day adoption check-in.", RED)]
 for i, (h, b, acc) in enumerate(OPTS):
     card(s, 0.6 + (i % 3) * 4.13, 2.05 + (i // 3) * 2.3, 3.87, 2.05, acc, h, b, hsize=14, bsize=13)

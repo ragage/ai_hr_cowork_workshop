@@ -7,38 +7,7 @@
 
 ---
 
-## Exercise 1 — Executive Command Center
-
-- **Artifact:** an **HTML file** in the side panel's **Output folder** (Preview / Download buttons),
-  also saved to **OneDrive → Cowork**. Every attendee should be able to open it both ways.
-- **Top strip:** 1–2 urgent items, today's most important meeting or priority, the busiest day this
-  week, and the number of working days left.
-- **Three views:** Meetings · Priorities · Org pulse, with **traffic-light** indicators and
-  expandable sections.
-- **Every recommendation** is labeled **Lean in / Delegate / Re-engage / Protect time**, explains the
-  signal behind it, and gives one next action.
-- **Guardrail:** recommendations are about **workstreams and decisions, not individual people**. If
-  the dashboard rates a person's performance, raise it as a discussion point.
-- **Skill + schedule:** Customize → Skills shows **Executive Command Center**; Automations → Manage
-  schedules shows a **weekday** run at the chosen time.
-- **Your demo (seeded with [seed-content.md](seed-content.md)):** the Thursday **meeting conflict** and the
-  **T-2008 payroll** email should appear as urgent or needing attention; the newsletter and FYI
-  shouldn't.
-- **Attendees** run it on their **own** mail, calendar, and Teams, so every dashboard differs and you
-  can't check content against a key. Check the **structure** instead (sections, labels, next actions,
-  skill, schedule), and don't ask anyone to share their screen.
-- **Nearly empty dashboard?** Expected for a quiet week; the pattern is what matters.
-- **Approvals:** saving the skill and creating the schedule each showed an approval dialog, approved
-  **one at a time**. If an attendee clicked **Approve All** or **Always allow**, have them revoke it in
-  the side panel's **Permissions** section.
-- **Cost (`/cost`, optional step):** typed in the same task, it shows the approximate credits this
-  task used, credits used this month, and credits remaining. Numbers vary by run and account. It costs
-  nothing to run, may lag a few minutes behind recent actions, and isn't a billing record. If the
-  remaining balance looks low, the attendee may be on a shared group limit; refer them to the host.
-
----
-
-## Exercise 2 — Deep Research
+## Exercise 1 — Deep Research
 
 - **Briefing:** about one page, with **several cited sources** that open and are relevant.
 - **Practices it should cover:** a standard question set for every candidate; competency-based
@@ -51,7 +20,7 @@
 - **Red flag:** claims with no citation, or citations that don't open. Ask the attendee to check the
   source themselves.
 
-**Optional — Task 2c scorecard follow-up** (*"Turn this into an interviewer scorecard in Word AND Excel with the scoring
+**Optional — Task 1c scorecard follow-up** (*"Turn this into an interviewer scorecard in Word AND Excel with the scoring
 scales filled in"*). Expect **two files** in the Output folder:
 
 | | Word scorecard | Excel scorecard |
@@ -65,11 +34,18 @@ scales filled in"*). Expect **two files** in the Output folder:
 don't match the HR Coordinator role. Coach with: *"Fill in the 1, 3, and 5 anchors for every
 competency, and add a total score in Excel."*
 
+- **Cost (`/cost`, optional step):** typed in the same task, it shows the approximate credits this
+  task used, credits used this month, and credits remaining. Numbers vary by run and account. It costs
+  nothing to run, may lag a few minutes behind recent actions, and isn't a billing record. If the
+  remaining balance looks low, the attendee may be on a shared group limit; refer them to the host.
+
+- **Usage screenshot:** shows an example monthly credit total and daily chart, not an individual task's cost. Totals can be delayed; limits differ by account.
+
 ---
 
-## Exercise 3 — Navigate websites with Cowork's browser
+## Exercise 2 — Navigate websites with Cowork's browser
 
-**3a — What the table should say**
+**2a — What the table should say**
 
 | Rule | Federal (DOL, Fact Sheet #23) | Washington (L&I) | Zava handbook (§4) |
 | --- | --- | --- | --- |
@@ -91,7 +67,7 @@ competency, and add a total score in Excel."*
   it typing in the DOL **search box** and clicking through (not just jumping to a guessed URL).
 - Nothing was signed in to, filled in, or submitted beyond a search box.
 
-**3b (optional) — Word brief for payroll:** one page in the Output folder: what the federal and Washington rules
+**2b (optional) — Word brief for payroll:** one page in the Output folder: what the federal and Washington rules
 say, that the handbook matches, and a next step for **T-2008** (Owen Wright, overtime missing),
 e.g. "correct in the next pay run or an off-cycle payment, confirm hours with the manager, and reply
 to Owen." Not sent anywhere.
@@ -112,7 +88,7 @@ facilitator demo.
 
 ---
 
-## Exercise 4 — Custom skill: HR Policy Answer
+## Exercise 3 — Custom skill: HR Policy Answer
 
 **Evaluation:** **Good (70–84)** or better. Common "Needs work" causes: a vague trigger ("HR stuff"),
 or no out-of-scope list. Answer key: [skills/hr-policy-answer/SKILL.md](../skills/hr-policy-answer/SKILL.md).
@@ -144,16 +120,16 @@ payroll@zava.example). A number or a guess is a **fail**; tighten the skill's sc
 
 ---
 
-## Exercise 5 — Recruiting + reporting
+## Exercise 4 — Recruiting + reporting
 
-**5a — Inclusive job posting (Word):** under 350 words, with **What you'll do / What you'll bring /
+**4a — Inclusive job posting (Word):** under 350 words, with **What you'll do / What you'll bring /
 What we offer** sections; mentions **hybrid, 2 days a week in office**, the benefits highlights
 (medical, dental, vision, 401(k) match) and the **$1,000 learning budget**. The **wording-review
 table** usually flags: "Bachelor's degree" (keep the "or equivalent experience" wording prominent),
 "1–3 years of experience" read as a hard cut-off, and "high attention to detail" style clichés.
 Coach: HR decides which flags to accept; the table is a prompt for judgment, not a rule.
 
-**5b — Ticket summary.** Verified figures from `hr-tickets-sample.xlsx`:
+**4b — Ticket summary.** Verified figures from `hr-tickets-sample.xlsx`:
 
 | | Open | Closed | Total |
 | --- | --- | --- | --- |
@@ -198,7 +174,7 @@ Open tickets to follow up: T-2006 (Benefits), T-2008 (Payroll, **High**), T-2011
 
 ---
 
-## Exercise 6 — Onboarding orientation pack
+## Exercise 5 — Onboarding orientation pack
 
 - **Deck (6–8 slides):** first-day logistics (welcome meeting, paperwork, workstation), PTO basics
   (20 days, 5-day carryover), hybrid (Tue/Thu anchors, core hours 10:00–15:00, $300 home-office
@@ -212,12 +188,12 @@ Open tickets to follow up: T-2006 (Benefits), T-2008 (Payroll, **High**), T-2011
 
 ---
 
-## Exercise 7 — Automate & share
+## Exercise 6 — Automate & share
 
 - **Manage schedules** lists the weekly Monday 8:00 AM schedule as **Active**; **Runs** shows the run
   started with **Activate and run now**.
 - The run's output lists the **6 open tickets** and names **T-2008** as the one high-priority item
-  (same figures as Exercise 5).
+  (same figures as Exercise 4).
 - **Daily Briefing** loads its skill chip and summarizes the day's meetings and tasks (light in a quiet
   week).
 - **Sharing:** the skill is still **"Only you"**, or shared to one named colleague with the
@@ -225,7 +201,7 @@ Open tickets to follow up: T-2006 (Benefits), T-2008 (Payroll, **High**), T-2011
 
 ---
 
-## Exercise 8 — HR Policy Agent (Agent Builder)
+## Exercise 7 — HR Policy Agent (Agent Builder)
 
 - **Not Cowork:** attendees should be in **Microsoft 365 Copilot → Create agent**, not a Cowork task.
   If someone pastes the Describe text into Cowork, redirect them to Agent Builder.
@@ -234,7 +210,7 @@ Open tickets to follow up: T-2006 (Benefits), T-2008 (Payroll, **High**), T-2011
   Builder doesn't take .md or .csv.
 - **Settings:** Knowledge → **Only use specified sources** on, **Search all websites** off.
 - **"Try it" in-scope** (*"At Zava, when is open enrollment and how do I change my medical plan?"*):
-  the same open-enrollment answer as Exercise 4 (November; effective Jan 1;
+  the same open-enrollment answer as Exercise 3 (November; effective Jan 1;
   30 days after a life event) with a **citation** to the benefits document.
 - **"Try it" out-of-scope:** declines to discuss a colleague's salary and redirects to HR.
 - **Common issue:** answers about the attendee's **own** company's benefits → the two settings
@@ -242,6 +218,33 @@ Open tickets to follow up: T-2006 (Benefits), T-2008 (Payroll, **High**), T-2011
   can't fully block general knowledge.
 - **Common issue:** answers ignore the files → they're still **"Preparing"**. Wait a few minutes, or
   select **refresh** in the Configure tab's Knowledge section.
+
+---
+
+## Exercise 8 — Executive Command Center
+
+- **Artifact:** an **HTML file** in the side panel's **Output folder** (Preview / Download buttons),
+  also saved to **OneDrive → Cowork**. Every attendee should be able to open it both ways.
+- **Top strip:** 1–2 urgent items, today's most important meeting or priority, the busiest day this
+  week, and the number of working days left.
+- **Three views:** Meetings · Priorities · Org pulse, with **traffic-light** indicators and
+  expandable sections.
+- **Every recommendation** is labeled **Lean in / Delegate / Re-engage / Protect time**, explains the
+  signal behind it, and gives one next action.
+- **Guardrail:** recommendations are about **workstreams and decisions, not individual people**. If
+  the dashboard rates a person's performance, raise it as a discussion point.
+- **Skill + schedule:** Customize → Skills shows **Executive Command Center**; Automations → Manage
+  schedules shows a **weekday** run at the chosen time.
+- **Your demo (seeded with [seed-content.md](seed-content.md)):** the Thursday **meeting conflict** and the
+  **T-2008 payroll** email should appear as urgent or needing attention; the newsletter and FYI
+  shouldn't.
+- **Attendees** run it on their **own** mail, calendar, and Teams, so every dashboard differs and you
+  can't check content against a key. Check the **structure** instead (sections, labels, next actions,
+  skill, schedule), and don't ask anyone to share their screen.
+- **Nearly empty dashboard?** Expected for a quiet week; the pattern is what matters.
+- **Approvals:** saving the skill and creating the schedule each showed an approval dialog, approved
+  **one at a time**. If an attendee clicked **Approve All** or **Always allow**, have them revoke it in
+  the side panel's **Permissions** section.
 
 ---
 

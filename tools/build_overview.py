@@ -31,14 +31,14 @@ wcard(s, 0.55, 1.6, 3.95, 3.35, BLUE, "WHO IT\u2019S FOR",
                "About **25 attendees** per session"], size=15))
 wcard(s, 4.69, 1.6, 3.95, 3.35, PURPLE, "FORMAT",
       bullets(["**2\u00bd hours**, instructor-led and hands-on", "**Eight** scenario-based exercises, one 15-minute break",
-               "Your **own work account**: your real calendar and mail for Ex 1, fictional Zava files for the rest"], size=15))
+               "Your **own work account**: your real calendar and mail for Ex 8, fictional Zava files for the rest"], size=15))
 wcard(s, 8.83, 1.6, 3.95, 3.35, GREEN, "THREE TOOLS",
       bullets(["**Copilot Chat** for quick answers", "**Cowork** for multi-step work that ends in a deliverable",
                "**Agent Builder** for a reusable helper others can use"], size=15))
 band(s, 0.55, 5.25, 12.23, 1.5,
      "**One habit all day: draft \u2192 review \u2192 approve.** Cowork pauses before it sends or shares anything, "
      "so HR stays accountable for every output.", fill=PLUM, color="FFFFFF", size=16)
-notes(s, "ABOUT. Who it's for, the format, and the three tools. Attendees use their own work accounts: Exercise 1 "
+notes(s, "ABOUT. Who it's for, the format, and the three tools. Attendees use their own work accounts: Exercise 8 "
          "builds a private dashboard from their own mail and calendar, and every other exercise uses fictional Zava "
          "sample files. Everything Cowork produces is a draft to review.")
 
@@ -50,7 +50,7 @@ notes(s, "LEARNING OBJECTIVES. The six outcomes attendees leave with. They mirro
 # 4 — Agenda
 s = agenda_slide()
 notes(s, "AGENDA. Two and a half hours: framing and a UI tour with setup, then eight hands-on exercises with one 15-minute break. "
-         "Exercise 4 (a custom skill) is the centerpiece; Exercise 8 builds a no-code agent in Agent Builder.")
+         "Exercise 3 (a custom skill) is the centerpiece; Exercise 7 builds a no-code agent in Agent Builder.")
 
 # 5 — The eight exercises
 s = white_slide("Eight hands-on exercises", "Each one starts from a real HR scenario and ends in a finished draft.")
@@ -69,8 +69,8 @@ for i, ex in enumerate(EXERCISES):
     text(s, x + 0.16, y + 0.46, 2.0, 0.6, [{"runs": [(ex["short"], {"size": 14, "bold": True, "color": W_TITLE})]}],
          line_spacing=0.95)
     text(s, x + 0.16, y + 1.05, 2.62, 1.3, [{"runs": rich(ex["goal"], 10.5, W_SUB)}], line_spacing=1.0)
-notes(s, "EXERCISES. Walk the eight scenarios: an executive command center, Deep Research, Cowork driving a "
-         "browser, a custom skill, recruiting and reporting, an onboarding pack, automations, and a policy agent. "
+notes(s, "EXERCISES. Walk the eight scenarios: Deep Research, Cowork driving a "
+         "browser, a custom skill, recruiting and reporting, an onboarding pack, automations, a policy agent, and the executive command center capstone. "
          "Each one ends in a draft the attendee reviews.")
 
 # 6 — Before the session

@@ -105,7 +105,7 @@ conflict. Use sample 1 during the workshop.
 
 Also on the **Customize** page, you can add your own **personal (custom) skills** — reusable
 instructions that teach Cowork to handle a recurring task consistently. This workshop builds one in
-Exercise 4. See [05-custom-skill-guide.md](05-custom-skill-guide.md).
+Exercise 3. See [05-custom-skill-guide.md](05-custom-skill-guide.md).
 
 ## Plugins
 

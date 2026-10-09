@@ -104,7 +104,7 @@ in Microsoft's documentation:
 ]
 ```
 
-The `hr-policy-answer` skill you built in **Exercise 4** could ship inside a plugin like this, so the
+The `hr-policy-answer` skill you built in **Exercise 3** could ship inside a plugin like this, so the
 whole HR team gets the skill **and** live HR data together. Details:
 [Build plugins for Cowork](https://learn.microsoft.com/microsoft-365/copilot/cowork/cowork-plugin-development).
 
