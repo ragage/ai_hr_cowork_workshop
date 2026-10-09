@@ -296,7 +296,7 @@ because it took about 11.
 
 ## Appendix
 
-Use the **Appendix** divider to introduce the optional slides after Exercise 8. Cover them only
+Use the **Appendix** divider to introduce the optional slides after the closing and cleanup slides. Cover them only
 if time allows, or share them after the workshop; preserve wrap-up and schedule cleanup.
 
 ### What you'll be able to do by the end
@@ -355,7 +355,7 @@ if time allows, or share them after the workshop; preserve wrap-up and schedule 
   (stand up a reusable helper).
 - Remind everyone to **pause or delete the Exercise 8 and Exercise 6 schedules** if they don't want
   them to keep running.
-- End on the deck's last slide, **Clean up the training data**, and leave it up while people pack
+- End the required session on **Clean up the training data**, before the Appendix, and leave it up while people pack
   up. The [clean-up steps](../participant/participant-workbook.md#clean-up-the-training-data) at the
   end of the workbook take about 5 minutes; attendees can finish them later today. Deleting the
   Exercise 8 and Exercise 6 schedules comes first, because they're usage-billed.

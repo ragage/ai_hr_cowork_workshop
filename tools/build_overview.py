@@ -44,7 +44,7 @@ notes(s, "ABOUT. Who it's for, the format, and the three tools. Attendees use th
 
 # 3 — Learning objectives
 s = objectives_slide()
-notes(s, "LEARNING OBJECTIVES. The six outcomes attendees leave with. They mirror the README and the participant "
+notes(s, "LEARNING OBJECTIVES. The six outcomes attendees leave with. They mirror the participant "
          "workbook, and the workshop closes with a recap and next steps.")
 
 # 4 — Agenda
@@ -92,16 +92,16 @@ notes(s, "BEFORE THE SESSION. Attendees need only a laptop with Edge and their o
          "licenses, the Cowork spending policy, and browser access; the facilitator seeds only their own demo account. The readiness checklist has the "
          "timeline, cost planning, and Plan B.")
 
-# 7 — Download links
+# 7 — Close
+s = title_slide("Ready to join?", "Ask your workshop host for the next session date.")
+notes(s, "CLOSE. Invite questions. The paste-ready invitation emails in communication/ carry the same links.")
+
+# 8 — Download links
 mark_section("Appendix")
 s = kit_links_slide()
 notes(s, "DOWNLOAD LINKS. Everything participants and instructors need; the Zava sample data is one zip. The links "
          "point to the kit's private GitHub repo: give people access, or post the files in a shared Teams/SharePoint "
          "folder and share that link instead.")
-
-# 8 — Close
-s = title_slide("Ready to join?", "Ask your workshop host for the next session date.")
-notes(s, "CLOSE. Invite questions. The paste-ready invitation emails in communication/ carry the same links.")
 
 exec(compile("# ---------------------------------------------------------------- remove template slides" + _TAIL,
              "build_deck.py", "exec"))
