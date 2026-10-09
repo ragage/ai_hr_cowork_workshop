@@ -1145,8 +1145,7 @@ text(s, 0.65, 1.45, 4.0, 0.35, [{"runs": [("1 \u00b7 Find the agent", {"size": 1
 pic = s.shapes.add_picture(os.path.join(ROOT, "tools", "assets", "prompt-coach-agent-picker.png"),
                            Inches(0.65), Inches(1.9), width=Inches(4.0))
 pic._element.nvPicPr.cNvPr.set(
-    "descr", "Prompt Coach agent page, created by Microsoft, showing an open-enrollment prompt and starter prompts "
-    "including Analyze Prompt, Fix my prompt, Prompt Generation, and Prompt Examples.")
+    "descr", "Copilot Chat with Agents selected and the search panel showing Prompt Coach as an agent result.")
 text(s, 4.95, 1.45, 7.7, 0.35, [{"runs": [("2 \u00b7 Ask for feedback on a weak prompt", {"size": 14, "bold": True, "color": W_TITLE})]}])
 pic = s.shapes.add_picture(os.path.join(ROOT, "tools", "assets", "prompt-coach-example.png"),
                            Inches(4.95), Inches(1.9), width=Inches(7.7))
