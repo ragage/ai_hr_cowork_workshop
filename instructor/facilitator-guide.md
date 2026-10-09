@@ -296,6 +296,9 @@ because it took about 11.
 
 ## Appendix
 
+Use the **Appendix** divider to introduce the optional slides after Exercise 8. Cover them only
+if time allows, or share them after the workshop; preserve wrap-up and schedule cleanup.
+
 ### What you'll be able to do by the end
 - Use the learning-objectives slide after Exercise 8 as an optional recap of the six outcomes:
   choose the right tool, delegate safely, ground in real content, package repeatable work,
@@ -307,6 +310,17 @@ because it took about 11.
 - Use the kit slide after Exercise 8 for take-away downloads, or share it after the workshop.
   Setup files must already be available through the invitation or shared Teams/SharePoint folder;
   don't wait until this optional section to distribute the workbook and sample-data zip.
+
+### Cowork settings — Edge browsing & Copilot Credits
+- Use the Appendix slide and its example spending-policy screenshot as a setup reference.
+  Browser access and credit availability must be checked **before training**, not after Exercise 8.
+- Host/admin: enable usage-based billing, include attendees in an enabled policy selecting Cowork,
+  and confirm enough remaining policy budget and user/group credits for the exercises and retries.
+  Estimate and dry-run the workshop; do not treat the screenshot's unlimited spending as guidance.
+- Enable Cowork Browsing for attendees. Each user needs Edge 152+, a matching work-account profile,
+  and **Allow Cowork to take actions on your behalf** enabled in Edge Settings.
+- See the [readiness checklist](readiness-checklist.md#cost-planning) and
+  [browser setup reference](../reference/10-cowork-browser.md#how-to-turn-it-on).
 
 ### How approvals work — one at a time (after Exercise 8, if time allows)
 - Use the approvals slide in the deck's **Appendix** and the

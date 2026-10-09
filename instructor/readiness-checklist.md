@@ -61,6 +61,10 @@ adds up. Before the session:
 - [ ] **Usage-based billing** set up, with a **spending policy that selects Cowork** and is scoped to
       that group. The spending policy is what **grants access** to Cowork (the older *Agents → Cowork*
       setting no longer controls access). Add an estimate and guardrails (see [Cost planning](#cost-planning)).
+- [ ] Verify **enough remaining Copilot Credits / budget** for every attendee to finish the training:
+      check policy spending limits and user/group credit limits, and allow headroom for all exercises,
+      retries, and scheduled runs until paused. Use the estimator and a dry run rather than a fixed
+      credit allowance. Access alone does not guarantee enough credits to complete the workshop.
 - [ ] **Cowork Browsing** (for the Exercise 2 browser task): in the Microsoft 365 admin center, **Copilot →
       Settings → View all → Cowork settings → Allow browser access**, and allow it for the attendee
       group. It's **off by default**. Also check that web filtering doesn't block **dol.gov** or

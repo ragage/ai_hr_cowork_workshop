@@ -1316,11 +1316,48 @@ for ex in EXERCISES:
                  "Exercise 3 skill saved: Exercise 6 shares it.")
 
 mark_section("Appendix")
+s = title_slide("Appendix", "Optional recaps, walkthroughs, and workshop resources")
+notes(s, "APPENDIX DIVIDER (after Exercise 8). The following slides are optional: learning objectives, "
+         "workshop download links, Cowork settings, approvals, custom instructions, and responsible use. Cover them "
+         "only if time allows, or share them after the workshop. Preserve wrap-up and schedule cleanup; "
+         "the required workshop timing is unchanged.")
 s = objectives_slide()
 notes(s, "OPTIONAL LEARNING OBJECTIVES (after Exercise 8, if time allows). Use the six objectives as "
          "a recap of what attendees practiced. They mirror the README and workbook. Skip this slide "
          "if time is short; preserve wrap-up and schedule cleanup.")
 kit_links_slide()
+s = white_slide("Cowork settings \u2014 Edge browsing & Copilot Credits",
+                "Complete these prerequisites before training; this Appendix slide is a setup reference.")
+wcard(s, 0.55, 1.6, 6.0, 2.4, BLUE, "EDGE BROWSING \u00b7 ADMIN + USER",
+      bullets(["**Admin:** Copilot \u2192 Settings \u2192 View all \u2192 Cowork settings \u2192 Allow browser access; include attendees.",
+               "**User:** Edge 152+, work-account profile; no InPrivate or guest window.",
+               "In Edge Settings, search **Cowork**; turn on **Allow Cowork to take actions on your behalf**."],
+              size=12), hsize=14)
+wcard(s, 0.55, 4.15, 6.0, 2.6, PURPLE, "COPILOT CREDITS \u00b7 HOST / ADMIN",
+      bullets(["Enable usage-based billing; include every attendee in an **enabled spending policy that selects Cowork**.",
+               "Confirm **enough remaining credits / budget** at policy, user, and group levels for all exercises and retries.",
+               "Use the estimator and a dry run to set limits with headroom; check **/cost** during training and pause schedules."],
+              size=12), hsize=14)
+text(s, 6.85, 1.6, 5.9, 0.45, [{"runs": [("Example admin spending policy", {"size": 14, "bold": True, "color": W_TITLE})]}])
+pic = s.shapes.add_picture(os.path.join(ROOT, "tools", "assets", "cowork-spending-policy.png"),
+                           Inches(6.85), Inches(2.1), width=Inches(5.9))
+pic._element.nvPicPr.cNvPr.set(
+    "descr", "Example All Users Policy: enabled, Cowork included, Capacity Packs plus pay-as-you-go billing, "
+    "no spending limit, user and group limits off, and alerts off. These are example settings, not recommendations.")
+text(s, 6.85, 6.4, 5.9, 0.45, [{"runs": [
+    ("Example only: use workshop-scoped limits and alerts, not unlimited spend.", {"size": 11, "color": W_SUB})]}])
+notes(s, "COWORK SETTINGS (Appendix reference). These are mandatory readiness checks, not optional prerequisites. "
+         "Before class, the host enables usage-based billing and an enabled spending policy selecting Cowork "
+         "that includes every attendee. Verify remaining policy budget and user/group credit limits have enough "
+         "headroom for the workshop, retries, and scheduled runs until paused. There is no fixed credit amount "
+         "guaranteed for every training run: estimate with the Customer Cowork Estimator and test in the attendee "
+         "tenant. A tiny limit grants access but can interrupt work when exhausted. The screenshot is an example, "
+         "not a recommendation for All users, No limit, or alerts off. Prefer the workshop group and appropriate "
+         "limits and alerts. Separately enable Cowork Browsing for attendees in the admin center, and check "
+         "Edge 152+, the matching work profile, and Allow Cowork to take actions on your behalf. Managed-device "
+         "policy may require admin help. Run the smoke test and Exercise 2 browser prompt before class. "
+         "Source: https://learn.microsoft.com/microsoft-365/copilot/cowork/cowork-admin-governance "
+         "and reference/10-cowork-browser.md; cost planning: instructor/readiness-checklist.md.")
 s = white_slide("How approvals work \u2014 one at a time",
                 "Optional walkthrough after Exercise 8: sending, posting, deleting, creating meetings.")
 APPR = [("Send / Post / Create", "Approves this one action", "Yes \u2014 after reading the preview", GREEN),

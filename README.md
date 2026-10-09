@@ -75,11 +75,14 @@ on long Cowork runs, and the **HR plugins** read (Customize → Plugins) is in t
 [after-the-workshop pack](participant/after-the-workshop.md) for self-study.
 
 The **What you'll be able to do by the end** learning-objectives slide,
-**Workshop kit / Download links** slide, detailed **How approvals work** walkthrough,
+**Workshop kit / Download links** slide, **Cowork settings — Edge browsing & Copilot Credits** reference,
+detailed **How approvals work** walkthrough,
 **Customize instructions for Cowork**, and **Responsible use — the golden rules** slide are in
 the **Appendix** after Exercise 8; cover them
 only if time allows, or after the workshop.
 Brief one-at-a-time approval reminders remain in the exercises.
+Browser access and enough available Copilot Credits are prerequisites to verify **before training**,
+even though their reference slide is in the Appendix.
 
 ## What's in this kit
 

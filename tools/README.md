@@ -18,6 +18,7 @@ Edit the content here (or in the Markdown guides), then rebuild; don't hand-edit
 | `check_kit.py` | builds nothing: checks Markdown links and anchors, Word links, stale text (the old title and sample folder, plus any terms in `KIT_STALE_TERMS`, separated by semicolons), and duplicate PowerPoint text highlights that trigger repair warnings; exits 1 on a problem |
 | `art/ex1.png`–`ex8.png` | Fluent Emoji pictures for the exercise dividers |
 | `assets/cowork-home.png` | the Cowork home-page screenshot on the "What is Copilot Cowork?" slide |
+| `assets/cowork-spending-policy.png` | supplied admin-policy screenshot on the Appendix's "Cowork settings — Edge browsing & Copilot Credits" slide; example settings, not recommended unlimited spending |
 | `assets/cowork-new-task.png` + `assets/cowork-starter-prompts.png` + `assets/cowork-task-ideas.png` | supplied screenshots on "Sample Cowork prompts to get started", immediately before Exercise 1 |
 | `assets/cowork-cost-command.png` + `assets/cowork-usage.png` | supplied screenshots on Exercise 1's closing cost-check slide: the `/cost` skill picker and monthly Usage panel |
 
