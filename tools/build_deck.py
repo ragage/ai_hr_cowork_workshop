@@ -725,8 +725,8 @@ def exercise_divider(ex):
 
 # ---------------------------------------------------------------- slides shared with build_overview.py
 def agenda_slide():
-    """Agenda slide: the 2\u00bd-hour run of show (shared by the instructor and overview decks)."""
-    s = white_slide("Agenda \u2014 2\u00bd hours, hands-on",
+    """Agenda slide: the 2-hour 35-minute run of show (shared by the instructor and overview decks)."""
+    s = white_slide("Agenda \u2014 2 hours 35 minutes, hands-on",
                     "Framing and a UI tour, then eight scenario-based exercises with one break.")
     LEFT = [("5 min", "Welcome & context", "What Cowork is, HR value, the approval model", BLUE),
             ("5 min", "Copilot vs. Cowork", "The difference and when to use which", BLUE),
@@ -734,7 +734,7 @@ def agenda_slide():
             ("15 min", "Ex 1 \u00b7 Deep Research", "Cited briefing + 5 questions; optional /cost", GREEN),
             ("15 min", "Ex 2 \u00b7 Navigate websites", "Cowork drives Edge: dol.gov + lni.wa.gov", GREEN),
             ("15 min", "Ex 3 \u00b7 Build a custom skill", "Centerpiece: HR Policy Answer", GREEN),
-            ("10 min", "Ex 4 \u00b7 Recruiting + reporting", "Inclusive job posting + ticket summary", GREEN)]
+            ("15 min", "Ex 4 \u00b7 Recruiting + reporting", "Inclusive job posting + ticket summary", GREEN)]
     RIGHT = [("15 min", "Break", "", GRAY),
              ("10 min", "Ex 5 \u00b7 Onboarding pack", "Orientation deck (+ kickoff, announcement)", GREEN),
              ("15 min", "Ex 6 \u00b7 Automate & share", "Automations + Daily Briefing (+ sharing)", GREEN),
@@ -824,7 +824,9 @@ def kit_links_slide():
         if o.get("link"):
             r.font.underline = True
             link_run(r, o["link"])
-    notes(s, "WORKSHOP KIT (part of setup, 0:10-0:20). Leave this up while people sign in. Participants need the "
+    notes(s, "WORKSHOP KIT (optional reference, outside the required agenda). Use this for take-away downloads "
+             "after the exercises or after the workshop. Distribute setup files through the invitation or shared "
+             "Teams/SharePoint folder before the session. Participants need the "
              "workbook and the sample-data zip today; the quick-reference card, prompt library, responsible-use guide, "
              "and after-the-workshop pack are take-aways. The right column is for you and the proctors. The links point "
              "to the kit's GitHub repo, which is private: before the session, give attendees access or post the files in "
@@ -917,12 +919,12 @@ def exercise_demo(ex):
 # 1 — Title
 mark_section("Welcome & orientation")
 s = title_slide("Getting Things Done with Copilot Cowork for HR Tasks",
-                "Instructor-led, hands-on workshop \u00b7 2\u00bd hours \u00b7 ~25 attendees", title_size=40,
+                "Instructor-led, hands-on workshop \u00b7 2 hours 35 minutes \u00b7 ~25 attendees", title_size=40,
                 lines=["Getting Things Done with Copilot Cowork", "for HR Tasks"])
 notes(s, "WELCOME (0:00-0:05). Introduce yourself and the goal: by the end, every attendee knows when to "
          "use Copilot Chat vs. Cowork and has built an executive command center, researched the web, "
          "had Cowork navigate websites in its browser, built a custom skill, an onboarding pack, an automation, and a no-code agent, and finished "
-         "with the Executive Command Center capstone. 2\u00bd hours, one 15-minute break after Ex 4. The pace is brisk: play the demo videos instead of waiting on long runs. Tenant note: ATTENDEES use their own work accounts; YOU demo "
+         "with the Executive Command Center capstone. 2 hours 35 minutes, one 15-minute break after Ex 4. The pace is brisk: play the demo videos instead of waiting on long runs. Tenant note: ATTENDEES use their own work accounts; YOU demo "
          "from a SEPARATE tenant, so your screen may differ. Golden rule all day: every Cowork output is "
          "a DRAFT; Cowork pauses at checkpoints.")
 
@@ -1006,42 +1008,11 @@ demo_video_slide("Copilot and Cowork UI", "Demo", "the Copilot and Cowork UI wal
                   ("New task", "Start box, model picker, reasoning effort, attach"),
                   ("Left nav", "My tasks \u00b7 Automations \u00b7 Customize"),
                   ("Side panel", "Progress, skill chips, Output folder")],
-                 "how approvals work, then setup in your own account.",
+                 "setup in your own account.",
                  "DEMO VIDEO \u2014 COPILOT AND COWORK UI WALKTHROUGH. Show the difference first: a quick question in "
                  "Copilot Chat, then the same app's Cowork entry point. Then tour New task, My tasks, Automations, "
                  "Customize, and the side panel of a running task.",
                  ("Watch, don't click yet. ", "You'll set up your own account in a few minutes."))
-
-# 4b — How approvals work
-s = white_slide("How approvals work \u2014 one at a time",
-                "Cowork asks before sensitive actions: sending, posting, deleting, creating meetings.")
-APPR = [("Send / Post / Create", "Approves this one action", "Yes \u2014 after reading the preview", GREEN),
-        ("Cancel", "Skips it; Cowork continues with the rest", "Yes \u2014 whenever unsure", GREEN),
-        ("Show parameters", "Shows recipients, targets, and details", "Yes \u2014 check before approving", GREEN),
-        ("Approve All (n)", "Approves every pending action at once", "No \u2014 not today", RED),
-        ("More options \u2192 Always allow", "Stops asking for similar actions this session", "No \u2014 not today", RED)]
-text(s, 0.75, 1.6, 3.6, 0.4, [{"runs": [("OPTION", {"size": 12, "bold": True, "color": W_SUB})]}])
-text(s, 4.55, 1.6, 4.5, 0.4, [{"runs": [("WHAT IT DOES", {"size": 12, "bold": True, "color": W_SUB})]}])
-text(s, 9.25, 1.6, 3.4, 0.4, [{"runs": [("USE IT TODAY?", {"size": 12, "bold": True, "color": W_SUB})]}])
-for i, (o, what, use, acc) in enumerate(APPR):
-    y = 2.0 + i * 0.66
-    box(s, 0.55, y, 12.23, 0.56, "FFFFFF", line=W_LINE, shadow=True)
-    box(s, 0.55, y, 0.06, 0.56, acc)
-    text(s, 0.75, y, 3.7, 0.56, [{"runs": [(o, {"size": 13.5, "bold": True, "color": W_TITLE})]}], anchor=MSO_ANCHOR.MIDDLE)
-    text(s, 4.55, y, 4.6, 0.56, [{"runs": [(what, {"size": 13, "color": W_BODY})]}], anchor=MSO_ANCHOR.MIDDLE)
-    text(s, 9.25, y, 3.4, 0.56, [{"runs": [(use, {"size": 13, "bold": True, "color": acc})]}], anchor=MSO_ANCHOR.MIDDLE)
-band(s, 0.55, 5.45, 12.23, 1.3,
-     "**Why:** one click on **Approve All** could bulk-send mail or change many items at once. **Clicked one by "
-     "mistake?** Open the side panel\u2019s **Permissions** section and revoke it.",
-     fill=PLUM, color="FFFFFF", size=15)
-notes(s, "HOW APPROVALS WORK (end of the UI walkthrough, before Exercise 1). Show a real approval dialog on screen. "
-         "Name each option: the action button, Cancel, Show parameters, and the two to avoid today: Approve All (n) "
-         "and More options -> Always allow / Approve & don't ask again. Say it plainly: 'One at a time. No Approve "
-         "All.' Show where to revoke: side panel -> Permissions. Source: Microsoft Learn, 'Use Copilot Cowork -> "
-         "Approve actions'. Detail: reference/07-cowork-ui-walkthrough.md.")
-
-# 4c — Workshop kit: download links
-kit_links_slide()
 
 # 6 — Setup
 s = white_slide("Setup \u2014 sign in and copy the data", "Do this before Exercise 1. Proctors: triage sign-in issues now.")
@@ -1107,25 +1078,6 @@ notes(s, "SKILLS. You don't invoke skills manually — Cowork activates them and
          "calendar, and chats through Work IQ; Ex 1 Deep Research + Word/Excel; Ex 2 is browser use (no skill chip); Ex 4 Word/Excel; Ex 5 PowerPoint, Scheduling, Communications; Ex 6 Daily Briefing. "
          "Full list: reference/03-skills-catalog.md.")
 
-# 9 — Responsible use
-s = white_slide("Responsible use \u2014 the golden rules", "HR handles sensitive people data. Make these non-negotiable.")
-RULES = [("Every output is a draft", "Review before you send, share, or file \u2014 especially employee comms.", BLUE),
-         ("Approve at checkpoints", "Cowork pauses before irreversible actions. Read before you confirm.", PURPLE),
-         ("Keep real data private", "Ex 8 reads **your own** mail and calendar: keep results off shared screens. Everything else uses the fictional Zava files.", GREEN),
-         ("Cite & confirm", "For policy answers, name the source and note HR should confirm.", RED),
-         ("Right person, right data", "Cowork only reaches content you already have permission to see.", OLIVE)]
-for i, (h, sub, acc) in enumerate(RULES):
-    y = 1.6 + i * 1.03
-    box(s, 0.55, y, 12.23, 0.92, "FFFFFF", line=W_LINE, shadow=True)
-    box(s, 0.55, y, 0.06, 0.92, acc)
-    text(s, 0.8, y, 0.5, 0.92, [{"runs": [(str(i + 1), {"size": 22, "bold": True, "color": acc})]}], anchor=MSO_ANCHOR.MIDDLE)
-    text(s, 1.35, y, 3.9, 0.92, [{"runs": [(h, {"size": 16, "bold": True, "color": W_TITLE})]}], anchor=MSO_ANCHOR.MIDDLE)
-    text(s, 5.3, y, 7.3, 0.92, [{"runs": rich(sub, 14, W_SUB)}], anchor=MSO_ANCHOR.MIDDLE)
-notes(s, "RESPONSIBLE USE. Draft -> review -> approve. Ex 8 runs on their own real data: results stay private, no screen sharing; all other exercises use the fictional Zava files, so no real employee data goes into them; never send to real "
-         "people (send only to yourself). Cite sources + 'confirm with HR'. Exercise 8's prompt also "
-         "keeps recommendations on workstreams, not on evaluating individuals. Detail: "
-         "reference/06-responsible-use.md.")
-
 # 9b — Prompting best practices: Goal · Source · Expectations · Constraints (same colors as the Word workbook)
 s = white_slide("Prompting best practices",
                 "Strong prompts include four elements. No labels needed: just make sure each one is there.")
@@ -1174,7 +1126,7 @@ notes(s, "PROMPTING BEST PRACTICES (about 4 min, before the exercises). Read the
          "November, so a weak prompt invites a made-up deadline. Key message: no labels and no fixed order; just check "
          "all four are there. Context about the situation belongs in the Goal. Every exercise prompt, in the "
          "workbook and on the exercise cards, uses these same colors, and each card has a Prompt key at the bottom right "
-         "(setup step E has the legend and this example). When Cowork asks a clarifying question or misses, the missing piece is "
+         "(setup step D has the legend and this example). When Cowork asks a clarifying question or misses, the missing piece is "
          "usually one of the four: add it in a follow-up.")
 
 # 9c \u2014 Demo video: weak vs. strong prompt
@@ -1336,10 +1288,38 @@ for ex in EXERCISES:
         cost_slide()
     if ex["num"] in NEXT_AFTER:
         b = break_slide(NEXT_AFTER[ex["num"]])
-        notes(b, "BREAK (15 min, 1:15-1:30). Sweep the room for blockers and check everyone's "
+        notes(b, "BREAK (15 min, 1:20-1:35). Sweep the room for blockers and check everyone's "
                  "Exercise 3 skill saved: Exercise 6 shares it.")
 
 mark_section("Optional Sections")
+kit_links_slide()
+s = white_slide("How approvals work \u2014 one at a time",
+                "Optional walkthrough after Exercise 8: sending, posting, deleting, creating meetings.")
+APPR = [("Send / Post / Create", "Approves this one action", "Yes \u2014 after reading the preview", GREEN),
+        ("Cancel", "Skips it; Cowork continues with the rest", "Yes \u2014 whenever unsure", GREEN),
+        ("Show parameters", "Shows recipients, targets, and details", "Yes \u2014 check before approving", GREEN),
+        ("Approve All (n)", "Approves every pending action at once", "No \u2014 not today", RED),
+        ("More options \u2192 Always allow", "Stops asking for similar actions this session", "No \u2014 not today", RED)]
+text(s, 0.75, 1.6, 3.6, 0.4, [{"runs": [("OPTION", {"size": 12, "bold": True, "color": W_SUB})]}])
+text(s, 4.55, 1.6, 4.5, 0.4, [{"runs": [("WHAT IT DOES", {"size": 12, "bold": True, "color": W_SUB})]}])
+text(s, 9.25, 1.6, 3.4, 0.4, [{"runs": [("USE IT TODAY?", {"size": 12, "bold": True, "color": W_SUB})]}])
+for i, (o, what, use, acc) in enumerate(APPR):
+    y = 2.0 + i * 0.66
+    box(s, 0.55, y, 12.23, 0.56, "FFFFFF", line=W_LINE, shadow=True)
+    box(s, 0.55, y, 0.06, 0.56, acc)
+    text(s, 0.75, y, 3.7, 0.56, [{"runs": [(o, {"size": 13.5, "bold": True, "color": W_TITLE})]}], anchor=MSO_ANCHOR.MIDDLE)
+    text(s, 4.55, y, 4.6, 0.56, [{"runs": [(what, {"size": 13, "color": W_BODY})]}], anchor=MSO_ANCHOR.MIDDLE)
+    text(s, 9.25, y, 3.4, 0.56, [{"runs": [(use, {"size": 13, "bold": True, "color": acc})]}], anchor=MSO_ANCHOR.MIDDLE)
+band(s, 0.55, 5.45, 12.23, 1.3,
+     "**Why:** one click on **Approve All** could bulk-send mail or change many items at once. **Clicked one by "
+     "mistake?** Open the side panel\u2019s **Permissions** section and revoke it.",
+     fill=PLUM, color="FFFFFF", size=15)
+notes(s, "OPTIONAL HOW APPROVALS WORK (after Exercise 8, outside the required agenda). Skip if time is short. "
+         "Show a real approval dialog and name each option: action button, Cancel, Show parameters, "
+         "Approve All (n), and More options -> Always allow. Reinforce the exercise reminder: one at a time, "
+         "no Approve All. Show where to revoke: side panel -> Permissions. "
+         "Detail: reference/07-cowork-ui-walkthrough.md.")
+
 CI_SHOT = os.path.join(ROOT, "reference", "media", "customize-instructions.png")
 s = white_slide("Optional \u2014 Customize instructions for Cowork",
                 "After Exercise 8, if time allows; otherwise try this after the workshop.")
@@ -1371,6 +1351,25 @@ notes(s, "OPTIONAL CUSTOM INSTRUCTIONS (after Exercise 8, about 1 min; outside t
          "20 KB; keep them short. Clear or adapt the Zava sample before returning to real work. Role-based samples "
          "are in the workbook's Optional Sections and reference/02-settings-and-models.md. Pick ONE, not stack them.")
 
+s = white_slide("Responsible use \u2014 the golden rules", "HR handles sensitive people data. Make these non-negotiable.")
+RULES = [("Every output is a draft", "Review before you send, share, or file \u2014 especially employee comms.", BLUE),
+         ("Approve at checkpoints", "Cowork pauses before irreversible actions. Read before you confirm.", PURPLE),
+         ("Keep real data private", "Ex 8 reads **your own** mail and calendar: keep results off shared screens. Everything else uses the fictional Zava files.", GREEN),
+         ("Cite & confirm", "For policy answers, name the source and note HR should confirm.", RED),
+         ("Right person, right data", "Cowork only reaches content you already have permission to see.", OLIVE)]
+for i, (h, sub, acc) in enumerate(RULES):
+    y = 1.6 + i * 1.03
+    box(s, 0.55, y, 12.23, 0.92, "FFFFFF", line=W_LINE, shadow=True)
+    box(s, 0.55, y, 0.06, 0.92, acc)
+    text(s, 0.8, y, 0.5, 0.92, [{"runs": [(str(i + 1), {"size": 22, "bold": True, "color": acc})]}], anchor=MSO_ANCHOR.MIDDLE)
+    text(s, 1.35, y, 3.9, 0.92, [{"runs": [(h, {"size": 16, "bold": True, "color": W_TITLE})]}], anchor=MSO_ANCHOR.MIDDLE)
+    text(s, 5.3, y, 7.3, 0.92, [{"runs": rich(sub, 14, W_SUB)}], anchor=MSO_ANCHOR.MIDDLE)
+notes(s, "OPTIONAL RESPONSIBLE USE (after Exercise 8, outside the required agenda). This detailed recap is "
+         "optional; the safety rules still apply throughout the exercises. Draft -> review -> approve. "
+         "Ex 8 runs on their own real data: results stay private, no screen sharing; all other exercises use "
+         "fictional Zava files; never send to real people (send only to yourself). Cite sources + 'confirm with HR'. "
+         "Keep recommendations on workstreams, not on evaluating individuals. Detail: reference/06-responsible-use.md.")
+
 # Facilitation
 mark_section("Close")
 s = white_slide("Facilitation & troubleshooting", "For instructors \u2014 skip live or use during a break.")
@@ -1387,7 +1386,7 @@ band(s, 0.55, 5.25, 12.23, 1.5,
 notes(s, "FACILITATION. Biggest risks with ~25 people: pace variance, account readiness, and quiet mailboxes in "
          "Ex 8 (your demo account is seeded with seed-content.md, loaded through VS Code + the Work IQ MCP server). Attendees use their own work accounts; you're on a separate tenant. Never ask anyone to share their Ex 8 dashboard. "
          "Mirrors facilitator-guide.md, facilitator-answer-key.md, and readiness-checklist.md (timeline, cost "
-         "planning, Plan B). Time checks: 0:20 Ex 1, 0:50 Ex 3, 1:15 break, 1:55 Ex 7, 2:10 Ex 8; the optional sub-tasks (1c scorecard, 2b brief, 5b + 5c, 6c sharing) are for fast finishers, so demo them rather than wait. If still behind, cut in this order: 6a only, then Ex 7 as a demo. Never cut Ex 3.")
+         "planning, Plan B). Time checks: 0:20 Ex 1, 0:50 Ex 3, 1:20 break, 2:00 Ex 7, 2:15 Ex 8; the optional sub-tasks (1c scorecard, 2b brief, 5b + 5c, 6c sharing) are for fast finishers, so demo them rather than wait. If still behind, cut in this order: 6a only, then Ex 7 as a demo. Never cut Ex 3.")
 
 # Wrap-up
 s = white_slide("Wrap-up & next steps", "Three tools, eight exercises, one habit: draft \u2192 review \u2192 approve.")
@@ -1405,7 +1404,7 @@ band(s, 0.55, 5.75, 12.23, 1.0,
      "**Before you leave:** clean up the training data with the steps on the last slide. At minimum, delete or "
      "pause your Exercise 8 and 6 schedules.",
      fill=PLUM, color="FFFFFF", size=14)
-notes(s, "WRAP-UP (2:25-2:30). Recap the THREE tools and everything they built. Reinforce the golden rules. Ask "
+notes(s, "WRAP-UP (2:30-2:35). Recap the THREE tools and everything they built. Reinforce the golden rules. Ask "
          "each person to name ONE task for next week. Remind them to pause/delete the Ex 8 and Ex 6 schedules, "
          "then leave the clean-up slide up while people pack up.")
 

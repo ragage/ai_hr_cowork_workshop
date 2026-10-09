@@ -5,7 +5,7 @@ Handoff notes for maintainers of the "Getting Things Done with Copilot Cowork fo
 
 ## Goal
 
-A 2½-hour, no-code, hands-on workshop kit, **"Getting Things Done with Copilot Cowork for HR Tasks"**,
+A 2-hour 35-minute, no-code, hands-on workshop kit, **"Getting Things Done with Copilot Cowork for HR Tasks"**,
 that teaches HR staff to use Microsoft Copilot Cowork for day-to-day work, includes a non-Cowork
 exercise in Agent Builder, and ends with an Executive Command Center capstone.
 
@@ -52,7 +52,7 @@ exercise in Agent Builder, and ends with an Executive Command Center capstone.
   their elements instead of labelling them: Goal (blue), Source (green), Expectations (orange),
   Constraints (purple). In Markdown this is `<span class="goal|source|expect|constraint">`, which
   `tools/callouts.lua` maps to the Word character styles "Prompt Goal" etc.; in `tools/content.py`
-  the deck uses `{g}…{/g}`, `{s}`, `{e}`, `{c}` markers. Workbook Setup step E and the prompting slide
+  the deck uses `{g}…{/g}`, `{s}`, `{e}`, `{c}` markers. Workbook Setup step D and the prompting slide
   teach the four elements with a weak vs. strong open-enrollment prompt.
   Every exercise card in the deck has a "Prompt key" legend picture (bottom right). Stretch prompts live at the
   end of each workbook exercise; the hands-on slides, the closing slide, and the facilitator guide
@@ -68,7 +68,7 @@ exercise in Agent Builder, and ends with an Executive Command Center capstone.
   `content.py`; `PREVIEW_CUSTOMER` and `PREVIEW_DATE` fill the title slide.
 - **Other outputs:** `instructor/instructor-deck.pptx` (56 slides),
   `participant/quick-reference-card.docx`, and a `.docx` copy of every guide (19 in total).
-- **Agenda (150 min, one break):**
+- **Agenda (155 min, one break):**
 
 | Time | Segment |
 | --- | --- |
@@ -76,13 +76,13 @@ exercise in Agent Builder, and ends with an Executive Command Center capstone.
 | 0:20–0:35 | Ex 1 · Deep Research |
 | 0:35–0:50 | Ex 2 · Navigate websites with Cowork's browser |
 | 0:50–1:05 | Ex 3 · Custom skill |
-| 1:05–1:15 | Ex 4 · Recruiting + reporting |
-| 1:15–1:30 | Break (15 min) |
-| 1:30–1:40 | Ex 5 · Onboarding pack |
-| 1:40–1:55 | Ex 6 · Automate & share |
-| 1:55–2:10 | Ex 7 · Agent Builder |
-| 2:10–2:25 | Ex 8 · Executive Command Center |
-| 2:25–2:30 | Wrap-up |
+| 1:05–1:20 | Ex 4 · Recruiting + reporting |
+| 1:20–1:35 | Break (15 min) |
+| 1:35–1:45 | Ex 5 · Onboarding pack |
+| 1:45–2:00 | Ex 6 · Automate & share |
+| 2:00–2:15 | Ex 7 · Agent Builder |
+| 2:15–2:30 | Ex 8 · Executive Command Center |
+| 2:30–2:35 | Wrap-up |
 
 The HR plugins read (reference/09) is self-study in the after-the-workshop pack.
 
@@ -174,8 +174,8 @@ Latest work:
 - **Workbook:**
   - the inbox exercise removed and the remaining exercises renumbered
   - a new browser exercise
-  - setup steps for the OneDrive folder (B) and approvals (D); custom instructions with samples
-    are now in Optional Sections after Exercise 8
+  - setup steps for the OneDrive folder (B) and prompting (D); the detailed approvals walkthrough
+    and custom instructions with samples are now in Optional Sections after Exercise 8
   - new-hire name changed to Sofia Alvarez; the inclusive job posting is now Task 4a
 - **New files:** `reference/10-cowork-browser.md`, `reference/09-plugins.md`, `.gitignore`, and two
   screenshots in `reference/media/`.
@@ -196,13 +196,18 @@ Latest work:
   and the Agent 365 per-workload servers (legacy) weren't suitable.
 - **Browser use is its own exercise.** It's a built-in capability, not a skill, and the exercise is
   read-only on dol.gov and lni.wa.gov.
-- **Approvals** are taught in setup step D and in Exercise 8.
+- **Approvals** have a detailed walkthrough in Optional Sections after Exercise 8, with brief
+  one-at-a-time safety reminders retained during exercises.
+- **Workshop kit / Download links** is in Optional Sections after Exercise 8. Distribute setup
+  files before the session through the invitation or shared Teams/SharePoint folder.
+- **Responsible use — the golden rules** is an optional recap after Exercise 8. The safety rules
+  still apply throughout the training.
 - **Custom instructions** are optional after Exercise 8, in the deck and workbook's Optional Sections;
-  they aren't a prerequisite for the exercises or part of the required 150-minute agenda.
+  they aren't a prerequisite for the exercises or part of the required 155-minute agenda.
 - **Access** comes from a Cowork spending policy, per Microsoft Learn.
 - **SuccessFactors:** no catalog plugin exists, so the kit points to the Employee Self-Service agent
   extension pack or a custom MCP plugin.
-- **Total time is 150 minutes with one 15-minute break** (October 7: cut from 240; all eight exercises kept, shortened; sign-in and upload move before the session; the plugins spotlight moved to the after-the-workshop pack). The repo is private. The divider pictures are Fluent Emoji (MIT,
+- **Total time is 155 minutes with one 15-minute break** (October 9: Exercise 4 extended to 15 minutes; October 7: cut from 240; all eight exercises kept, shortened; sign-in and upload move before the session; the plugins spotlight moved to the after-the-workshop pack). The repo is private. The divider pictures are Fluent Emoji (MIT,
   credited in the README).
 - **Custom skills keep the documented `/Documents/Cowork/skills/` path.** Only the sample-data
   folder moved.

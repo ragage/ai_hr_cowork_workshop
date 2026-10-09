@@ -1,7 +1,7 @@
 # Getting Things Done with Copilot Cowork for HR Tasks
-### A 2½-hour, hands-on workshop kit for HR teams
+### A 2-hour 35-minute, hands-on workshop kit for HR teams
 
-This kit contains everything you need to run (or attend) a 2½-hour, hands-on workshop that teaches
+This kit contains everything you need to run (or attend) a 2-hour 35-minute, hands-on workshop that teaches
 **HR professionals** how to use **Microsoft Copilot Cowork** — no code required — for everyday HR
 work: onboarding, policy and benefits Q&A, recruiting and interview prep, employee communications,
 and reporting.
@@ -52,7 +52,7 @@ the Exercise 2 browser task. Attendees need a **laptop/desktop** with **Microsof
 later) signed in with their work account (custom skills and browser tasks aren't supported on mobile). Full details and a host checklist:
 [readiness-checklist.md](instructor/readiness-checklist.md).
 
-## Agenda (2½ hours)
+## Agenda (2 hours 35 minutes)
 
 | Time | Segment |
 | --- | --- |
@@ -62,7 +62,7 @@ later) signed in with their work account (custom skills and browser tasks aren't
 | 15 min | **Exercise 1** — Research the web with Deep Research (cited briefing + 5 tailored interview questions; optional cost review) |
 | 15 min | **Exercise 2** — Navigate websites with Cowork's browser (search and click through dol.gov and lni.wa.gov in Edge) |
 | 15 min | **Exercise 3** — Build your own custom skill ("HR Policy Answer") |
-| 10 min | **Exercise 4** — Recruiting + reporting mini-lab |
+| 15 min | **Exercise 4** — Recruiting + reporting mini-lab |
 | 15 min | Break |
 | 10 min | **Exercise 5** — Onboarding pack (orientation deck; scheduling + announcement if time allows) |
 | 15 min | **Exercise 6** — Automate & share (Automations, Daily Briefing; skill sharing if time allows) |
@@ -74,8 +74,11 @@ The pace is brisk: the facilitator plays a short **demo video** before each exer
 on long Cowork runs, and the **HR plugins** read (Customize → Plugins) is in the
 [after-the-workshop pack](participant/after-the-workshop.md) for self-study.
 
-**Customize instructions for Cowork** is in **Optional Sections** after Exercise 8, not a setup
-prerequisite; cover it only if time allows, or after the workshop.
+The **Workshop kit / Download links** slide, detailed **How approvals work** walkthrough,
+**Customize instructions for Cowork**, and **Responsible use — the golden rules** slide are in
+**Optional Sections** after Exercise 8; cover them
+only if time allows, or after the workshop.
+Brief one-at-a-time approval reminders remain in the exercises.
 
 ## What's in this kit
 

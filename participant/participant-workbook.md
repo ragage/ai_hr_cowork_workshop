@@ -1,7 +1,7 @@
 # Participant Workbook
 ## Getting Things Done with Copilot Cowork for HR Tasks
 
-Welcome! Over the next two and a half hours you'll use **Microsoft Copilot Cowork** to do real work — no code
+Welcome! Over the next two hours and 35 minutes you'll use **Microsoft Copilot Cowork** to do real work — no code
 required. You'll build an **executive command center**, research the web, have Cowork **drive a web
 browser** for you, and
 **build your own custom skill** — then finish by building a reusable **agent** with **Copilot Agent
@@ -37,8 +37,9 @@ Builder**.
 ## Setup (about 10 minutes) — do A and B before the session
 
 > The session is brisk, so please do **A** (sign in) and **B** (copy the sample data) **before the day**,
-> as the invitation email asks. During the session's 10-minute setup check, you'll do **C–E**.
-> Custom instructions are optional, after Exercise 8 in [Optional Sections](#optional-sections).
+> as the invitation email asks. During the session's 10-minute setup check, you'll do **C–D**.
+> The detailed approval walkthrough and custom instructions are after Exercise 8 in
+> [Optional Sections](#optional-sections).
 
 ### A. Sign in and smoke test
 1. Sign in with **your own work account**, then open
@@ -103,18 +104,10 @@ The left navigation has four places you'll use today:
 
 See [reference/07-cowork-ui-walkthrough.md](../reference/07-cowork-ui-walkthrough.md) for the full tour.
 
-### D. Approvals — one at a time (read before Exercise 1)
-Cowork **pauses before it acts** — before it sends, schedules, saves a skill, or does something
-consequential in a website — and shows an approval dialog. You'll meet these all day.
+> **Safety reminder:** review and approve one action at a time; don't use **Approve All** or
+> **Always allow** during the exercises.
 
-> **⚠️ Approve one at a time.** Each approval dialog offers the action button (e.g., **Send**,
-> **Create**), **Cancel**, and **Show parameters**. It may also offer **Approve All** or **More
-> options → Always allow**. **Don't use Approve All or Always allow today**: one click would skip every
-> remaining checkpoint and could bulk-send or bulk-change things. Clicked one by mistake? Revoke it in the
-> side panel's **Permissions** section. Details:
-> [How approvals work](../reference/07-cowork-ui-walkthrough.md#how-approvals-work-read-this-before-exercise-1).
-
-### E. Prompting best practices
+### D. Prompting best practices
 
 A strong Cowork prompt includes four elements. You don't have to label them; just make sure each one
 is there. In the **Word workbook** and on the exercise slides, every exercise prompt is color-coded so
@@ -388,7 +381,7 @@ do share to **specific users**, add your **initials** to the skill name first to
 
 ---
 
-## Exercise 4 — Recruiting + reporting mini-lab (10 min)
+## Exercise 4 — Recruiting + reporting mini-lab (15 min)
 
 > **Scenario card — Ex 04 · Recruiting + Reporting** · Function: **HR · Talent & operations**
 > - **Goal:** Attract the right candidates for an open role and get on top of the HR service queue
@@ -745,6 +738,17 @@ HR ticket trends from `hr-tickets-sample.xlsx`.
 These are not required for any exercise. Try them after Exercise 8 if time allows, or after the
 workshop; keep the five-minute wrap-up and schedule cleanup.
 
+### How approvals work — one at a time
+Cowork **pauses before it acts** — before it sends, schedules, saves a skill, or does something
+consequential in a website — and shows an approval dialog.
+
+> **⚠️ Approve one at a time.** Each approval dialog offers the action button (e.g., **Send**,
+> **Create**), **Cancel**, and **Show parameters**. It may also offer **Approve All** or **More
+> options → Always allow**. **Don't use Approve All or Always allow today**: one click would skip every
+> remaining checkpoint and could bulk-send or bulk-change things. Clicked one by mistake? Revoke it in the
+> side panel's **Permissions** section. Details:
+> [How approvals work](../reference/07-cowork-ui-walkthrough.md#how-approvals-work).
+
 ### Customize instructions for Cowork (1 min)
 Custom instructions are guidance Cowork **automatically adds to the start of every new task**, so
 you don't have to repeat your tone, format, or rules in each prompt. They are optional and aren't
@@ -807,7 +811,7 @@ Full set, including formatting preferences you can add to any of them:
 - Naming clashes when sharing a skill → keep skills **"Only you"** or add your initials to the name
   (everyone's in the same tenant).
 - Finished early → try the **Stretch** prompt at the end of each exercise:
-  [Ex 1](#exercise-1--research-the-web-with-deep-research-15-min) · [Ex 2](#exercise-2--navigate-websites-with-coworks-browser-15-min) · [Ex 3](#exercise-3--build-your-own-custom-skill-15-min) · [Ex 4](#exercise-4--recruiting--reporting-mini-lab-10-min) · [Ex 5](#exercise-5--onboarding-orientation-pack-10-min) · [Ex 6](#exercise-6--automate--share-15-min) · [Ex 7](#exercise-7--build-a-policy-agent-with-copilot-agent-builder-15-min) · [Ex 8](#exercise-8--executive-command-center-15-min).
+  [Ex 1](#exercise-1--research-the-web-with-deep-research-15-min) · [Ex 2](#exercise-2--navigate-websites-with-coworks-browser-15-min) · [Ex 3](#exercise-3--build-your-own-custom-skill-15-min) · [Ex 4](#exercise-4--recruiting--reporting-mini-lab-15-min) · [Ex 5](#exercise-5--onboarding-orientation-pack-10-min) · [Ex 6](#exercise-6--automate--share-15-min) · [Ex 7](#exercise-7--build-a-policy-agent-with-copilot-agent-builder-15-min) · [Ex 8](#exercise-8--executive-command-center-15-min).
 
 ---
 
